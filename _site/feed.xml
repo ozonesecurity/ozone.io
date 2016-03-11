@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zmNinja - Articles</title>
+    <description>Better than sliced toast by 73%. FDA might have said so</description>
+    <link>
+    http://pliablepixels.github.io</link>
+    
+      
+      <item>
+        <title>Montage Awesomness</title>
+        
+          <description>&lt;p&gt;So what have I’ve been working on lately? Besides wrapping up feature requests and bug reports, I’ve decided to do a amajor revamp of the Montage screen. As it turns out, a lot of people spend a lot of time looking at that screen, so why not give it more design and functionality love? Everyone seems to have an opinion on size and order of the screens, so how about we give you full power? Take a look at the sneak preview. It’s mostly working - need to iron out some kinks.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 07 Mar 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/03/07/Montage-Awesomeness.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/03/07/Montage-Awesomeness.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>New feature- events via ZMS - smoother playback</title>
+        
+          <description>&lt;p&gt;Hey there! I just released version 1.0.9. Besides many bug fixes, I have also now added an option
+to play events footage via ZMS. This will result in much smoother playback for those who
+are on networks that are slow, are on servers that are not fast. To enable ZMS event playback
+for your surveillance footage, make sure “use ZMS for events footage” is enabled.
+Also please take note of the new “Event single image scale” setting - you can now
+control the quality of playback for event montage and single event playback separately.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 26 Feb 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/02/26/events-via-zms.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/02/26/events-via-zms.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A note about the Desktop clients</title>
+        
+          <description>&lt;p&gt;Hi, it seems the desktop client has become more popular than expected. While the Android and iOS versions are priced at a fee, the desktop versions are free. However, please note that the same license applies - it is free for ‘personal’ use. What that means is if you are running a commercial service based on zoneminder and are charging your users a fee (fixed or monthly), even if you are “giving away” the desktop client for free, you are still violating the license  as it is a commercial deployment. Please contact me to discuss commercial terms.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 22 Feb 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/02/22/Desktop-and-free.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/02/22/Desktop-and-free.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Critical updates to ZoneMinder</title>
+        
+          <description>&lt;p&gt;Hi folks, some very important announcements:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 Feb 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/02/05/Important-updates-to-ZoneMinder.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/02/05/Important-updates-to-ZoneMinder.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>zmNinja data consumption in the background</title>
+        
+          <description>&lt;p&gt;Hi there, for those of you who have noticed that zmNinja consumes a lot of data in the background, the problem has been fixed.
+This is primarily a problem for Android users and not iOS (as iOS freezes the app when it goes to background)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 30 Jan 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/01/30/Zoneminder-fix.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/01/30/Zoneminder-fix.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Hello world</title>
+        
+          <description>&lt;p&gt;Hey there. I just set up this blog using Jekyll.
+I look forward to keeping this updated&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 22 Jan 2016 00:00:00 -0500</pubDate>
+        <link>
+        http://pliablepixels.github.io/2016/01/22/Hello-world.html</link>
+        <guid isPermaLink="true">http://pliablepixels.github.io/2016/01/22/Hello-world.html</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

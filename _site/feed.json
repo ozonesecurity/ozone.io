@@ -1,0 +1,45 @@
+    [
+    
+        {
+          "title"    : "Montage Awesomness",
+          "url"     : "http://pliablepixels.github.io/2016/03/07/Montage-Awesomeness.html",
+          "date"     : "2016-03-07",
+	  "level"    : ""
+        } ,
+    
+        {
+          "title"    : "New feature- events via ZMS - smoother playback",
+          "url"     : "http://pliablepixels.github.io/2016/02/26/events-via-zms.html",
+          "date"     : "2016-02-26",
+	  "level"    : ""
+        } ,
+    
+        {
+          "title"    : "A note about the Desktop clients",
+          "url"     : "http://pliablepixels.github.io/2016/02/22/Desktop-and-free.html",
+          "date"     : "2016-02-22",
+	  "level"    : ""
+        } ,
+    
+        {
+          "title"    : "Critical updates to ZoneMinder",
+          "url"     : "http://pliablepixels.github.io/2016/02/05/Important-updates-to-ZoneMinder.html",
+          "date"     : "2016-02-05",
+	  "level"    : "critical"
+        } ,
+    
+        {
+          "title"    : "zmNinja data consumption in the background",
+          "url"     : "http://pliablepixels.github.io/2016/01/30/Zoneminder-fix.html",
+          "date"     : "2016-01-30",
+	  "level"    : "critical"
+        } ,
+    
+        {
+          "title"    : "Hello world",
+          "url"     : "http://pliablepixels.github.io/2016/01/22/Hello-world.html",
+          "date"     : "2016-01-22",
+	  "level"    : ""
+        } 
+    
+    ] 
