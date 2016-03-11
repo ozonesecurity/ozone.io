@@ -1,10 +1,10 @@
 # Site settings
-name: zmNinja
-title: zmNinja
+name: oZone.network
+title: oZone.network
 email: pliablepixels@gmail.com
-description: "Better than sliced toast by 73%. FDA might have said so"
+description: "Making ZoneMinder awesome"
 baseurl: ""
-url: "http://pliablepixels.github.io"
+url: "http://ozone.network"
 disqusid: zmNinja
 
 # Build settings
