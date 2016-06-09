@@ -3,21 +3,75 @@
 
 
     <div class="container">
-    <h2 class="title">oZone brings in useful innovations to DIY security and surveillance software</h2>
-    <h3>Such As:</h3>
-    <ul class="feature-list list-unstyled">
-        <li><i class="fa fa-check"></i><a href="https://github.com/ozonesecurity/zmv2base"</a>A state of the art, headless library for OEMs/ISVs wanting to build their own security solutions</li>
-        <li><i class="fa fa-check"></i><a href="http://pliablepixels.github.io">zmNinja</a>, the rockstar multi-platform remote surveillance app. No other home security app is as cool as this one.</li>
-        <li><i class="fa fa-check"></i>Alexa integration <a href="http://pliablepixels.github.io/2016/04/19/ozone-alexa.html">(sneak preview)</a></li>
-        <li><i class="fa fa-check"></i>Simplified UI that you can relate to (work in progress)</li>
-        <li><i class="fa fa-check"></i><a href="https://github.com/pliablepixels/zmeventserver">Real-time event server</a> with web-sockets - build your own event processor! (already in production!)</li>
-        <li><i class="fa fa-check"></i>Presence aware (work in progress, <a href="https://forums.zoneminder.com/viewtopic.php?f=9&t=23026">exists in part</a>)</li>
-        <li><i class="fa fa-check"></i>And hopefully many more to come!</li>
-    </ul>
-    <br/>
-    <br/>
-    <br/>
-    </div>
+    <h2 class="title">oZone makes developing surveillance products Child's Play. Really.</h2>
+
+    <h3>What if connecting to RTSP camers were as simple as:</h3>
+
+<pre><code class="language-clike">
+  Application app;
+
+  // Two RTSP sources 
+  NetworkAVInput cam1( "cam1", "rtsp://170.93.143.139:1935/rtplive/0b01b57900060075004d823633235daa" );
+  NetworkAVInput cam2("cam2","rtsp://170.93.143.139:1935/rtplive/e0ffa81e00a200ab0050fa36c4235c0a");
+  app.addThread( &cam1 );
+  app.addThread( &cam2 );
+</code></pre>
+
+
+<h3>And doing motion detection on them was as simple as:</h3>
+<pre><code class="language-clike">
+    // motion detect for cam1
+    MotionDetector motionDetector1( "modectcam1" );
+    motionDetector1.registerProvider( cam1 );
+    app.addThread( &motionDetector1 );
+
+    // motion detect for cam1
+    MotionDetector motionDetector2( "modectcam2" );
+    motionDetector2.registerProvider( cam2 );
+    app.addThread( &motionDetector2 );
+</code></pre>
+
+<h3>And stitching arbirary streams together was as easy as:</h3>
+<pre><code class="language-clike">
+// Let's make a mux/stitched handler for cam1 and cam2 and its debugs
+    QuadVideo quadVideo( "quadcammux", PIX_FMT_YUV420P, 640, 480, FrameRate( 1, 10 ), 2, 2 );
+    quadVideo.registerProvider( cam1 );
+    quadVideo.registerProvider( *motionDetector1.deltaImageSlave() );
+    quadVideo.registerProvider( cam2 );
+    quadVideo.registerProvider( *motionDetector2.deltaImageSlave() );
+    app.addThread( &quadVideo );
+
+</code></pre>
+
+<h3>And making all of this renderable on a browser without any plugins is as simple as:</h3>
+<pre><code class="language-clike">
+    HttpController httpController( "watch", 9292 );
+    httpController.addStream("watchcam1",cam1);
+    httpController.addStream("watchcam2",cam2);
+    httpController.addStream( "debug", quadVideo );
+    httpController.addStream( "debug", motionDetector1 );
+    httpController.addStream( "debug", motionDetector2 );
+    listener.addController( &httpController );
+    app.run();
+</code></pre>
+
+<h2>Holy Batman!</h2>
+
+And you'd write a super simple HTML file to access all of this which looks like this:
+<br/>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/Ic2HXUjxRnU" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+And your <a href="https://github.com/ozonesecurity/ozonebase/blob/master/server/src/examples/starter_example.html">code</a> would just be a bunch of <code>img src</code> tags to access the feeds like this:
+<pre><code>img src="http://192.168.1.224:9292/watchcam1/cam1" </code></pre>
+to watch live feed for camera1, or, 
+<pre><code>img src="http://192.168.1.224:9292/debug/modectcam1" </code> </pre>
+to watch live motion detection highlighting on that camera, or, 
+<pre><code>img src="ttp://192.168.1.224:9292/debug/quadcammux" </code> </pre>
+to render a 4x4 stiched image of 2 camera feeds and their differential frame analysis LIVE?
+
+
+</div>
     
 
 </section>
