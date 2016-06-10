@@ -3,9 +3,9 @@
 
 
     <div class="container">
-    <h2 class="title">oZone makes developing surveillance products Child's Play. Really.</h2>
+    <h2 class="title">oZone makes developing surveillance products child's play. Really.</h2>
 
-    <h3>What if connecting to RTSP camers were as simple as:</h3>
+    <h3>What if connecting to RTSP cameras were as simple as:</h3>
 
 <pre><code class="language-clike">
   Application app;
@@ -31,7 +31,7 @@
     app.addThread( &motionDetector2 );
 </code></pre>
 
-<h3>And stitching arbirary streams together was as easy as:</h3>
+<h3>And stitching arbirary streams together for a montage was as easy as:</h3>
 <pre><code class="language-clike">
 // Let's make a mux/stitched handler for cam1 and cam2 and its debugs
     QuadVideo quadVideo( "quadcammux", PIX_FMT_YUV420P, 640, 480, FrameRate( 1, 10 ), 2, 2 );
@@ -55,9 +55,8 @@
     app.run();
 </code></pre>
 
-<h2>Holy Batman!</h2>
 
-And you'd write a super simple HTML file to access all of this which looks like this:
+<h2>And you'd write a super simple HTML file to access all of this which looks like this:</h2>
 <br/>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/Ic2HXUjxRnU" frameborder="0" allowfullscreen></iframe>
 
@@ -70,6 +69,8 @@ to watch live motion detection highlighting on that camera, or,
 <pre><code>img src="ttp://192.168.1.224:9292/debug/quadcammux" </code> </pre>
 to render a 4x4 stiched image of 2 camera feeds and their differential frame analysis LIVE?
 
+<h2>Holy Batman!</h2>
+Yeah, we agree.
 
 </div>
     
