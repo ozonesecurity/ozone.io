@@ -16,10 +16,10 @@
 <area shape="rect" id="node22" href="$class_image_convert.html" title="ImageConvert" alt="" coords="484,664,588,691"/>
 <area shape="rect" id="node23" href="$class_image_timestamper.html" title="ImageTimestamper" alt="" coords="469,715,603,741"/>
 <area shape="rect" id="node24" href="$class_local_file_output.html" title="LocalFileOutput" alt="" coords="479,259,593,285"/>
-<area shape="rect" id="node25" href="$class_memory_output.html" title="MemoryOutput" alt="" coords="482,309,590,336"/>
-<area shape="rect" id="node26" href="$class_motion_detector.html" title="MotionDetector" alt="" coords="481,765,591,792"/>
-<area shape="rect" id="node27" href="$class_movie_file_output.html" title="MovieFileOutput" alt="" coords="477,360,595,387"/>
-<area shape="rect" id="node28" href="$class_quad_video.html" title="QuadVideo" alt="" coords="493,816,579,843"/>
+<area shape="rect" id="node25" href="$class_matrix_video.html" title="MatrixVideo" alt="" coords="491,765,581,792"/>
+<area shape="rect" id="node26" href="$class_memory_output.html" title="MemoryOutput" alt="" coords="482,309,590,336"/>
+<area shape="rect" id="node27" href="$class_motion_detector.html" title="MotionDetector" alt="" coords="481,816,591,843"/>
+<area shape="rect" id="node28" href="$class_movie_file_output.html" title="MovieFileOutput" alt="" coords="477,360,595,387"/>
 <area shape="rect" id="node29" href="$class_queued_video_filter.html" title="QueuedVideoFilter" alt="" coords="471,867,601,893"/>
 <area shape="rect" id="node30" href="$class_rate_limiter.html" title="RateLimiter" alt="" coords="491,411,581,437"/>
 <area shape="rect" id="node31" href="$class_signal_checker.html" title="SignalChecker" alt="" coords="483,563,589,589"/>

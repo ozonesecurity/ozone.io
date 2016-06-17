@@ -1,6 +1,6 @@
 <map id="FeedConsumer::registerProvider" name="FeedConsumer::registerProvider">
 <area shape="rect" id="node2" href="$class_feed_provider.html#a4c7c45fb518c4d5469ac43649fe09c1b" title="FeedProvider::registerConsumer" alt="" coords="264,31,475,57"/>
-<area shape="rect" id="node5" href="$class_quad_video.html#ae14e9c547206482020988cc1dfe421b9" title="QuadVideo::registerProvider" alt="" coords="277,81,462,108"/>
+<area shape="rect" id="node5" href="$class_matrix_video.html#a01548f373c715be48779b7568047476d" title="MatrixVideo::registerProvider" alt="" coords="274,81,465,108"/>
 <area shape="rect" id="node6" href="$class_http_image_stream.html#a30d396eaae0715bf5db81777e1e0449b" title="HttpImageStream::HttpImage\lStream" alt="" coords="272,133,467,174"/>
 <area shape="rect" id="node7" href="$class_http_data_stream.html#a78e003682475c44cdf03af97a1d26436" title="HttpDataStream::HttpData\lStream" alt="" coords="280,198,459,239"/>
 <area shape="rect" id="node8" href="$class_rtsp_connection.html#a8864466b9ec035a67c9973fa4d0aa126" title="RtspConnection::handleRequest" alt="" coords="264,264,475,291"/>

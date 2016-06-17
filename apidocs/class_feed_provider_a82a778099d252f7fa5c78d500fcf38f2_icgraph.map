@@ -1,4 +1,4 @@
 <map id="FeedProvider::pollFrame" name="FeedProvider::pollFrame">
-<area shape="rect" id="node2" href="$class_quad_video.html#a82407168ee00d3c18c5baf625dc96ea0" title="QuadVideo::run" alt="" coords="219,5,331,32"/>
-<area shape="rect" id="node3" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="217,56,332,83"/>
+<area shape="rect" id="node2" href="$class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca" title="MatrixVideo::run" alt="" coords="217,5,335,32"/>
+<area shape="rect" id="node3" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="219,56,333,83"/>
 </map>

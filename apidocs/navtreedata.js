@@ -25,7 +25,7 @@ var NAVTREEINDEX =
 "class_comms_base.html#a612c9a9c20884bbcf33bc4983aa4edbf",
 "class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1",
 "class_image.html#a56759e2557792a6359888acb1615f7a5",
-"class_memory_i_o_v1.html#a118e70672c5535317e06a27f398ccb8ea37db6b06f4387d30856beb45a97534d4",
+"class_memory_i_o.html#ac8a7350a2ff99d17ed237cbea60e6e98",
 "class_raw_h264_input.html#a1cea304e7e60c0f70d0d4b783f08e971",
 "class_slave_video.html#ad386842523025e7f1286264ffcf6bcc6",
 "class_udp_unix_client.html#a95fdcb57a5f802001cd8035059e9c1b6",

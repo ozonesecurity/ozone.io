@@ -9,6 +9,7 @@ var searchData=
   ['mapuserassocs',['mapUserAssocs',['../class_config_1_1_values.html#a6686db716fb8359f8c301cf2f9457361',1,'Config::Values']]],
   ['mapusers',['mapUsers',['../class_config_1_1_values.html#ad5f580f33d1e00a56d2217647d61c32d',1,'Config::Values']]],
   ['mask',['Mask',['../class_mask.html',1,'']]],
+  ['matrixvideo',['MatrixVideo',['../class_matrix_video.html',1,'MatrixVideo'],['../class_matrix_video.html#a15b74236fa8f8bfd265302b109cdbc31',1,'MatrixVideo::MatrixVideo()']]],
   ['maudioparms',['mAudioParms',['../class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759',1,'MovieFileOutput::mAudioParms()'],['../class_mp4_file_output.html#a8da78a74258d04a566a7b79dd04704e5',1,'Mp4FileOutput::mAudioParms()']]],
   ['maudioprovider',['mAudioProvider',['../class_audio_frame.html#a73c65a64104e51121e65478e9dfa4ba2',1,'AudioFrame']]],
   ['max_5fevent_5fhead_5fage',['MAX_EVENT_HEAD_AGE',['../class_event_recorder.html#a17665b636bfb6e5f7ee0c9fb24ae98a0',1,'EventRecorder']]],

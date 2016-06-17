@@ -13,8 +13,8 @@
 <area shape="rect" id="node13" href="$class_filter_swap_u_v.html#a8f2ada0785b3dc45f7f9c01862188953" title="FilterSwapUV::run" alt="" coords="278,563,407,589"/>
 <area shape="rect" id="node14" href="$class_image_convert.html#ab1eda5b14ac0ae1f07cad4230dc90fc2" title="ImageConvert::run" alt="" coords="277,613,408,640"/>
 <area shape="rect" id="node15" href="$class_image_timestamper.html#aa36263a77e76737f883c4a868eeddeaf" title="ImageTimestamper::run" alt="" coords="263,664,423,691"/>
-<area shape="rect" id="node16" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="274,715,411,741"/>
-<area shape="rect" id="node17" href="$class_quad_video.html#a82407168ee00d3c18c5baf625dc96ea0" title="QuadVideo::run" alt="" coords="287,765,399,792"/>
+<area shape="rect" id="node16" href="$class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca" title="MatrixVideo::run" alt="" coords="284,715,401,741"/>
+<area shape="rect" id="node17" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="274,765,411,792"/>
 <area shape="rect" id="node18" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="285,816,400,843"/>
 <area shape="rect" id="node19" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="276,867,409,893"/>
 <area shape="rect" id="node20" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="265,917,420,944"/>

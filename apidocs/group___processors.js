@@ -37,6 +37,17 @@ var group___processors =
       [ "timestampImage", "class_image_timestamper.html#a87b0016cf59e9370f3fed0da2207e73e", null ],
       [ "width", "class_image_timestamper.html#ae31c833e2e29ace3c44e4d53035c4ff2", null ]
     ] ],
+    [ "MatrixVideo", "class_matrix_video.html", [
+      [ "MatrixVideo", "class_matrix_video.html#a15b74236fa8f8bfd265302b109cdbc31", null ],
+      [ "~MatrixVideo", "class_matrix_video.html#a0d404cb3d3ca005d5f7199aba9da8cbe", null ],
+      [ "deregisterProvider", "class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b", null ],
+      [ "frameRate", "class_matrix_video.html#ab14935b64e85f00720da6e1a5ea5f6d6", null ],
+      [ "height", "class_matrix_video.html#a750fda7d5d7b6d8298d81ca479be3a24", null ],
+      [ "pixelFormat", "class_matrix_video.html#a495a1a5269100147914885c3799666a1", null ],
+      [ "registerProvider", "class_matrix_video.html#a01548f373c715be48779b7568047476d", null ],
+      [ "run", "class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca", null ],
+      [ "width", "class_matrix_video.html#a294827189bea6abba1f837eed1d34547", null ]
+    ] ],
     [ "MotionDetector", "class_motion_detector.html", [
       [ "MotionDetector", "class_motion_detector.html#a1824001d9fbac38f7a736f071e52d08e", null ],
       [ "~MotionDetector", "class_motion_detector.html#af191d9f7658236de50fdb9c8b9cc66dd", null ],
@@ -53,17 +64,6 @@ var group___processors =
       [ "run", "class_motion_detector.html#af0b59147c5ec1c704e2389a415657588", null ],
       [ "varImageSlave", "class_motion_detector.html#a572eac81c27b5b7f7c90b195dc7297a6", null ],
       [ "width", "class_motion_detector.html#a4441ab384634ee0f098644c9108fcede", null ]
-    ] ],
-    [ "QuadVideo", "class_quad_video.html", [
-      [ "QuadVideo", "class_quad_video.html#acd0e821ee36e5fc4df343520061cab32", null ],
-      [ "~QuadVideo", "class_quad_video.html#af5efc506cd739cbc024bcb524ee266f6", null ],
-      [ "deregisterProvider", "class_quad_video.html#a1e50ad091c386023aad8e6a6f9ec33a0", null ],
-      [ "frameRate", "class_quad_video.html#a70b2695ecbb7325b1a723d7525557a39", null ],
-      [ "height", "class_quad_video.html#a3778f192c20e3dde00db2ace22bfb604", null ],
-      [ "pixelFormat", "class_quad_video.html#a6744f81f7abf9cdb361ace198e45864e", null ],
-      [ "registerProvider", "class_quad_video.html#ae14e9c547206482020988cc1dfe421b9", null ],
-      [ "run", "class_quad_video.html#a82407168ee00d3c18c5baf625dc96ea0", null ],
-      [ "width", "class_quad_video.html#a5493d1c9164b41782b04dccd60c9c176", null ]
     ] ],
     [ "RateLimiter", "class_rate_limiter.html", [
       [ "RateLimiter", "class_rate_limiter.html#a1e27f1645fdc6ffe8ef1f2012b294419", null ],
