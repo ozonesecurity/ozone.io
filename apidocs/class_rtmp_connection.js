@@ -1,7 +1,5 @@
 var class_rtmp_connection =
 [
-    [ "CS1", "struct_rtmp_connection_1_1_c_s1.html", "struct_rtmp_connection_1_1_c_s1" ],
-    [ "CS2", "struct_rtmp_connection_1_1_c_s2.html", "struct_rtmp_connection_1_1_c_s2" ],
     [ "RtmpConnection", "class_rtmp_connection.html#a7c2dbf61f7f5e6c3b3d75946db8239fc", null ],
     [ "~RtmpConnection", "class_rtmp_connection.html#a5c71bb984e13a7cb46c4da57391315b7", null ],
     [ "__attribute__", "class_rtmp_connection.html#a9eb8320235852af0f65ef4fd456c9079", null ],

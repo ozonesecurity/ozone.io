@@ -1,19 +1,19 @@
 var class_amf3_record =
 [
-    [ "Amf3DataType", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442", [
-      [ "UNDEFINED_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442abc07cbaaa55f7197ff2485bff36a5773", null ],
-      [ "NULL_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a1837422a2227501bebbee22047e49a01", null ],
-      [ "FALSE_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a0e8bb4e6a3dfe10eed5e2041223a5059", null ],
-      [ "TRUE_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a2612c974b4f68fb76ee0e2a9d3df1de4", null ],
-      [ "INTEGER_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a2e9ccbe4d1cf49e1986e52f32f70aa9a", null ],
-      [ "DOUBLE_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a5c054877e06a1888350e5ebbbda58798", null ],
-      [ "STRING_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a24e75d3e90b4a23cc7152412910f3034", null ],
-      [ "XML_DOC_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442acaade8da81fb0156b6d19ac04cd32260", null ],
-      [ "DATE_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442afea1883a50defd726df63e172f1d7922", null ],
-      [ "ARRAY_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442ac08ab0b578e310913bed70c1f16ce266", null ],
-      [ "OBJECT_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442ac86110aff888d2f21cb1fbc8994ed13c", null ],
-      [ "XML_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a9625277a4757e639ab156e4e22cc75b3", null ],
-      [ "BYTE_ARRAY_MARKER", "class_amf3_record.html#a73c66d6c62e16b8b9cfb77358839a442a6ba58cbf437125aa0f0df0d76251d44b", null ]
+    [ "Amf3DataType", "group___protocols.html#ga73c66d6c62e16b8b9cfb77358839a442", [
+      [ "UNDEFINED_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442abc07cbaaa55f7197ff2485bff36a5773", null ],
+      [ "NULL_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a1837422a2227501bebbee22047e49a01", null ],
+      [ "FALSE_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a0e8bb4e6a3dfe10eed5e2041223a5059", null ],
+      [ "TRUE_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a2612c974b4f68fb76ee0e2a9d3df1de4", null ],
+      [ "INTEGER_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a2e9ccbe4d1cf49e1986e52f32f70aa9a", null ],
+      [ "DOUBLE_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a5c054877e06a1888350e5ebbbda58798", null ],
+      [ "STRING_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a24e75d3e90b4a23cc7152412910f3034", null ],
+      [ "XML_DOC_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442acaade8da81fb0156b6d19ac04cd32260", null ],
+      [ "DATE_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442afea1883a50defd726df63e172f1d7922", null ],
+      [ "ARRAY_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442ac08ab0b578e310913bed70c1f16ce266", null ],
+      [ "OBJECT_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442ac86110aff888d2f21cb1fbc8994ed13c", null ],
+      [ "XML_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a9625277a4757e639ab156e4e22cc75b3", null ],
+      [ "BYTE_ARRAY_MARKER", "group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442a6ba58cbf437125aa0f0df0d76251d44b", null ]
     ] ],
     [ "Amf3Record", "class_amf3_record.html#a066ecf9e26e9af3f8a8eeeaa36d3085b", null ],
     [ "Amf3Record", "class_amf3_record.html#af7ddee3770cd5fde32c4f0015b756ce6", null ],

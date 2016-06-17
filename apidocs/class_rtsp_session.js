@@ -1,9 +1,9 @@
 var class_rtsp_session =
 [
-    [ "State", "class_rtsp_session.html#a9527bf5a383d9422c75507eb9a6d3c7d", [
-      [ "INIT", "class_rtsp_session.html#a9527bf5a383d9422c75507eb9a6d3c7da158ae65d335e687394d8c8533302fc33", null ],
-      [ "READY", "class_rtsp_session.html#a9527bf5a383d9422c75507eb9a6d3c7daf251ae4b425ebde2560875ed3ed9d944", null ],
-      [ "PLAYING", "class_rtsp_session.html#a9527bf5a383d9422c75507eb9a6d3c7dac69d1eb16dc2f661cf73465125c2a8e4", null ]
+    [ "State", "group___protocols.html#ga9527bf5a383d9422c75507eb9a6d3c7d", [
+      [ "INIT", "group___protocols.html#gga9527bf5a383d9422c75507eb9a6d3c7da158ae65d335e687394d8c8533302fc33", null ],
+      [ "READY", "group___protocols.html#gga9527bf5a383d9422c75507eb9a6d3c7daf251ae4b425ebde2560875ed3ed9d944", null ],
+      [ "PLAYING", "group___protocols.html#gga9527bf5a383d9422c75507eb9a6d3c7dac69d1eb16dc2f661cf73465125c2a8e4", null ]
     ] ],
     [ "RtspSession", "class_rtsp_session.html#a49510e8d258ecfda31d29bf366916d1a", null ],
     [ "~RtspSession", "class_rtsp_session.html#a7c8d43295f8c983a07790ae6b2ee9241", null ],

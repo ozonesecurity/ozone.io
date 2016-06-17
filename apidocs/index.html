@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>oZone Server Framework: Main Page</title>
+<title>oZone Server Framework: Welcome to the oZone Server documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -99,15 +100,46 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">oZone Server Framework Documentation</div>  </div>
+<div class="title">Welcome to the oZone Server documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>At a high level, the oZone server framework is distributed into the following key components:<br />
+</p>
+<ul>
+<li>
+<a class="el" href="group___providers.html">Providers</a> </li>
+<li>
+<a class="el" href="group___consumers.html">Consumers</a> </li>
+<li>
+<a class="el" href="group___processors.html">Processors</a> </li>
+</ul>
+<p>Providers are components that generate frames (such as IP cameras (<a class="el" href="class_network_a_v_input.html">NetworkAVInput</a>, <a class="el" href="class_raw_h264_input.html">RawH264Input</a>), movie files (<a class="el" href="class_local_video_input.html">LocalVideoInput</a>) etc)</p>
+<p>Consumers are components that consume those frames and do something with it (example convert Provider frames to a movie file)</p>
+<p>Processors are components that both "consume" frames from a Provider and "provide" processed frames to other consumers or processors. For example, <a class="el" href="class_motion_detector.html">MotionDetector</a> is a Processor that consumes frames from say a video camera provider, performs motion detection on frames and outputs only frames with motion in them for others to connect to (such as <a class="el" href="class_event_recorder.html">EventRecorder</a>)</p>
+<p>In addition to the core components above, there are other components that form an integral part in connecting the dots:</p>
+<ul>
+<li>
+<a class="el" href="class_controller.html">Controller</a> – A controller is required to handle requests for a particular protocol, e.g. HTTPController, <a class="el" href="class_rtsp_controller.html">RtspController</a>. Controllers register with the listener to allow it to route requests appropriately. </li>
+<li>
+<a class="el" href="group___protocols.html">Protocols</a> – A protocol is required to handle the low level communication for a controller. </li>
+<li>
+Session – A protocol may need a session component to manage persistence for a connection or other session based behaviour. </li>
+<li>
+<a class="el" href="class_stream.html">Stream</a> – A provider can add a stream to a controller to make specific video or audio frames available over the network. </li>
+<li>
+<a class="el" href="class_listener.html">Listener</a> – This is a general component that is required to handle any incoming network connection. </li>
+</ul>
+<p>At a high level, a visual layout of how these components interact is shown below: <br />
+ </p><div class="image">
+<img src="../public/images/ozone-mainpage-class-ref.png"  width="400px"/>
+</div>
+ <p>Please browse the <a href="modules.html">modules</a> category on the sidebar to read more about the various classes </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jun 13 2016 11:11:39 for oZone Server Framework by
+    <li class="footer">Generated on Fri Jun 17 2016 11:00:46 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

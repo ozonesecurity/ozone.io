@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -107,36 +108,38 @@ $(document).ready(function(){initNavTree('zm_memory_output_8h_source.html','');}
 <div class="title">zmMemoryOutput.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ZM_MEMORY_OUTPUT_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ZM_MEMORY_OUTPUT_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../base/zmFeedConsumer.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../base/zmMemoryIO.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../libgen/libgenThread.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_image.html">Image</a>;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef ZM_MEMORY_OUTPUT_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define ZM_MEMORY_OUTPUT_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../base/zmFeedConsumer.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../base/zmMemoryIO.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../libgen/libgenThread.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_memory_output.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_memory_output.html">MemoryOutput</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_memory_i_o.html">MemoryIO</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;CLASSID(<a class="code" href="class_memory_output.html">MemoryOutput</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    uint64_t            mImageCount;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_memory_output.html#ad78a4a552afecace71b15cb3c248d206">run</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb">storeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_memory_output.html#ab30a2b2d0527b7aa609ef6118fcd05b3">MemoryOutput</a>( <span class="keyword">const</span> std::string &amp;<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <span class="keyword">const</span> std::string &amp;location, <span class="keywordtype">int</span> memoryKey );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="class_memory_output.html">MemoryOutput</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // ZM_MEMORY_OUTPUT_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="class_image.html">Image</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_memory_output.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_memory_output.html">MemoryOutput</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_memory_i_o.html">MemoryIO</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;CLASSID(<a class="code" href="class_memory_output.html">MemoryOutput</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    uint64_t            mImageCount;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_memory_output.html#ad78a4a552afecace71b15cb3c248d206">run</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb">storeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_memory_output.html#ab30a2b2d0527b7aa609ef6118fcd05b3">MemoryOutput</a>( <span class="keyword">const</span> std::string &amp;<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <span class="keyword">const</span> std::string &amp;location, <span class="keywordtype">int</span> memoryKey );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="class_memory_output.html">MemoryOutput</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // ZM_MEMORY_OUTPUT_H</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="ttc" id="class_memory_output_html_aa2a0a962daba743c700cf2553e8400eb"><div class="ttname"><a href="class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb">MemoryOutput::storeFrame</a></div><div class="ttdeci">bool storeFrame(FramePtr frame)</div><div class="ttdef"><b>Definition:</b> zmMemoryOutput.cpp:85</div></div>
 <div class="ttc" id="class_memory_i_o_html"><div class="ttname"><a href="class_memory_i_o.html">MemoryIO</a></div><div class="ttdef"><b>Definition:</b> zmMemoryIO.h:8</div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
-<div class="ttc" id="class_memory_output_html"><div class="ttname"><a href="class_memory_output.html">MemoryOutput</a></div><div class="ttdef"><b>Definition:</b> zmMemoryOutput.h:16</div></div>
+<div class="ttc" id="class_memory_output_html"><div class="ttname"><a href="class_memory_output.html">MemoryOutput</a></div><div class="ttdef"><b>Definition:</b> zmMemoryOutput.h:18</div></div>
 <div class="ttc" id="class_memory_output_html_ad78a4a552afecace71b15cb3c248d206"><div class="ttname"><a href="class_memory_output.html#ad78a4a552afecace71b15cb3c248d206">MemoryOutput::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> zmMemoryOutput.cpp:48</div></div>
 <div class="ttc" id="class_memory_output_html_ab30a2b2d0527b7aa609ef6118fcd05b3"><div class="ttname"><a href="class_memory_output.html#ab30a2b2d0527b7aa609ef6118fcd05b3">MemoryOutput::MemoryOutput</a></div><div class="ttdeci">MemoryOutput(const std::string &amp;name, const std::string &amp;location, int memoryKey)</div><div class="ttdef"><b>Definition:</b> zmMemoryOutput.cpp:28</div></div>
 <div class="ttc" id="class_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> libimgImage.h:167</div></div>
@@ -149,7 +152,7 @@ $(document).ready(function(){initNavTree('zm_memory_output_8h_source.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>zmMemoryOutput.h</b></li>
-    <li class="footer">Generated on Mon Jun 13 2016 11:11:38 for oZone Server Framework by
+    <li class="footer">Generated on Fri Jun 17 2016 11:00:44 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

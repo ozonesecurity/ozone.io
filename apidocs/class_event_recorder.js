@@ -1,11 +1,11 @@
 var class_event_recorder =
 [
     [ "FrameStore", "class_event_recorder.html#ab1c4564fe04d2c0db5d8f8893e4f493a", null ],
-    [ "AlarmState", "class_event_recorder.html#aa349dfe2b4bf86754252a909f689623d", [
-      [ "IDLE", "class_event_recorder.html#aa349dfe2b4bf86754252a909f689623daaccc30869e541454774c2a4ad4c45117", null ],
-      [ "PREALARM", "class_event_recorder.html#aa349dfe2b4bf86754252a909f689623da48a8c7ffb18ac7660ab76a08ec21331f", null ],
-      [ "ALARM", "class_event_recorder.html#aa349dfe2b4bf86754252a909f689623daefdf19e3502b0bf6fcba46049dd99e5b", null ],
-      [ "ALERT", "class_event_recorder.html#aa349dfe2b4bf86754252a909f689623da18c3fdae244c3b678f83f286ec0bdfef", null ]
+    [ "AlarmState", "group___consumers.html#gaa349dfe2b4bf86754252a909f689623d", [
+      [ "IDLE", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623daaccc30869e541454774c2a4ad4c45117", null ],
+      [ "PREALARM", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623da48a8c7ffb18ac7660ab76a08ec21331f", null ],
+      [ "ALARM", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623daefdf19e3502b0bf6fcba46049dd99e5b", null ],
+      [ "ALERT", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623da18c3fdae244c3b678f83f286ec0bdfef", null ]
     ] ],
     [ "EventRecorder", "class_event_recorder.html#a571aff610809bce64c3d5c9aff8f1d10", null ],
     [ "~EventRecorder", "class_event_recorder.html#a54c194d6913c8d12ba30c76dd4d9d369", null ],

@@ -22,6 +22,7 @@ var searchData=
   ['configregistration',['ConfigRegistration',['../class_config_registration.html',1,'']]],
   ['connect',['connect',['../class_socket.html#af1373ffc9218769faed0340b52b842de',1,'Socket']]],
   ['connection',['Connection',['../class_connection.html',1,'']]],
+  ['consumers',['Consumers',['../group___consumers.html',1,'']]],
   ['controller',['Controller',['../class_controller.html',1,'']]],
   ['convert',['convert',['../class_image.html#a65729ebb7aa3dc01f2c50788fc2fb037',1,'Image']]],
   ['coord',['Coord',['../class_coord.html',1,'']]],

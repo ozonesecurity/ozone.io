@@ -1,9 +1,9 @@
 var class_rtp_session =
 [
-    [ "FrameState", "class_rtp_session.html#a3766eb07ef66963bd933311945363197", [
-      [ "EMPTY", "class_rtp_session.html#a3766eb07ef66963bd933311945363197a607f5e279fe17bd2ddfe188d221ca3c9", null ],
-      [ "FILLING", "class_rtp_session.html#a3766eb07ef66963bd933311945363197a1b8d2a5594c5956703cd49bf5ca0de89", null ],
-      [ "READY", "class_rtp_session.html#a3766eb07ef66963bd933311945363197acc6a97462a0524ff42a5eb6b6338c8c8", null ]
+    [ "FrameState", "group___protocols.html#ga3766eb07ef66963bd933311945363197", [
+      [ "EMPTY", "group___protocols.html#gga3766eb07ef66963bd933311945363197a607f5e279fe17bd2ddfe188d221ca3c9", null ],
+      [ "FILLING", "group___protocols.html#gga3766eb07ef66963bd933311945363197a1b8d2a5594c5956703cd49bf5ca0de89", null ],
+      [ "READY", "group___protocols.html#gga3766eb07ef66963bd933311945363197acc6a97462a0524ff42a5eb6b6338c8c8", null ]
     ] ],
     [ "RtpSession", "class_rtp_session.html#afcfcb84bb231318c9ccac0a8ede3413b", null ],
     [ "expectedPackets", "class_rtp_session.html#a30e1aa04ef99033ff1ef8c9bc6d8d589", null ],
