@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "oZone Server Framework", "index.html", [
-    [ "Welcome to the oZone Server documentation", "index.html", null ],
+    [ "Welcome", "index.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
