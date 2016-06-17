@@ -30,7 +30,7 @@ var NAVTREEINDEX =
 "class_slave_video.html#ad386842523025e7f1286264ffcf6bcc6",
 "class_udp_unix_client.html#a95fdcb57a5f802001cd8035059e9c1b6",
 "group___protocols.html#gga797683e1085dd5c8583c59ac8faa94d8ab176fda5fd92964649b0eb004a4f8778",
-"structmem__destination__mgr.html"
+"struct_memory_i_o_v1_1_1_trigger_data.html#ab908acf5c80c718845096561bf39ace2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

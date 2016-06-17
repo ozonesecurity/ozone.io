@@ -9,5 +9,5 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "protocols", "dir_79690749eba542503bb1a9a3dbb495e1.html", "dir_79690749eba542503bb1a9a3dbb495e1" ],
     [ "providers", "dir_306d1f7c2316132a5a1b654ae206deb5.html", "dir_306d1f7c2316132a5a1b654ae206deb5" ],
     [ "doxy.h", "doxy_8h_source.html", null ],
-    [ "zmConfigDefines.h", "zm_config_defines_8h_source.html", null ]
+    [ "ozConfigDefines.h", "oz_config_defines_8h_source.html", null ]
 ];
