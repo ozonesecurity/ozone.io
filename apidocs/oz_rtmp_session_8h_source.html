@@ -111,36 +111,36 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef ZM_RTMP_SESSION_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ZM_RTMP_SESSION_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef OZ_RTMP_SESSION_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define OZ_RTMP_SESSION_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../base/ozConnection.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ZM_RTMP_CSID_LOW_LEVEL             2</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ZM_RTMP_CSID_HIGH_LEVEL            3</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define ZM_RTMP_CSID_CONTROL               4</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define ZM_RTMP_CSID_VIDEO                 8</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define ZM_RTMP_CSID_AUDIO                 9</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define OZ_RTMP_CSID_LOW_LEVEL             2</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define OZ_RTMP_CSID_HIGH_LEVEL            3</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define OZ_RTMP_CSID_CONTROL               4</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define OZ_RTMP_CSID_VIDEO                 8</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define OZ_RTMP_CSID_AUDIO                 9</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_SET_CHUNK_SIZE        1</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_ABORT_MESSAGE         2</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_ACK                   3</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_USER_CTRL_MESSAGE     4</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_WINDOW_ACK_SIZE       5</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_SET_PEER_BANDWIDTH    6</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_SET_CHUNK_SIZE        1</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_ABORT_MESSAGE         2</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_ACK                   3</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_USER_CTRL_MESSAGE     4</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_WINDOW_ACK_SIZE       5</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_SET_PEER_BANDWIDTH    6</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_AUDIO                 8</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_VIDEO                 9</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_AUDIO                 8</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_VIDEO                 9</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_DATA_AMF3             15</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_SHOBJ_AMF3            16</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_CMD_AMF3              17</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_DATA_AMF0             18</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_SHOBJ_AMF0            19</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_CMD_AMF0              20</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define ZM_RTMP_TYPE_AGGREGATE             22</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_DATA_AMF3             15</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_SHOBJ_AMF3            16</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_CMD_AMF3              17</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_DATA_AMF0             18</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_SHOBJ_AMF0            19</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_CMD_AMF0              20</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define OZ_RTMP_TYPE_AGGREGATE             22</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define RTCP_CMD_SUPPORT_SND_NONE       0x0001</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define RTCP_CMD_SUPPORT_SND_ADPCM      0x0002</span></div>
@@ -156,8 +156,8 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define RTCP_CMD_SUPPORT_VID_CLIENT_SEEK    1</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define ZM_RTMP_CMD_OBJ_ENCODING_AMF0      0</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define ZM_RTMP_CMD_OBJ_ENCODING_AMF3      3</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define OZ_RTMP_CMD_OBJ_ENCODING_AMF0      0</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define OZ_RTMP_CMD_OBJ_ENCODING_AMF3      3</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_rtmp_message_header.html">   54</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_rtmp_message_header.html">RtmpMessageHeader</a></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
@@ -189,13 +189,13 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//RtmpMessageHeader   header;</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    uint16_t            eventType __attribute__ ((packed));</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_STREAM_BEGIN         0</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_STREAM_EOF           1</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_STREAM_DRY           2</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_SET_BUFFER_LENGTH    3</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_STREAM_IS_RECORDED   4</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_PING_REQUEST         6</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define ZM_RTMP_UCM_EVENT_PING_RESPONSE        7</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_STREAM_BEGIN         0</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_STREAM_EOF           1</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_STREAM_DRY           2</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_SET_BUFFER_LENGTH    3</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_STREAM_IS_RECORDED   4</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_PING_REQUEST         6</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define OZ_RTMP_UCM_EVENT_PING_RESPONSE        7</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint8_t             eventData[];</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
@@ -209,9 +209,9 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//RtmpMessageHeader   header;</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    uint32_t             ackWindowSize __attribute__ ((packed));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define ZM_RTMP_LIMIT_TYPE_HARD    0</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define ZM_RTMP_LIMIT_TYPE_SOFT    1</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define ZM_RTMP_LIMIT_TYPE_DYNAMIC 2</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#define OZ_RTMP_LIMIT_TYPE_HARD    0</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#define OZ_RTMP_LIMIT_TYPE_SOFT    1</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#define OZ_RTMP_LIMIT_TYPE_DYNAMIC 2</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    uint8_t              limitType;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">bool</span> handleRequest( uint32_t chunkStreamId, <a class="code" href="class_rtmp_request.html">RtmpRequest</a> &amp;request, <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;response );</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;};</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#endif // ZM_RTMP_SESSION_H</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#endif // OZ_RTMP_SESSION_H</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
 <div class="ttc" id="struct_rtmp_user_control_payload_html"><div class="ttname"><a href="struct_rtmp_user_control_payload.html">RtmpUserControlPayload</a></div><div class="ttdef"><b>Definition:</b> ozRtmpSession.h:80</div></div>
@@ -281,7 +281,7 @@ $(document).ready(function(){initNavTree('oz_rtmp_session_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_79690749eba542503bb1a9a3dbb495e1.html">protocols</a></li><li class="navelem"><b>ozRtmpSession.h</b></li>
-    <li class="footer">Generated on Fri Jun 17 2016 16:52:27 for oZone Server Framework by
+    <li class="footer">Generated on Fri Jun 17 2016 18:50:46 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

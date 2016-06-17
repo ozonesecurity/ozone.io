@@ -111,8 +111,8 @@ $(document).ready(function(){initNavTree('oz_rtp_ctrl_8h_source.html','');});
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef ZM_RTP_CTRL_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define ZM_RTP_CTRL_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef OZ_RTP_CTRL_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define OZ_RTP_CTRL_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../base/ozStream.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../libgen/libgenThread.h&quot;</span></div>
@@ -125,11 +125,11 @@ $(document).ready(function(){initNavTree('oz_rtp_ctrl_8h_source.html','');});
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_rtp_session.html">RtpSession</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Defined in ffmpeg rtp.h</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//#define ZM_RTP_MAX_SDES 255      // maximum text length for SDES</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//#define OZ_RTP_MAX_SDES 255      // maximum text length for SDES</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Big-endian mask for version, padding bit and packet type pair</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define RTCP_VALID_MASK (0xc000 | 0x2000 | 0xfe)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define RTCP_VALID_VALUE ((ZM_RTP_VERSION &lt;&lt; 14) | RTCP_SR)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define RTCP_VALID_VALUE ((OZ_RTP_VERSION &lt;&lt; 14) | RTCP_SR)</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_rtp_ctrl_manager.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rtp_ctrl_manager.html">RtpCtrlManager</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
@@ -249,7 +249,7 @@ $(document).ready(function(){initNavTree('oz_rtp_ctrl_8h_source.html','');});
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_rtp_ctrl_manager.html#ac7e9ed4c03d4d6279cda4046970f0f2f">recvPackets</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buffer, ssize_t nBytes );</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;};</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif // ZM_RTP_CTRL_H</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">#endif // OZ_RTP_CTRL_H</span></div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
 <div class="ttc" id="class_rtp_ctrl_manager_html_a830accf197466adb33612c0c4410bfde"><div class="ttname"><a href="class_rtp_ctrl_manager.html#a830accf197466adb33612c0c4410bfde">RtpCtrlManager::generateRr</a></div><div class="ttdeci">int generateRr(const unsigned char *packet, ssize_t packetLen)</div><div class="ttdef"><b>Definition:</b> ozRtpCtrl.cpp:176</div></div>
@@ -269,7 +269,7 @@ $(document).ready(function(){initNavTree('oz_rtp_ctrl_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_79690749eba542503bb1a9a3dbb495e1.html">protocols</a></li><li class="navelem"><b>ozRtpCtrl.h</b></li>
-    <li class="footer">Generated on Fri Jun 17 2016 16:52:27 for oZone Server Framework by
+    <li class="footer">Generated on Fri Jun 17 2016 18:50:46 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

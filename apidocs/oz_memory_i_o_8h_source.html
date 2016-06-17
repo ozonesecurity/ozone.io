@@ -108,8 +108,8 @@ $(document).ready(function(){initNavTree('oz_memory_i_o_8h_source.html','');});
 <div class="title">ozMemoryIO.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ZM_MEMORY_IO_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ZM_MEMORY_IO_H</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OZ_MEMORY_IO_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OZ_MEMORY_IO_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;ozFfmpeg.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
@@ -141,12 +141,12 @@ $(document).ready(function(){initNavTree('oz_memory_i_o_8h_source.html','');});
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_image.html">Image</a>       *image;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if ZM_MEM_MAPPED</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if OZ_MEM_MAPPED</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span>             mMapFd;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">char</span>            mMemFile[PATH_MAX];</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#else // ZM_MEM_MAPPED</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#else // OZ_MEM_MAPPED</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span>             mShmId;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // ZM_MEM_MAPPED</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif // OZ_MEM_MAPPED</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span>             mMemSize;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>   *mMemPtr;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('oz_memory_i_o_8h_source.html','');});
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="class_memory_i_o.html">MemoryIO</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // ZM_MEMORY_IO_H</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // OZ_MEMORY_IO_H</span></div>
 <div class="ttc" id="class_memory_i_o_html"><div class="ttname"><a href="class_memory_i_o.html">MemoryIO</a></div><div class="ttdef"><b>Definition:</b> ozMemoryIO.h:8</div></div>
 <div class="ttc" id="class_memory_i_o_html_ac8a7350a2ff99d17ed237cbea60e6e98"><div class="ttname"><a href="class_memory_i_o.html#ac8a7350a2ff99d17ed237cbea60e6e98">MemoryIO::MemoryIO</a></div><div class="ttdeci">MemoryIO(const std::string &amp;location, int id, bool owner)</div><div class="ttdef"><b>Definition:</b> ozMemoryIO.cpp:24</div></div>
 <div class="ttc" id="struct_memory_i_o_1_1_shared_data_html"><div class="ttname"><a href="struct_memory_i_o_1_1_shared_data.html">MemoryIO::SharedData</a></div><div class="ttdef"><b>Definition:</b> ozMemoryIO.h:15</div></div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('oz_memory_i_o_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozMemoryIO.h</b></li>
-    <li class="footer">Generated on Fri Jun 17 2016 16:52:27 for oZone Server Framework by
+    <li class="footer">Generated on Fri Jun 17 2016 18:50:46 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
