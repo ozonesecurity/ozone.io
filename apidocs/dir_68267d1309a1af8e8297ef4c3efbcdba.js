@@ -3,6 +3,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "base", "dir_0af1587c8378955de40f48b4bd1869f0.html", "dir_0af1587c8378955de40f48b4bd1869f0" ],
     [ "consumers", "dir_7d36de6d9921a6ab7cb445011e2e89e9.html", "dir_7d36de6d9921a6ab7cb445011e2e89e9" ],
     [ "encoders", "dir_18e91fceada5d197dcb7aec06d99f041.html", "dir_18e91fceada5d197dcb7aec06d99f041" ],
+    [ "examples", "dir_e931c1a3f0014e624d0645a271726ad2.html", "dir_e931c1a3f0014e624d0645a271726ad2" ],
     [ "libgen", "dir_5a887c48e4658a59483992ab6c219613.html", "dir_5a887c48e4658a59483992ab6c219613" ],
     [ "libimg", "dir_832dcc2fd9c5142824e420d8d124316e.html", "dir_832dcc2fd9c5142824e420d8d124316e" ],
     [ "processors", "dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html", "dir_8235a0e1c388cdad0e3f2a0adaa9e0ee" ],

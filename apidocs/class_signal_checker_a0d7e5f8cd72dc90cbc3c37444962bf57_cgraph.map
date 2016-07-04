@@ -1,7 +1,7 @@
 <map id="SignalChecker::run" name="SignalChecker::run">
 <area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="697,325,915,351"/>
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="705,575,907,602"/>
-<area shape="rect" id="node5" href="$class_video_provider.html#a1bb6fc416559db01b839fb7d94dd5575" title="Return the image format of video frames supplied by this provider. " alt="" coords="202,551,381,578"/>
+<area shape="rect" id="node5" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="202,551,381,578"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="220,602,363,629"/>
 <area shape="rect" id="node7" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="218,653,365,679"/>
 <area shape="rect" id="node8" href="$class_signal_checker.html#a2ed64e4c3df3495b4c3278a28927b123" title="SignalChecker::checkSignal" alt="" coords="198,450,385,477"/>

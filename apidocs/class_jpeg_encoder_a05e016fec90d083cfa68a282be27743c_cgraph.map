@@ -3,7 +3,7 @@
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="181,56,383,83"/>
 <area shape="rect" id="node5" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="211,107,353,133"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="209,157,355,184"/>
-<area shape="rect" id="node7" href="$class_video_provider.html#a1bb6fc416559db01b839fb7d94dd5575" title="Return the image format of video frames supplied by this provider. " alt="" coords="193,208,371,235"/>
+<area shape="rect" id="node7" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="193,208,371,235"/>
 <area shape="rect" id="node8" href="$class_encoder.html#acc731ccbc4c05090a66c8dc61d254940" title="Pass a frame on to all registered consumers. " alt="" coords="198,5,366,32"/>
 <area shape="rect" id="node14" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="177,259,387,285"/>
 <area shape="rect" id="node16" href="$class_encoder.html#a59605bf58500542f1a15d25629ac3922" title="Tidy up relationships with providers etc before destruction. " alt="" coords="221,385,343,412"/>

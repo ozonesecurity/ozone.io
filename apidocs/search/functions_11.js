@@ -23,7 +23,7 @@ var searchData=
   ['signalchecker',['SignalChecker',['../class_signal_checker.html#ab6c285a6c15b15baf505c4e3a0266704',1,'SignalChecker']]],
   ['signalinvalid',['signalInvalid',['../class_signal_checker.html#afd4bf3e43fd7d0d986e2091140599b0a',1,'SignalChecker']]],
   ['signalvalid',['signalValid',['../class_signal_checker.html#a4398d356d9ed2636e392207d5d5a7645',1,'SignalChecker']]],
-  ['slavevideo',['SlaveVideo',['../class_slave_video.html#adfc99cbb608a1defe2e06a3ce914a28d',1,'SlaveVideo::SlaveVideo(const std::string &amp;name)'],['../class_slave_video.html#a39afdd492897bb19eb741ad1758f061b',1,'SlaveVideo::SlaveVideo(const std::string &amp;name, uint16_t width, uint16_t height, PixelFormat pixelFormat, const FrameRate &amp;frameRate)']]],
+  ['slavevideo',['SlaveVideo',['../class_slave_video.html#adfc99cbb608a1defe2e06a3ce914a28d',1,'SlaveVideo::SlaveVideo(const std::string &amp;name)'],['../class_slave_video.html#adb5027bcb07e5d267024af856acde10a',1,'SlaveVideo::SlaveVideo(const std::string &amp;name, uint16_t width, uint16_t height, AVPixelFormat pixelFormat, const FrameRate &amp;frameRate)']]],
   ['sockaddr',['SockAddr',['../class_sock_addr.html#a89f55a0affe9e0639fd762f7137526de',1,'SockAddr']]],
   ['socket',['socket',['../class_socket.html#ae6815d3adb0f78bfdff95413826c316a',1,'Socket']]],
   ['sourceframe',['sourceFrame',['../class_feed_frame.html#a41024f6e629faefbf46dc745766951ab',1,'FeedFrame']]],

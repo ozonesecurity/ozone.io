@@ -1,6 +1,8 @@
 var class_image_1_1_blob_group =
 [
     [ "BlobGroup", "class_image_1_1_blob_group.html#a77a8ec31f2616f1acda77f1ba12a047c", null ],
+    [ "BlobGroup", "class_image_1_1_blob_group.html#a8676005679041881f85e5fcc044d8cc7", null ],
+    [ "~BlobGroup", "class_image_1_1_blob_group.html#ae308427c5155a1b599c1743c1f38147e", null ],
     [ "blobList", "class_image_1_1_blob_group.html#ab2bea97025f89678f368320045c89daa", null ],
     [ "centre", "class_image_1_1_blob_group.html#a892d64f7dfea2879163e79ebd7e039c9", null ],
     [ "extent", "class_image_1_1_blob_group.html#a8e1ee7b41328f4854bfa7f533bb6a7c4", null ],
@@ -9,6 +11,7 @@ var class_image_1_1_blob_group =
     [ "minSize", "class_image_1_1_blob_group.html#a703030c5931576658f5e1aced690b946", null ],
     [ "minSize", "class_image_1_1_blob_group.html#a1a8ab74a4315cfd5dafa891d48488e5d", null ],
     [ "operator+=", "class_image_1_1_blob_group.html#ab366dc5dc35e092812c97ccdf0b7c4a2", null ],
+    [ "operator=", "class_image_1_1_blob_group.html#a42f1261528a2dfdc59f2bc09771c0102", null ],
     [ "pixels", "class_image_1_1_blob_group.html#a46ac6ede3c6bdd172a8220bf185c1181", null ],
     [ "setFilter", "class_image_1_1_blob_group.html#abcae6371ac44cd15890a30bc74b1417f", null ],
     [ "Image", "class_image_1_1_blob_group.html#a5d6b29a75202aeeaef335faca9eb55e2", null ],

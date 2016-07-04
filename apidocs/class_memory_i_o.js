@@ -4,7 +4,7 @@ var class_memory_i_o =
     [ "Snapshot", "struct_memory_i_o_1_1_snapshot.html", "struct_memory_i_o_1_1_snapshot" ],
     [ "MemoryIO", "class_memory_i_o.html#ac8a7350a2ff99d17ed237cbea60e6e98", null ],
     [ "~MemoryIO", "class_memory_i_o.html#acd90ed0eb66554ab4540d58f3d0e9a67", null ],
-    [ "attachMemory", "class_memory_i_o.html#a7bda1139918948debcc8074bfc41fdb7", null ],
+    [ "attachMemory", "class_memory_i_o.html#a4e06fd633a8e4cd0279c8b1fc7e3b595", null ],
     [ "detachMemory", "class_memory_i_o.html#a138e6735230279601dd7b1a74d57ea98", null ],
     [ "queryMemory", "class_memory_i_o.html#ab737f9e4d37cf7fc64f90bca8707671f", null ],
     [ "mImageBuffer", "class_memory_i_o.html#a9834c68960b37072dbb5277a17d2ed5b", null ],

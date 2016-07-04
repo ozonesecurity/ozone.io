@@ -4,7 +4,7 @@
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="217,122,419,149"/>
 <area shape="rect" id="node5" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="247,173,389,199"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="245,223,391,250"/>
-<area shape="rect" id="node7" href="$class_video_provider.html#a1bb6fc416559db01b839fb7d94dd5575" title="Return the image format of video frames supplied by this provider. " alt="" coords="229,274,407,301"/>
+<area shape="rect" id="node7" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="229,274,407,301"/>
 <area shape="rect" id="node8" href="$class_feed_base.html#a9c5aad6ef160c9d036aba28ea83df795" title="Return the name string as a c&#45;style string. " alt="" coords="509,307,637,334"/>
 <area shape="rect" id="node9" href="$class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d" title="Return the provider of this frame. " alt="" coords="247,391,389,418"/>
 <area shape="rect" id="node10" href="$class_feed_frame.html#a410433cd0f566b87251790f099d1f984" title="Return the provider of the originating frame. " alt="" coords="243,442,393,469"/>

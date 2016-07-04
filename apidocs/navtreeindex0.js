@@ -1,7 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "annotated.html":[2,0],
-"base_2oz_config_defines_8h_source.html":[3,0,0,0,6],
+"base_2oz_config_defines_8h_source.html":[3,0,0,0,9],
 "class_alarm_frame.html":[2,0,0],
 "class_alarm_frame.html#a08aec85dd6df6d4bd2c4311bb2174490":[2,0,0,2],
 "class_alarm_frame.html#a2f6de6c074ce0bf649ac06a506b498b0":[2,0,0,1],

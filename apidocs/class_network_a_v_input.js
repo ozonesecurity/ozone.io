@@ -11,6 +11,7 @@ var class_network_a_v_input =
     [ "sampleFormat", "class_network_a_v_input.html#abc6b625123e3467b1709d2c2d06fab27", null ],
     [ "sampleRate", "class_network_a_v_input.html#abe775479ae3d4b9e9878890160eea49f", null ],
     [ "samples", "class_network_a_v_input.html#a64e5e57991ac7f33ae7c03b8218a5549", null ],
+    [ "source", "class_network_a_v_input.html#af29924caed4b87ccc2ac430e3e7bae6f", null ],
     [ "videoCodecContext", "class_network_a_v_input.html#afb846c59e27d5250b10e62644e894742", null ],
     [ "width", "class_network_a_v_input.html#a6ff49cae99e6043ffcf84cc9758f50bc", null ]
 ];

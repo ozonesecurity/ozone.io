@@ -17,7 +17,7 @@ var class_memory_i_o_v1 =
     ] ],
     [ "MemoryIOV1", "class_memory_i_o_v1.html#ab8f49a8451701d081fd8ea657c574a6f", null ],
     [ "~MemoryIOV1", "class_memory_i_o_v1.html#a12a03fd802225a7a79e86539d6a71a5d", null ],
-    [ "attachMemory", "class_memory_i_o_v1.html#afffd2cd9facf2f6e91485e882b5bb766", null ],
+    [ "attachMemory", "class_memory_i_o_v1.html#a8eafd103b2f88f7c3a16c78e94e5c115", null ],
     [ "detachMemory", "class_memory_i_o_v1.html#a6082d9a1711553faf4a3fe2f1ee69d27", null ],
     [ "queryMemory", "class_memory_i_o_v1.html#aab6a9837032e1d8b9a26e81be724b523", null ],
     [ "mImageBuffer", "class_memory_i_o_v1.html#a3848a13b33bf2e0e760a3c5ae69ef210", null ],

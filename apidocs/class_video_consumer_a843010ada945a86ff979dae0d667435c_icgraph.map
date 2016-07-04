@@ -21,7 +21,7 @@
 <area shape="rect" id="node21" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="539,1341,677,1367"/>
 <area shape="rect" id="node22" href="$class_motion_detector.html#a4441ab384634ee0f098644c9108fcede" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="286,1266,437,1293"/>
 <area shape="rect" id="node23" href="$class_motion_detector.html#a75f891082b089ccdb0cd3cbaacf0a3e5" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="284,1341,439,1367"/>
-<area shape="rect" id="node24" href="$class_motion_detector.html#acba2527eea400dc63efd892d133e90ea" title="Return the image format of video frames supplied by this provider. " alt="" coords="268,1415,455,1442"/>
+<area shape="rect" id="node24" href="$class_motion_detector.html#a6fbf18f4c5910b207d74da3409fb2ce5" title="Return the image format of video frames supplied by this provider. " alt="" coords="268,1415,455,1442"/>
 <area shape="rect" id="node25" href="$class_motion_detector.html#a644e0ae9fa00ffd69b996b58a073b70d" title="Return the frame rate at this this provider supplies frames. May not be available or accurate..." alt="" coords="271,1490,451,1517"/>
 <area shape="rect" id="node26" href="$class_rate_limiter.html#a0a58de58e9536c33b0de925a76818e3a" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="297,1565,425,1591"/>
 <area shape="rect" id="node27" href="$class_rate_limiter.html#aba8a54e4a0b67e3ce6a47b8f6e153a23" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="295,1639,427,1666"/>

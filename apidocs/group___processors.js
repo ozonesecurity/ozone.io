@@ -59,7 +59,7 @@ var group___processors =
       [ "detectMotion", "class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9", null ],
       [ "frameRate", "class_motion_detector.html#a644e0ae9fa00ffd69b996b58a073b70d", null ],
       [ "height", "class_motion_detector.html#a75f891082b089ccdb0cd3cbaacf0a3e5", null ],
-      [ "pixelFormat", "class_motion_detector.html#acba2527eea400dc63efd892d133e90ea", null ],
+      [ "pixelFormat", "class_motion_detector.html#a6fbf18f4c5910b207d74da3409fb2ce5", null ],
       [ "refImageSlave", "class_motion_detector.html#a097e2e3fc23240d4eb65ef10f09d81d3", null ],
       [ "run", "class_motion_detector.html#af0b59147c5ec1c704e2389a415657588", null ],
       [ "varImageSlave", "class_motion_detector.html#a572eac81c27b5b7f7c90b195dc7297a6", null ],

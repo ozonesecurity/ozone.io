@@ -5,6 +5,6 @@ var class_video_provider =
     [ "~VideoProvider", "class_video_provider.html#aa8a9b589a527246891092434a28cebce", null ],
     [ "frameRate", "class_video_provider.html#a5b5ad2235e3bb94f6f21bf82ea0fd9ec", null ],
     [ "height", "class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022", null ],
-    [ "pixelFormat", "class_video_provider.html#a1bb6fc416559db01b839fb7d94dd5575", null ],
+    [ "pixelFormat", "class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0", null ],
     [ "width", "class_video_provider.html#a025b965717f76ea6abc267626238d493", null ]
 ];

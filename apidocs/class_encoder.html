@@ -187,10 +187,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a21fb04c56b16da04d346748ca0c5b2d4 inherit pub_methods_class_feed_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the identity string as a c-style string. <br /></td></tr>
 <tr class="separator:a21fb04c56b16da04d346748ca0c5b2d4 inherit pub_methods_class_feed_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_video_provider"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_video_provider')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_video_provider.html">VideoProvider</a></td></tr>
-<tr class="memitem:a1bb6fc416559db01b839fb7d94dd5575 inherit pub_methods_class_video_provider"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bb6fc416559db01b839fb7d94dd5575"></a>
-virtual PixelFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_provider.html#a1bb6fc416559db01b839fb7d94dd5575">pixelFormat</a> () const =0</td></tr>
-<tr class="memdesc:a1bb6fc416559db01b839fb7d94dd5575 inherit pub_methods_class_video_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the image format of video frames supplied by this provider. <br /></td></tr>
-<tr class="separator:a1bb6fc416559db01b839fb7d94dd5575 inherit pub_methods_class_video_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11321473510fcbb4d4a4933722a67d0 inherit pub_methods_class_video_provider"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11321473510fcbb4d4a4933722a67d0"></a>
+virtual AVPixelFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">pixelFormat</a> () const =0</td></tr>
+<tr class="memdesc:ac11321473510fcbb4d4a4933722a67d0 inherit pub_methods_class_video_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the image format of video frames supplied by this provider. <br /></td></tr>
+<tr class="separator:ac11321473510fcbb4d4a4933722a67d0 inherit pub_methods_class_video_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025b965717f76ea6abc267626238d493 inherit pub_methods_class_video_provider"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a025b965717f76ea6abc267626238d493"></a>
 virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a> () const =0</td></tr>
 <tr class="memdesc:a025b965717f76ea6abc267626238d493 inherit pub_methods_class_video_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the width (in pixels) of video frames supplied by this provider. <br /></td></tr>
@@ -457,6 +457,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for encoder threads. These are threads that take the captured video frame from a decoder and encode it into another format for transmission. Encoders are normally instantiated 'on-demand' from network interfaces and used to generate video or audio streams. Further requests for the same type of stream will re-use the same encoder. Once no client is using those streams, the encoder will expire itself and be deleted. </p>
+
+<p>Definition at line <a class="el" href="oz_encoder_8h_source.html#l00020">20</a> of file <a class="el" href="oz_encoder_8h_source.html">ozEncoder.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a76e85b282cf1567b0cc3431bc713314e"></a>
 <div class="memitem">
@@ -488,6 +490,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00013">13</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
 
 </div>
 </div>
@@ -523,6 +527,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider</a>.</p>
+
+<p>Definition at line <a class="el" href="oz_encoder_8h_source.html#l00060">60</a> of file <a class="el" href="oz_encoder_8h_source.html">ozEncoder.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -574,6 +580,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
+<p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00071">71</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -615,6 +623,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00087">87</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -669,6 +679,8 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4">FeedConsumer</a>.</p>
 
+<p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00053">53</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -711,6 +723,8 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
+<p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00104">104</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -724,7 +738,7 @@ Here is the caller graph for this function:</div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/base/<a class="el" href="oz_encoder_8h_source.html">ozEncoder.h</a></li>
-<li>src/base/ozEncoder.cpp</li>
+<li>src/base/<a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -732,7 +746,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_encoder.html">Encoder</a></li>
-    <li class="footer">Generated on Sat Jun 18 2016 07:27:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Jul 4 2016 03:29:11 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
