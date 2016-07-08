@@ -34,12 +34,12 @@
 <h3>And stitching arbirary streams together for a montage was as easy as:</h3>
 <pre><code class="language-clike">
 // Let's make a mux/stitched handler for cam1 and cam2 and its debugs
-    QuadVideo quadVideo( "quadcammux", PIX_FMT_YUV420P, 640, 480, FrameRate( 1, 10 ), 2, 2 );
-    quadVideo.registerProvider( cam1 );
-    quadVideo.registerProvider( *motionDetector1.deltaImageSlave() );
-    quadVideo.registerProvider( cam2 );
-    quadVideo.registerProvider( *motionDetector2.deltaImageSlave() );
-    app.addThread( &quadVideo );
+    MatrixVideo matrixVideo( "quadcammux", PIX_FMT_YUV420P, 640, 480, FrameRate( 1, 10 ), 2, 2 );
+    matrixVideo.registerProvider( cam1 );
+    matrixVideo.registerProvider( *motionDetector1.deltaImageSlave() );
+    matrixVideo.registerProvider( cam2 );
+    matrixVideo.registerProvider( *motionDetector2.deltaImageSlave() );
+    app.addThread( &matrixVideo );
 
 </code></pre>
 
@@ -48,7 +48,7 @@
     HttpController httpController( "watch", 9292 );
     httpController.addStream("watchcam1",cam1);
     httpController.addStream("watchcam2",cam2);
-    httpController.addStream( "debug", quadVideo );
+    httpController.addStream( "debug", matrixVideo );
     httpController.addStream( "debug", motionDetector1 );
     httpController.addStream( "debug", motionDetector2 );
     listener.addController( &httpController );
@@ -56,21 +56,12 @@
 </code></pre>
 
 
-<h2>And you'd write a super simple HTML file to access all of this which looks like this:</h2>
+<h2>Looks interesting?</h2>
 <br/>
-<iframe width="420" height="315" src="https://www.youtube.com/embed/Ic2HXUjxRnU" frameborder="0" allowfullscreen></iframe>
-
-<br/>
-And your <a href="https://github.com/ozonesecurity/ozonebase/blob/master/server/src/examples/starter_example.html">code</a> would just be a bunch of <code>img src</code> tags to access the feeds like this:
-<pre><code>img src="http://192.168.1.224:9292/watchcam1/cam1" </code></pre>
-to watch live feed for camera1, or, 
-<pre><code>img src="http://192.168.1.224:9292/debug/modectcam1" </code> </pre>
-to watch live motion detection highlighting on that camera, or, 
-<pre><code>img src="ttp://192.168.1.224:9292/debug/quadcammux" </code> </pre>
-to render a 4x4 stiched image of 2 camera feeds and their differential frame analysis LIVE?
-
+How about taking a look at how to write an NVR from scratch? Go <a href="https://github.com/ozonesecurity/ozonebase/tree/master/server/src/examples/nvrcli">here</a>, get started, get coding. Let oZone do the heavy lifting for you.
 <h2>Holy Batman!</h2>
-Yeah, we agree. Check out our detailed <a href="/apidocs/index.html">API</a> (Okay, its just a doxygen dump for now, will get better). Better yet, read our <a href="https://github.com/pliablepixels/ozonebase/tree/master/server/src/examples">examples</a>.
+
+Yeah, we agree. Check out our detailed <a href="/apidocs/index.html">API</a> Better yet, read our <a href="https://github.com/pliablepixels/ozonebase/tree/master/server/src/examples">examples</a>.
 
 </div>
     
