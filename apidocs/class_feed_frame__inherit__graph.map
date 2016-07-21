@@ -1,7 +1,10 @@
 <map id="FeedFrame" name="FeedFrame">
-<area shape="rect" id="node2" href="$class_audio_frame.html" title="AudioFrame" alt="" coords="5,80,97,107"/>
-<area shape="rect" id="node3" href="$class_data_frame.html" title="DataFrame" alt="" coords="121,80,208,107"/>
-<area shape="rect" id="node4" href="$class_video_frame.html" title="VideoFrame" alt="" coords="232,80,324,107"/>
-<area shape="rect" id="node5" href="$class_alarm_frame.html" title="AlarmFrame" alt="" coords="231,155,325,181"/>
-<area shape="rect" id="node6" href="$class_motion_frame.html" title="MotionFrame" alt="" coords="229,229,327,256"/>
+<area shape="rect" id="node2" href="$class_audio_frame.html" title="AudioFrame" alt="" coords="68,80,160,107"/>
+<area shape="rect" id="node3" href="$class_data_frame.html" title="DataFrame" alt="" coords="184,80,271,107"/>
+<area shape="rect" id="node7" href="$class_video_frame.html" title="VideoFrame" alt="" coords="297,80,389,107"/>
+<area shape="rect" id="node4" href="$class_notify_frame.html" title="NotifyFrame" alt="" coords="173,155,268,181"/>
+<area shape="rect" id="node5" href="$class_disk_i_o_notification.html" title="DiskIONotification" alt="" coords="5,229,135,256"/>
+<area shape="rect" id="node6" href="$class_event_notification.html" title="EventNotification" alt="" coords="159,229,282,256"/>
+<area shape="rect" id="node8" href="$class_alarm_frame.html" title="AlarmFrame" alt="" coords="301,155,394,181"/>
+<area shape="rect" id="node9" href="$class_motion_frame.html" title="MotionFrame" alt="" coords="306,229,405,256"/>
 </map>

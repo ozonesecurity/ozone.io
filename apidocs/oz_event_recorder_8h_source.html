@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -121,7 +122,7 @@ $(document).ready(function(){initNavTree('oz_event_recorder_8h_source.html','');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_event_recorder.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_event_recorder.html">EventRecorder</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_event_recorder.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_event_recorder.html">EventRecorder</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_data_provider.html">DataProvider</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;CLASSID(<a class="code" href="class_event_recorder.html">EventRecorder</a>);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
@@ -169,19 +170,20 @@ $(document).ready(function(){initNavTree('oz_event_recorder_8h_source.html','');
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
 <div class="ttc" id="class_event_recorder_html_af85576baf3d378da71202349f7a57089"><div class="ttname"><a href="class_event_recorder.html#af85576baf3d378da71202349f7a57089">EventRecorder::MAX_EVENT_TAIL_AGE</a></div><div class="ttdeci">static const int MAX_EVENT_TAIL_AGE</div><div class="ttdoc">Number of seconds of video after event to save. </div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00025">ozEventRecorder.h:25</a></div></div>
 <div class="ttc" id="class_event_recorder_html_a17665b636bfb6e5f7ee0c9fb24ae98a0"><div class="ttname"><a href="class_event_recorder.html#a17665b636bfb6e5f7ee0c9fb24ae98a0">EventRecorder::MAX_EVENT_HEAD_AGE</a></div><div class="ttdeci">static const int MAX_EVENT_HEAD_AGE</div><div class="ttdoc">Number of seconds of video before event to save. </div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00024">ozEventRecorder.h:24</a></div></div>
-<div class="ttc" id="class_event_recorder_html_a84a608c8ab801d830856408647e1785e"><div class="ttname"><a href="class_event_recorder.html#a84a608c8ab801d830856408647e1785e">EventRecorder::processFrame</a></div><div class="ttdeci">bool processFrame(FramePtr)</div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8cpp_source.html#l00043">ozEventRecorder.cpp:43</a></div></div>
+<div class="ttc" id="class_event_recorder_html_a84a608c8ab801d830856408647e1785e"><div class="ttname"><a href="class_event_recorder.html#a84a608c8ab801d830856408647e1785e">EventRecorder::processFrame</a></div><div class="ttdeci">bool processFrame(FramePtr)</div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8cpp_source.html#l00046">ozEventRecorder.cpp:46</a></div></div>
 <div class="ttc" id="class_video_consumer_html"><div class="ttname"><a href="class_video_consumer.html">VideoConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00112">ozFeedConsumer.h:112</a></div></div>
-<div class="ttc" id="class_feed_base_html_a22f313327e4e4effc09beed76b12fa55"><div class="ttname"><a href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">FeedBase::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Return the name string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00075">ozFeedBase.h:75</a></div></div>
-<div class="ttc" id="class_event_recorder_html_a84137d6f676655852a6c306f9931ae5f"><div class="ttname"><a href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f">EventRecorder::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8cpp_source.html#l00012">ozEventRecorder.cpp:12</a></div></div>
+<div class="ttc" id="class_feed_base_html_a22f313327e4e4effc09beed76b12fa55"><div class="ttname"><a href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">FeedBase::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Return the name string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00077">ozFeedBase.h:77</a></div></div>
+<div class="ttc" id="class_event_recorder_html_a84137d6f676655852a6c306f9931ae5f"><div class="ttname"><a href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f">EventRecorder::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8cpp_source.html#l00013">ozEventRecorder.cpp:13</a></div></div>
+<div class="ttc" id="class_data_provider_html"><div class="ttname"><a href="class_data_provider.html">DataProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00136">ozFeedProvider.h:136</a></div></div>
 <div class="ttc" id="class_event_recorder_html_a8764536d25ade8dc7a088b5a8b7c27f2"><div class="ttname"><a href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">EventRecorder::mEventCount</a></div><div class="ttdeci">int mEventCount</div><div class="ttdoc">Temp, in lieu of DB event index. </div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00036">ozEventRecorder.h:36</a></div></div>
-<div class="ttc" id="class_feed_base_html_aada1551e2fc238c1435be539ae27588a"><div class="ttname"><a href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">FeedBase::identity</a></div><div class="ttdeci">const std::string &amp; identity() const </div><div class="ttdoc">Return the identity string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00077">ozFeedBase.h:77</a></div></div>
+<div class="ttc" id="class_feed_base_html_aada1551e2fc238c1435be539ae27588a"><div class="ttname"><a href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">FeedBase::identity</a></div><div class="ttdeci">const std::string &amp; identity() const </div><div class="ttdoc">Return the identity string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00079">ozFeedBase.h:79</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozEventRecorder.h</b></li>
-    <li class="footer">Generated on Mon Jul 4 2016 03:29:10 for oZone Server Framework by
+    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

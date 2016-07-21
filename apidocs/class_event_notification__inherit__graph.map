@@ -1,0 +1,5 @@
+<map id="EventNotification" name="EventNotification">
+<area shape="rect" id="node2" href="$class_notify_frame.html" title="NotifyFrame" alt="" coords="19,155,114,181"/>
+<area shape="rect" id="node3" href="$class_data_frame.html" title="DataFrame" alt="" coords="23,80,110,107"/>
+<area shape="rect" id="node4" href="$class_feed_frame.html" title="FeedFrame" alt="" coords="23,5,111,32"/>
+</map>

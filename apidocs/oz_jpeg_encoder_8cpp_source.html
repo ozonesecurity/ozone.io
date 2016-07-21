@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -281,12 +282,12 @@ $(document).ready(function(){initNavTree('oz_jpeg_encoder_8cpp_source.html','');
 <div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00159">ozFeedConsumer.cpp:159</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_jpeg_encoder_html_afba361b50d33286a476af803dab46a99"><div class="ttname"><a href="class_jpeg_encoder.html#afba361b50d33286a476af803dab46a99">JpegEncoder::getPoolKey</a></div><div class="ttdeci">static std::string getPoolKey(const std::string &amp;name, uint16_t width, uint16_t height, FrameRate frameRate, uint8_t quality)</div><div class="ttdef"><b>Definition:</b> <a href="oz_jpeg_encoder_8cpp_source.html#l00020">ozJpegEncoder.cpp:20</a></div></div>
-<div class="ttc" id="class_feed_frame_html"><div class="ttname"><a href="class_feed_frame.html">FeedFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00024">ozFeedFrame.h:24</a></div></div>
+<div class="ttc" id="class_feed_frame_html"><div class="ttname"><a href="class_feed_frame.html">FeedFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00025">ozFeedFrame.h:25</a></div></div>
 <div class="ttc" id="class_video_consumer_html_a843010ada945a86ff979dae0d667435c"><div class="ttname"><a href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">VideoConsumer::videoProvider</a></div><div class="ttdeci">VideoProvider * videoProvider() const </div><div class="ttdoc">Return the first provider cast appropriately, shortcut for when providers == 1. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00305">ozFeedConsumer.cpp:305</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
 <div class="ttc" id="class_frame_rate_html"><div class="ttname"><a href="class_frame_rate.html">FrameRate</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_ffmpeg_8h_source.html#l00060">ozFfmpeg.h:60</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a51edf3b685285db14d1a52fb94eec991"><div class="ttname"><a href="class_feed_provider.html#a51edf3b685285db14d1a52fb94eec991">FeedProvider::mConsumers</a></div><div class="ttdeci">ConsumerMap mConsumers</div><div class="ttdoc">Collection of frame consumer. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00047">ozFeedProvider.h:47</a></div></div>
-<div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00160">ozFeedFrame.h:160</a></div></div>
+<div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00173">ozFeedFrame.h:173</a></div></div>
 <div class="ttc" id="class_thread_html_a59c9c8a425d516f50d9adc516eaa67fd"><div class="ttname"><a href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">Thread::mStop</a></div><div class="ttdeci">bool mStop</div><div class="ttdoc">Flag indicating whether this thread has been signalled to stop. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00263">libgenThread.h:263</a></div></div>
 <div class="ttc" id="class_jpeg_encoder_html_a05e016fec90d083cfa68a282be27743c"><div class="ttname"><a href="class_jpeg_encoder.html#a05e016fec90d083cfa68a282be27743c">JpegEncoder::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_jpeg_encoder_8cpp_source.html#l00057">ozJpegEncoder.cpp:57</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a113a8127bb5d18b0317e70b850bf2c89"><div class="ttname"><a href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">FeedProvider::mFrameCount</a></div><div class="ttdeci">uint64_t mFrameCount</div><div class="ttdoc">Number of frames, advisory only. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00042">ozFeedProvider.h:42</a></div></div>
@@ -300,7 +301,7 @@ $(document).ready(function(){initNavTree('oz_jpeg_encoder_8cpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_18e91fceada5d197dcb7aec06d99f041.html">encoders</a></li><li class="navelem"><b>ozJpegEncoder.cpp</b></li>
-    <li class="footer">Generated on Mon Jul 4 2016 03:29:10 for oZone Server Framework by
+    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

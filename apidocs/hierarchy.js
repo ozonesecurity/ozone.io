@@ -66,7 +66,9 @@ var hierarchy =
     [ "RtmpConnection::CS1", "struct_rtmp_connection_1_1_c_s1.html", null ],
     [ "RtmpConnection::CS2", "struct_rtmp_connection_1_1_c_s2.html", null ],
     [ "DeltaTimeval", "struct_delta_timeval.html", null ],
+    [ "DiskIONotification::DiskIODetail", "class_disk_i_o_notification_1_1_disk_i_o_detail.html", null ],
     [ "Image::Edge", "struct_image_1_1_edge.html", null ],
+    [ "EventNotification::EventDetail", "class_event_notification_1_1_event_detail.html", null ],
     [ "Exception", "class_exception.html", [
       [ "CommsException", "class_comms_exception.html", null ],
       [ "HttpException", "class_http_exception.html", null ],
@@ -78,7 +80,8 @@ var hierarchy =
       [ "FeedConsumer", "class_feed_consumer.html", [
         [ "AudioConsumer", "class_audio_consumer.html", null ],
         [ "DataConsumer", "class_data_consumer.html", [
-          [ "Mp4FileOutput", "class_mp4_file_output.html", null ]
+          [ "Mp4FileOutput", "class_mp4_file_output.html", null ],
+          [ "NotifyOutput", "class_notify_output.html", null ]
         ] ],
         [ "GeneralConsumer", "class_general_consumer.html", [
           [ "DelayBufferFilter", "class_delay_buffer_filter.html", null ]
@@ -97,7 +100,9 @@ var hierarchy =
             [ "JpegEncoder", "class_jpeg_encoder.html", null ],
             [ "MpegEncoder", "class_mpeg_encoder.html", null ]
           ] ],
-          [ "EventRecorder", "class_event_recorder.html", null ],
+          [ "EventRecorder", "class_event_recorder.html", [
+            [ "EventDetector", "class_event_detector.html", null ]
+          ] ],
           [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
           [ "ImageConvert", "class_image_convert.html", null ],
           [ "ImageTimestamper", "class_image_timestamper.html", null ],
@@ -106,6 +111,7 @@ var hierarchy =
           [ "MemoryOutput", "class_memory_output.html", null ],
           [ "MotionDetector", "class_motion_detector.html", null ],
           [ "MovieFileOutput", "class_movie_file_output.html", null ],
+          [ "MovieFileOutputDetector", "class_movie_file_output_detector.html", null ],
           [ "QueuedVideoFilter", "class_queued_video_filter.html", null ],
           [ "RateLimiter", "class_rate_limiter.html", null ],
           [ "SignalChecker", "class_signal_checker.html", null ],
@@ -125,7 +131,10 @@ var hierarchy =
             [ "NetworkAVInput", "class_network_a_v_input.html", null ]
           ] ]
         ] ],
-        [ "DataProvider", "class_data_provider.html", null ],
+        [ "DataProvider", "class_data_provider.html", [
+          [ "EventRecorder", "class_event_recorder.html", null ],
+          [ "MovieFileOutput", "class_movie_file_output.html", null ]
+        ] ],
         [ "GeneralProvider", "class_general_provider.html", [
           [ "DelayBufferFilter", "class_delay_buffer_filter.html", null ]
         ] ],
@@ -154,7 +163,12 @@ var hierarchy =
     ] ],
     [ "FeedFrame", "class_feed_frame.html", [
       [ "AudioFrame", "class_audio_frame.html", null ],
-      [ "DataFrame", "class_data_frame.html", null ],
+      [ "DataFrame", "class_data_frame.html", [
+        [ "NotifyFrame", "class_notify_frame.html", [
+          [ "DiskIONotification", "class_disk_i_o_notification.html", null ],
+          [ "EventNotification", "class_event_notification.html", null ]
+        ] ]
+      ] ],
       [ "VideoFrame", "class_video_frame.html", [
         [ "AlarmFrame", "class_alarm_frame.html", [
           [ "MotionFrame", "class_motion_frame.html", null ]
@@ -184,6 +198,7 @@ var hierarchy =
     ] ],
     [ "MotionData", "class_motion_data.html", null ],
     [ "Mutex", "class_mutex.html", null ],
+    [ "nvrCameras", "classnvr_cameras.html", null ],
     [ "Polygon", "class_polygon.html", null ],
     [ "Region::Range", "struct_region_1_1_range.html", null ],
     [ "Mask::Range", "struct_mask_1_1_range.html", null ],
@@ -209,8 +224,8 @@ var hierarchy =
     [ "Select", "class_select.html", null ],
     [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
     [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
-    [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
     [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
+    [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
     [ "SockAddr", "class_sock_addr.html", [
       [ "SockAddrInet", "class_sock_addr_inet.html", null ],
       [ "SockAddrUnix", "class_sock_addr_unix.html", null ]
@@ -250,9 +265,11 @@ var hierarchy =
       [ "MemoryOutput", "class_memory_output.html", null ],
       [ "MotionDetector", "class_motion_detector.html", null ],
       [ "MovieFileOutput", "class_movie_file_output.html", null ],
+      [ "MovieFileOutputDetector", "class_movie_file_output_detector.html", null ],
       [ "Mp4FileOutput", "class_mp4_file_output.html", null ],
       [ "MpegEncoder", "class_mpeg_encoder.html", null ],
       [ "NetworkAVInput", "class_network_a_v_input.html", null ],
+      [ "NotifyOutput", "class_notify_output.html", null ],
       [ "QueuedVideoFilter", "class_queued_video_filter.html", null ],
       [ "RateLimiter", "class_rate_limiter.html", null ],
       [ "RawH264Input", "class_raw_h264_input.html", null ],

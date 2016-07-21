@@ -1,3 +1,6 @@
 <map id="DataFrame" name="DataFrame">
-<area shape="rect" id="node2" href="$class_feed_frame.html" title="FeedFrame" alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node3" href="$class_notify_frame.html" title="NotifyFrame" alt="" coords="97,155,192,181"/>
+<area shape="rect" id="node2" href="$class_feed_frame.html" title="FeedFrame" alt="" coords="101,5,189,32"/>
+<area shape="rect" id="node4" href="$class_disk_i_o_notification.html" title="DiskIONotification" alt="" coords="5,229,135,256"/>
+<area shape="rect" id="node5" href="$class_event_notification.html" title="EventNotification" alt="" coords="159,229,282,256"/>
 </map>

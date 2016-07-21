@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -120,8 +121,10 @@ $(document).ready(function(){initNavTree('class_motion_frame.html','');});
   <tr bgcolor="#f0f0f0"><td class="entry"><b>AlarmFrame</b>(VideoProvider *provider, FramePtr parent, uint64_t id, uint64_t timestamp, const ByteBuffer &amp;buffer, bool alarmed) (defined in <a class="el" href="class_alarm_frame.html">AlarmFrame</a>)</td><td class="entry"><a class="el" href="class_alarm_frame.html">AlarmFrame</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>AlarmFrame</b>(VideoProvider *provider, FramePtr parent, bool alarmed) (defined in <a class="el" href="class_alarm_frame.html">AlarmFrame</a>)</td><td class="entry"><a class="el" href="class_alarm_frame.html">AlarmFrame</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>buffer</b>() const  (defined in <a class="el" href="class_feed_frame.html">FeedFrame</a>)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_feed_frame.html#a1cb3db493f789e3baea7b860ad49c28d">FeedFrame</a>(FeedProvider *provider, FeedType mediaType, uint64_t id, uint64_t timestamp, const ByteBuffer &amp;buffer)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_feed_frame.html#a3fd4a0e5ae6a2d3c197008154e657a1f">FeedFrame</a>(FeedProvider *provider, FeedType mediaType, uint64_t id, uint64_t timestamp, const uint8_t *buffer, size_t size)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_feed_frame.html#a957ca50945a29be91bef4f09315bcd82">FeedFrame</a>(FeedProvider *provider, FeedType mediaType, uint64_t id, uint64_t timestamp)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_feed_frame.html#a1cb3db493f789e3baea7b860ad49c28d">FeedFrame</a>(FeedProvider *provider, FeedType mediaType, uint64_t id, uint64_t timestamp, const ByteBuffer &amp;buffer)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_feed_frame.html#a3fd4a0e5ae6a2d3c197008154e657a1f">FeedFrame</a>(FeedProvider *provider, FeedType mediaType, uint64_t id, uint64_t timestamp, const uint8_t *buffer, size_t size)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_feed_frame.html#a8e93e898115a0525dee9a8d109630a42">FeedFrame</a>(FeedProvider *provider, FramePtr parent, FeedType mediaType, uint64_t id, uint64_t timestamp)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_feed_frame.html#a3923e11074448eb0f62eb67ce0deee30">FeedFrame</a>(FeedProvider *provider, FramePtr parent, FeedType mediaType, uint64_t id, uint64_t timestamp, const ByteBuffer &amp;buffer)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_feed_frame.html#a229e4e6a2c71219ca62a740686a25f6f">FeedFrame</a>(FeedProvider *provider, FramePtr parent, FeedType mediaType, uint64_t id, uint64_t timestamp, const uint8_t *buffer, size_t size)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>FeedFrame</b>(FeedProvider *provider, FramePtr parent) (defined in <a class="el" href="class_feed_frame.html">FeedFrame</a>)</td><td class="entry"><a class="el" href="class_feed_frame.html">FeedFrame</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
@@ -168,7 +171,7 @@ $(document).ready(function(){initNavTree('class_motion_frame.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 4 2016 03:29:11 for oZone Server Framework by
+    <li class="footer">Generated on Thu Jul 21 2016 10:32:11 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

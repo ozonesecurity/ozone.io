@@ -13,6 +13,7 @@ var searchData=
   ['motiondetector',['MotionDetector',['../class_motion_detector.html',1,'']]],
   ['motionframe',['MotionFrame',['../class_motion_frame.html',1,'']]],
   ['moviefileoutput',['MovieFileOutput',['../class_movie_file_output.html',1,'']]],
+  ['moviefileoutputdetector',['MovieFileOutputDetector',['../class_movie_file_output_detector.html',1,'']]],
   ['mp4fileoutput',['Mp4FileOutput',['../class_mp4_file_output.html',1,'']]],
   ['mpegencoder',['MpegEncoder',['../class_mpeg_encoder.html',1,'']]],
   ['mutex',['Mutex',['../class_mutex.html',1,'']]]

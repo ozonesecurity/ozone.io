@@ -2,6 +2,8 @@ var NAVTREE =
 [
   [ "oZone Server Framework", "index.html", [
     [ "Welcome", "index.html", null ],
+    [ "README", "md_src_examples_nvrcli_nvrcli_web__r_e_a_d_m_e.html", null ],
+    [ "NVR-cli", "md_src_examples_nvrcli__r_e_a_d_m_e.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
@@ -22,15 +24,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_comms_base.html#a612c9a9c20884bbcf33bc4983aa4edbf",
-"class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1",
-"class_image.html#a56759e2557792a6359888acb1615f7a5",
-"class_memory_i_o.html#a61bf4f861426bb5c730c64f1f4a96155",
-"class_rational.html#ac02c3a56867170165e8865d441d9b48c",
-"class_slave_video.html#ac235d95ae5cfeca075c8c3d9ef7fb903",
-"class_udp_socket_protocol.html#a3667ac7badb1ba63d15df9b2e8bcef20",
-"group___protocols.html#gga73c66d6c62e16b8b9cfb77358839a442abc07cbaaa55f7197ff2485bff36a5773",
-"struct_image_1_1_blob_data.html"
+"class_comms_base.html#a78f0b426538f97dead75cd2c88d6fddb",
+"class_event_notification_1_1_event_detail.html#a05aa86aa75dd030b7bb9304906037ebc",
+"class_http_data_stream.html#ad334780169fbf64102c540bde6ec5795",
+"class_listener.html#a1446ad8dd30cfe430edd6fccfbf666ea",
+"class_network_a_v_input.html#afb846c59e27d5250b10e62644e894742",
+"class_rtsp_controller.html#aa102bd6e234cb12e918330173cb65adf",
+"class_tcp_unix_server.html#ac9c241115219027006808a7e09cffb01",
+"example8_8cpp_source.html",
+"oz_local_video_input_8cpp_source.html",
+"struct_rtp_data_header.html#ac0e5132caa11a022054e2658a004eb0e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

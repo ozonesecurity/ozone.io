@@ -5,8 +5,10 @@ var class_feed_frame =
       [ "FRAME_TYPE_VIDEO", "class_feed_frame.html#a20b3494c15c0354f1ed5c5e8b08229d7a48c96354c60b0ef8476b48c65420be51", null ],
       [ "FRAME_TYPE_AUDIO", "class_feed_frame.html#a20b3494c15c0354f1ed5c5e8b08229d7acc2e90bfde65de0216bf3a3ed173738f", null ]
     ] ],
+    [ "FeedFrame", "class_feed_frame.html#a957ca50945a29be91bef4f09315bcd82", null ],
     [ "FeedFrame", "class_feed_frame.html#a1cb3db493f789e3baea7b860ad49c28d", null ],
     [ "FeedFrame", "class_feed_frame.html#a3fd4a0e5ae6a2d3c197008154e657a1f", null ],
+    [ "FeedFrame", "class_feed_frame.html#a8e93e898115a0525dee9a8d109630a42", null ],
     [ "FeedFrame", "class_feed_frame.html#a3923e11074448eb0f62eb67ce0deee30", null ],
     [ "FeedFrame", "class_feed_frame.html#a229e4e6a2c71219ca62a740686a25f6f", null ],
     [ "FeedFrame", "class_feed_frame.html#a6188659f55344f4f0e3e36edcc2cf879", null ],

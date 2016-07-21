@@ -9,6 +9,7 @@ var dir_e931c1a3f0014e624d0645a271726ad2 =
     [ "example6.cpp", "example6_8cpp_source.html", null ],
     [ "example7.cpp", "example7_8cpp_source.html", null ],
     [ "example8.cpp", "example8_8cpp_source.html", null ],
+    [ "example9.cpp", "example9_8cpp_source.html", null ],
     [ "experimenting.cpp", "experimenting_8cpp_source.html", null ],
     [ "starter_example.cpp", "starter__example_8cpp_source.html", null ]
 ];

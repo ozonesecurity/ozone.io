@@ -48,6 +48,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -175,7 +176,7 @@ $(document).ready(function(){initNavTree('oz_delay_buffer_8cpp_source.html','');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="ttc" id="class_feed_consumer_html_adc13326763ab579da3c33c6cc6c04604"><div class="ttname"><a href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">FeedConsumer::mQueueMutex</a></div><div class="ttdeci">Mutex mQueueMutex</div><div class="ttdoc">Protects the frame queue. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00028">ozFeedConsumer.h:28</a></div></div>
 <div class="ttc" id="class_delay_buffer_filter_html_a142149158e47f6c295e4e19519b3a7b7"><div class="ttname"><a href="class_delay_buffer_filter.html#a142149158e47f6c295e4e19519b3a7b7">DelayBufferFilter::DelayBufferFilter</a></div><div class="ttdeci">DelayBufferFilter(const std::string &amp;name, double delay)</div><div class="ttdef"><b>Definition:</b> <a href="oz_delay_buffer_8cpp_source.html#l00012">ozDelayBuffer.cpp:12</a></div></div>
-<div class="ttc" id="class_feed_frame_html_ab7b2319f304dbc261142dd53c5ca010a"><div class="ttname"><a href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">FeedFrame::age</a></div><div class="ttdeci">double age(uint64_t checkTimestamp=0) const </div><div class="ttdoc">How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00127">ozFeedFrame.h:127</a></div></div>
+<div class="ttc" id="class_feed_frame_html_ab7b2319f304dbc261142dd53c5ca010a"><div class="ttname"><a href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">FeedFrame::age</a></div><div class="ttdeci">double age(uint64_t checkTimestamp=0) const </div><div class="ttdoc">How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00146">ozFeedFrame.h:146</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00159">ozFeedConsumer.cpp:159</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a9e6dfca4261b1f3e67fca4543dc24f27"><div class="ttname"><a href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relations before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00084">ozFeedProvider.cpp:84</a></div></div>
@@ -188,14 +189,14 @@ $(document).ready(function(){initNavTree('oz_delay_buffer_8cpp_source.html','');
 <div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00170">ozFeedProvider.cpp:170</a></div></div>
 <div class="ttc" id="class_delay_buffer_filter_html_ae11002a478c6a99daaa687116c4eb0be"><div class="ttname"><a href="class_delay_buffer_filter.html#ae11002a478c6a99daaa687116c4eb0be">DelayBufferFilter::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_delay_buffer_8cpp_source.html#l00031">ozDelayBuffer.cpp:31</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00098">ozFeedConsumer.cpp:98</a></div></div>
-<div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00038">ozFeedBase.h:38</a></div></div>
+<div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozDelayBuffer.cpp</b></li>
-    <li class="footer">Generated on Mon Jul 4 2016 03:29:11 for oZone Server Framework by
+    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
