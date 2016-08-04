@@ -18,12 +18,11 @@
 </code></pre>
 
 
-<h3>And doing motion detection on them was as simple as:</h3>
+<h3>And doing Face detection on them was as simple as:</h3>
 <pre><code class="language-clike">
-    // motion detect for cam1
-    MotionDetector motionDetector1( "modectcam1" );
-    motionDetector1.registerProvider( cam1 );
-    app.addThread( &motionDetector1 );
+    FaceDetector faceDetector1( "modectcam1" );
+    faceDetector1.registerProvider( cam1 );
+    app.addThread( &faceDetector1 );
 
     // motion detect for cam1
     MotionDetector motionDetector2( "modectcam2" );
@@ -36,7 +35,7 @@
 // Let's make a mux/stitched handler for cam1 and cam2 and its debugs
     MatrixVideo matrixVideo( "quadcammux", PIX_FMT_YUV420P, 640, 480, FrameRate( 1, 10 ), 2, 2 );
     matrixVideo.registerProvider( cam1 );
-    matrixVideo.registerProvider( *motionDetector1.deltaImageSlave() );
+    matrixVideo.registerProvider( *faceDetector1.deltaImageSlave() );
     matrixVideo.registerProvider( cam2 );
     matrixVideo.registerProvider( *motionDetector2.deltaImageSlave() );
     app.addThread( &matrixVideo );
@@ -49,7 +48,7 @@
     httpController.addStream("watchcam1",cam1);
     httpController.addStream("watchcam2",cam2);
     httpController.addStream( "debug", matrixVideo );
-    httpController.addStream( "debug", motionDetector1 );
+    httpController.addStream( "debug", faceDetector1 );
     httpController.addStream( "debug", motionDetector2 );
     listener.addController( &httpController );
     app.run();
@@ -61,7 +60,7 @@
 How about taking a look at how to write an NVR from scratch? Go <a href="https://github.com/ozonesecurity/ozonebase/tree/master/server/src/examples/nvrcli">here</a>, get started, get coding. Let oZone do the heavy lifting for you.
 <h2>Holy Batman!</h2>
 
-Yeah, we agree. Check out our detailed <a href="/apidocs/index.html">API</a> Better yet, read our <a href="https://github.com/pliablepixels/ozonebase/tree/master/server/src/examples">examples</a>.
+Yeah, we agree. Check out our <a href="http://ozone-framework.readthedocs.io/en/latest/index.html">starter guide</a>, or detailed <a href="/apidocs/index.html">API</a> our, read our <a href="https://github.com/pliablepixels/ozonebase/tree/master/server/src/examples">examples</a>.
 
 </div>
     
