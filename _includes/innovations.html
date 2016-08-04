@@ -20,11 +20,12 @@
 
 <h3>And doing Face detection on them was as simple as:</h3>
 <pre><code class="language-clike">
+    // Detect faces for cam1
     FaceDetector faceDetector1( "modectcam1" );
     faceDetector1.registerProvider( cam1 );
     app.addThread( &faceDetector1 );
 
-    // motion detect for cam1
+    // Detect any motion for cam2
     MotionDetector motionDetector2( "modectcam2" );
     motionDetector2.registerProvider( cam2 );
     app.addThread( &motionDetector2 );
@@ -45,9 +46,9 @@
 <h3>And making all of this renderable on a browser without any plugins is as simple as:</h3>
 <pre><code class="language-clike">
     HttpController httpController( "watch", 9292 );
-    httpController.addStream("watchcam1",cam1);
-    httpController.addStream("watchcam2",cam2);
-    httpController.addStream( "debug", matrixVideo );
+    httpController.addStream("watchcam1",cam1); // watch livestream of cam1
+    httpController.addStream("watchcam2",cam2); // watch livestream of cam2
+    httpController.addStream( "debug", matrixVideo ); // watch a 4x4 mux stiched from cam1,cam2 and their debug frames
     httpController.addStream( "debug", faceDetector1 );
     httpController.addStream( "debug", motionDetector2 );
     listener.addController( &httpController );
