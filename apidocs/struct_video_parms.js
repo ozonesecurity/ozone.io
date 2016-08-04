@@ -1,6 +1,6 @@
 var struct_video_parms =
 [
-    [ "VideoParms", "struct_video_parms.html#a29c75ecd24ef637237307cb48f720b91", null ],
+    [ "VideoParms", "struct_video_parms.html#af7981da5e580c3d9f65b0915da0eab30", null ],
     [ "VideoParms", "struct_video_parms.html#aff6f333577cd0326b99858d5e4bd0ffa", null ],
     [ "bitRate", "struct_video_parms.html#a27058dc2df6d9820ab8750e5a99d5c69", null ],
     [ "frameRate", "struct_video_parms.html#a2cec077b62cee583aa7da473643375e1", null ],

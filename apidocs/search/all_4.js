@@ -12,7 +12,6 @@ var searchData=
   ['engineaddrisdnbcdlen',['engineAddrIsdnBcdLen',['../class_config_1_1_values.html#af03d4331e3abe257c26ba618e336a0bc',1,'Config::Values']]],
   ['eventdetail',['EventDetail',['../class_event_notification_1_1_event_detail.html#aa8a0c4240e2aa6ed3159c32912435ce3',1,'EventNotification::EventDetail::EventDetail(ozId_t id, Stage stage, double length=0.0)'],['../class_event_notification_1_1_event_detail.html#a5bc03d38708da9d375fff03812f28af0',1,'EventNotification::EventDetail::EventDetail(ozId_t id, double length)']]],
   ['eventdetail',['EventDetail',['../class_event_notification_1_1_event_detail.html',1,'EventNotification']]],
-  ['eventdetector',['EventDetector',['../class_event_detector.html',1,'']]],
   ['eventnotification',['EventNotification',['../class_event_notification.html',1,'EventNotification'],['../class_event_notification.html#acccea36cc6c52480b278c8adc469b286',1,'EventNotification::EventNotification(FeedProvider *provider, uint64_t id, uint64_t timestamp, const EventDetail &amp;detail)'],['../class_event_notification.html#a19a8b5db3efc8b38e76574348acb5159',1,'EventNotification::EventNotification(FeedProvider *provider, uint64_t id, const EventDetail &amp;detail)']]],
   ['eventrecorder',['EventRecorder',['../class_event_recorder.html',1,'']]],
   ['exception',['Exception',['../class_exception.html',1,'']]]

@@ -128,11 +128,14 @@ Collaboration diagram for NotifyOutput:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_notify_output__coll__graph.png" border="0" usemap="#_notify_output_coll__map" alt="Collaboration graph"/></div>
 <map name="_notify_output_coll__map" id="_notify_output_coll__map">
-<area shape="rect" id="node2" href="class_data_consumer.html" title="DataConsumer" alt="" coords="63,185,173,212"/><area shape="rect" id="node3" href="class_feed_consumer.html" title="FeedConsumer" alt="" coords="35,109,145,136"/><area shape="rect" id="node4" href="class_feed_base.html" title="FeedBase" alt="" coords="5,5,87,32"/><area shape="rect" id="node5" href="class_mutex.html" title="Class representing phread mutex. " alt="" coords="151,5,210,32"/><area shape="rect" id="node6" href="class_thread.html" title="Abstract class representing pthread thread. " alt="" coords="189,109,252,136"/><area shape="rect" id="node7" href="class_condition.html" title="Condition" alt="" coords="305,5,382,32"/></map>
+<area shape="rect" id="node2" href="class_data_consumer.html" title="DataConsumer" alt="" coords="44,199,155,225"/><area shape="rect" id="node3" href="class_feed_consumer.html" title="FeedConsumer" alt="" coords="35,109,145,136"/><area shape="rect" id="node4" href="class_feed_base.html" title="FeedBase" alt="" coords="5,5,87,32"/><area shape="rect" id="node5" href="class_mutex.html" title="Class representing phread mutex. " alt="" coords="146,5,205,32"/><area shape="rect" id="node6" href="class_thread.html" title="Abstract class representing pthread thread. " alt="" coords="179,199,241,225"/><area shape="rect" id="node7" href="class_condition.html" title="Condition" alt="" coords="326,109,403,136"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab8b4447660c486fc6f5c9f9bc61b2a21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8b4447660c486fc6f5c9f9bc61b2a21"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NotifyOutput</b> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>)</td></tr>
+<tr class="separator:ab8b4447660c486fc6f5c9f9bc61b2a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b4447660c486fc6f5c9f9bc61b2a21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8b4447660c486fc6f5c9f9bc61b2a21"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>NotifyOutput</b> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>)</td></tr>
 <tr class="separator:ab8b4447660c486fc6f5c9f9bc61b2a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +214,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1741688b0c7d2675af3bc1981a9a5c3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1741688b0c7d2675af3bc1981a9a5c3e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notify_output.html#a1741688b0c7d2675af3bc1981a9a5c3e">run</a> ()</td></tr>
+<tr class="memdesc:a1741688b0c7d2675af3bc1981a9a5c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_thread.html" title="Abstract class representing pthread thread. ">Thread</a> code, must be overriden to do actual thread work. <br /></td></tr>
+<tr class="separator:a1741688b0c7d2675af3bc1981a9a5c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46eba937d046cac961cf83753081f81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa46eba937d046cac961cf83753081f81"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>processFrame</b> (<a class="el" href="classlinked__ptr.html">FramePtr</a>)</td></tr>
+<tr class="separator:aa46eba937d046cac961cf83753081f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1741688b0c7d2675af3bc1981a9a5c3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1741688b0c7d2675af3bc1981a9a5c3e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_notify_output.html#a1741688b0c7d2675af3bc1981a9a5c3e">run</a> ()</td></tr>
 <tr class="memdesc:a1741688b0c7d2675af3bc1981a9a5c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_thread.html" title="Abstract class representing pthread thread. ">Thread</a> code, must be overriden to do actual thread work. <br /></td></tr>
@@ -345,8 +355,10 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="example9_8cpp_source.html#l00010">10</a> of file <a class="el" href="example9_8cpp_source.html">example9.cpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/examples/<a class="el" href="example9_8cpp_source.html">example9.cpp</a></li>
+<li>src/examples/nvrcli/<a class="el" href="nvr_notify_output_8h_source.html">nvrNotifyOutput.h</a></li>
+<li>src/examples/nvrcli/<a class="el" href="nvr_notify_output_8cpp_source.html">nvrNotifyOutput.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -354,7 +366,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_notify_output.html">NotifyOutput</a></li>
-    <li class="footer">Generated on Thu Jul 21 2016 10:32:11 for oZone Server Framework by
+    <li class="footer">Generated on Thu Aug 4 2016 15:24:11 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

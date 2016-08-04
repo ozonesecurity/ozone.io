@@ -1,0 +1,23 @@
+<map id="FaceDetector::run" name="FaceDetector::run">
+<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="691,474,908,501"/>
+<area shape="rect" id="node4" href="$class_face_detector.html#ac2e096062435ffeab3f64ce46c87706e" title="Return the image format of video frames supplied by this provider. " alt="" coords="196,71,373,98"/>
+<area shape="rect" id="node6" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="439,271,641,298"/>
+<area shape="rect" id="node7" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="195,197,374,223"/>
+<area shape="rect" id="node8" href="$class_face_detector.html#a5e3ada74344d7158ecff31b527697809" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="215,146,355,173"/>
+<area shape="rect" id="node9" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="213,322,356,349"/>
+<area shape="rect" id="node10" href="$class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="213,271,357,298"/>
+<area shape="rect" id="node11" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="211,423,358,450"/>
+<area shape="rect" id="node12" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="205,5,365,47"/>
+<area shape="rect" id="node17" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="180,474,389,501"/>
+<area shape="rect" id="node19" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="209,575,361,602"/>
+<area shape="rect" id="node22" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="203,626,367,653"/>
+<area shape="rect" id="node3" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="981,423,1119,450"/>
+<area shape="rect" id="node5" href="$class_image.html#acf081289e3dde561d654bcbfc194658a" title="Image::getFfPixFormat" alt="" coords="462,146,618,173"/>
+<area shape="rect" id="node13" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="458,80,622,121"/>
+<area shape="rect" id="node14" href="$class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="705,197,893,223"/>
+<area shape="rect" id="node15" href="$class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="711,80,887,121"/>
+<area shape="rect" id="node16" href="$class_feed_provider.html#a55fc4d795ba5c0055eaa9f77465139c1" title="FeedProvider::hasConsumer" alt="" coords="956,87,1144,114"/>
+<area shape="rect" id="node18" href="$class_thread.html#abd50159ecd409936f454c2321f673616" title="Stop the thread, by setting the mStop flag. Thread is responsible for actually existing. " alt="" coords="493,474,587,501"/>
+<area shape="rect" id="node20" href="$class_feed_provider.html#a0e59944ab9228929539fde3da0fe65ef" title="Remove this provider from the static provider map. " alt="" coords="437,575,643,602"/>
+<area shape="rect" id="node21" href="$class_feed_base.html#aada1551e2fc238c1435be539ae27588a" title="Return the identity string. " alt="" coords="734,525,865,551"/>
+</map>

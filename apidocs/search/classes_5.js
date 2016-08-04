@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['facedetector',['FaceDetector',['../class_face_detector.html',1,'']]],
   ['feedbase',['FeedBase',['../class_feed_base.html',1,'']]],
   ['feedconsumer',['FeedConsumer',['../class_feed_consumer.html',1,'']]],
   ['feedframe',['FeedFrame',['../class_feed_frame.html',1,'']]],

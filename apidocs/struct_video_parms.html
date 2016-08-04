@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('struct_video_parms.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="oz_movie_file_output_8h_source.html">ozMovieFileOutput.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="oz_parameters_8h_source.html">ozParameters.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for VideoParms:</div>
 <div class="dyncontent">
@@ -128,9 +128,9 @@ Collaboration diagram for VideoParms:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29c75ecd24ef637237307cb48f720b91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29c75ecd24ef637237307cb48f720b91"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VideoParms</b> (uint16_t width=320, uint16_t height=240, PixelFormat pixelFormat=PIX_FMT_YUV420P, const <a class="el" href="class_frame_rate.html">FrameRate</a> &amp;frameRate=<a class="el" href="class_frame_rate.html">FrameRate</a>(1, 25), uint32_t bitRate=90000, uint8_t quality=70)</td></tr>
-<tr class="separator:a29c75ecd24ef637237307cb48f720b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7981da5e580c3d9f65b0915da0eab30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7981da5e580c3d9f65b0915da0eab30"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>VideoParms</b> (uint16_t width=320, uint16_t height=240, PixelFormat pixelFormat=PIX_FMT_YUV420P, const <a class="el" href="class_frame_rate.html">FrameRate</a> &amp;frameRate=25, uint32_t bitRate=200000, uint8_t quality=70)</td></tr>
+<tr class="separator:af7981da5e580c3d9f65b0915da0eab30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaceedb4773be4e5d6ba39304b9f0028a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaceedb4773be4e5d6ba39304b9f0028a"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const </td></tr>
 <tr class="separator:aaceedb4773be4e5d6ba39304b9f0028a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,11 +181,12 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mQuality</b></td><
 <tr class="separator:a5cab94097eb9960444dd9a50e20ef990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Video generation parameters </p>
+<div class="textblock"><p>Video generation/encoding parameters</p>
+<p>Video generation parameters </p>
 
-<p>Definition at line <a class="el" href="oz_movie_file_output_8h_source.html#l00015">15</a> of file <a class="el" href="oz_movie_file_output_8h_source.html">ozMovieFileOutput.h</a>.</p>
+<p>Definition at line <a class="el" href="oz_parameters_8h_source.html#l00012">12</a> of file <a class="el" href="oz_parameters_8h_source.html">ozParameters.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/consumers/<a class="el" href="oz_movie_file_output_8h_source.html">ozMovieFileOutput.h</a></li>
+<li>src/base/<a class="el" href="oz_parameters_8h_source.html">ozParameters.h</a></li>
 <li>src/consumers/<a class="el" href="oz_mp4_file_output_8h_source.html">ozMp4FileOutput.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -194,7 +195,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mQuality</b></td><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="struct_video_parms.html">VideoParms</a></li>
-    <li class="footer">Generated on Thu Jul 21 2016 10:32:11 for oZone Server Framework by
+    <li class="footer">Generated on Thu Aug 4 2016 15:24:11 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

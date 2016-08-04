@@ -1,6 +1,6 @@
 <map id="DataConsumer" name="DataConsumer">
 <area shape="rect" id="node4" href="$class_mp4_file_output.html" title="Mp4FileOutput" alt="" coords="5,229,112,256"/>
 <area shape="rect" id="node5" href="$class_notify_output.html" title="NotifyOutput" alt="" coords="136,229,232,256"/>
-<area shape="rect" id="node2" href="$class_feed_consumer.html" title="FeedConsumer" alt="" coords="66,80,177,107"/>
-<area shape="rect" id="node3" href="$class_feed_base.html" title="FeedBase" alt="" coords="81,5,162,32"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html" title="FeedConsumer" alt="" coords="129,80,239,107"/>
+<area shape="rect" id="node3" href="$class_feed_base.html" title="FeedBase" alt="" coords="143,5,225,32"/>
 </map>

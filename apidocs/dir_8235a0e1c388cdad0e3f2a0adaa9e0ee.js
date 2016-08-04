@@ -2,6 +2,8 @@ var dir_8235a0e1c388cdad0e3f2a0adaa9e0ee =
 [
     [ "ozDelayBuffer.cpp", "oz_delay_buffer_8cpp_source.html", null ],
     [ "ozDelayBuffer.h", "oz_delay_buffer_8h_source.html", null ],
+    [ "ozFaceDetector.cpp", "oz_face_detector_8cpp_source.html", null ],
+    [ "ozFaceDetector.h", "oz_face_detector_8h_source.html", null ],
     [ "ozFilterSwapUV.cpp", "oz_filter_swap_u_v_8cpp_source.html", null ],
     [ "ozFilterSwapUV.h", "oz_filter_swap_u_v_8h_source.html", null ],
     [ "ozImageConvert.cpp", "oz_image_convert_8cpp_source.html", null ],

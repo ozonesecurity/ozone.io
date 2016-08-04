@@ -118,110 +118,53 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8h_source.html','
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../base/ozFeedProvider.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../libgen/libgenThread.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../base/ozFfmpeg.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_video_parms.html">   15</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_video_parms.html">VideoParms</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    uint16_t        mWidth;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint16_t        mHeight;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    PixelFormat     mPixelFormat;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_frame_rate.html">FrameRate</a>       mFrameRate;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint32_t        mBitRate;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    uint8_t         mQuality;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="struct_video_parms.html">VideoParms</a>( uint16_t width=320, uint16_t height=240, PixelFormat pixelFormat=PIX_FMT_YUV420P, <span class="keyword">const</span> <a class="code" href="class_frame_rate.html">FrameRate</a> &amp;frameRate=<a class="code" href="class_frame_rate.html">FrameRate</a>(1,25), uint32_t bitRate=90000, uint8_t quality=70 ) :</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        mWidth( width ),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        mHeight( height ),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        mPixelFormat( pixelFormat ),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        mFrameRate( frameRate ),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        mBitRate( bitRate ),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        mQuality( quality )</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    uint16_t width()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mWidth ); }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    uint16_t height()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mHeight ); }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    PixelFormat pixelFormat()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mPixelFormat ); }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    uint16_t bitRate()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mBitRate ); }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_frame_rate.html">FrameRate</a> frameRate()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mFrameRate ); }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_audio_parms.html">   42</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_audio_parms.html">AudioParms</a></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_audio_parms.html#a34401bb279e064cea8d3f9f731aa5777">   45</a></span>&#160;    AVSampleFormat  <a class="code" href="struct_audio_parms.html#a34401bb279e064cea8d3f9f731aa5777">mSampleFormat</a>;          </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint32_t        mBitRate;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_audio_parms.html#ac62412877514fc538da503a4bffd9f62">   47</a></span>&#160;    uint32_t        <a class="code" href="struct_audio_parms.html#ac62412877514fc538da503a4bffd9f62">mSampleRate</a>;            </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_audio_parms.html#acdb51b180fdecb4db6edf0703ba43c13">   48</a></span>&#160;    uint8_t         <a class="code" href="struct_audio_parms.html#acdb51b180fdecb4db6edf0703ba43c13">mChannels</a>;              </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="struct_audio_parms.html">AudioParms</a>( AVSampleFormat sampleFormat=AV_SAMPLE_FMT_S16, uint32_t bitRate=22050, uint32_t sampleRate=16000, uint8_t channels=1 ) :</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        mSampleFormat( sampleFormat ),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        mBitRate( bitRate ),</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        mSampleRate( sampleRate ),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        mChannels( channels )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    AVSampleFormat sampleFormat()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mSampleFormat ); }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint16_t bitRate()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mBitRate ); }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    uint32_t sampleRate()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mSampleRate ); }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    uint8_t channels()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mChannels ); }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//class AudioVideoParms : public AudioParms, public VideoParms</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//{</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//AudioVideoParms( PixelFormat pixelFormat, uint16_t width=320, uint16_t height=240, const FrameRate &amp;frameRate=FrameRate(1,25), uint32_t bitRate=90000, uint8_t quality=70 ) :</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//}</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_movie_file_output.html">   73</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_movie_file_output.html">MovieFileOutput</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_data_provider.html">DataProvider</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;CLASSID(<a class="code" href="class_movie_file_output.html">MovieFileOutput</a>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">   78</a></span>&#160;    std::string     <a class="code" href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">mLocation</a>;      </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">   79</a></span>&#160;    std::string     <a class="code" href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">mFormat</a>;        </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">   80</a></span>&#160;    uint32_t        <a class="code" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">mMaxLength</a>;     </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">   81</a></span>&#160;    <a class="code" href="struct_video_parms.html">VideoParms</a>      <a class="code" href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">mVideoParms</a>;    </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">   82</a></span>&#160;    <a class="code" href="struct_audio_parms.html">AudioParms</a>      <a class="code" href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">mAudioParms</a>;    </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8">run</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_movie_file_output.html">MovieFileOutput</a>( <span class="keyword">const</span> std::string &amp;<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <span class="keyword">const</span> std::string &amp;location, <span class="keyword">const</span> std::string &amp;format, uint32_t maxLength, <span class="keyword">const</span> <a class="code" href="struct_video_parms.html">VideoParms</a> &amp;videoParms, <span class="keyword">const</span> <a class="code" href="struct_audio_parms.html">AudioParms</a> &amp;audioParms ) :</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="class_video_consumer.html">VideoConsumer</a>( cClass(), name ),</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_thread.html">Thread</a>( <a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>() ),</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        mLocation( location ),</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        mFormat( format ),</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        mMaxLength( maxLength ),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        mVideoParms( videoParms ),</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        mAudioParms( audioParms )</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ~<a class="code" href="class_movie_file_output.html">MovieFileOutput</a>()</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif // OZ_MOVIE_FILE_OUTPUT_H</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="ttc" id="class_movie_file_output_html_aaf328892f4c8ee9848f65bc930c9a588"><div class="ttname"><a href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">MovieFileOutput::mLocation</a></div><div class="ttdeci">std::string mLocation</div><div class="ttdoc">Path to directory in which to write movie file. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00078">ozMovieFileOutput.h:78</a></div></div>
-<div class="ttc" id="class_movie_file_output_html_adb6f68adaac86d7630167f4d1a8e56f8"><div class="ttname"><a href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">MovieFileOutput::mMaxLength</a></div><div class="ttdeci">uint32_t mMaxLength</div><div class="ttdoc">Maximum length of each movie file, files will be timestamped in name. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00080">ozMovieFileOutput.h:80</a></div></div>
-<div class="ttc" id="class_movie_file_output_html_a6327a29892f5015dc8fa2fd8ce8ef4ec"><div class="ttname"><a href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">MovieFileOutput::mVideoParms</a></div><div class="ttdeci">VideoParms mVideoParms</div><div class="ttdoc">Video parameters. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00081">ozMovieFileOutput.h:81</a></div></div>
-<div class="ttc" id="class_movie_file_output_html_af85a908f32812f1e7278d1732cb93759"><div class="ttname"><a href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">MovieFileOutput::mAudioParms</a></div><div class="ttdeci">AudioParms mAudioParms</div><div class="ttdoc">Audio parameters. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00082">ozMovieFileOutput.h:82</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../base/ozParameters.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_movie_file_output.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_movie_file_output.html">MovieFileOutput</a> : <span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_data_provider.html">DataProvider</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;CLASSID(<a class="code" href="class_movie_file_output.html">MovieFileOutput</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">   22</a></span>&#160;    std::string     <a class="code" href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">mLocation</a>;      </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">   23</a></span>&#160;    std::string     <a class="code" href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">mFormat</a>;        </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">   24</a></span>&#160;    uint32_t        <a class="code" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">mMaxLength</a>;     </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">   25</a></span>&#160;    <a class="code" href="struct_video_parms.html">VideoParms</a>      <a class="code" href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">mVideoParms</a>;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">   26</a></span>&#160;    <a class="code" href="struct_audio_parms.html">AudioParms</a>      <a class="code" href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">mAudioParms</a>;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8">run</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_movie_file_output.html">MovieFileOutput</a>( <span class="keyword">const</span> std::string &amp;<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <span class="keyword">const</span> std::string &amp;location, <span class="keyword">const</span> std::string &amp;format, uint32_t maxLength, <span class="keyword">const</span> <a class="code" href="struct_video_parms.html">VideoParms</a> &amp;videoParms, <span class="keyword">const</span> <a class="code" href="struct_audio_parms.html">AudioParms</a> &amp;audioParms ) :</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_video_consumer.html">VideoConsumer</a>( cClass(), name ),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_thread.html">Thread</a>( <a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>() ),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        mLocation( location ),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        mFormat( format ),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        mMaxLength( maxLength ),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        mVideoParms( videoParms ),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        mAudioParms( audioParms )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ~<a class="code" href="class_movie_file_output.html">MovieFileOutput</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // OZ_MOVIE_FILE_OUTPUT_H</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="ttc" id="class_movie_file_output_html_aaf328892f4c8ee9848f65bc930c9a588"><div class="ttname"><a href="class_movie_file_output.html#aaf328892f4c8ee9848f65bc930c9a588">MovieFileOutput::mLocation</a></div><div class="ttdeci">std::string mLocation</div><div class="ttdoc">Path to directory in which to write movie file. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00022">ozMovieFileOutput.h:22</a></div></div>
+<div class="ttc" id="class_movie_file_output_html_adb6f68adaac86d7630167f4d1a8e56f8"><div class="ttname"><a href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">MovieFileOutput::mMaxLength</a></div><div class="ttdeci">uint32_t mMaxLength</div><div class="ttdoc">Maximum length of each movie file, files will be timestamped in name. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00024">ozMovieFileOutput.h:24</a></div></div>
+<div class="ttc" id="class_movie_file_output_html_a6327a29892f5015dc8fa2fd8ce8ef4ec"><div class="ttname"><a href="class_movie_file_output.html#a6327a29892f5015dc8fa2fd8ce8ef4ec">MovieFileOutput::mVideoParms</a></div><div class="ttdeci">VideoParms mVideoParms</div><div class="ttdoc">Video parameters. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00025">ozMovieFileOutput.h:25</a></div></div>
+<div class="ttc" id="class_movie_file_output_html_af85a908f32812f1e7278d1732cb93759"><div class="ttname"><a href="class_movie_file_output.html#af85a908f32812f1e7278d1732cb93759">MovieFileOutput::mAudioParms</a></div><div class="ttdeci">AudioParms mAudioParms</div><div class="ttdoc">Audio parameters. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00026">ozMovieFileOutput.h:26</a></div></div>
 <div class="ttc" id="class_movie_file_output_html_aadab693b67ea6cf88fff6c5e4ab1b4a8"><div class="ttname"><a href="class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8">MovieFileOutput::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8cpp_source.html#l00019">ozMovieFileOutput.cpp:19</a></div></div>
-<div class="ttc" id="struct_video_parms_html"><div class="ttname"><a href="struct_video_parms.html">VideoParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00015">ozMovieFileOutput.h:15</a></div></div>
-<div class="ttc" id="struct_audio_parms_html_acdb51b180fdecb4db6edf0703ba43c13"><div class="ttname"><a href="struct_audio_parms.html#acdb51b180fdecb4db6edf0703ba43c13">AudioParms::mChannels</a></div><div class="ttdeci">uint8_t mChannels</div><div class="ttdoc">Number of audio channels. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00048">ozMovieFileOutput.h:48</a></div></div>
+<div class="ttc" id="struct_video_parms_html"><div class="ttname"><a href="struct_video_parms.html">VideoParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_parameters_8h_source.html#l00012">ozParameters.h:12</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
-<div class="ttc" id="class_frame_rate_html"><div class="ttname"><a href="class_frame_rate.html">FrameRate</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_ffmpeg_8h_source.html#l00060">ozFfmpeg.h:60</a></div></div>
-<div class="ttc" id="class_movie_file_output_html"><div class="ttname"><a href="class_movie_file_output.html">MovieFileOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00073">ozMovieFileOutput.h:73</a></div></div>
-<div class="ttc" id="struct_audio_parms_html_ac62412877514fc538da503a4bffd9f62"><div class="ttname"><a href="struct_audio_parms.html#ac62412877514fc538da503a4bffd9f62">AudioParms::mSampleRate</a></div><div class="ttdeci">uint32_t mSampleRate</div><div class="ttdoc">Sample rate (samples per second) of this frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00047">ozMovieFileOutput.h:47</a></div></div>
+<div class="ttc" id="class_movie_file_output_html"><div class="ttname"><a href="class_movie_file_output.html">MovieFileOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00017">ozMovieFileOutput.h:17</a></div></div>
 <div class="ttc" id="class_video_consumer_html"><div class="ttname"><a href="class_video_consumer.html">VideoConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00112">ozFeedConsumer.h:112</a></div></div>
-<div class="ttc" id="struct_audio_parms_html_a34401bb279e064cea8d3f9f731aa5777"><div class="ttname"><a href="struct_audio_parms.html#a34401bb279e064cea8d3f9f731aa5777">AudioParms::mSampleFormat</a></div><div class="ttdeci">AVSampleFormat mSampleFormat</div><div class="ttdoc">The ffmpeg sample format of this frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00045">ozMovieFileOutput.h:45</a></div></div>
 <div class="ttc" id="class_feed_base_html_a22f313327e4e4effc09beed76b12fa55"><div class="ttname"><a href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">FeedBase::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Return the name string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00077">ozFeedBase.h:77</a></div></div>
 <div class="ttc" id="class_data_provider_html"><div class="ttname"><a href="class_data_provider.html">DataProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00136">ozFeedProvider.h:136</a></div></div>
-<div class="ttc" id="struct_audio_parms_html"><div class="ttname"><a href="struct_audio_parms.html">AudioParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00042">ozMovieFileOutput.h:42</a></div></div>
-<div class="ttc" id="class_movie_file_output_html_a994bc4719c5f6f8a95267959b409ef29"><div class="ttname"><a href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">MovieFileOutput::mFormat</a></div><div class="ttdeci">std::string mFormat</div><div class="ttdoc">Short tag for movie format, e.g. mp4, mpeg. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00079">ozMovieFileOutput.h:79</a></div></div>
+<div class="ttc" id="struct_audio_parms_html"><div class="ttname"><a href="struct_audio_parms.html">AudioParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_parameters_8h_source.html#l00042">ozParameters.h:42</a></div></div>
+<div class="ttc" id="class_movie_file_output_html_a994bc4719c5f6f8a95267959b409ef29"><div class="ttname"><a href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">MovieFileOutput::mFormat</a></div><div class="ttdeci">std::string mFormat</div><div class="ttdoc">Short tag for movie format, e.g. mp4, mpeg. </div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00023">ozMovieFileOutput.h:23</a></div></div>
 <div class="ttc" id="class_feed_base_html_aada1551e2fc238c1435be539ae27588a"><div class="ttname"><a href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">FeedBase::identity</a></div><div class="ttdeci">const std::string &amp; identity() const </div><div class="ttdoc">Return the identity string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00079">ozFeedBase.h:79</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -229,7 +172,7 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8h_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozMovieFileOutput.h</b></li>
-    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
+    <li class="footer">Generated on Thu Aug 4 2016 15:24:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

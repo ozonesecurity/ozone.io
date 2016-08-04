@@ -6,6 +6,15 @@ var group___processors =
       [ "run", "class_delay_buffer_filter.html#ae11002a478c6a99daaa687116c4eb0be", null ],
       [ "mDelay", "class_delay_buffer_filter.html#a1bfd1dd75c677c33e815139abf1799d2", null ]
     ] ],
+    [ "FaceDetector", "class_face_detector.html", [
+      [ "FaceDetector", "class_face_detector.html#acb270d00aa729d8b02b4d0eae55c3f30", null ],
+      [ "~FaceDetector", "class_face_detector.html#a3aa4f1c3b08ef02351ec458dd90b04e2", null ],
+      [ "frameRate", "class_face_detector.html#a53b8f5134d8ad6dc270df9d65bf88eee", null ],
+      [ "height", "class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10", null ],
+      [ "pixelFormat", "class_face_detector.html#ac2e096062435ffeab3f64ce46c87706e", null ],
+      [ "run", "class_face_detector.html#a7778cbc2fbf8c61eceee8b33a8e781f8", null ],
+      [ "width", "class_face_detector.html#a5e3ada74344d7158ecff31b527697809", null ]
+    ] ],
     [ "FilterSwapUV", "class_filter_swap_u_v.html", [
       [ "FilterSwapUV", "class_filter_swap_u_v.html#a00a17273e12ffe81e2eba4f1f99fda1a", null ],
       [ "FilterSwapUV", "class_filter_swap_u_v.html#a46c2e54c49b7225c05887d028868ad02", null ],

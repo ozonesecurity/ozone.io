@@ -81,6 +81,7 @@ var hierarchy =
         [ "AudioConsumer", "class_audio_consumer.html", null ],
         [ "DataConsumer", "class_data_consumer.html", [
           [ "Mp4FileOutput", "class_mp4_file_output.html", null ],
+          [ "NotifyOutput", "class_notify_output.html", null ],
           [ "NotifyOutput", "class_notify_output.html", null ]
         ] ],
         [ "GeneralConsumer", "class_general_consumer.html", [
@@ -100,9 +101,8 @@ var hierarchy =
             [ "JpegEncoder", "class_jpeg_encoder.html", null ],
             [ "MpegEncoder", "class_mpeg_encoder.html", null ]
           ] ],
-          [ "EventRecorder", "class_event_recorder.html", [
-            [ "EventDetector", "class_event_detector.html", null ]
-          ] ],
+          [ "EventRecorder", "class_event_recorder.html", null ],
+          [ "FaceDetector", "class_face_detector.html", null ],
           [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
           [ "ImageConvert", "class_image_convert.html", null ],
           [ "ImageTimestamper", "class_image_timestamper.html", null ],
@@ -111,7 +111,6 @@ var hierarchy =
           [ "MemoryOutput", "class_memory_output.html", null ],
           [ "MotionDetector", "class_motion_detector.html", null ],
           [ "MovieFileOutput", "class_movie_file_output.html", null ],
-          [ "MovieFileOutputDetector", "class_movie_file_output_detector.html", null ],
           [ "QueuedVideoFilter", "class_queued_video_filter.html", null ],
           [ "RateLimiter", "class_rate_limiter.html", null ],
           [ "SignalChecker", "class_signal_checker.html", null ],
@@ -122,7 +121,8 @@ var hierarchy =
             ] ],
             [ "RtmpStream", "class_rtmp_stream.html", null ],
             [ "RtspStream", "class_rtsp_stream.html", null ]
-          ] ]
+          ] ],
+          [ "VideoRecorder", "class_video_recorder.html", null ]
         ] ]
       ] ],
       [ "FeedProvider", "class_feed_provider.html", [
@@ -133,7 +133,8 @@ var hierarchy =
         ] ],
         [ "DataProvider", "class_data_provider.html", [
           [ "EventRecorder", "class_event_recorder.html", null ],
-          [ "MovieFileOutput", "class_movie_file_output.html", null ]
+          [ "MovieFileOutput", "class_movie_file_output.html", null ],
+          [ "VideoRecorder", "class_video_recorder.html", null ]
         ] ],
         [ "GeneralProvider", "class_general_provider.html", [
           [ "DelayBufferFilter", "class_delay_buffer_filter.html", null ]
@@ -142,6 +143,7 @@ var hierarchy =
           [ "AudioVideoProvider", "class_audio_video_provider.html", null ],
           [ "DirectVideoFilter", "class_direct_video_filter.html", null ],
           [ "Encoder", "class_encoder.html", null ],
+          [ "FaceDetector", "class_face_detector.html", null ],
           [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
           [ "ImageConvert", "class_image_convert.html", null ],
           [ "ImageTimestamper", "class_image_timestamper.html", null ],
@@ -247,6 +249,7 @@ var hierarchy =
     [ "Thread", "class_thread.html", [
       [ "DelayBufferFilter", "class_delay_buffer_filter.html", null ],
       [ "EventRecorder", "class_event_recorder.html", null ],
+      [ "FaceDetector", "class_face_detector.html", null ],
       [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
       [ "H264Encoder", "class_h264_encoder.html", null ],
       [ "H264Relay", "class_h264_relay.html", null ],
@@ -265,10 +268,10 @@ var hierarchy =
       [ "MemoryOutput", "class_memory_output.html", null ],
       [ "MotionDetector", "class_motion_detector.html", null ],
       [ "MovieFileOutput", "class_movie_file_output.html", null ],
-      [ "MovieFileOutputDetector", "class_movie_file_output_detector.html", null ],
       [ "Mp4FileOutput", "class_mp4_file_output.html", null ],
       [ "MpegEncoder", "class_mpeg_encoder.html", null ],
       [ "NetworkAVInput", "class_network_a_v_input.html", null ],
+      [ "NotifyOutput", "class_notify_output.html", null ],
       [ "NotifyOutput", "class_notify_output.html", null ],
       [ "QueuedVideoFilter", "class_queued_video_filter.html", null ],
       [ "RateLimiter", "class_rate_limiter.html", null ],
@@ -277,7 +280,8 @@ var hierarchy =
       [ "RtmpStream", "class_rtmp_stream.html", null ],
       [ "RtspStream", "class_rtsp_stream.html", null ],
       [ "SignalChecker", "class_signal_checker.html", null ],
-      [ "Video4LinuxInput", "class_video4_linux_input.html", null ]
+      [ "Video4LinuxInput", "class_video4_linux_input.html", null ],
+      [ "VideoRecorder", "class_video_recorder.html", null ]
     ] ],
     [ "ThreadData< T >", "class_thread_data.html", null ],
     [ "ThreadData< bool >", "class_thread_data.html", null ],

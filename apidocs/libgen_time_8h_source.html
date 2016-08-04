@@ -171,10 +171,10 @@ $(document).ready(function(){initNavTree('libgen_time_8h_source.html','');});
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define MSEC_PER_SEC 1000</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span>timeval tv;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">typedef</span> typeof(tv.tv_sec) ast_time_t;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;typedef typeof(tv.tv_usec) ast_suseconds_t;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//typedef typeof(tv.tv_sec) ast_time_t;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//typedef typeof(tv.tv_usec) ast_suseconds_t;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;inline <span class="keywordtype">int</span> tvDiffUsec( struct timeval first, struct timeval last )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> tvDiffUsec( <span class="keyword">struct</span> timeval first, <span class="keyword">struct</span> timeval last )</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span>( (last.tv_sec - first.tv_sec) * USEC_PER_SEC) + ((USEC_PER_SEC + last.tv_usec - first.tv_usec) - USEC_PER_SEC );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
@@ -317,7 +317,7 @@ $(document).ready(function(){initNavTree('libgen_time_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5a887c48e4658a59483992ab6c219613.html">libgen</a></li><li class="navelem"><b>libgenTime.h</b></li>
-    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
+    <li class="footer">Generated on Thu Aug 4 2016 15:24:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

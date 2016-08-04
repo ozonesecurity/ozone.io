@@ -38,6 +38,8 @@ var dir_0af1587c8378955de40f48b4bd1869f0 =
     [ "ozMotionFrame.h", "oz_motion_frame_8h_source.html", null ],
     [ "ozNotifyFrame.cpp", "oz_notify_frame_8cpp_source.html", null ],
     [ "ozNotifyFrame.h", "oz_notify_frame_8h_source.html", null ],
+    [ "ozParameters.cpp", "oz_parameters_8cpp_source.html", null ],
+    [ "ozParameters.h", "oz_parameters_8h_source.html", null ],
     [ "ozRegion.cpp", "oz_region_8cpp_source.html", null ],
     [ "ozRegion.h", "oz_region_8h_source.html", null ],
     [ "ozSignal.cpp", "oz_signal_8cpp_source.html", null ],

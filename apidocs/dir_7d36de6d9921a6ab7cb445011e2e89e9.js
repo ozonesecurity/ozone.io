@@ -11,5 +11,7 @@ var dir_7d36de6d9921a6ab7cb445011e2e89e9 =
     [ "ozMovieFileOutput.cpp", "oz_movie_file_output_8cpp_source.html", null ],
     [ "ozMovieFileOutput.h", "oz_movie_file_output_8h_source.html", null ],
     [ "ozMp4FileOutput.cpp", "oz_mp4_file_output_8cpp_source.html", null ],
-    [ "ozMp4FileOutput.h", "oz_mp4_file_output_8h_source.html", null ]
+    [ "ozMp4FileOutput.h", "oz_mp4_file_output_8h_source.html", null ],
+    [ "ozVideoRecorder.cpp", "oz_video_recorder_8cpp_source.html", null ],
+    [ "ozVideoRecorder.h", "oz_video_recorder_8h_source.html", null ]
 ];

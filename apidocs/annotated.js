@@ -35,10 +35,10 @@ var annotated =
     [ "DirectVideoFilter", "class_direct_video_filter.html", "class_direct_video_filter" ],
     [ "DiskIONotification", "class_disk_i_o_notification.html", "class_disk_i_o_notification" ],
     [ "Encoder", "class_encoder.html", "class_encoder" ],
-    [ "EventDetector", "class_event_detector.html", "class_event_detector" ],
     [ "EventNotification", "class_event_notification.html", "class_event_notification" ],
     [ "EventRecorder", "class_event_recorder.html", "class_event_recorder" ],
     [ "Exception", "class_exception.html", "class_exception" ],
+    [ "FaceDetector", "class_face_detector.html", "class_face_detector" ],
     [ "FeedBase", "class_feed_base.html", "class_feed_base" ],
     [ "FeedConsumer", "class_feed_consumer.html", "class_feed_consumer" ],
     [ "FeedFrame", "class_feed_frame.html", "class_feed_frame" ],
@@ -83,7 +83,6 @@ var annotated =
     [ "MotionDetector", "class_motion_detector.html", "class_motion_detector" ],
     [ "MotionFrame", "class_motion_frame.html", "class_motion_frame" ],
     [ "MovieFileOutput", "class_movie_file_output.html", "class_movie_file_output" ],
-    [ "MovieFileOutputDetector", "class_movie_file_output_detector.html", "class_movie_file_output_detector" ],
     [ "Mp4FileOutput", "class_mp4_file_output.html", "class_mp4_file_output" ],
     [ "MpegEncoder", "class_mpeg_encoder.html", "class_mpeg_encoder" ],
     [ "Mutex", "class_mutex.html", "class_mutex" ],
@@ -163,5 +162,6 @@ var annotated =
     [ "VideoFrame", "class_video_frame.html", "class_video_frame" ],
     [ "VideoParms", "struct_video_parms.html", "struct_video_parms" ],
     [ "VideoProvider", "class_video_provider.html", "class_video_provider" ],
+    [ "VideoRecorder", "class_video_recorder.html", "class_video_recorder" ],
     [ "Zone", "class_zone.html", "class_zone" ]
 ];

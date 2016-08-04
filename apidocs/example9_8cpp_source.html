@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('example9_8cpp_source.html','');});
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../base/ozApp.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../providers/ozNetworkAVInput.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../processors/ozMotionDetector.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../consumers/ozEventRecorder.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../consumers/ozVideoRecorder.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../consumers/ozMovieFileOutput.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../base/ozNotifyFrame.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
@@ -244,7 +244,7 @@ $(document).ready(function(){initNavTree('example9_8cpp_source.html','');});
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[] )</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    debugInitialise( <span class="stringliteral">&quot;example3&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 5 );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    debugInitialise( <span class="stringliteral">&quot;example9&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0 );</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Info( <span class="stringliteral">&quot;Starting&quot;</span> );</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
@@ -259,25 +259,20 @@ $(document).ready(function(){initNavTree('example9_8cpp_source.html','');});
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    motionDetector.registerProvider( input );</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;motionDetector );</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="class_event_recorder.html">EventRecorder</a> recorder( <span class="stringliteral">&quot;recorder&quot;</span> , <span class="stringliteral">&quot;/tmp&quot;</span> );</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    recorder.registerProvider( motionDetector );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;recorder );</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="struct_video_parms.html">VideoParms</a> videoParms( 640, 480 );</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="struct_audio_parms.html">AudioParms</a> audioParms;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_movie_file_output.html">MovieFileOutput</a> output( input.cname(), <span class="stringliteral">&quot;/tmp&quot;</span>, <span class="stringliteral">&quot;mp4&quot;</span>, 60, videoParms, audioParms );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    output.<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( motionDetector );</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;output );</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="class_notify_output.html">NotifyOutput</a> notifier( <span class="stringliteral">&quot;notifier&quot;</span> );</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    notifier.registerProvider( recorder );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    notifier.registerProvider( output );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;notifier );</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    app.run();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="struct_video_parms.html">VideoParms</a> videoParms( 640, 480 );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="struct_audio_parms.html">AudioParms</a> audioParms;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="class_video_recorder.html">VideoRecorder</a> recorder( <span class="stringliteral">&quot;recorder&quot;</span> , <span class="stringliteral">&quot;/transfer&quot;</span>, <span class="stringliteral">&quot;mp4&quot;</span>, videoParms, audioParms );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//MovieFileOutput recorder( &quot;recorder&quot; , &quot;/tmp&quot;, &quot;mp4&quot;, 300, videoParms, audioParms );</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    recorder.registerProvider( motionDetector );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;recorder );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="class_notify_output.html">NotifyOutput</a> notifier( <span class="stringliteral">&quot;notifier&quot;</span> );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    notifier.<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( recorder );</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;notifier );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    app.run();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
 <div class="ttc" id="class_feed_consumer_html_adc13326763ab579da3c33c6cc6c04604"><div class="ttname"><a href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">FeedConsumer::mQueueMutex</a></div><div class="ttdeci">Mutex mQueueMutex</div><div class="ttdoc">Protects the frame queue. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00028">ozFeedConsumer.h:28</a></div></div>
-<div class="ttc" id="class_event_recorder_html"><div class="ttname"><a href="class_event_recorder.html">EventRecorder</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00019">ozEventRecorder.h:19</a></div></div>
 <div class="ttc" id="class_event_notification_1_1_event_detail_html"><div class="ttname"><a href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_notify_frame_8h_source.html#l00132">ozNotifyFrame.h:132</a></div></div>
 <div class="ttc" id="class_motion_detector_html"><div class="ttname"><a href="class_motion_detector.html">MotionDetector</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8h_source.html#l00028">ozMotionDetector.h:28</a></div></div>
 <div class="ttc" id="class_notify_frame_html"><div class="ttname"><a href="class_notify_frame.html">NotifyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_notify_frame_8h_source.html#l00010">ozNotifyFrame.h:10</a></div></div>
@@ -286,18 +281,18 @@ $(document).ready(function(){initNavTree('example9_8cpp_source.html','');});
 <div class="ttc" id="class_data_consumer_html"><div class="ttname"><a href="class_data_consumer.html">DataConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00095">ozFeedConsumer.h:95</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_network_a_v_input_html"><div class="ttname"><a href="class_network_a_v_input.html">NetworkAVInput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_network_a_v_input_8h_source.html#l00016">ozNetworkAVInput.h:16</a></div></div>
-<div class="ttc" id="struct_video_parms_html"><div class="ttname"><a href="struct_video_parms.html">VideoParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00015">ozMovieFileOutput.h:15</a></div></div>
+<div class="ttc" id="struct_video_parms_html"><div class="ttname"><a href="struct_video_parms.html">VideoParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_parameters_8h_source.html#l00012">ozParameters.h:12</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
 <div class="ttc" id="class_notify_output_html_a1741688b0c7d2675af3bc1981a9a5c3e"><div class="ttname"><a href="class_notify_output.html#a1741688b0c7d2675af3bc1981a9a5c3e">NotifyOutput::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Thread code, must be overriden to do actual thread work. </div><div class="ttdef"><b>Definition:</b> <a href="example9_8cpp_source.html#l00026">example9.cpp:26</a></div></div>
 <div class="ttc" id="class_thread_html_a1c5b8d5a855d7a0f1c1b5721a018ec70"><div class="ttname"><a href="class_thread.html#a1c5b8d5a855d7a0f1c1b5721a018ec70">Thread::Thread</a></div><div class="ttdeci">Thread(const std::string &amp;threadLabel)</div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8cpp_source.html#l00230">libgenThread.cpp:230</a></div></div>
 <div class="ttc" id="class_application_html_a14ad8492991aea218c57fa632b69333d"><div class="ttname"><a href="class_application.html#a14ad8492991aea218c57fa632b69333d">Application::addThread</a></div><div class="ttdeci">void addThread(Thread *)</div><div class="ttdef"><b>Definition:</b> <a href="oz_app_8cpp_source.html#l00025">ozApp.cpp:25</a></div></div>
-<div class="ttc" id="class_movie_file_output_html"><div class="ttname"><a href="class_movie_file_output.html">MovieFileOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00073">ozMovieFileOutput.h:73</a></div></div>
+<div class="ttc" id="class_video_recorder_html"><div class="ttname"><a href="class_video_recorder.html">VideoRecorder</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_video_recorder_8h_source.html#l00020">ozVideoRecorder.h:20</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a5d1815f55c448c80392e2f28a36cde3a"><div class="ttname"><a href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relationships with providers etc before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00008">ozFeedConsumer.cpp:8</a></div></div>
 <div class="ttc" id="class_notify_output_html"><div class="ttname"><a href="class_notify_output.html">NotifyOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="example9_8cpp_source.html#l00010">example9.cpp:10</a></div></div>
 <div class="ttc" id="class_thread_html_a59c9c8a425d516f50d9adc516eaa67fd"><div class="ttname"><a href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">Thread::mStop</a></div><div class="ttdeci">bool mStop</div><div class="ttdoc">Flag indicating whether this thread has been signalled to stop. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00263">libgenThread.h:263</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a5eac06a868f4dc353d34589207ab99f6"><div class="ttname"><a href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">FeedConsumer::registerProvider</a></div><div class="ttdeci">virtual bool registerProvider(FeedProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00029">ozFeedConsumer.cpp:29</a></div></div>
 <div class="ttc" id="class_feed_base_html_a22f313327e4e4effc09beed76b12fa55"><div class="ttname"><a href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">FeedBase::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Return the name string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00077">ozFeedBase.h:77</a></div></div>
-<div class="ttc" id="struct_audio_parms_html"><div class="ttname"><a href="struct_audio_parms.html">AudioParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00042">ozMovieFileOutput.h:42</a></div></div>
+<div class="ttc" id="struct_audio_parms_html"><div class="ttname"><a href="struct_audio_parms.html">AudioParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_parameters_8h_source.html#l00042">ozParameters.h:42</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a7e7b12b6dbd3995eeb956e00063a781a"><div class="ttname"><a href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">FeedConsumer::mFrameQueue</a></div><div class="ttdeci">FrameQueue mFrameQueue</div><div class="ttdoc">Queue of frames from providers that are ready to be handled. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00029">ozFeedConsumer.h:29</a></div></div>
 <div class="ttc" id="class_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_app_8h_source.html#l00007">ozApp.h:7</a></div></div>
 <div class="ttc" id="class_feed_base_html_aada1551e2fc238c1435be539ae27588a"><div class="ttname"><a href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">FeedBase::identity</a></div><div class="ttdeci">const std::string &amp; identity() const </div><div class="ttdoc">Return the identity string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00079">ozFeedBase.h:79</a></div></div>
@@ -311,7 +306,7 @@ $(document).ready(function(){initNavTree('example9_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><b>example9.cpp</b></li>
-    <li class="footer">Generated on Thu Jul 21 2016 10:32:10 for oZone Server Framework by
+    <li class="footer">Generated on Thu Aug 4 2016 15:24:10 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
