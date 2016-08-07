@@ -1,6 +1,5 @@
 var class_event_notification =
 [
-    [ "EventDetail", "class_event_notification_1_1_event_detail.html", "class_event_notification_1_1_event_detail" ],
     [ "EventNotification", "class_event_notification.html#acccea36cc6c52480b278c8adc469b286", null ],
     [ "EventNotification", "class_event_notification.html#a189ea4b5a622a7062713ff9127589b4a", null ],
     [ "EventNotification", "class_event_notification.html#ab84cd7e7ed40017321c4331f911c0c2b", null ],

@@ -1,6 +1,5 @@
 var class_disk_i_o_notification =
 [
-    [ "DiskIODetail", "class_disk_i_o_notification_1_1_disk_i_o_detail.html", "class_disk_i_o_notification_1_1_disk_i_o_detail" ],
     [ "DiskIONotification", "class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745", null ],
     [ "DiskIONotification", "class_disk_i_o_notification.html#a6ad4d40a231d75e03cce064cefb23d01", null ],
     [ "DiskIONotification", "class_disk_i_o_notification.html#a3bf615a589accb9d27843150d3b98e36", null ],

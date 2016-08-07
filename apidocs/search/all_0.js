@@ -20,7 +20,7 @@ var searchData=
   ['amf3record',['Amf3Record',['../class_amf3_record.html',1,'']]],
   ['analyse',['analyse',['../class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6',1,'MotionDetector']]],
   ['annotate',['annotate',['../class_image.html#a38c94ebadaa1dfe6e96cf10f385f2df7',1,'Image']]],
-  ['application',['Application',['../class_application.html',1,'']]],
+  ['application',['Application',['../class_application.html',1,'Application'],['../group___application.html',1,'(Global Namespace)']]],
   ['assign',['assign',['../class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4',1,'Image::assign(const Image &amp;image)'],['../class_image.html#ad2bf8323394f0301d1acec1d78a8b5b0',1,'Image::assign(Format format, int width, int height, unsigned char *data=NULL, bool adoptData=false)']]],
   ['attachmemory',['attachMemory',['../class_memory_i_o.html#a4e06fd633a8e4cd0279c8b1fc7e3b595',1,'MemoryIO::attachMemory()'],['../class_memory_i_o_v1.html#a8eafd103b2f88f7c3a16c78e94e5c115',1,'MemoryIOV1::attachMemory()']]],
   ['audioconsumer',['AudioConsumer',['../class_audio_consumer.html',1,'AudioConsumer'],['../class_audio_consumer.html#aa8cc9bbc27e075c5af5fce9a60b29c86',1,'AudioConsumer::AudioConsumer(const std::string &amp;tag, const std::string &amp;id, int providerLimit=1)'],['../class_audio_consumer.html#a3ef11c11ab77aa54a4fe2ae13c6f43e6',1,'AudioConsumer::AudioConsumer(const std::string &amp;tag, FeedProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)']]],
