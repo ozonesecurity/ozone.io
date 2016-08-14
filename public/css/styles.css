@@ -22,10 +22,10 @@ h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #17baef;
+  color: #333333;
 }
 a {
-  color: #17baef;
+  color: #333333;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -33,7 +33,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #0e98c5;
+  color: #DDDDDD;
 }
 .btn,
 a.btn {
@@ -69,16 +69,16 @@ a.btn-cta-primary:hover,
 }
 a.btn-cta-secondary,
 .btn-cta-secondary {
-  background: #eebf3f;
-  border: 1px solid #eebf3f;
+  background: #e74c3c;
+  border: 1px solid #e74c3c;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
 }
 a.btn-cta-secondary:hover,
 .btn-cta-secondary:hover {
-  background: #ecb728;
-  border: 1px solid #ecb728;
+  background: #e74c3c;
+  border: 1px solid #e74c3c;
   color: #fff;
 }
 .text-highlight {
@@ -93,7 +93,7 @@ pre code {
 /* ======= Header ======= */
 .header {
   padding: 10px 0;
-  background: #17baef;
+  background: #333333;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -106,7 +106,7 @@ pre code {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 .header.navbar-fixed-top .logo a {
-  color: #17baef;
+  color: #333333;
 }
 .header.navbar-fixed-top .main-nav .nav .nav-item a {
   color: #666666;
@@ -149,11 +149,11 @@ pre code {
   font-family: 'Montserrat', sans-serif;
 }
 .header .main-nav .nav .nav-item.active a {
-  color: #17baef;
+  color: #333333;
   background: none;
 }
 .header .main-nav .nav .nav-item a {
-  color: #0a7396;
+  color: #ffffff;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -162,7 +162,7 @@ pre code {
   padding: 15px 10px;
 }
 .header .main-nav .nav .nav-item a:hover {
-  color: #074f66;
+  color: #ffffff;
   background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
@@ -174,14 +174,14 @@ pre code {
   background: none;
 }
 .header .main-nav .nav .nav-item.active {
-  color: #17baef;
+  color: #333333;
 }
 .header .main-nav .nav .nav-item.last {
   margin-right: 0;
 }
 /* ======= Promo Section ======= */
 .promo {
-  background: #17baef;
+  background: #333333;
   color: #fff;
   padding-top: 150px;
 }
@@ -219,7 +219,7 @@ pre code {
   color: #074f66;
 }
 .promo .social-media {
-  background: #0c86ae;
+  background: #0a6c8d;
   padding: 10px 0;
   margin: 0 auto;
 }
@@ -270,7 +270,7 @@ pre code {
 /* ======= Features Section ======= */
 .features {
   padding: 80px 0;
-  background: #17baef;
+  background: #333333;
   color: #fff;
 }
 .features .title {
@@ -413,7 +413,7 @@ pre code {
 /* ======= Contact Section ======= */
 .contact {
   padding: 80px 0;
-  background: #17baef;
+  background: #333333;
   color: #fff;
 }
 .contact .contact-inner {
@@ -421,7 +421,7 @@ pre code {
   margin: 0 auto;
 }
 .contact .title {
-  color: #074f66;
+  color: #d9d9d9;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -429,10 +429,10 @@ pre code {
   margin-bottom: 60px;
 }
 .contact a {
-  color: #074f66;
+  color: #dddddd;
 }
 .contact a:hover {
-  color: #042a36;
+  color: #eeeeee;
 }
 .contact .author-message {
   position: relative;
