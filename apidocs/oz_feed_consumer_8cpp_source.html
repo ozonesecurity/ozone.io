@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('oz_feed_consumer_8cpp_source.html','')
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_feed_consumer.html#afe94f1ac1b89d0f95db1dbabac398187">mProviderMutex</a>.lock();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_feed_consumer.html#acebc19224ebb06b5ed5ec29cec84a51b">mProviders</a>.empty() )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        Warning( <span class="stringliteral">&quot;%s: No providers registered for consumer&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        Debug( 5,<span class="stringliteral">&quot;%s: No providers registered for consumer&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_feed_consumer.html#afe94f1ac1b89d0f95db1dbabac398187">mProviderMutex</a>.unlock();</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> waitCount, readyCount, badCount;</div>
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('oz_feed_consumer_8cpp_source.html','')
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        readyCount = 0;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        badCount = 0;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="class_feed_consumer.html#afe94f1ac1b89d0f95db1dbabac398187">mProviderMutex</a>.lock();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Info( <span class="stringliteral">&quot;%s: Got %lu providers&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), <a class="code" href="class_feed_consumer.html#acebc19224ebb06b5ed5ec29cec84a51b">mProviders</a>.size() );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Debug( 5,<span class="stringliteral">&quot;%s: Got %lu providers&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), <a class="code" href="class_feed_consumer.html#acebc19224ebb06b5ed5ec29cec84a51b">mProviders</a>.size() );</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">for</span> ( ProviderMap::const_iterator iter = <a class="code" href="class_feed_consumer.html#acebc19224ebb06b5ed5ec29cec84a51b">mProviders</a>.begin(); iter != <a class="code" href="class_feed_consumer.html#acebc19224ebb06b5ed5ec29cec84a51b">mProviders</a>.end(); iter++ )</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">if</span> ( iter-&gt;first-&gt;ready() )</div>
@@ -401,7 +401,7 @@ $(document).ready(function(){initNavTree('oz_feed_consumer_8cpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozFeedConsumer.cpp</b></li>
-    <li class="footer">Generated on Sun Aug 7 2016 19:37:49 for oZone Server Framework by
+    <li class="footer">Generated on Sun Aug 14 2016 09:43:19 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
