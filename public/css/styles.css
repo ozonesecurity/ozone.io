@@ -162,7 +162,7 @@ pre code {
   padding: 15px 10px;
 }
 .header .main-nav .nav .nav-item a:hover {
-  color: #ffffff;
+  /*color: #ffffff;*/
   background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
