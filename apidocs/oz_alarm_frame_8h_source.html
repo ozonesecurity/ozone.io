@@ -131,20 +131,25 @@ $(document).ready(function(){initNavTree('oz_alarm_frame_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        mAlarmed( alarmed )</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//AlarmFrame( VideoProvider *provider, FramePtr parent, uint64_t id, uint64_t timestamp, const uint8_t *buffer, size_t size );</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( <a class="code" href="class_video_provider.html">VideoProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, <span class="keywordtype">bool</span> alarmed ) :</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_video_frame.html">VideoFrame</a>( provider, parent ),</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_alarm_frame.html#a53f5275e6278a11b5c79cd3b69d56099">   27</a></span>&#160;    <a class="code" href="class_alarm_frame.html#a53f5275e6278a11b5c79cd3b69d56099">AlarmFrame</a>( <a class="code" href="class_video_provider.html">VideoProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> uint8_t *buffer, <span class="keywordtype">size_t</span> size, <span class="keywordtype">bool</span> alarmed ) :</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_video_frame.html">VideoFrame</a>( provider, parent, id, timestamp, buffer, size ),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        mAlarmed( alarmed )</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> alarmed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mAlarmed ); }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif // OZ_ALARM_FRAME_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( <a class="code" href="class_video_provider.html">VideoProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, <span class="keywordtype">bool</span> alarmed ) :</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_video_frame.html">VideoFrame</a>( provider, parent ),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        mAlarmed( alarmed )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> alarmed()<span class="keyword"> const </span>{ <span class="keywordflow">return</span>( mAlarmed ); }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif // OZ_ALARM_FRAME_H</span></div>
 <div class="ttc" id="class_alarm_frame_html"><div class="ttname"><a href="class_alarm_frame.html">AlarmFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00009">ozAlarmFrame.h:9</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_alarm_frame_html_af0c1e31a467d2d615c79cfde8267b44b"><div class="ttname"><a href="class_alarm_frame.html#af0c1e31a467d2d615c79cfde8267b44b">AlarmFrame::mAlarmed</a></div><div class="ttdeci">bool mAlarmed</div><div class="ttdoc">Indicates whether this frame represents an alarmed frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00012">ozAlarmFrame.h:12</a></div></div>
+<div class="ttc" id="class_alarm_frame_html_a53f5275e6278a11b5c79cd3b69d56099"><div class="ttname"><a href="class_alarm_frame.html#a53f5275e6278a11b5c79cd3b69d56099">AlarmFrame::AlarmFrame</a></div><div class="ttdeci">AlarmFrame(VideoProvider *provider, FramePtr parent, uint64_t id, uint64_t timestamp, const uint8_t *buffer, size_t size, bool alarmed)</div><div class="ttdoc">Create a new frame from a data pointer and relate it to a parent frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00027">ozAlarmFrame.h:27</a></div></div>
 <div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00173">ozFeedFrame.h:173</a></div></div>
 <div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="class_feed_frame_html_afbd33229a1867f0ba6d907bfb00a264d"><div class="ttname"><a href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">FeedFrame::provider</a></div><div class="ttdeci">const FeedProvider * provider() const </div><div class="ttdoc">Return the provider of this frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00130">ozFeedFrame.h:130</a></div></div>
@@ -155,7 +160,7 @@ $(document).ready(function(){initNavTree('oz_alarm_frame_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozAlarmFrame.h</b></li>
-    <li class="footer">Generated on Sun Aug 14 2016 09:43:19 for oZone Server Framework by
+    <li class="footer">Generated on Tue Aug 23 2016 16:16:32 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

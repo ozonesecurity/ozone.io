@@ -473,6 +473,10 @@ static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>YUV2R
 <tr class="memitem:a928402bd09547404b2745ef9ddf5e02f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a928402bd09547404b2745ef9ddf5e02f"></a>
 static AVPixelFormat&#160;</td><td class="memItemRight" valign="bottom"><b>getNativePixelFormat</b> (AVPixelFormat pixelFormat)</td></tr>
 <tr class="separator:a928402bd09547404b2745ef9ddf5e02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56104949202cb8c0a404e0abc4892ad6"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#a56104949202cb8c0a404e0abc4892ad6">calcBufferSize</a> (int v4lPalette, int width, int height)</td></tr>
+<tr class="separator:a56104949202cb8c0a404e0abc4892ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab629dc6fb861a90f4108172c344aadb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image.html#aab629dc6fb861a90f4108172c344aadb">calcBufferSize</a> (AVPixelFormat pixFormat, int width, int height)</td></tr>
+<tr class="separator:aab629dc6fb861a90f4108172c344aadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7cbaa588b9fef9c71b9e0a129ad7c76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7cbaa588b9fef9c71b9e0a129ad7c76"></a>
 static <a class="el" href="class_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>merge</b> (int n_images, <a class="el" href="class_image.html">Image</a> *images[])</td></tr>
 <tr class="separator:af7cbaa588b9fef9c71b9e0a129ad7c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -790,14 +794,14 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02202">2202</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02242">2242</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_image_a283d7e656d2dadbc5e9b151357341c0e_cgraph.png" border="0" usemap="#class_image_a283d7e656d2dadbc5e9b151357341c0e_cgraph" alt=""/></div>
 <map name="class_image_a283d7e656d2dadbc5e9b151357341c0e_cgraph" id="class_image_a283d7e656d2dadbc5e9b151357341c0e_cgraph">
-<area shape="rect" id="node2" href="class_image.html#aa3c908f15e0376b5b1119ce4d9528db4" title="Image::copyYUVP2YUVP" alt="" coords="156,31,331,57"/><area shape="rect" id="node5" href="class_image.html#a1b6d8500f5720584e9ea67969ad7a557" title="Image::copyYUYV2YUVP" alt="" coords="156,81,331,108"/><area shape="rect" id="node6" href="class_image.html#a9f71ecf6d60e116129c04fb2aef67a5b" title="Image::copyUYVY2YUVP" alt="" coords="156,132,331,159"/><area shape="rect" id="node7" href="class_image.html#a3be686531c3b3c0f90ef5649048c1442" title="Image::copyRGBP2RGB" alt="" coords="159,183,327,209"/><area shape="rect" id="node8" href="class_image.html#a07e1ea03fd8bd780d65cac3d26404e6a" title="Image::copyBGR2RGB" alt="" coords="164,233,323,260"/><area shape="rect" id="node9" href="class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4" title="Image::assign" alt="" coords="191,284,295,311"/><area shape="rect" id="node3" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29" title="Image::y" alt="" coords="387,5,461,32"/><area shape="rect" id="node4" href="class_image.html#ac4122a1c84c7164ba433a4889a85f13f" title="Image::total" alt="" coords="379,56,469,83"/></map>
+<area shape="rect" id="node2" href="class_image.html#a56104949202cb8c0a404e0abc4892ad6" title="Image::calcBufferSize" alt="" coords="168,5,319,32"/><area shape="rect" id="node3" href="class_image.html#aa3c908f15e0376b5b1119ce4d9528db4" title="Image::copyYUVP2YUVP" alt="" coords="156,56,331,83"/><area shape="rect" id="node6" href="class_image.html#a1b6d8500f5720584e9ea67969ad7a557" title="Image::copyYUYV2YUVP" alt="" coords="156,107,331,133"/><area shape="rect" id="node7" href="class_image.html#a9f71ecf6d60e116129c04fb2aef67a5b" title="Image::copyUYVY2YUVP" alt="" coords="156,157,331,184"/><area shape="rect" id="node8" href="class_image.html#a3be686531c3b3c0f90ef5649048c1442" title="Image::copyRGBP2RGB" alt="" coords="159,208,327,235"/><area shape="rect" id="node9" href="class_image.html#a07e1ea03fd8bd780d65cac3d26404e6a" title="Image::copyBGR2RGB" alt="" coords="164,259,323,285"/><area shape="rect" id="node10" href="class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4" title="Image::assign" alt="" coords="191,309,295,336"/><area shape="rect" id="node4" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29" title="Image::y" alt="" coords="387,31,461,57"/><area shape="rect" id="node5" href="class_image.html#ac4122a1c84c7164ba433a4889a85f13f" title="Image::total" alt="" coords="379,81,469,108"/></map>
 </div>
 </p>
 
@@ -863,14 +867,14 @@ Here is the call graph for this function:</div>
 <p>&lt; planar YUV 4:4:0 (1 Cr &amp; Cb sample per 1x2 Y samples)</p>
 <p>&lt; planar YUV 4:4:0 full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV440P and setting color_range </p>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02323">2323</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02421">2421</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_image_ad8d590c25630467959a490402703fec6_cgraph.png" border="0" usemap="#class_image_ad8d590c25630467959a490402703fec6_cgraph" alt=""/></div>
 <map name="class_image_ad8d590c25630467959a490402703fec6_cgraph" id="class_image_ad8d590c25630467959a490402703fec6_cgraph">
-<area shape="rect" id="node2" href="class_image.html#aa3c908f15e0376b5b1119ce4d9528db4" title="Image::copyYUVP2YUVP" alt="" coords="156,56,331,83"/><area shape="rect" id="node5" href="class_image.html#aec40cc68cfa85a1bd296a1c55756bd3c" title="Image::copyYUYV2RGB" alt="" coords="160,107,327,133"/><area shape="rect" id="node8" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="160,157,327,184"/><area shape="rect" id="node9" href="class_image.html#a07e1ea03fd8bd780d65cac3d26404e6a" title="Image::copyBGR2RGB" alt="" coords="164,208,323,235"/><area shape="rect" id="node10" href="class_image.html#a3be686531c3b3c0f90ef5649048c1442" title="Image::copyRGBP2RGB" alt="" coords="159,259,327,285"/><area shape="rect" id="node11" href="class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4" title="Image::assign" alt="" coords="191,309,295,336"/><area shape="rect" id="node3" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29" title="Image::y" alt="" coords="387,5,461,32"/><area shape="rect" id="node4" href="class_image.html#ac4122a1c84c7164ba433a4889a85f13f" title="Image::total" alt="" coords="379,56,469,83"/><area shape="rect" id="node6" href="class_image.html#a701f154e8b447f516da8fd988826ecd8" title="Image::u" alt="" coords="387,107,461,133"/><area shape="rect" id="node7" href="class_image.html#aed2b6bcf75a5c36c94d27301610186fb" title="Image::v" alt="" coords="387,157,461,184"/></map>
+<area shape="rect" id="node2" href="class_image.html#a56104949202cb8c0a404e0abc4892ad6" title="Image::calcBufferSize" alt="" coords="168,5,319,32"/><area shape="rect" id="node3" href="class_image.html#aa3c908f15e0376b5b1119ce4d9528db4" title="Image::copyYUVP2YUVP" alt="" coords="156,56,331,83"/><area shape="rect" id="node6" href="class_image.html#a1b6d8500f5720584e9ea67969ad7a557" title="Image::copyYUYV2YUVP" alt="" coords="156,107,331,133"/><area shape="rect" id="node7" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="160,157,327,184"/><area shape="rect" id="node10" href="class_image.html#a07e1ea03fd8bd780d65cac3d26404e6a" title="Image::copyBGR2RGB" alt="" coords="164,208,323,235"/><area shape="rect" id="node11" href="class_image.html#a3be686531c3b3c0f90ef5649048c1442" title="Image::copyRGBP2RGB" alt="" coords="159,259,327,285"/><area shape="rect" id="node12" href="class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4" title="Image::assign" alt="" coords="191,309,295,336"/><area shape="rect" id="node4" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29" title="Image::y" alt="" coords="387,31,461,57"/><area shape="rect" id="node5" href="class_image.html#ac4122a1c84c7164ba433a4889a85f13f" title="Image::total" alt="" coords="379,81,469,108"/><area shape="rect" id="node8" href="class_image.html#a701f154e8b447f516da8fd988826ecd8" title="Image::u" alt="" coords="387,132,461,159"/><area shape="rect" id="node9" href="class_image.html#aed2b6bcf75a5c36c94d27301610186fb" title="Image::v" alt="" coords="387,183,461,209"/></map>
 </div>
 </p>
 
@@ -896,7 +900,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02509">2509</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02604">2604</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -940,7 +944,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02522">2522</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02617">2617</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -999,7 +1003,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09085">9085</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09180">9180</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1032,7 +1036,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02656">2656</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02751">2751</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1097,7 +1101,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02544">2544</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02639">2639</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1136,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l04469">4469</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l04564">4564</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1244,7 +1248,131 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05701">5701</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05796">5796</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56104949202cb8c0a404e0abc4892ad6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Image::calcBufferSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v4lPalette</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v4lPalette</td><td></td></tr>
+    <tr><td class="paramname">width</td><td></td></tr>
+    <tr><td class="paramname">height</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02201">2201</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_image_a56104949202cb8c0a404e0abc4892ad6_icgraph.png" border="0" usemap="#class_image_a56104949202cb8c0a404e0abc4892ad6_icgraph" alt=""/></div>
+<map name="class_image_a56104949202cb8c0a404e0abc4892ad6_icgraph" id="class_image_a56104949202cb8c0a404e0abc4892ad6_icgraph">
+<area shape="rect" id="node2" href="class_image.html#a283d7e656d2dadbc5e9b151357341c0e" title="Image::Image" alt="" coords="204,5,307,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aab629dc6fb861a90f4108172c344aadb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Image::calcBufferSize </td>
+          <td>(</td>
+          <td class="paramtype">AVPixelFormat&#160;</td>
+          <td class="paramname"><em>pixFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixFormat</td><td></td></tr>
+    <tr><td class="paramname">width</td><td></td></tr>
+    <tr><td class="paramname">height</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; planar YUV 4:2:0, 12bpp, (1 Cr &amp; Cb sample per 2x2 Y samples)</p>
+<p>&lt; packed YUV 4:2:2, 16bpp, Y0 Cb Y1 Cr</p>
+<p>&lt; packed YUV 4:2:2, 16bpp, Cb Y0 Cr Y1</p>
+<p>&lt; planar YUV 4:2:2, 16bpp, (1 Cr &amp; Cb sample per 2x1 Y samples)</p>
+<p>&lt; planar YUV 4:4:4, 24bpp, (1 Cr &amp; Cb sample per 1x1 Y samples)</p>
+<p>&lt; planar YUV 4:1:0, 9bpp, (1 Cr &amp; Cb sample per 4x4 Y samples)</p>
+<p>&lt; planar YUV 4:1:1, 12bpp, (1 Cr &amp; Cb sample per 4x1 Y samples)</p>
+<p>&lt; planar YUV 4:2:0, 12bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV420P and setting color_range</p>
+<p>&lt; planar YUV 4:2:2, 16bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV422P and setting color_range</p>
+<p>&lt; planar YUV 4:4:4, 24bpp, full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV444P and setting color_range</p>
+<p>&lt; planar YUV 4:4:0 (1 Cr &amp; Cb sample per 1x2 Y samples)</p>
+<p>&lt; planar YUV 4:4:0 full scale (JPEG), deprecated in favor of AV_PIX_FMT_YUV440P and setting color_range</p>
+<p>&lt; packed RGB 8:8:8, 24bpp, RGBRGB...</p>
+<p>&lt; packed RGB 8:8:8, 24bpp, BGRBGR...</p>
+<p>&lt; Y , 8bpp </p>
+
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02364">2364</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1768,15 +1896,6 @@ Here is the call graph for this function:</div>
 </div>
 </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_image_aec40cc68cfa85a1bd296a1c55756bd3c_icgraph.png" border="0" usemap="#class_image_aec40cc68cfa85a1bd296a1c55756bd3c_icgraph" alt=""/></div>
-<map name="class_image_aec40cc68cfa85a1bd296a1c55756bd3c_icgraph" id="class_image_aec40cc68cfa85a1bd296a1c55756bd3c_icgraph">
-<area shape="rect" id="node2" href="class_image.html#ad8d590c25630467959a490402703fec6" title="Image::Image" alt="" coords="220,5,323,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a1b6d8500f5720584e9ea67969ad7a557"></a>
@@ -1891,7 +2010,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03323">3323</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03418">3418</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1934,7 +2053,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03372">3372</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03467">3467</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1967,7 +2086,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05629">5629</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05724">5724</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2003,7 +2122,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03066">3066</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03161">3161</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2048,7 +2167,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06976">6976</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l07071">7071</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2093,7 +2212,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l07240">7240</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l07335">7335</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2135,7 +2254,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06291">6291</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06386">6386</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2231,7 +2350,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03173">3173</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03268">3268</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2284,7 +2403,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09386">9386</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09481">9481</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2328,7 +2447,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09397">9397</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09492">9492</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2370,7 +2489,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09507">9507</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09602">9602</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2412,7 +2531,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09684">9684</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09779">9779</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2436,7 +2555,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10170">10170</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10265">10265</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2707,7 +2826,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02669">2669</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02764">2764</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2758,7 +2877,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02811">2811</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02906">2906</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2793,7 +2912,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02789">2789</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02884">2884</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2852,7 +2971,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06417">6417</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06512">6512</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2905,7 +3024,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09851">9851</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09946">9946</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -2949,7 +3068,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09935">9935</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10030">10030</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2982,7 +3101,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03383">3383</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03478">3478</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -3016,7 +3135,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02833">2833</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02928">2928</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3059,7 +3178,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02722">2722</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02817">2817</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -3119,7 +3238,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10080">10080</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10175">10175</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3152,7 +3271,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10282">10282</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l10377">10377</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3185,7 +3304,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06018">6018</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06113">6113</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3227,7 +3346,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06171">6171</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06266">6266</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3270,7 +3389,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09050">9050</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09145">9145</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -3312,7 +3431,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09332">9332</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l09427">9427</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3339,7 +3458,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05857">5857</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05952">5952</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -3373,7 +3492,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l05942">5942</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l06037">6037</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3414,7 +3533,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_image_a701f154e8b447f516da8fd988826ecd8_icgraph.png" border="0" usemap="#class_image_a701f154e8b447f516da8fd988826ecd8_icgraph" alt=""/></div>
 <map name="class_image_a701f154e8b447f516da8fd988826ecd8_icgraph" id="class_image_a701f154e8b447f516da8fd988826ecd8_icgraph">
-<area shape="rect" id="node2" href="class_image.html#aec40cc68cfa85a1bd296a1c55756bd3c" title="Image::copyYUYV2RGB" alt="" coords="127,5,293,32"/><area shape="rect" id="node4" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="127,56,293,83"/><area shape="rect" id="node5" href="class_image.html#ab2816efdcfe535cb0bbcd920c9f04115" title="Image::u" alt="" coords="173,107,247,133"/><area shape="rect" id="node6" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e" title="Image::delta2" alt="" coords="159,157,261,184"/><area shape="rect" id="node3" href="class_image.html#ad8d590c25630467959a490402703fec6" title="Image::Image" alt="" coords="387,31,490,57"/><area shape="rect" id="node7" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9" title="MotionDetector::detectMotion" alt="" coords="341,157,536,184"/><area shape="rect" id="node8" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="584,157,748,184"/><area shape="rect" id="node9" href="class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="796,157,933,184"/></map>
+<area shape="rect" id="node2" href="class_image.html#aec40cc68cfa85a1bd296a1c55756bd3c" title="Image::copyYUYV2RGB" alt="" coords="127,5,293,32"/><area shape="rect" id="node3" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="127,56,293,83"/><area shape="rect" id="node5" href="class_image.html#ab2816efdcfe535cb0bbcd920c9f04115" title="Image::u" alt="" coords="173,107,247,133"/><area shape="rect" id="node6" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e" title="Image::delta2" alt="" coords="159,157,261,184"/><area shape="rect" id="node4" href="class_image.html#ad8d590c25630467959a490402703fec6" title="Image::Image" alt="" coords="387,56,490,83"/><area shape="rect" id="node7" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9" title="MotionDetector::detectMotion" alt="" coords="341,157,536,184"/><area shape="rect" id="node8" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="584,157,748,184"/><area shape="rect" id="node9" href="class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="796,157,933,184"/></map>
 </div>
 </p>
 
@@ -3493,7 +3612,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_image_aed2b6bcf75a5c36c94d27301610186fb_icgraph.png" border="0" usemap="#class_image_aed2b6bcf75a5c36c94d27301610186fb_icgraph" alt=""/></div>
 <map name="class_image_aed2b6bcf75a5c36c94d27301610186fb_icgraph" id="class_image_aed2b6bcf75a5c36c94d27301610186fb_icgraph">
-<area shape="rect" id="node2" href="class_image.html#aec40cc68cfa85a1bd296a1c55756bd3c" title="Image::copyYUYV2RGB" alt="" coords="127,5,293,32"/><area shape="rect" id="node4" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="127,56,293,83"/><area shape="rect" id="node5" href="class_image.html#a8e1aa5ac21bbfc57bcc5ffa1c9c06e3a" title="Image::v" alt="" coords="173,107,247,133"/><area shape="rect" id="node6" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e" title="Image::delta2" alt="" coords="159,157,261,184"/><area shape="rect" id="node3" href="class_image.html#ad8d590c25630467959a490402703fec6" title="Image::Image" alt="" coords="387,31,490,57"/><area shape="rect" id="node7" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9" title="MotionDetector::detectMotion" alt="" coords="341,157,536,184"/><area shape="rect" id="node8" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="584,157,748,184"/><area shape="rect" id="node9" href="class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="796,157,933,184"/></map>
+<area shape="rect" id="node2" href="class_image.html#aec40cc68cfa85a1bd296a1c55756bd3c" title="Image::copyYUYV2RGB" alt="" coords="127,5,293,32"/><area shape="rect" id="node3" href="class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="127,56,293,83"/><area shape="rect" id="node5" href="class_image.html#a8e1aa5ac21bbfc57bcc5ffa1c9c06e3a" title="Image::v" alt="" coords="173,107,247,133"/><area shape="rect" id="node6" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e" title="Image::delta2" alt="" coords="159,157,261,184"/><area shape="rect" id="node4" href="class_image.html#ad8d590c25630467959a490402703fec6" title="Image::Image" alt="" coords="387,56,490,83"/><area shape="rect" id="node7" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9" title="MotionDetector::detectMotion" alt="" coords="341,157,536,184"/><area shape="rect" id="node8" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="584,157,748,184"/><area shape="rect" id="node9" href="class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="796,157,933,184"/></map>
 </div>
 </p>
 
@@ -3576,7 +3695,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02949">2949</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l03044">3044</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3619,7 +3738,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02764">2764</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l02859">2859</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 </div>
 </div>
@@ -3734,7 +3853,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l07559">7559</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l07654">7654</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3788,7 +3907,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l08299">8299</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="libimg_image_8cpp_source.html#l08394">8394</a> of file <a class="el" href="libimg_image_8cpp_source.html">libimgImage.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3929,7 +4048,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_image.html">Image</a></li>
-    <li class="footer">Generated on Sun Aug 14 2016 09:43:20 for oZone Server Framework by
+    <li class="footer">Generated on Tue Aug 23 2016 16:16:33 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

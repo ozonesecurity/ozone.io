@@ -123,22 +123,29 @@ $(document).ready(function(){initNavTree('ozone_8h_source.html','');});
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;processors/ozMotionDetector.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;processors/ozMatrixVideo.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;processors/ozRateLimiter.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;processors/ozImageTimestamper.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;protocols/ozHttpController.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;processors/ozImageConvert.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;processors/ozFaceDetector.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;processors/ozMatrixVideo.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;processors/ozRateLimiter.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;processors/ozImageTimestamper.h&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;libgen/libgenDebug.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;protocols/ozHttpController.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;libgen/libgenDebug.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_detector.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_detector.html">Detector</a>:<span class="keyword">public</span> <a class="code" href="class_video_consumer.html">VideoConsumer</a>, <span class="keyword">public</span> <a class="code" href="class_video_provider.html">VideoProvider</a>, <span class="keyword">public</span> <a class="code" href="class_thread.html">Thread</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{};</div>
+<div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
+<div class="ttc" id="class_video_consumer_html"><div class="ttname"><a href="class_video_consumer.html">VideoConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00118">ozFeedConsumer.h:118</a></div></div>
+<div class="ttc" id="class_detector_html"><div class="ttname"><a href="class_detector.html">Detector</a></div><div class="ttdef"><b>Definition:</b> <a href="ozone_8h_source.html#l00025">ozone.h:25</a></div></div>
+<div class="ttc" id="class_video_provider_html"><div class="ttname"><a href="class_video_provider.html">VideoProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00149">ozFeedProvider.h:149</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><a class="el" href="dir_633c170a2dafea89702e0223e0d0d51d.html">nvrcli</a></li><li class="navelem"><b>ozone.h</b></li>
-    <li class="footer">Generated on Sun Aug 14 2016 09:43:19 for oZone Server Framework by
+    <li class="footer">Generated on Tue Aug 23 2016 16:16:32 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

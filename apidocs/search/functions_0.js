@@ -9,6 +9,7 @@ var searchData=
   ['addwriter',['addWriter',['../class_select.html#af179f984eef6bb3f28df56154cc1f156',1,'Select']]],
   ['addzone',['addZone',['../class_motion_detector.html#a01553305fb60580912bdae5c60ee5bed',1,'MotionDetector']]],
   ['age',['age',['../class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a',1,'FeedFrame']]],
+  ['alarmframe',['AlarmFrame',['../class_alarm_frame.html#a53f5275e6278a11b5c79cd3b69d56099',1,'AlarmFrame']]],
   ['analyse',['analyse',['../class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6',1,'MotionDetector']]],
   ['annotate',['annotate',['../class_image.html#a38c94ebadaa1dfe6e96cf10f385f2df7',1,'Image']]],
   ['assign',['assign',['../class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4',1,'Image::assign(const Image &amp;image)'],['../class_image.html#ad2bf8323394f0301d1acec1d78a8b5b0',1,'Image::assign(Format format, int width, int height, unsigned char *data=NULL, bool adoptData=false)']]],

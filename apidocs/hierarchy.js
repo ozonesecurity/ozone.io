@@ -94,6 +94,7 @@ var hierarchy =
             [ "RtmpController", "class_rtmp_controller.html", null ],
             [ "RtspController", "class_rtsp_controller.html", null ]
           ] ],
+          [ "Detector", "class_detector.html", null ],
           [ "DirectVideoFilter", "class_direct_video_filter.html", null ],
           [ "Encoder", "class_encoder.html", [
             [ "H264Encoder", "class_h264_encoder.html", null ],
@@ -141,6 +142,7 @@ var hierarchy =
         ] ],
         [ "VideoProvider", "class_video_provider.html", [
           [ "AudioVideoProvider", "class_audio_video_provider.html", null ],
+          [ "Detector", "class_detector.html", null ],
           [ "DirectVideoFilter", "class_direct_video_filter.html", null ],
           [ "Encoder", "class_encoder.html", null ],
           [ "FaceDetector", "class_face_detector.html", null ],
@@ -226,8 +228,8 @@ var hierarchy =
     [ "Select", "class_select.html", null ],
     [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
     [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
-    [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
+    [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "SockAddr", "class_sock_addr.html", [
       [ "SockAddrInet", "class_sock_addr_inet.html", null ],
       [ "SockAddrUnix", "class_sock_addr_unix.html", null ]
@@ -248,6 +250,7 @@ var hierarchy =
     [ "SvrExecRegistration", "class_svr_exec_registration.html", null ],
     [ "Thread", "class_thread.html", [
       [ "DelayBufferFilter", "class_delay_buffer_filter.html", null ],
+      [ "Detector", "class_detector.html", null ],
       [ "EventRecorder", "class_event_recorder.html", null ],
       [ "FaceDetector", "class_face_detector.html", null ],
       [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],

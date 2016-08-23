@@ -12,6 +12,7 @@ var searchData=
   ['deletewriter',['deleteWriter',['../class_select.html#a4a08c721972734620db541273bd98905',1,'Select']]],
   ['delta',['delta',['../class_image.html#af441830a49260ab63c14d56602e6f7c9',1,'Image']]],
   ['delta2',['delta2',['../class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e',1,'Image']]],
+  ['deregisterallproviders',['deregisterAllProviders',['../class_feed_consumer.html#ac77312f2cb04b457f44accce96e9ae9b',1,'FeedConsumer']]],
   ['deregisterconsumer',['deregisterConsumer',['../class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1',1,'FeedProvider::deregisterConsumer()'],['../class_h264_encoder.html#a6f5f6fc05bc1a12d4124277161971a8d',1,'H264Encoder::deregisterConsumer()'],['../class_h264_relay.html#a88a15610c98409aa9f59e03c072762ed',1,'H264Relay::deregisterConsumer()']]],
   ['deregisterprovider',['deregisterProvider',['../class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1',1,'FeedConsumer::deregisterProvider()'],['../class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b',1,'MatrixVideo::deregisterProvider()']]],
   ['despecklefilter',['despeckleFilter',['../class_image.html#af800b8a9e1e01ce573f7dd05b2b1935a',1,'Image']]],

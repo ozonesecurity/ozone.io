@@ -32,6 +32,7 @@ var annotated =
     [ "DataProvider", "class_data_provider.html", "class_data_provider" ],
     [ "DelayBufferFilter", "class_delay_buffer_filter.html", "class_delay_buffer_filter" ],
     [ "DeltaTimeval", "struct_delta_timeval.html", "struct_delta_timeval" ],
+    [ "Detector", "class_detector.html", null ],
     [ "DirectVideoFilter", "class_direct_video_filter.html", "class_direct_video_filter" ],
     [ "DiskIONotification", "class_disk_i_o_notification.html", "class_disk_i_o_notification" ],
     [ "Encoder", "class_encoder.html", "class_encoder" ],

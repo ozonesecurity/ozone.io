@@ -11,7 +11,7 @@ var searchData=
   ['addwriter',['addWriter',['../class_select.html#af179f984eef6bb3f28df56154cc1f156',1,'Select']]],
   ['addzone',['addZone',['../class_motion_detector.html#a01553305fb60580912bdae5c60ee5bed',1,'MotionDetector']]],
   ['age',['age',['../class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a',1,'FeedFrame']]],
-  ['alarmframe',['AlarmFrame',['../class_alarm_frame.html',1,'']]],
+  ['alarmframe',['AlarmFrame',['../class_alarm_frame.html',1,'AlarmFrame'],['../class_alarm_frame.html#a53f5275e6278a11b5c79cd3b69d56099',1,'AlarmFrame::AlarmFrame()']]],
   ['amf0array',['Amf0Array',['../class_amf0_array.html',1,'']]],
   ['amf0object',['Amf0Object',['../class_amf0_object.html',1,'']]],
   ['amf0record',['Amf0Record',['../class_amf0_record.html',1,'']]],

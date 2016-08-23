@@ -7,6 +7,7 @@ var class_feed_consumer =
     [ "~FeedConsumer", "class_feed_consumer.html#ad642c9be81f193f112479c9106d043b1", null ],
     [ "checkProviders", "class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9", null ],
     [ "cleanup", "class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a", null ],
+    [ "deregisterAllProviders", "class_feed_consumer.html#ac77312f2cb04b457f44accce96e9ae9b", null ],
     [ "deregisterProvider", "class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1", null ],
     [ "hasProvider", "class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5", null ],
     [ "hasProvider", "class_feed_consumer.html#a2ac1d96d15bdc8fb64ad115dbcc15a3f", null ],

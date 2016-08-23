@@ -144,87 +144,96 @@ $(document).ready(function(){initNavTree('oz_event_recorder_8cpp_source.html',''
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_event_recorder.html#a84a608c8ab801d830856408647e1785e">   46</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_event_recorder.html#a84a608c8ab801d830856408647e1785e">EventRecorder::processFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame )</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_motion_frame.html">MotionFrame</a> *motionFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_motion_frame.html">MotionFrame</a> *<span class="keyword">&gt;</span>(frame.get());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a> *alarmFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_alarm_frame.html">AlarmFrame</a> *<span class="keyword">&gt;</span>(frame.get());</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//const VideoProvider *provider = dynamic_cast&lt;const VideoProvider *&gt;(frame-&gt;provider());</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> uint64_t mLastAlarmTime;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    AlarmState lastState = mState;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> ( motionFrame-&gt;alarmed() )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        mState = ALARM;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        mLastAlarmTime = time64();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> ( lastState == IDLE )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// Create new event</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            mAlarmTime = mLastAlarmTime;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>++;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a> detail( <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, EventNotification::EventDetail::BEGIN );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_event_notification.html">EventNotification</a> *notification = <span class="keyword">new</span> <a class="code" href="class_event_notification.html">EventNotification</a>( <span class="keyword">this</span>, motionFrame-&gt;id(), detail );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( notification ) );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">for</span> ( FrameStore::const_iterator iter = mFrameStore.begin(); iter != mFrameStore.end(); iter++ )</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keyword">const</span> <a class="code" href="class_motion_frame.html">MotionFrame</a> *frame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_motion_frame.html">MotionFrame</a> *<span class="keyword">&gt;</span>( iter-&gt;get() );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                std::string path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, frame-&gt;id() );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="comment">//Info( &quot;PF:%d @ %dx%d&quot;, frame-&gt;pixelFormat(), frame-&gt;width(), frame-&gt;height() );</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <a class="code" href="class_image.html">Image</a> image( frame-&gt;pixelFormat(), frame-&gt;width(), frame-&gt;height(), frame-&gt;buffer().data() );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                image.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( path.c_str() );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( lastState == ALARM )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        mState = ALERT;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> ( mState == ALERT )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> ( frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>( mLastAlarmTime ) &lt; -<a class="code" href="class_event_recorder.html#af85576baf3d378da71202349f7a57089">MAX_EVENT_TAIL_AGE</a> )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            mState = IDLE;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a> detail( <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, ((<span class="keywordtype">double</span>)mLastAlarmTime-mAlarmTime)/1000000.0 );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_event_notification.html">EventNotification</a> *notification = <span class="keyword">new</span> <a class="code" href="class_event_notification.html">EventNotification</a>( <span class="keyword">this</span>, motionFrame-&gt;id(), detail );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( notification ) );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> ( mState &gt; IDLE )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::string path;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> ( mState == ALARM )</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju-A.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, motionFrame-&gt;id() );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mState == ALERT )</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, motionFrame-&gt;id() );</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//Info( &quot;PF:%d @ %dx%d&quot;, motionFrame-&gt;pixelFormat(), motionFrame-&gt;width(), motionFrame-&gt;height() );</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="class_image.html">Image</a> image( motionFrame-&gt;pixelFormat(), motionFrame-&gt;width(), motionFrame-&gt;height(), motionFrame-&gt;buffer().data() );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        image.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( path.c_str() );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// Clear out old frames</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    Debug( 5, <span class="stringliteral">&quot;Got %lu frames in store&quot;</span>, mFrameStore.size() );</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">while</span>( !mFrameStore.empty() )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classlinked__ptr.html">FramePtr</a> tempFrame = *(mFrameStore.begin());</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Debug( 5, <span class="stringliteral">&quot;Frame %ju age %.2lf&quot;</span>, tempFrame-&gt;id(), tempFrame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>() );</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> ( tempFrame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>() &lt;= <a class="code" href="class_event_recorder.html#a17665b636bfb6e5f7ee0c9fb24ae98a0">MAX_EVENT_HEAD_AGE</a> )</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        Debug( 5, <span class="stringliteral">&quot;Deleting&quot;</span> );</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">//delete tempFrame;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        mFrameStore.pop_front();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    mFrameStore.push_back( frame );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    mFrameCount++;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> ( !alarmFrame )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    AlarmState lastState = mState;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> ( alarmFrame-&gt;alarmed() )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        mState = ALARM;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        mLastAlarmTime = time64();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> ( lastState == IDLE )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// Create new event</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            mAlarmTime = mLastAlarmTime;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>++;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a> detail( <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, EventNotification::EventDetail::BEGIN );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_event_notification.html">EventNotification</a> *notification = <span class="keyword">new</span> <a class="code" href="class_event_notification.html">EventNotification</a>( <span class="keyword">this</span>, alarmFrame-&gt;id(), detail );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( notification ) );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">for</span> ( FrameStore::const_iterator iter = mFrameStore.begin(); iter != mFrameStore.end(); iter++ )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keyword">const</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a> *frame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_alarm_frame.html">AlarmFrame</a> *<span class="keyword">&gt;</span>( iter-&gt;get() );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> ( !frame )</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    Error( <span class="stringliteral">&quot;Unexpected frame type in frame store&quot;</span> );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                std::string path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, frame-&gt;id() );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="comment">//Info( &quot;PF:%d @ %dx%d&quot;, frame-&gt;pixelFormat(), frame-&gt;width(), frame-&gt;height() );</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <a class="code" href="class_image.html">Image</a> image( frame-&gt;pixelFormat(), frame-&gt;width(), frame-&gt;height(), frame-&gt;buffer().data() );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                image.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( path.c_str() );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( lastState == ALARM )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        mState = ALERT;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> ( mState == ALERT )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> ( frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>( mLastAlarmTime ) &lt; -<a class="code" href="class_event_recorder.html#af85576baf3d378da71202349f7a57089">MAX_EVENT_TAIL_AGE</a> )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            mState = IDLE;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a> detail( <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, ((<span class="keywordtype">double</span>)mLastAlarmTime-mAlarmTime)/1000000.0 );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="class_event_notification.html">EventNotification</a> *notification = <span class="keyword">new</span> <a class="code" href="class_event_notification.html">EventNotification</a>( <span class="keyword">this</span>, alarmFrame-&gt;id(), detail );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( notification ) );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> ( mState &gt; IDLE )</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::string path;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> ( mState == ALARM )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju-A.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, alarmFrame-&gt;id() );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mState == ALERT )</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            path = stringtf( <span class="stringliteral">&quot;%s/img-%s-%d-%ju.jpg&quot;</span>, <a class="code" href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">mLocation</a>.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">mEventCount</a>, alarmFrame-&gt;id() );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="comment">//Info( &quot;PF:%d @ %dx%d&quot;, alarmFrame-&gt;pixelFormat(), alarmFrame-&gt;width(), alarmFrame-&gt;height() );</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="class_image.html">Image</a> image( alarmFrame-&gt;pixelFormat(), alarmFrame-&gt;width(), alarmFrame-&gt;height(), alarmFrame-&gt;buffer().data() );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        image.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( path.c_str() );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// Clear out old frames</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    Debug( 5, <span class="stringliteral">&quot;Got %lu frames in store&quot;</span>, mFrameStore.size() );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">while</span>( !mFrameStore.empty() )</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classlinked__ptr.html">FramePtr</a> tempFrame = *(mFrameStore.begin());</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        Debug( 5, <span class="stringliteral">&quot;Frame %ju age %.2lf&quot;</span>, tempFrame-&gt;id(), tempFrame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>() );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span> ( tempFrame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>() &lt;= <a class="code" href="class_event_recorder.html#a17665b636bfb6e5f7ee0c9fb24ae98a0">MAX_EVENT_HEAD_AGE</a> )</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        Debug( 5, <span class="stringliteral">&quot;Deleting&quot;</span> );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">//delete tempFrame;</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        mFrameStore.pop_front();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    mFrameStore.push_back( frame );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    mFrameCount++;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
 <div class="ttc" id="class_feed_consumer_html_adc13326763ab579da3c33c6cc6c04604"><div class="ttname"><a href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">FeedConsumer::mQueueMutex</a></div><div class="ttdeci">Mutex mQueueMutex</div><div class="ttdoc">Protects the frame queue. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00028">ozFeedConsumer.h:28</a></div></div>
 <div class="ttc" id="class_feed_frame_html_ab7b2319f304dbc261142dd53c5ca010a"><div class="ttname"><a href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">FeedFrame::age</a></div><div class="ttdeci">double age(uint64_t checkTimestamp=0) const </div><div class="ttdoc">How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00146">ozFeedFrame.h:146</a></div></div>
 <div class="ttc" id="class_event_notification_1_1_event_detail_html"><div class="ttname"><a href="class_event_notification_1_1_event_detail.html">EventNotification::EventDetail</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_notify_frame_8h_source.html#l00134">ozNotifyFrame.h:134</a></div></div>
-<div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00159">ozFeedConsumer.cpp:159</a></div></div>
+<div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00168">ozFeedConsumer.cpp:168</a></div></div>
 <div class="ttc" id="class_event_notification_html"><div class="ttname"><a href="class_event_notification.html">EventNotification</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_notify_frame_8h_source.html#l00131">ozNotifyFrame.h:131</a></div></div>
+<div class="ttc" id="class_alarm_frame_html"><div class="ttname"><a href="class_alarm_frame.html">AlarmFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00009">ozAlarmFrame.h:9</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8h_source.html#l00168">libimgImage.h:168</a></div></div>
 <div class="ttc" id="class_event_recorder_html_ab20e8b05863d910a00fffc88761a632c"><div class="ttname"><a href="class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c">EventRecorder::mLocation</a></div><div class="ttdeci">std::string mLocation</div><div class="ttdoc">Where to store the saved files. </div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00032">ozEventRecorder.h:32</a></div></div>
@@ -238,18 +247,17 @@ $(document).ready(function(){initNavTree('oz_event_recorder_8cpp_source.html',''
 <div class="ttc" id="class_event_recorder_html_a84137d6f676655852a6c306f9931ae5f"><div class="ttname"><a href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f">EventRecorder::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8cpp_source.html#l00013">ozEventRecorder.cpp:13</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a7e7b12b6dbd3995eeb956e00063a781a"><div class="ttname"><a href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">FeedConsumer::mFrameQueue</a></div><div class="ttdeci">FrameQueue mFrameQueue</div><div class="ttdoc">Queue of frames from providers that are ready to be handled. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00029">ozFeedConsumer.h:29</a></div></div>
 <div class="ttc" id="class_event_recorder_html_a8764536d25ade8dc7a088b5a8b7c27f2"><div class="ttname"><a href="class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2">EventRecorder::mEventCount</a></div><div class="ttdeci">int mEventCount</div><div class="ttdoc">Temp, in lieu of DB event index. </div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00036">ozEventRecorder.h:36</a></div></div>
-<div class="ttc" id="class_image_html_a5af802879f05abe0ad9b5988e21a5b97"><div class="ttname"><a href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">Image::writeJpeg</a></div><div class="ttdeci">bool writeJpeg(const std::string &amp;filename, int quality_override=0) const </div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l02949">libimgImage.cpp:2949</a></div></div>
+<div class="ttc" id="class_image_html_a5af802879f05abe0ad9b5988e21a5b97"><div class="ttname"><a href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">Image::writeJpeg</a></div><div class="ttdeci">bool writeJpeg(const std::string &amp;filename, int quality_override=0) const </div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l03044">libimgImage.cpp:3044</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00170">ozFeedProvider.cpp:170</a></div></div>
-<div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00098">ozFeedConsumer.cpp:98</a></div></div>
+<div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
 <div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
-<div class="ttc" id="class_motion_frame_html"><div class="ttname"><a href="class_motion_frame.html">MotionFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_frame_8h_source.html#l00011">ozMotionFrame.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozEventRecorder.cpp</b></li>
-    <li class="footer">Generated on Sun Aug 14 2016 09:43:19 for oZone Server Framework by
+    <li class="footer">Generated on Tue Aug 23 2016 16:16:32 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

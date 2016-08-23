@@ -1,23 +1,26 @@
 <map id="nvrCameras" name="nvrCameras">
-<area shape="rect" id="node2" href="$class_event_recorder.html" title="EventRecorder" alt="" coords="1044,225,1153,252"/>
-<area shape="rect" id="node3" href="$class_video_consumer.html" title="VideoConsumer" alt="" coords="779,264,893,291"/>
-<area shape="rect" id="node12" href="$class_video_recorder.html" title="VideoRecorder" alt="" coords="1045,364,1153,391"/>
-<area shape="rect" id="node23" href="$class_motion_detector.html" title="MotionDetector" alt="" coords="1043,157,1154,184"/>
-<area shape="rect" id="node4" href="$class_feed_consumer.html" title="FeedConsumer" alt="" coords="507,255,617,281"/>
-<area shape="rect" id="node5" href="$class_feed_base.html" title="FeedBase" alt="" coords="204,103,285,129"/>
-<area shape="rect" id="node8" href="$class_feed_provider.html" title="FeedProvider" alt="" coords="513,68,611,95"/>
-<area shape="rect" id="node6" href="$class_mutex.html" title="Class representing phread mutex. " alt="" coords="215,172,274,199"/>
-<area shape="rect" id="node10" href="$class_thread.html" title="Abstract class representing pthread thread. " alt="" coords="805,147,867,173"/>
-<area shape="rect" id="node7" href="$class_data_provider.html" title="DataProvider" alt="" coords="787,213,885,240"/>
-<area shape="rect" id="node21" href="$class_video_provider.html" title="VideoProvider" alt="" coords="785,64,887,91"/>
-<area shape="rect" id="node22" href="$class_audio_provider.html" title="AudioProvider" alt="" coords="785,5,887,32"/>
-<area shape="rect" id="node9" href="$classlinked__ptr.html" title="linked_ptr\&lt; const FeedFrame \&gt;" alt="" coords="143,35,347,61"/>
-<area shape="rect" id="node19" href="$class_network_a_v_input.html" title="NetworkAVInput" alt="" coords="1216,97,1335,124"/>
-<area shape="rect" id="node11" href="$class_condition.html" title="Condition" alt="" coords="523,120,601,147"/>
-<area shape="rect" id="node13" href="$struct_video_parms.html" title="VideoParms" alt="" coords="789,393,883,420"/>
-<area shape="rect" id="node14" href="$class_frame_rate.html" title="FrameRate" alt="" coords="519,393,605,420"/>
-<area shape="rect" id="node15" href="$class_rational.html" title="Rational" alt="" coords="209,393,280,420"/>
-<area shape="rect" id="node17" href="$struct_audio_parms.html" title="AudioParms" alt="" coords="789,444,883,471"/>
-<area shape="rect" id="node18" href="$class_buffer.html" title="Buffer\&lt; uint8_t \&gt;" alt="" coords="776,519,896,545"/>
-<area shape="rect" id="node20" href="$class_audio_video_provider.html" title="AudioVideoProvider" alt="" coords="1031,31,1167,57"/>
+<area shape="rect" id="node2" href="$class_event_recorder.html" title="EventRecorder" alt="" coords="1044,312,1153,339"/>
+<area shape="rect" id="node3" href="$class_video_consumer.html" title="VideoConsumer" alt="" coords="779,431,893,457"/>
+<area shape="rect" id="node12" href="$class_face_detector.html" title="FaceDetector" alt="" coords="1048,367,1149,393"/>
+<area shape="rect" id="node14" href="$class_video_recorder.html" title="VideoRecorder" alt="" coords="1045,631,1153,657"/>
+<area shape="rect" id="node21" href="$class_image_convert.html" title="ImageConvert" alt="" coords="1047,440,1151,467"/>
+<area shape="rect" id="node22" href="$class_rate_limiter.html" title="RateLimiter" alt="" coords="1054,497,1143,524"/>
+<area shape="rect" id="node26" href="$class_motion_detector.html" title="MotionDetector" alt="" coords="1043,185,1154,212"/>
+<area shape="rect" id="node4" href="$class_feed_consumer.html" title="FeedConsumer" alt="" coords="507,312,617,339"/>
+<area shape="rect" id="node5" href="$class_feed_base.html" title="FeedBase" alt="" coords="204,295,285,321"/>
+<area shape="rect" id="node8" href="$class_feed_provider.html" title="FeedProvider" alt="" coords="513,208,611,235"/>
+<area shape="rect" id="node6" href="$class_mutex.html" title="Class representing phread mutex. " alt="" coords="215,175,274,201"/>
+<area shape="rect" id="node10" href="$class_thread.html" title="Abstract class representing pthread thread. " alt="" coords="805,97,867,124"/>
+<area shape="rect" id="node7" href="$class_data_provider.html" title="DataProvider" alt="" coords="787,364,885,391"/>
+<area shape="rect" id="node13" href="$class_video_provider.html" title="VideoProvider" alt="" coords="785,203,887,229"/>
+<area shape="rect" id="node25" href="$class_audio_provider.html" title="AudioProvider" alt="" coords="785,5,887,32"/>
+<area shape="rect" id="node9" href="$classlinked__ptr.html" title="linked_ptr\&lt; const FeedFrame \&gt;" alt="" coords="143,49,347,76"/>
+<area shape="rect" id="node23" href="$class_network_a_v_input.html" title="NetworkAVInput" alt="" coords="1216,89,1335,116"/>
+<area shape="rect" id="node11" href="$class_condition.html" title="Condition" alt="" coords="523,157,601,184"/>
+<area shape="rect" id="node24" href="$class_audio_video_provider.html" title="AudioVideoProvider" alt="" coords="1031,89,1167,116"/>
+<area shape="rect" id="node15" href="$struct_video_parms.html" title="VideoParms" alt="" coords="789,744,883,771"/>
+<area shape="rect" id="node16" href="$class_frame_rate.html" title="FrameRate" alt="" coords="519,744,605,771"/>
+<area shape="rect" id="node17" href="$class_rational.html" title="Rational" alt="" coords="209,744,280,771"/>
+<area shape="rect" id="node19" href="$struct_audio_parms.html" title="AudioParms" alt="" coords="789,795,883,821"/>
+<area shape="rect" id="node20" href="$class_buffer.html" title="Buffer\&lt; uint8_t \&gt;" alt="" coords="776,693,896,720"/>
 </map>

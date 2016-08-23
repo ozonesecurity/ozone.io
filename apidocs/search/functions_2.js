@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calcbuffersize',['calcBufferSize',['../class_image.html#a56104949202cb8c0a404e0abc4892ad6',1,'Image::calcBufferSize(int v4lPalette, int width, int height)'],['../class_image.html#aab629dc6fb861a90f4108172c344aadb',1,'Image::calcBufferSize(AVPixelFormat pixFormat, int width, int height)']]],
   ['canpoll',['canPoll',['../class_feed_provider.html#a3089a6e0dc76ba03e3d03174d36da29b',1,'FeedProvider']]],
   ['cclass',['cclass',['../class_feed_base.html#ad3df0c2639a5fba05035b0ceac0812c8',1,'FeedBase']]],
   ['channelframes0',['channelFrames0',['../class_video4_linux_input.html#ae22c3340195b8b03d202f92e37f0957a',1,'Video4LinuxInput']]],
