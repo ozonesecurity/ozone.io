@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "oZone Server Framework", "index.html", [
+    [ "ozone.network", "^http://ozone.network", null ],
     [ "Welcome", "index.html", null ],
     [ "README", "md_src_examples_nvrcli_nvrcli_web__r_e_a_d_m_e.html", null ],
     [ "NVR-cli", "md_src_examples_nvrcli__r_e_a_d_m_e.html", null ],
