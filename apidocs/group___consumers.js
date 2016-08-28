@@ -42,7 +42,7 @@ var group___consumers =
         [ "ALARM", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623daefdf19e3502b0bf6fcba46049dd99e5b", null ],
         [ "ALERT", "group___consumers.html#ggaa349dfe2b4bf86754252a909f689623da18c3fdae244c3b678f83f286ec0bdfef", null ]
       ] ],
-      [ "EventRecorder", "class_event_recorder.html#a571aff610809bce64c3d5c9aff8f1d10", null ],
+      [ "EventRecorder", "class_event_recorder.html#af8cb64074d1534b6ba6ec63d947c718c", null ],
       [ "~EventRecorder", "class_event_recorder.html#a54c194d6913c8d12ba30c76dd4d9d369", null ],
       [ "processFrame", "class_event_recorder.html#a84a608c8ab801d830856408647e1785e", null ],
       [ "run", "class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f", null ],
@@ -51,6 +51,7 @@ var group___consumers =
       [ "mFrameCount", "class_event_recorder.html#a3f32ce4f8097058df246c9cbc9ae6869", null ],
       [ "mFrameStore", "class_event_recorder.html#a78687a65ca343bb835a52b015af31b15", null ],
       [ "mLocation", "class_event_recorder.html#ab20e8b05863d910a00fffc88761a632c", null ],
+      [ "mMinTime", "class_event_recorder.html#af9f0fd134ea7eec1a453c864e518213b", null ],
       [ "mState", "class_event_recorder.html#a6a48716e364d10be9fa0c0a8ff31de3e", null ]
     ] ],
     [ "LocalFileDump", "class_local_file_dump.html", [
@@ -103,7 +104,7 @@ var group___consumers =
         [ "ALARM", "group___consumers.html#gga0db56893d533215e97c7461bfb73ac25a9bcf2b9aa0d4e264032d07024f086bc0", null ],
         [ "ALERT", "group___consumers.html#gga0db56893d533215e97c7461bfb73ac25acddd0bcd9164ae41f65f2b584fa9f6bd", null ]
       ] ],
-      [ "VideoRecorder", "class_video_recorder.html#a9fff46007361e3dce7a67e295b6d2eb8", null ],
+      [ "VideoRecorder", "class_video_recorder.html#afa797922b53843db0c7f69bad891ba24", null ],
       [ "~VideoRecorder", "class_video_recorder.html#a5e1485723ebab38ce05427c01a8e5493", null ],
       [ "closeVideoFile", "class_video_recorder.html#ac17672b34d1c63d2ac29b0af29908104", null ],
       [ "deinitEncoder", "class_video_recorder.html#aef1fe13013c77a5915ba7ffdeca76ca9", null ],
@@ -126,6 +127,7 @@ var group___consumers =
       [ "mFrameStore", "class_video_recorder.html#a741185498100ce168396f4d2fe55a8db", null ],
       [ "mInterBuffer", "class_video_recorder.html#a1f434c5758148926d4a41fbd6298aa39", null ],
       [ "mLocation", "class_video_recorder.html#a54e74957df0efa63291a0715ab9b0596", null ],
+      [ "mMinTime", "class_video_recorder.html#ae9e5aaf17e3ada146983a816e0eee74b", null ],
       [ "mNotificationId", "class_video_recorder.html#adcb5a4611b51c4d2802ef9ced48f50c1", null ],
       [ "mOutputContext", "class_video_recorder.html#a801b78e7afd7be8a5402093d2efd9a27", null ],
       [ "mState", "class_video_recorder.html#a481cd574c2d5ce313eece3c1d18308b7", null ],

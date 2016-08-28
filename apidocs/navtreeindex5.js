@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"class_pipe.html#a589df0fc0a855ddd75df1a77de93ef17":[4,0,91,3],
 "class_pipe.html#a6b80b49c0299213c5d3ce12aa12413ff":[4,0,91,5],
 "class_pipe.html#a91ddad07e89d5585b1cf27fa7860e201":[4,0,91,0],
 "class_pipe.html#ad37a5cdd8488d5326c435fb5185d2bd0":[4,0,91,7],
@@ -87,16 +88,17 @@ var NAVTREEINDEX5 =
 "class_raw_h264_input.html#adc9ed818b6e6312f74797585c1a89684":[3,1,5,7],
 "class_raw_h264_input.html#ae7827bad8134c5a6e55984203c25f0ed":[3,1,5,10],
 "class_raw_h264_input.html#afcb5c39fd21b8ac72325cd29d77b6925":[3,1,5,5],
-"class_region.html":[4,0,98],
-"class_region.html#a126782b4aa234f0bf3f6a69648facf10":[4,0,98,8],
-"class_region.html#a19aabb45a8f2aaa22c34e7b1652f60e8":[4,0,98,7],
-"class_region.html#a30fdecfe9f271b557ed662426212d08f":[4,0,98,1],
-"class_region.html#a3c3670fff78f7511d156e3b2f0bc6266":[4,0,98,2],
-"class_region.html#a3c84fae40161950ab4e5f42275997676":[4,0,98,4],
-"class_region.html#a491c8ec55eb65d73b2d0d6b224b2c3ec":[4,0,98,9],
-"class_region.html#abdb7af06ff5e72aea80d415fad94ae28":[4,0,98,3],
-"class_region.html#ac1c1fcd2dd85f8aacf125b13542a4f98":[4,0,98,5],
-"class_region.html#ac2ef406d41cfe4ad48d61fe582168ad1":[4,0,98,6],
+"class_recorder.html":[4,0,98],
+"class_region.html":[4,0,99],
+"class_region.html#a126782b4aa234f0bf3f6a69648facf10":[4,0,99,8],
+"class_region.html#a19aabb45a8f2aaa22c34e7b1652f60e8":[4,0,99,7],
+"class_region.html#a30fdecfe9f271b557ed662426212d08f":[4,0,99,1],
+"class_region.html#a3c3670fff78f7511d156e3b2f0bc6266":[4,0,99,2],
+"class_region.html#a3c84fae40161950ab4e5f42275997676":[4,0,99,4],
+"class_region.html#a491c8ec55eb65d73b2d0d6b224b2c3ec":[4,0,99,9],
+"class_region.html#abdb7af06ff5e72aea80d415fad94ae28":[4,0,99,3],
+"class_region.html#ac1c1fcd2dd85f8aacf125b13542a4f98":[4,0,99,5],
+"class_region.html#ac2ef406d41cfe4ad48d61fe582168ad1":[4,0,99,6],
 "class_remote_video_input.html":[3,1,6],
 "class_remote_video_input.html#a44080adc5726b1a3e54d4527a0928102":[3,1,6,0],
 "class_remote_video_input.html#a550c701a09cca7828c8ca99a48e4e7a5":[3,1,6,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "class_rtsp_session.html#aeba274fdf1537fa1f600e9e2cec3c350":[3,6,35,11],
 "class_rtsp_stream.html":[3,6,36],
 "class_rtsp_stream.html#a10de44044c2c9b84f3cdfff563d827f7":[3,6,36,16],
-"class_rtsp_stream.html#a177c4112a9694564062dff5879beb0b3":[3,6,36,9],
-"class_rtsp_stream.html#a2062f21b96866c4c92f552c660728711":[3,6,36,15],
-"class_rtsp_stream.html#a234eaa4e6b1bf205f801bd6b983d3550":[3,6,36,7]
+"class_rtsp_stream.html#a177c4112a9694564062dff5879beb0b3":[3,6,36,9]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"dir_5a887c48e4658a59483992ab6c219613.html":[5,0,0,4],
+"dir_633c170a2dafea89702e0223e0d0d51d.html":[5,0,0,3,0],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[5,0,0],
 "dir_79690749eba542503bb1a9a3dbb495e1.html":[5,0,0,7],
 "dir_7d36de6d9921a6ab7cb445011e2e89e9.html":[5,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "oz_controller_8h_source.html":[5,0,0,0,13],
 "oz_delay_buffer_8cpp_source.html":[5,0,0,6,0],
 "oz_delay_buffer_8h_source.html":[5,0,0,6,1],
-"oz_encoder_8cpp_source.html":[5,0,0,0,14],
-"oz_encoder_8h_source.html":[5,0,0,0,15],
-"oz_event_recorder_8cpp_source.html":[5,0,0,1,0]
+"oz_detector_8cpp_source.html":[5,0,0,0,14]
 };
