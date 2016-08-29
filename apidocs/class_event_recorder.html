@@ -132,8 +132,7 @@ Inheritance diagram for EventRecorder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af8cb64074d1534b6ba6ec63d947c718c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8cb64074d1534b6ba6ec63d947c718c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>EventRecorder</b> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const std::string &amp;location, double minTime=0)</td></tr>
+<tr class="memitem:af8cb64074d1534b6ba6ec63d947c718c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_recorder.html#af8cb64074d1534b6ba6ec63d947c718c">EventRecorder</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const std::string &amp;location, double minTime=0)</td></tr>
 <tr class="separator:af8cb64074d1534b6ba6ec63d947c718c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_video_consumer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_video_consumer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_video_consumer.html">VideoConsumer</a></td></tr>
 <tr class="memitem:a843010ada945a86ff979dae0d667435c inherit pub_methods_class_video_consumer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_video_provider.html">VideoProvider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a> () const </td></tr>
@@ -281,6 +280,7 @@ typedef std::map&lt; <a class="el" href="class_feed_consumer.html">FeedConsumer<
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a84137d6f676655852a6c306f9931ae5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f">run</a> ()</td></tr>
+<tr class="memdesc:a84137d6f676655852a6c306f9931ae5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">default run method  <a href="#a84137d6f676655852a6c306f9931ae5f">More...</a><br /></td></tr>
 <tr class="separator:a84137d6f676655852a6c306f9931ae5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84a608c8ab801d830856408647e1785e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_recorder.html#a84a608c8ab801d830856408647e1785e">processFrame</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>)</td></tr>
 <tr class="separator:a84a608c8ab801d830856408647e1785e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -532,7 +532,59 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Consumer class used to record video stream for which motion or other significant activity has been detected. Ultimately will write to a DB, but for now just to filesystem. </p>
 
 <p>Definition at line <a class="el" href="oz_event_recorder_8h_source.html#l00020">20</a> of file <a class="el" href="oz_event_recorder_8h_source.html">ozEventRecorder.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af8cb64074d1534b6ba6ec63d947c718c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EventRecorder::EventRecorder </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minTime</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of instance </td></tr>
+    <tr><td class="paramname">location</td><td>location base path where to store videos </td></tr>
+    <tr><td class="paramname">minTime</td><td>Minimum amount of time (in seconds) to record after an alarm is triggered</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">nvrcam.event = <span class="keyword">new</span> <a class="code" href="class_event_recorder.html#af8cb64074d1534b6ba6ec63d947c718c">EventRecorder</a>( <span class="stringliteral">&quot;event-&quot;</span>+name,  path,30);</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="oz_event_recorder_8h_source.html#l00057">57</a> of file <a class="el" href="oz_event_recorder_8h_source.html">ozEventRecorder.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a84a608c8ab801d830856408647e1785e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +614,7 @@ static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="oz_event_recorder_8cpp_source.html#l00046">46</a> of file <a class="el" href="oz_event_recorder_8cpp_source.html">ozEventRecorder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_event_recorder_8cpp_source.html#l00049">49</a> of file <a class="el" href="oz_event_recorder_8cpp_source.html">ozEventRecorder.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -578,7 +630,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_event_recorder_a84a608c8ab801d830856408647e1785e_icgraph.png" border="0" usemap="#class_event_recorder_a84a608c8ab801d830856408647e1785e_icgraph" alt=""/></div>
 <map name="class_event_recorder_a84a608c8ab801d830856408647e1785e_icgraph" id="class_event_recorder_a84a608c8ab801d830856408647e1785e_icgraph">
-<area shape="rect" id="node2" href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="EventRecorder::run" alt="" coords="253,5,388,32"/></map>
+<area shape="rect" id="node2" href="class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="default run method " alt="" coords="253,5,388,32"/></map>
 </div>
 </p>
 
@@ -604,6 +656,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>default run method </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="class_thread.html#af4a66c44c91ab79cbd830511f622c4e8">Thread</a>.</p>
@@ -631,7 +685,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_event_recorder.html">EventRecorder</a></li>
-    <li class="footer">Generated on Sun Aug 28 2016 16:36:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

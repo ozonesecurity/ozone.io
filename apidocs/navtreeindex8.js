@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"dir_306d1f7c2316132a5a1b654ae206deb5.html":[6,0,0,8],
 "dir_5a887c48e4658a59483992ab6c219613.html":[6,0,0,4],
 "dir_633c170a2dafea89702e0223e0d0d51d.html":[6,0,0,3,0],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[6,0,0],
@@ -22,8 +23,8 @@ var NAVTREEINDEX8 =
 "example9_8cpp_source.html":[6,0,0,3,10],
 "experimenting_8cpp_source.html":[6,0,0,3,11],
 "files.html":[6,0],
-"functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
+"functions.html":[5,3,0],
 "functions_b.html":[5,3,0,1],
 "functions_c.html":[5,3,0,2],
 "functions_d.html":[5,3,0,3],
@@ -189,8 +190,8 @@ var NAVTREEINDEX8 =
 "group___utilities.html#ggabcfddb3f185edd6f77a0be690e0fe0d8af0c24521bc244b10eff45f17ceffd14b":[4,4,4,2,2],
 "group___utilities.html#ggabcfddb3f185edd6f77a0be690e0fe0d8af3189a054c0c7a3809f0e43425bd6609":[4,4,4,2,0],
 "hierarchy.html":[5,2],
-"index.html":[],
 "index.html":[1],
+"index.html":[],
 "libgen_buffer_8cpp_source.html":[6,0,0,4,0],
 "libgen_buffer_8h_source.html":[6,0,0,4,1],
 "libgen_comms_8cpp_source.html":[6,0,0,4,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "oz_controller_8cpp_source.html":[6,0,0,0,12],
 "oz_controller_8h_source.html":[6,0,0,0,13],
 "oz_delay_buffer_8cpp_source.html":[6,0,0,6,0],
-"oz_delay_buffer_8h_source.html":[6,0,0,6,1],
-"oz_detector_8cpp_source.html":[6,0,0,0,14]
+"oz_delay_buffer_8h_source.html":[6,0,0,6,1]
 };

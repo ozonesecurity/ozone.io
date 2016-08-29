@@ -27,7 +27,7 @@
 <area shape="rect" id="node4" href="$class_h264_relay.html#a78d8b75067ae59ecbe807f9f98924f27" title="H264Relay::run" alt="" coords="502,56,615,83"/>
 <area shape="rect" id="node5" href="$class_jpeg_encoder.html#a05e016fec90d083cfa68a282be27743c" title="JpegEncoder::run" alt="" coords="497,107,621,133"/>
 <area shape="rect" id="node6" href="$class_mpeg_encoder.html#a0fa085fc6da907f0d9b90065ffcd80cf" title="MpegEncoder::run" alt="" coords="495,157,623,184"/>
-<area shape="rect" id="node8" href="$class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="EventRecorder::run" alt="" coords="491,208,626,235"/>
+<area shape="rect" id="node8" href="$class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="default run method " alt="" coords="491,208,626,235"/>
 <area shape="rect" id="node11" href="$class_video_recorder.html#a88391f0c4a0a061551999ae72ed52be9" title="VideoRecorder::run" alt="" coords="491,284,626,311"/>
 <area shape="rect" id="node31" href="$class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9" title="MotionDetector::detectMotion" alt="" coords="461,1119,656,1145"/>
 <area shape="rect" id="node32" href="$class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="704,976,868,1003"/>

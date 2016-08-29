@@ -490,7 +490,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="separator:a8efbe56a46e166f8356e232513705ed0 inherit pro_static_attribs_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Processor that amalgamates up to four video streams into a 2x2 matrix video matrix. Can easily be extended for other geometries but the overall image size must be exactly divisble by the number of tiles. Bit of a kludge implementation, a more flexible variant should be possible using ffmpeg filters. </p>
+<div class="textblock"><p>Processor that amalgamates video streams into a mxn matrix video matrix. Can easily be extended for other geometries but the overall image size must be exactly divisble by the number of tiles. Bit of a kludge implementation, a more flexible variant should be possible using ffmpeg filters. </p>
 
 <p>Definition at line <a class="el" href="oz_matrix_video_8h_source.html#l00017">17</a> of file <a class="el" href="oz_matrix_video_8h_source.html">ozMatrixVideo.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -548,6 +548,24 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Instance name </td></tr>
+    <tr><td class="paramname">pixelFormat</td><td>format of image (PIX_FMT_YUV420 or other AVPixelFormat types) </td></tr>
+    <tr><td class="paramname">widtha</td><td>Total width of matrix </td></tr>
+    <tr><td class="paramname">height</td><td>Total height of matrix </td></tr>
+    <tr><td class="paramname">frameRate</td><td>framerate per second to update the matrix feeds </td></tr>
+    <tr><td class="paramname">xTiles</td><td>m (of mxn tiles) </td></tr>
+    <tr><td class="paramname">yTiles</td><td>n (of mxn tiles)</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="class_matrix_video.html">MatrixVideo</a> matrixVideo( <span class="stringliteral">&quot;matrixcammux&quot;</span>, PIX_FMT_YUV420P, 640, 480, <a class="code" href="class_frame_rate.html">FrameRate</a>( 1, 10 ), 2, 2 );</div>
+<div class="line">matrixVideo.registerProvider( cam1 );</div>
+<div class="line">matrixVideo.registerProvider( *motionDetector1.deltaImageSlave() );</div>
+<div class="line">matrixVideo.registerProvider( cam2 );</div>
+<div class="line">matrixVideo.registerProvider( *motionDetector2.deltaImageSlave() );</div>
+<div class="line">app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;matrixVideo );</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
     <tr><td class="paramname">pixelFormat</td><td></td></tr>
@@ -722,7 +740,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_matrix_video.html">MatrixVideo</a></li>
-    <li class="footer">Generated on Sun Aug 28 2016 16:36:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

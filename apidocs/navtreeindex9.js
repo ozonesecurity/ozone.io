@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"oz_detector_8cpp_source.html":[6,0,0,0,14],
 "oz_detector_8h_source.html":[6,0,0,0,15],
 "oz_encoder_8cpp_source.html":[6,0,0,0,16],
 "oz_encoder_8h_source.html":[6,0,0,0,17],
@@ -141,16 +142,16 @@ var NAVTREEINDEX9 =
 "struct_audio_parms.html":[4,0,1],
 "struct_audio_parms.html#a34401bb279e064cea8d3f9f731aa5777":[4,0,1,12],
 "struct_audio_parms.html#a475567a0f50a5ea1f4894d6a0ef5f2c0":[4,0,1,10],
-"struct_audio_parms.html#a4aab5f735e741a97fe0d4ece9fe20c2b":[4,0,1,0],
 "struct_audio_parms.html#a4aab5f735e741a97fe0d4ece9fe20c2b":[4,0,1,1],
+"struct_audio_parms.html#a4aab5f735e741a97fe0d4ece9fe20c2b":[4,0,1,0],
 "struct_audio_parms.html#a5a1ad7f1415b0e50e9d9cace5aa0ba75":[4,0,1,7],
 "struct_audio_parms.html#a5a1ad7f1415b0e50e9d9cace5aa0ba75":[4,0,1,6],
 "struct_audio_parms.html#a7a0286935b273cda02aaed4dbf40c79b":[4,0,1,4],
 "struct_audio_parms.html#a7a0286935b273cda02aaed4dbf40c79b":[4,0,1,5],
 "struct_audio_parms.html#a7b52d4c3a547ab4bee06067ecce70fef":[4,0,1,9],
 "struct_audio_parms.html#a7b52d4c3a547ab4bee06067ecce70fef":[4,0,1,8],
-"struct_audio_parms.html#abd14fb5cfc702022c504013a4902b731":[4,0,1,3],
 "struct_audio_parms.html#abd14fb5cfc702022c504013a4902b731":[4,0,1,2],
+"struct_audio_parms.html#abd14fb5cfc702022c504013a4902b731":[4,0,1,3],
 "struct_audio_parms.html#ac62412877514fc538da503a4bffd9f62":[4,0,1,13],
 "struct_audio_parms.html#acdb51b180fdecb4db6edf0703ba43c13":[4,0,1,11],
 "struct_delta_timeval.html":[5,0,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "struct_memory_i_o_v1_1_1_shared_data.html#a9df32f4ab52cbb9e6fc8e0a7d3462769":[5,0,78,0,16],
 "struct_memory_i_o_v1_1_1_shared_data.html#aa0e0ca6c23259f2298cc96f0626ab04e":[5,0,78,0,3],
 "struct_memory_i_o_v1_1_1_shared_data.html#aa5c112bbd6d8800e78b305f300bb3b29":[5,0,78,0,12],
-"struct_memory_i_o_v1_1_1_shared_data.html#abca47f0d5a6439041a4856bf782d891b":[5,0,78,0,6],
-"struct_memory_i_o_v1_1_1_shared_data.html#ac6db7d67c7e706ad7b0fc7973c16b517":[5,0,78,0,4]
+"struct_memory_i_o_v1_1_1_shared_data.html#abca47f0d5a6439041a4856bf782d891b":[5,0,78,0,6]
 };

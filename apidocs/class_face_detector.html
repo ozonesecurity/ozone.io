@@ -490,9 +490,9 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="separator:a8efbe56a46e166f8356e232513705ed0 inherit pro_static_attribs_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Processor that detects motion on a video frame feed and reports on the nature of the motion via <a class="el" href="class_motion_frame.html">MotionFrame</a> objects. </p>
+<div class="textblock"><p>Processor that detects faces on a video frame feed This processor uses dlib and also requires presence of the dlib shape detector dat file in the same directory as the invoking application as of now You can get the shape_predictor_68_face_landmarks.dat file from: <a href="http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2">http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2</a> </p>
 
-<p>Definition at line <a class="el" href="oz_face_detector_8h_source.html#l00020">20</a> of file <a class="el" href="oz_face_detector_8h_source.html">ozFaceDetector.h</a>.</p>
+<p>Definition at line <a class="el" href="oz_face_detector_8h_source.html#l00024">24</a> of file <a class="el" href="oz_face_detector_8h_source.html">ozFaceDetector.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acb270d00aa729d8b02b4d0eae55c3f30"></a>
 <div class="memitem">
@@ -508,6 +508,13 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
       </table>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of instance</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">nvrcam.face = <span class="keyword">new</span> <a class="code" href="class_face_detector.html#acb270d00aa729d8b02b4d0eae55c3f30">FaceDetector</a>( <span class="stringliteral">&quot;face-cam0&quot;</span> );</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
   </table>
@@ -566,7 +573,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_face_detector.html">FaceDetector</a></li>
-    <li class="footer">Generated on Sun Aug 28 2016 16:36:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

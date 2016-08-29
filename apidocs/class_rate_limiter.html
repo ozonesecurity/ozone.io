@@ -527,6 +527,16 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">name</td><td>name of instance </td></tr>
+    <tr><td class="paramname">frameRate</td><td>rate in seconds to limit it to (can use fractions as well) </td></tr>
+    <tr><td class="paramname">skip</td><td>if true, will keep itself updated with latest frame from provider, else will not skip frames as it rate limits</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">nvrcam.rate = <span class="keyword">new</span> <a class="code" href="class_rate_limiter.html#a1e27f1645fdc6ffe8ef1f2012b294419">RateLimiter</a>( <span class="stringliteral">&quot;rate-&quot;</span>+<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>,0.1,<span class="keyword">true</span> );</div>
+<div class="line">nvrcam.rate-&gt;registerProvider(*(nvrcam.cam) );</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
     <tr><td class="paramname">frameRate</td><td></td></tr>
     <tr><td class="paramname">skip</td><td></td></tr>
@@ -635,7 +645,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_rate_limiter.html">RateLimiter</a></li>
-    <li class="footer">Generated on Sun Aug 28 2016 16:36:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

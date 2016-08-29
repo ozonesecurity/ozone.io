@@ -499,6 +499,17 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">name</td><td>instance name </td></tr>
+    <tr><td class="paramname">source</td><td>AV source (example "rtsp://foo", "/dev/video0", "/tmp/test.mp4" etc) </td></tr>
+    <tr><td class="paramname">format</td><td></td></tr>
+    <tr><td class="paramname">loop</td><td>if true, loops the source. Makes sense only if you have provided a file</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">nvrcam.cam = <span class="keyword">new</span> <a class="code" href="class_network_a_v_input.html#adf1ea48667855cf00695f6e91103542f">NetworkAVInput</a> ( <span class="stringliteral">&quot;cam0&quot;</span>, <span class="stringliteral">&quot;/tmp/myvideo.mp4&quot;</span>,<span class="stringliteral">&quot;&quot;</span>,<span class="keyword">true</span> );</div>
+<div class="line">nvrcam.cam = <span class="keyword">new</span> <a class="code" href="class_network_a_v_input.html#adf1ea48667855cf00695f6e91103542f">NetworkAVInput</a> ( <span class="stringliteral">&quot;cam1&quot;</span>, <span class="stringliteral">&quot;rtsp://user:password@192.168.1.12/videoMain&quot;</span>,<span class="stringliteral">&quot;&quot;</span>,<span class="keyword">false</span> );</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
     <tr><td class="paramname">source</td><td></td></tr>
     <tr><td class="paramname">format</td><td></td></tr>
@@ -558,7 +569,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_network_a_v_input.html">NetworkAVInput</a></li>
-    <li class="footer">Generated on Sun Aug 28 2016 16:36:37 for oZone Server Framework by
+    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

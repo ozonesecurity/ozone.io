@@ -1,5 +1,5 @@
 <map id="FeedConsumer::waitForProviders" name="FeedConsumer::waitForProviders">
-<area shape="rect" id="node2" href="$class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="EventRecorder::run" alt="" coords="283,5,418,32"/>
+<area shape="rect" id="node2" href="$class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f" title="default run method " alt="" coords="283,5,418,32"/>
 <area shape="rect" id="node3" href="$class_local_file_dump.html#a1aa8d343f94f9c0e5aef79d1ccd3e133" title="LocalFileDump::run" alt="" coords="283,56,418,83"/>
 <area shape="rect" id="node4" href="$class_local_file_output.html#acd87a7f0a0aaed0663590c0192483adf" title="LocalFileOutput::run" alt="" coords="281,107,420,133"/>
 <area shape="rect" id="node5" href="$class_memory_output.html#ad78a4a552afecace71b15cb3c248d206" title="MemoryOutput::run" alt="" coords="283,157,418,184"/>
