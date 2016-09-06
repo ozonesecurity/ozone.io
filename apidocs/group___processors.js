@@ -1,5 +1,16 @@
 var group___processors =
 [
+    [ "VideoFilter", "class_video_filter.html", [
+      [ "VideoFilter", "class_video_filter.html#a4653273c4c72909e8ebafcca203bef80", null ],
+      [ "VideoFilter", "class_video_filter.html#aa15f717ffbf33d3c9d996494c7d30e7e", null ],
+      [ "~VideoFilter", "class_video_filter.html#a47f86822b9d06e2bf9a7b6733b03f012", null ],
+      [ "filter", "class_video_filter.html#ae858eb88c933d8150ab142ef2ddcdb79", null ],
+      [ "frameRate", "class_video_filter.html#afe2dbc21d7ee355a71b4b16a69454ee9", null ],
+      [ "height", "class_video_filter.html#ac4ff62259eb71dca003882cae80eeaf6", null ],
+      [ "pixelFormat", "class_video_filter.html#a9fc72d7f60ec24022fe4d595b3dff8cd", null ],
+      [ "run", "class_video_filter.html#a04324dbaf442e6c8b1d5109eeecd400c", null ],
+      [ "width", "class_video_filter.html#a8fa1e5dd2c61b44912ee1b364873eb17", null ]
+    ] ],
     [ "DelayBufferFilter", "class_delay_buffer_filter.html", [
       [ "DelayBufferFilter", "class_delay_buffer_filter.html#a142149158e47f6c295e4e19519b3a7b7", null ],
       [ "~DelayBufferFilter", "class_delay_buffer_filter.html#a82f363ba62734da3834b3c1ef9bc0933", null ],
@@ -7,7 +18,13 @@ var group___processors =
       [ "mDelay", "class_delay_buffer_filter.html#a1bfd1dd75c677c33e815139abf1799d2", null ]
     ] ],
     [ "FaceDetector", "class_face_detector.html", [
-      [ "FaceDetector", "class_face_detector.html#acb270d00aa729d8b02b4d0eae55c3f30", null ],
+      [ "FaceMarkup", "group___processors.html#gaac1caac0fbdab2c03004170d4f7db95c", [
+        [ "OZ_FACE_MARKUP_NONE", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cae56466ac3855b7e96d7b2afbbc288eee", null ],
+        [ "OZ_FACE_MARKUP_OUTLINE", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cadb21f465d5327b06a52b062aad2d3d28", null ],
+        [ "OZ_FACE_MARKUP_DETAIL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cab4aa41d96497f892c831ac90008903e3", null ],
+        [ "OZ_FACE_MARKUP_ALL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95ca343a3864188ccd07ed656cdd9c699e28", null ]
+      ] ],
+      [ "FaceDetector", "class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293", null ],
       [ "~FaceDetector", "class_face_detector.html#a3aa4f1c3b08ef02351ec458dd90b04e2", null ],
       [ "frameRate", "class_face_detector.html#a53b8f5134d8ad6dc270df9d65bf88eee", null ],
       [ "height", "class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10", null ],
@@ -34,6 +51,17 @@ var group___processors =
       [ "pixelFormat", "class_image_convert.html#a4e0e12160109d7fc1c2319664de58972", null ],
       [ "run", "class_image_convert.html#ab1eda5b14ac0ae1f07cad4230dc90fc2", null ],
       [ "width", "class_image_convert.html#a6915f9ad033ab16b31da7205881c98d1", null ]
+    ] ],
+    [ "ImageScale", "class_image_scale.html", [
+      [ "ImageScale", "class_image_scale.html#a0c258d60ee814cb63157adbd6f3248f9", null ],
+      [ "ImageScale", "class_image_scale.html#a8f09ffb5e198c6d0ad7c3e6eee19389e", null ],
+      [ "~ImageScale", "class_image_scale.html#a25b7bf48f43b1fc736b160e8cdd3cdee", null ],
+      [ "frameRate", "class_image_scale.html#a0b004bfe3bed0446af57229874c355d6", null ],
+      [ "height", "class_image_scale.html#a02b2612d50509dad4590935a9ca4922c", null ],
+      [ "pixelFormat", "class_image_scale.html#a1cc2600818f6ed3a7178ffa60d91af25", null ],
+      [ "run", "class_image_scale.html#a443f8e25d59b666eba9940b53a5803de", null ],
+      [ "scale", "class_image_scale.html#a27d287cf942c4a581ac4d1764dd9f933", null ],
+      [ "width", "class_image_scale.html#a69edfcb4d25ec8c2e87f036e154424d3", null ]
     ] ],
     [ "ImageTimestamper", "class_image_timestamper.html", [
       [ "ImageTimestamper", "class_image_timestamper.html#a9e5b307b48d8de92ffcbaa4a5725be73", null ],
@@ -83,6 +111,21 @@ var group___processors =
       [ "pixelFormat", "class_rate_limiter.html#ae0a7680c92a4830837c307e743491b10", null ],
       [ "run", "class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33", null ],
       [ "width", "class_rate_limiter.html#a0a58de58e9536c33b0de925a76818e3a", null ]
+    ] ],
+    [ "ShapeDetector", "class_shape_detector.html", [
+      [ "ShapeMarkup", "group___processors.html#ga940c27b65b82690b52fc1b2263b5faba", [
+        [ "OZ_SHAPE_MARKUP_NONE", "group___processors.html#gga940c27b65b82690b52fc1b2263b5fabaa31a44f5148ff78ea4e6d582f60ed327b", null ],
+        [ "OZ_SHAPE_MARKUP_OUTLINE", "group___processors.html#gga940c27b65b82690b52fc1b2263b5fabaabed369f86a4452ec8767f8fbe8a004a9", null ],
+        [ "OZ_SHAPE_MARKUP_ALL", "group___processors.html#gga940c27b65b82690b52fc1b2263b5fabaa54dfd428f0f71900ffa3b08a04a78287", null ]
+      ] ],
+      [ "ShapeDetector", "class_shape_detector.html#a4c247812777be05a3b0190f8fe77ab62", null ],
+      [ "ShapeDetector", "class_shape_detector.html#a1c81257901fb32f15f1e61c6b51f754b", null ],
+      [ "~ShapeDetector", "class_shape_detector.html#a1af962f6d51209d56375bfac40fc9cda", null ],
+      [ "frameRate", "class_shape_detector.html#a8e6243e16368c36b5062822dfe235821", null ],
+      [ "height", "class_shape_detector.html#aa298bb43eb9c18d3321f04cf55171d89", null ],
+      [ "pixelFormat", "class_shape_detector.html#a9b04be759478770161beb38336ac1a96", null ],
+      [ "run", "class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf", null ],
+      [ "width", "class_shape_detector.html#a8dd6d1024087419c5ab72db3e149dccd", null ]
     ] ],
     [ "SignalChecker", "class_signal_checker.html", [
       [ "SignalChecker", "class_signal_checker.html#ab6c285a6c15b15baf505c4e3a0266704", null ],

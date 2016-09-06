@@ -112,29 +112,40 @@ $(document).ready(function(){initNavTree('oz_feed_base_8cpp_source.html','');});
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;oz.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ozFeedBase.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ozFeedConsumer.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gQueuedFeedLink( FEED_QUEUED );</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gPolledFeedLink( FEED_POLLED );</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">   16</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">FeedLink::compare</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame, <span class="keyword">const</span> <a class="code" href="class_feed_consumer.html">FeedConsumer</a> *consumer )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> ( FeedComparatorList::const_iterator iter = mComparators.begin(); iter != mComparators.end(); iter++ )</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> ( !(*iter)( frame, consumer ) )</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="class_feed_link_html_a1cdf37d857004fe8cdb7f67add4b2fde"><div class="ttname"><a href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">FeedLink::compare</a></div><div class="ttdeci">bool compare(FramePtr, const FeedConsumer *) const </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8cpp_source.html#l00016">ozFeedBase.cpp:16</a></div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ozFeedProvider.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;ozFeedConsumer.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gQueuedFeedLink( FEED_QUEUED );</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gQueuedVideoLink( FEED_QUEUED, <a class="code" href="class_feed_provider.html#a6549b70fd19c43b6b8d507ed6f1911ee">FeedProvider::videoFramesOnly</a> );</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gQueuedAudioLink( FEED_QUEUED, <a class="code" href="class_feed_provider.html#ac9d719f3dea903d919aa9290f9799846">FeedProvider::audioFramesOnly</a> );</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gQueuedDataLink( FEED_QUEUED, <a class="code" href="class_feed_provider.html#ae28ed365e84af8f4825dce8caee01d4d">FeedProvider::dataFramesOnly</a> );</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gPolledFeedLink( FEED_POLLED );</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gPolledVideoLink( FEED_POLLED, <a class="code" href="class_feed_provider.html#a6549b70fd19c43b6b8d507ed6f1911ee">FeedProvider::videoFramesOnly</a> );</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gPolledAudioLink( FEED_POLLED, <a class="code" href="class_feed_provider.html#ac9d719f3dea903d919aa9290f9799846">FeedProvider::audioFramesOnly</a> );</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="class_feed_link.html">FeedLink</a> gPolledDataLink( FEED_POLLED, <a class="code" href="class_feed_provider.html#ae28ed365e84af8f4825dce8caee01d4d">FeedProvider::dataFramesOnly</a> );</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">FeedLink::compare</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame, <span class="keyword">const</span> <a class="code" href="class_feed_consumer.html">FeedConsumer</a> *consumer )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> ( FeedComparatorList::const_iterator iter = mComparators.begin(); iter != mComparators.end(); iter++ )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> ( !(*iter)( frame, consumer ) )</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="class_feed_link_html_a1cdf37d857004fe8cdb7f67add4b2fde"><div class="ttname"><a href="class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde">FeedLink::compare</a></div><div class="ttdeci">bool compare(FramePtr, const FeedConsumer *) const </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8cpp_source.html#l00024">ozFeedBase.cpp:24</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_feed_consumer_html"><div class="ttname"><a href="class_feed_consumer.html">FeedConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00016">ozFeedConsumer.h:16</a></div></div>
+<div class="ttc" id="class_feed_provider_html_a6549b70fd19c43b6b8d507ed6f1911ee"><div class="ttname"><a href="class_feed_provider.html#a6549b70fd19c43b6b8d507ed6f1911ee">FeedProvider::videoFramesOnly</a></div><div class="ttdeci">static bool videoFramesOnly(FramePtr, const FeedConsumer *)</div><div class="ttdoc">Comparator function to allow consumers to select only video frames. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00034">ozFeedProvider.cpp:34</a></div></div>
+<div class="ttc" id="class_feed_provider_html_ae28ed365e84af8f4825dce8caee01d4d"><div class="ttname"><a href="class_feed_provider.html#ae28ed365e84af8f4825dce8caee01d4d">FeedProvider::dataFramesOnly</a></div><div class="ttdeci">static bool dataFramesOnly(FramePtr, const FeedConsumer *)</div><div class="ttdoc">Comparator function to allow consumers to select only data frames. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00062">ozFeedProvider.cpp:62</a></div></div>
 <div class="ttc" id="class_feed_link_html"><div class="ttname"><a href="class_feed_link.html">FeedLink</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00092">ozFeedBase.h:92</a></div></div>
+<div class="ttc" id="class_feed_provider_html_ac9d719f3dea903d919aa9290f9799846"><div class="ttname"><a href="class_feed_provider.html#ac9d719f3dea903d919aa9290f9799846">FeedProvider::audioFramesOnly</a></div><div class="ttdeci">static bool audioFramesOnly(FramePtr, const FeedConsumer *)</div><div class="ttdoc">Comparator function to allow consumers to select only audio frames. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00048">ozFeedProvider.cpp:48</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozFeedBase.cpp</b></li>
-    <li class="footer">Generated on Mon Aug 29 2016 10:38:11 for oZone Server Framework by
+    <li class="footer">Generated on Tue Sep 6 2016 16:07:28 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

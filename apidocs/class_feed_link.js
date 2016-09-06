@@ -1,7 +1,7 @@
 var class_feed_link =
 [
-    [ "FeedLink", "class_feed_link.html#a1c10ccb08bf37b4185f3c2c794cb32a9", null ],
-    [ "FeedLink", "class_feed_link.html#a00256b1439bdc0d210bd45ef10cdcade", null ],
+    [ "FeedLink", "class_feed_link.html#afb6784612a1b80ce172473b150b9096f", null ],
+    [ "FeedLink", "class_feed_link.html#a888d95e550a5268e52492ff4af2e39f5", null ],
     [ "FeedLink", "class_feed_link.html#abb137eee6ea166fee3e711774c32166f", null ],
     [ "clearPolled", "class_feed_link.html#a182c96d26b6e0bb5f6ed34a117517ae6", null ],
     [ "clearQueued", "class_feed_link.html#ad0402f04195583524a1dc79ade79f113", null ],

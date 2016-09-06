@@ -1,6 +1,12 @@
 var class_face_detector =
 [
-    [ "FaceDetector", "class_face_detector.html#acb270d00aa729d8b02b4d0eae55c3f30", null ],
+    [ "FaceMarkup", "group___processors.html#gaac1caac0fbdab2c03004170d4f7db95c", [
+      [ "OZ_FACE_MARKUP_NONE", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cae56466ac3855b7e96d7b2afbbc288eee", null ],
+      [ "OZ_FACE_MARKUP_OUTLINE", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cadb21f465d5327b06a52b062aad2d3d28", null ],
+      [ "OZ_FACE_MARKUP_DETAIL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cab4aa41d96497f892c831ac90008903e3", null ],
+      [ "OZ_FACE_MARKUP_ALL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95ca343a3864188ccd07ed656cdd9c699e28", null ]
+    ] ],
+    [ "FaceDetector", "class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293", null ],
     [ "~FaceDetector", "class_face_detector.html#a3aa4f1c3b08ef02351ec458dd90b04e2", null ],
     [ "frameRate", "class_face_detector.html#a53b8f5134d8ad6dc270df9d65bf88eee", null ],
     [ "height", "class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10", null ],

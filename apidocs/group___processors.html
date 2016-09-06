@@ -103,7 +103,8 @@ $(document).ready(function(){initNavTree('group___processors.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Processors</div>  </div>
 </div><!--header-->
@@ -111,6 +112,8 @@ $(document).ready(function(){initNavTree('group___processors.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_filter.html">VideoFilter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_delay_buffer_filter.html">DelayBufferFilter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html">FaceDetector</a></td></tr>
@@ -119,6 +122,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_convert.html">ImageConvert</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_scale.html">ImageScale</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processor that simply resizes the input frame by a defined factor.  <a href="class_image_scale.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_timestamper.html">ImageTimestamper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_matrix_video.html">MatrixVideo</a></td></tr>
@@ -126,6 +132,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_detector.html">MotionDetector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html">RateLimiter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape_detector.html">ShapeDetector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_checker.html">SignalChecker</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +153,20 @@ Macros</h2></td></tr>
 <tr class="memitem:gaa553d90ca8d611f42e0fbbbaca00304f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa553d90ca8d611f42e0fbbbaca00304f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LINKED_CAUSE</b>&#160;&#160;&#160;&quot;Linked&quot;</td></tr>
 <tr class="separator:gaa553d90ca8d611f42e0fbbbaca00304f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaac1caac0fbdab2c03004170d4f7db95c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaac1caac0fbdab2c03004170d4f7db95c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>FaceMarkup</b> { <b>OZ_FACE_MARKUP_NONE</b> =0, 
+<b>OZ_FACE_MARKUP_OUTLINE</b> =1, 
+<b>OZ_FACE_MARKUP_DETAIL</b> =2, 
+<b>OZ_FACE_MARKUP_ALL</b> =3
+ }</td></tr>
+<tr class="separator:gaac1caac0fbdab2c03004170d4f7db95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga940c27b65b82690b52fc1b2263b5faba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga940c27b65b82690b52fc1b2263b5faba"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ShapeMarkup</b> { <b>OZ_SHAPE_MARKUP_NONE</b> =0, 
+<b>OZ_SHAPE_MARKUP_OUTLINE</b> =1, 
+<b>OZ_SHAPE_MARKUP_ALL</b> =0xff
+ }</td></tr>
+<tr class="separator:ga940c27b65b82690b52fc1b2263b5faba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>These will both consume and (usually) provide frames. For instance a motion detection component consume video frames and then outputs them potentially with additional information details motion detected etc. </p>
@@ -153,7 +175,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Aug 29 2016 10:38:12 for oZone Server Framework by
+    <li class="footer">Generated on Tue Sep 6 2016 16:07:29 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

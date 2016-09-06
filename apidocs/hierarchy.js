@@ -96,7 +96,8 @@ var hierarchy =
           ] ],
           [ "Detector", "class_detector.html", [
             [ "FaceDetector", "class_face_detector.html", null ],
-            [ "MotionDetector", "class_motion_detector.html", null ]
+            [ "MotionDetector", "class_motion_detector.html", null ],
+            [ "ShapeDetector", "class_shape_detector.html", null ]
           ] ],
           [ "DirectVideoFilter", "class_direct_video_filter.html", null ],
           [ "Encoder", "class_encoder.html", [
@@ -107,6 +108,7 @@ var hierarchy =
           ] ],
           [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
           [ "ImageConvert", "class_image_convert.html", null ],
+          [ "ImageScale", "class_image_scale.html", null ],
           [ "ImageTimestamper", "class_image_timestamper.html", null ],
           [ "LocalFileOutput", "class_local_file_output.html", null ],
           [ "MatrixVideo", "class_matrix_video.html", null ],
@@ -126,7 +128,8 @@ var hierarchy =
             ] ],
             [ "RtmpStream", "class_rtmp_stream.html", null ],
             [ "RtspStream", "class_rtsp_stream.html", null ]
-          ] ]
+          ] ],
+          [ "VideoFilter", "class_video_filter.html", null ]
         ] ]
       ] ],
       [ "FeedProvider", "class_feed_provider.html", [
@@ -149,6 +152,7 @@ var hierarchy =
           [ "Encoder", "class_encoder.html", null ],
           [ "FilterSwapUV", "class_filter_swap_u_v.html", null ],
           [ "ImageConvert", "class_image_convert.html", null ],
+          [ "ImageScale", "class_image_scale.html", null ],
           [ "ImageTimestamper", "class_image_timestamper.html", null ],
           [ "LocalFileInput", "class_local_file_input.html", null ],
           [ "LocalVideoInput", "class_local_video_input.html", null ],
@@ -161,7 +165,8 @@ var hierarchy =
           [ "RemoteVideoInput", "class_remote_video_input.html", null ],
           [ "SignalChecker", "class_signal_checker.html", null ],
           [ "SlaveVideo", "class_slave_video.html", null ],
-          [ "Video4LinuxInput", "class_video4_linux_input.html", null ]
+          [ "Video4LinuxInput", "class_video4_linux_input.html", null ],
+          [ "VideoFilter", "class_video_filter.html", null ]
         ] ]
       ] ]
     ] ],
@@ -226,8 +231,8 @@ var hierarchy =
     [ "RtspSession", "class_rtsp_session.html", null ],
     [ "ScopedMutex", "class_scoped_mutex.html", null ],
     [ "Select", "class_select.html", null ],
-    [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
     [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
+    [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
     [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
     [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "SockAddr", "class_sock_addr.html", [
@@ -256,6 +261,7 @@ var hierarchy =
       [ "H264Relay", "class_h264_relay.html", null ],
       [ "HttpStream", "class_http_stream.html", null ],
       [ "ImageConvert", "class_image_convert.html", null ],
+      [ "ImageScale", "class_image_scale.html", null ],
       [ "ImageTimestamper", "class_image_timestamper.html", null ],
       [ "JpegEncoder", "class_jpeg_encoder.html", null ],
       [ "Listener", "class_listener.html", null ],
@@ -281,7 +287,8 @@ var hierarchy =
       [ "RtmpStream", "class_rtmp_stream.html", null ],
       [ "RtspStream", "class_rtsp_stream.html", null ],
       [ "SignalChecker", "class_signal_checker.html", null ],
-      [ "Video4LinuxInput", "class_video4_linux_input.html", null ]
+      [ "Video4LinuxInput", "class_video4_linux_input.html", null ],
+      [ "VideoFilter", "class_video_filter.html", null ]
     ] ],
     [ "ThreadData< T >", "class_thread_data.html", null ],
     [ "ThreadData< bool >", "class_thread_data.html", null ],
