@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['sampleformat',['sampleFormat',['../class_audio_provider.html#a98d7dfac7e1ac9cdd5bae5d758770c19',1,'AudioProvider::sampleFormat()'],['../class_network_a_v_input.html#abc6b625123e3467b1709d2c2d06fab27',1,'NetworkAVInput::sampleFormat()']]],
-  ['samplerate',['sampleRate',['../class_audio_provider.html#a5a3d5bebebbd3c115d6bfaa80fe6d83a',1,'AudioProvider::sampleRate()'],['../class_network_a_v_input.html#abe775479ae3d4b9e9878890160eea49f',1,'NetworkAVInput::sampleRate()']]],
-  ['samples',['samples',['../class_audio_provider.html#acdebec02436ad16692643714667890be',1,'AudioProvider::samples()'],['../class_network_a_v_input.html#a64e5e57991ac7f33ae7c03b8218a5549',1,'NetworkAVInput::samples()']]],
+  ['sampleformat',['sampleFormat',['../class_audio_provider.html#a98d7dfac7e1ac9cdd5bae5d758770c19',1,'AudioProvider::sampleFormat()'],['../class_a_v_input.html#ac554e67643eb86ac3d0790defed506c3',1,'AVInput::sampleFormat()']]],
+  ['samplerate',['sampleRate',['../class_audio_provider.html#a5a3d5bebebbd3c115d6bfaa80fe6d83a',1,'AudioProvider::sampleRate()'],['../class_a_v_input.html#ae5b14ee583c751f5b2e980b71b67532f',1,'AVInput::sampleRate()']]],
+  ['samples',['samples',['../class_audio_provider.html#acdebec02436ad16692643714667890be',1,'AudioProvider::samples()'],['../class_a_v_input.html#a69376e639ebcb73d7cdd13e7b6d45d59',1,'AVInput::samples()']]],
   ['scale',['scale',['../class_image.html#aa10502f0883c35e50e3ee8dd0ce91d6a',1,'Image']]],
   ['scopedmutex',['ScopedMutex',['../class_scoped_mutex.html#ad36e72200dd72344bfaa06c70f661176',1,'ScopedMutex']]],
   ['sdpstring',['sdpString',['../class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6',1,'Encoder::sdpString()'],['../class_h264_encoder.html#a363123936b98c1ccf2ce933aa64707fc',1,'H264Encoder::sdpString()'],['../class_h264_relay.html#acf8fe01cdcb6412abdfd0ee90479d725',1,'H264Relay::sdpString()'],['../class_mpeg_encoder.html#aceb639f735c756c9bf6c526b564dee23',1,'MpegEncoder::sdpString()']]],

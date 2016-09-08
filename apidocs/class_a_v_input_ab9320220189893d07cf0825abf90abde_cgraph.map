@@ -1,0 +1,6 @@
+<map id="AVInput::run" name="AVInput::run">
+<area shape="rect" id="node2" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="601,5,740,32"/>
+<area shape="rect" id="node3" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="148,56,300,83"/>
+<area shape="rect" id="node4" href="$class_feed_provider.html#a0e59944ab9228929539fde3da0fe65ef" title="Remove this provider from the static provider map. " alt="" coords="348,56,553,83"/>
+<area shape="rect" id="node5" href="$class_feed_base.html#aada1551e2fc238c1435be539ae27588a" title="Return the identity string. " alt="" coords="605,56,736,83"/>
+</map>

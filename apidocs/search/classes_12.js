@@ -1,11 +1,23 @@
 var searchData=
 [
-  ['udpinetclient',['UdpInetClient',['../class_udp_inet_client.html',1,'']]],
-  ['udpinetserver',['UdpInetServer',['../class_udp_inet_server.html',1,'']]],
-  ['udpinetsocket',['UdpInetSocket',['../class_udp_inet_socket.html',1,'']]],
-  ['udpsocketprotocol',['UdpSocketProtocol',['../class_udp_socket_protocol.html',1,'']]],
-  ['udpunixclient',['UdpUnixClient',['../class_udp_unix_client.html',1,'']]],
-  ['udpunixserver',['UdpUnixServer',['../class_udp_unix_server.html',1,'']]],
-  ['udpunixsocket',['UdpUnixSocket',['../class_udp_unix_socket.html',1,'']]],
-  ['unixsocket',['UnixSocket',['../class_unix_socket.html',1,'']]]
+  ['scopedmutex',['ScopedMutex',['../class_scoped_mutex.html',1,'']]],
+  ['select',['Select',['../class_select.html',1,'']]],
+  ['semaphore',['Semaphore',['../class_semaphore.html',1,'']]],
+  ['shapedetector',['ShapeDetector',['../class_shape_detector.html',1,'']]],
+  ['shareddata',['SharedData',['../struct_memory_i_o_1_1_shared_data.html',1,'MemoryIO']]],
+  ['shareddata',['SharedData',['../struct_memory_i_o_v1_1_1_shared_data.html',1,'MemoryIOV1']]],
+  ['signalchecker',['SignalChecker',['../class_signal_checker.html',1,'']]],
+  ['slavevideo',['SlaveVideo',['../class_slave_video.html',1,'']]],
+  ['snapshot',['Snapshot',['../struct_memory_i_o_v1_1_1_snapshot.html',1,'MemoryIOV1']]],
+  ['snapshot',['Snapshot',['../struct_memory_i_o_1_1_snapshot.html',1,'MemoryIO']]],
+  ['sockaddr',['SockAddr',['../class_sock_addr.html',1,'']]],
+  ['sockaddrinet',['SockAddrInet',['../class_sock_addr_inet.html',1,'']]],
+  ['sockaddrunix',['SockAddrUnix',['../class_sock_addr_unix.html',1,'']]],
+  ['socket',['Socket',['../class_socket.html',1,'']]],
+  ['socketprotocol',['SocketProtocol',['../class_socket_protocol.html',1,'']]],
+  ['staticconfig',['StaticConfig',['../struct_static_config.html',1,'']]],
+  ['stream',['Stream',['../class_stream.html',1,'']]],
+  ['stringtokenlist',['StringTokenList',['../class_string_token_list.html',1,'']]],
+  ['svrexception',['SvrException',['../class_svr_exception.html',1,'']]],
+  ['svrexecregistration',['SvrExecRegistration',['../class_svr_exec_registration.html',1,'']]]
 ];

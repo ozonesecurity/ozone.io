@@ -274,7 +274,7 @@ $(document).ready(function(){initNavTree('oz_h264_encoder_8cpp_source.html','');
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">while</span> ( currTime &lt; nextTime )</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            {</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                currTime = time64();</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                usleep( 1000 );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            }</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            nextTime += timeInterval;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
@@ -417,13 +417,14 @@ $(document).ready(function(){initNavTree('oz_h264_encoder_8cpp_source.html','');
 <div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
 <div class="ttc" id="class_h264_encoder_html_a248ceec2d6ab50aa5ef1443ef3d58947"><div class="ttname"><a href="class_h264_encoder.html#a248ceec2d6ab50aa5ef1443ef3d58947">H264Encoder::width</a></div><div class="ttdeci">uint16_t width() const </div><div class="ttdoc">Return the width (in pixels) of video frames supplied by this provider. </div><div class="ttdef"><b>Definition:</b> <a href="oz_h264_encoder_8h_source.html#l00097">ozH264Encoder.h:97</a></div></div>
 <div class="ttc" id="class_h264_encoder_html_a48d38071526f547986d4e61084a23433"><div class="ttname"><a href="class_h264_encoder.html#a48d38071526f547986d4e61084a23433">H264Encoder::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_h264_encoder_8cpp_source.html#l00135">ozH264Encoder.cpp:135</a></div></div>
+<div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_18e91fceada5d197dcb7aec06d99f041.html">encoders</a></li><li class="navelem"><b>ozH264Encoder.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:28 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:14 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

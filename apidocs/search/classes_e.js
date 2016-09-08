@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['queuedvideofilter',['QueuedVideoFilter',['../class_queued_video_filter.html',1,'']]]
+  ['option',['Option',['../class_option.html',1,'']]],
+  ['options',['Options',['../class_options.html',1,'']]]
 ];

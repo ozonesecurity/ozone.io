@@ -25,6 +25,7 @@ var group___processors =
         [ "OZ_FACE_MARKUP_ALL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95ca343a3864188ccd07ed656cdd9c699e28", null ]
       ] ],
       [ "FaceDetector", "class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293", null ],
+      [ "FaceDetector", "class_face_detector.html#a9ed69824aa48c57cc74982a86a6ba4d0", null ],
       [ "~FaceDetector", "class_face_detector.html#a3aa4f1c3b08ef02351ec458dd90b04e2", null ],
       [ "frameRate", "class_face_detector.html#a53b8f5134d8ad6dc270df9d65bf88eee", null ],
       [ "height", "class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10", null ],
@@ -87,6 +88,7 @@ var group___processors =
     ] ],
     [ "MotionDetector", "class_motion_detector.html", [
       [ "MotionDetector", "class_motion_detector.html#a1824001d9fbac38f7a736f071e52d08e", null ],
+      [ "MotionDetector", "class_motion_detector.html#a20d2964605c87c02b8a405eaf437dbb6", null ],
       [ "~MotionDetector", "class_motion_detector.html#af191d9f7658236de50fdb9c8b9cc66dd", null ],
       [ "addZone", "class_motion_detector.html#a01553305fb60580912bdae5c60ee5bed", null ],
       [ "alarmed", "class_motion_detector.html#a89a5c3b10259f1bd8bd21097bba8f3c3", null ],
@@ -104,7 +106,8 @@ var group___processors =
     ] ],
     [ "RateLimiter", "class_rate_limiter.html", [
       [ "RateLimiter", "class_rate_limiter.html#a1e27f1645fdc6ffe8ef1f2012b294419", null ],
-      [ "RateLimiter", "class_rate_limiter.html#a74af328b91c86677ad118e826a5c5f02", null ],
+      [ "RateLimiter", "class_rate_limiter.html#a8c1721dfd2bea78e0483c9d5e51d95ca", null ],
+      [ "RateLimiter", "class_rate_limiter.html#a177b159f51112a66ed9f0c058b894a9b", null ],
       [ "~RateLimiter", "class_rate_limiter.html#a30bbe6f431699d625ccfeb56c344a8a7", null ],
       [ "frameRate", "class_rate_limiter.html#acf6c311ed89a86e0455b340210dc3973", null ],
       [ "height", "class_rate_limiter.html#aba8a54e4a0b67e3ce6a47b8f6e153a23", null ],

@@ -4,7 +4,7 @@ var searchData=
   ['canpoll',['canPoll',['../class_feed_provider.html#a3089a6e0dc76ba03e3d03174d36da29b',1,'FeedProvider']]],
   ['cclass',['cclass',['../class_feed_base.html#ad3df0c2639a5fba05035b0ceac0812c8',1,'FeedBase']]],
   ['channelframes0',['channelFrames0',['../class_video4_linux_input.html#ae22c3340195b8b03d202f92e37f0957a',1,'Video4LinuxInput']]],
-  ['channels',['channels',['../class_audio_provider.html#aff5f8aaa52aadaa128c4d29e3c0dcba1',1,'AudioProvider::channels()'],['../class_network_a_v_input.html#a263fac797ad817b0f4b707f14770b707',1,'NetworkAVInput::channels()']]],
+  ['channels',['channels',['../class_audio_provider.html#aff5f8aaa52aadaa128c4d29e3c0dcba1',1,'AudioProvider::channels()'],['../class_a_v_input.html#a08b18e46ac25b1b1a6db3a1fe34741c6',1,'AVInput::channels()']]],
   ['checkmotion',['checkMotion',['../class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548',1,'Zone']]],
   ['checkproviders',['checkProviders',['../class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9',1,'FeedConsumer']]],
   ['checksignal',['checkSignal',['../class_signal_checker.html#a2ed64e4c3df3495b4c3278a28927b123',1,'SignalChecker']]],

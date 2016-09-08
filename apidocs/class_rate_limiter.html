@@ -131,8 +131,10 @@ Inheritance diagram for RateLimiter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e27f1645fdc6ffe8ef1f2012b294419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html#a1e27f1645fdc6ffe8ef1f2012b294419">RateLimiter</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <a class="el" href="class_frame_rate.html">FrameRate</a> <a class="el" href="class_rate_limiter.html#acf6c311ed89a86e0455b340210dc3973">frameRate</a>, bool skip=true)</td></tr>
 <tr class="separator:a1e27f1645fdc6ffe8ef1f2012b294419"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74af328b91c86677ad118e826a5c5f02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html#a74af328b91c86677ad118e826a5c5f02">RateLimiter</a> (<a class="el" href="class_frame_rate.html">FrameRate</a> <a class="el" href="class_rate_limiter.html#acf6c311ed89a86e0455b340210dc3973">frameRate</a>, bool skip, <a class="el" href="class_video_provider.html">VideoProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>, const <a class="el" href="class_feed_link.html">FeedLink</a> &amp;link=gQueuedFeedLink)</td></tr>
-<tr class="separator:a74af328b91c86677ad118e826a5c5f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1721dfd2bea78e0483c9d5e51d95ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html#a8c1721dfd2bea78e0483c9d5e51d95ca">RateLimiter</a> (<a class="el" href="class_frame_rate.html">FrameRate</a> <a class="el" href="class_rate_limiter.html#acf6c311ed89a86e0455b340210dc3973">frameRate</a>, <a class="el" href="class_video_provider.html">VideoProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>)</td></tr>
+<tr class="separator:a8c1721dfd2bea78e0483c9d5e51d95ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a177b159f51112a66ed9f0c058b894a9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html#a177b159f51112a66ed9f0c058b894a9b">RateLimiter</a> (<a class="el" href="class_frame_rate.html">FrameRate</a> <a class="el" href="class_rate_limiter.html#acf6c311ed89a86e0455b340210dc3973">frameRate</a>, bool skip, <a class="el" href="class_video_provider.html">VideoProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>, const <a class="el" href="class_feed_link.html">FeedLink</a> &amp;link=gQueuedVideoLink)</td></tr>
+<tr class="separator:a177b159f51112a66ed9f0c058b894a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a58de58e9536c33b0de925a76818e3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a58de58e9536c33b0de925a76818e3a"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rate_limiter.html#a0a58de58e9536c33b0de925a76818e3a">width</a> () const </td></tr>
 <tr class="memdesc:a0a58de58e9536c33b0de925a76818e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the width (in pixels) of video frames supplied by this provider. <br /></td></tr>
@@ -557,7 +559,42 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 </div>
 </div>
-<a class="anchor" id="a74af328b91c86677ad118e826a5c5f02"></a>
+<a class="anchor" id="a8c1721dfd2bea78e0483c9d5e51d95ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RateLimiter::RateLimiter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_frame_rate.html">FrameRate</a>&#160;</td>
+          <td class="paramname"><em>frameRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_video_provider.html">VideoProvider</a> &amp;&#160;</td>
+          <td class="paramname"><em>provider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frameRate</td><td></td></tr>
+    <tr><td class="paramname">provider</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="oz_rate_limiter_8cpp_source.html#l00029">29</a> of file <a class="el" href="oz_rate_limiter_8cpp_source.html">ozRateLimiter.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a177b159f51112a66ed9f0c058b894a9b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -583,7 +620,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_feed_link.html">FeedLink</a> &amp;&#160;</td>
-          <td class="paramname"><em>link</em> = <code>gQueuedFeedLink</code>&#160;</td>
+          <td class="paramname"><em>link</em> = <code>gQueuedVideoLink</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -602,7 +639,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="oz_rate_limiter_8cpp_source.html#l00031">31</a> of file <a class="el" href="oz_rate_limiter_8cpp_source.html">ozRateLimiter.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_rate_limiter_8cpp_source.html#l00046">46</a> of file <a class="el" href="oz_rate_limiter_8cpp_source.html">ozRateLimiter.cpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +668,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 <p>Implements <a class="el" href="class_thread.html#af4a66c44c91ab79cbd830511f622c4e8">Thread</a>.</p>
 
-<p>Definition at line <a class="el" href="oz_rate_limiter_8cpp_source.html#l00052">52</a> of file <a class="el" href="oz_rate_limiter_8cpp_source.html">ozRateLimiter.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_rate_limiter_8cpp_source.html#l00067">67</a> of file <a class="el" href="oz_rate_limiter_8cpp_source.html">ozRateLimiter.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -654,7 +691,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_rate_limiter.html">RateLimiter</a></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:30 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:16 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

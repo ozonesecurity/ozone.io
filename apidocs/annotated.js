@@ -1,5 +1,6 @@
 var annotated =
 [
+    [ "_Option", "class___option.html", "class___option" ],
     [ "AlarmFrame", "class_alarm_frame.html", "class_alarm_frame" ],
     [ "Amf0Array", "class_amf0_array.html", "class_amf0_array" ],
     [ "Amf0Object", "class_amf0_object.html", "class_amf0_object" ],
@@ -13,6 +14,7 @@ var annotated =
     [ "AudioParms", "struct_audio_parms.html", "struct_audio_parms" ],
     [ "AudioProvider", "class_audio_provider.html", "class_audio_provider" ],
     [ "AudioVideoProvider", "class_audio_video_provider.html", "class_audio_video_provider" ],
+    [ "AVInput", "class_a_v_input.html", "class_a_v_input" ],
     [ "BinaryConnection", "class_binary_connection.html", "class_binary_connection" ],
     [ "Box", "class_box.html", "class_box" ],
     [ "BoxMask", "class_box_mask.html", "class_box_mask" ],
@@ -88,10 +90,11 @@ var annotated =
     [ "Mp4FileOutput", "class_mp4_file_output.html", "class_mp4_file_output" ],
     [ "MpegEncoder", "class_mpeg_encoder.html", "class_mpeg_encoder" ],
     [ "Mutex", "class_mutex.html", "class_mutex" ],
-    [ "NetworkAVInput", "class_network_a_v_input.html", "class_network_a_v_input" ],
     [ "NotifyFrame", "class_notify_frame.html", "class_notify_frame" ],
     [ "NotifyOutput", "class_notify_output.html", "class_notify_output" ],
     [ "nvrCameras", "classnvr_cameras.html", "classnvr_cameras" ],
+    [ "Option", "class_option.html", "class_option" ],
+    [ "Options", "class_options.html", "class_options" ],
     [ "Pipe", "class_pipe.html", "class_pipe" ],
     [ "Polygon", "class_polygon.html", "class_polygon" ],
     [ "PolyMask", "class_poly_mask.html", "class_poly_mask" ],

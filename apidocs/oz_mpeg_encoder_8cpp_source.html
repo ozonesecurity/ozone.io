@@ -261,7 +261,7 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">while</span> ( currTime &lt; nextTime )</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                currTime = time64();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                usleep( 1000 );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            nextTime += timeInterval;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
@@ -351,6 +351,7 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <div class="ttc" id="class_feed_consumer_html_a7e7b12b6dbd3995eeb956e00063a781a"><div class="ttname"><a href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">FeedConsumer::mFrameQueue</a></div><div class="ttdeci">FrameQueue mFrameQueue</div><div class="ttdoc">Queue of frames from providers that are ready to be handled. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00029">ozFeedConsumer.h:29</a></div></div>
 <div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
+<div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 <div class="ttc" id="class_mpeg_encoder_html_a165f659826a5fc8078e592fc2bca364e"><div class="ttname"><a href="class_mpeg_encoder.html#a165f659826a5fc8078e592fc2bca364e">MpegEncoder::gopSize</a></div><div class="ttdeci">int gopSize() const </div><div class="ttdef"><b>Definition:</b> <a href="oz_mpeg_encoder_8cpp_source.html#l00085">ozMpegEncoder.cpp:85</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -358,7 +359,7 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_18e91fceada5d197dcb7aec06d99f041.html">encoders</a></li><li class="navelem"><b>ozMpegEncoder.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:28 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:14 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

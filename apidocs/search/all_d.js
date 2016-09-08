@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['open',['open',['../class_pipe.html#a543b5731e9f969c7c558e10f77f6ea73',1,'Pipe']]],
-  ['openfile',['openFile',['../class_mp4_file_output.html#aaeb621cd587bba70f4e7d96df42308a7',1,'Mp4FileOutput']]],
-  ['operator_3d',['operator=',['../class_box_mask.html#abb5a62c4ba9098b694a71036b6052ee1',1,'BoxMask::operator=()'],['../class_poly_mask.html#ad0638d11a11d693319c6e2eeb03712d4',1,'PolyMask::operator=()'],['../class_image_mask.html#a0e9132570d3ad2daf2922dc14e702a10',1,'ImageMask::operator=()'],['../class_polygon.html#ab3b30157fa1c973c6003e0ba864831c3',1,'Polygon::operator=()']]],
-  ['originator',['originator',['../class_feed_frame.html#a410433cd0f566b87251790f099d1f984',1,'FeedFrame']]],
-  ['outline',['outline',['../class_image.html#ac809762a44da79842fbc0f0f3862c714',1,'Image::outline(Rgb colour, const Box &amp;box)'],['../class_image.html#addbc4491f38d8e4e62e2a49a851ce306',1,'Image::outline(Rgb colour, const Polygon &amp;polygon)']]],
-  ['overlay',['overlay',['../class_image.html#a23c09b67d81e678595d23df911e99a3e',1,'Image']]]
+  ['nvr_2dcli',['NVR-cli',['../md_src_examples_nvrcli__r_e_a_d_m_e.html',1,'']]],
+  ['name',['name',['../class_feed_base.html#a22f313327e4e4effc09beed76b12fa55',1,'FeedBase']]],
+  ['newconnection',['newConnection',['../class_controller.html#ace35eafc8f2bb035ba8d707b969871c9',1,'Controller::newConnection()'],['../class_http_controller.html#a3bb4e42a8bb5af6e71c3e03cbc466dfe',1,'HttpController::newConnection()'],['../class_rtmp_controller.html#a7fe9a9c2191db30d974c73271a518f8d',1,'RtmpController::newConnection()'],['../class_rtsp_controller.html#a1f0490ef493114544197bbec7ab7ec7f',1,'RtspController::newConnection()']]],
+  ['newsession',['newSession',['../class_http_controller.html#a88a1b384856e74324ab1e8b14e752e24',1,'HttpController::newSession()'],['../class_rtsp_controller.html#a7ac3be3b899a058468a5874226664e81',1,'RtspController::newSession()']]],
+  ['newsockaddr',['newSockAddr',['../class_sock_addr.html#a64044fb2db81add97a8126e51fe6bd9b',1,'SockAddr::newSockAddr(const struct sockaddr &amp;addr, socklen_t len)'],['../class_sock_addr.html#ab9961603ff70fe3b141ba3fa4044569f',1,'SockAddr::newSockAddr(const SockAddr *addr)']]],
+  ['newstream',['newStream',['../class_rtsp_session.html#aab38c3a0dcd44c6fb6fa2ca1799f3b6e',1,'RtspSession']]],
+  ['noframes',['noFrames',['../class_feed_provider.html#a58d6e4e3d037fe525e1ad28e48afd951',1,'FeedProvider']]],
+  ['notifyframe',['NotifyFrame',['../class_notify_frame.html',1,'']]],
+  ['notifyoutput',['NotifyOutput',['../class_notify_output.html',1,'']]],
+  ['nvrcameras',['nvrCameras',['../classnvr_cameras.html',1,'']]]
 ];

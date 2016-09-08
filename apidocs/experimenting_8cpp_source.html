@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('experimenting_8cpp_source.html','');})
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//------------------------------------------</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../base/ozApp.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../base/ozListener.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../providers/ozNetworkAVInput.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../providers/ozAVInput.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../processors/ozMotionDetector.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../processors/ozMatrixVideo.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../protocols/ozHttpController.h&quot;</span></div>
@@ -146,8 +146,8 @@ $(document).ready(function(){initNavTree('experimenting_8cpp_source.html','');})
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_application.html">Application</a> app;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// Two RTSP sources </span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_network_a_v_input.html">NetworkAVInput</a> cam1( <span class="stringliteral">&quot;cam1&quot;</span>, <span class="stringliteral">&quot;rtsp://170.93.143.139:1935/rtplive/0b01b57900060075004d823633235daa&quot;</span> );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_network_a_v_input.html">NetworkAVInput</a> cam2(<span class="stringliteral">&quot;cam2&quot;</span>,<span class="stringliteral">&quot;rtsp://170.93.143.139:1935/rtplive/e0ffa81e00a200ab0050fa36c4235c0a&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_a_v_input.html">AVInput</a> cam1( <span class="stringliteral">&quot;cam1&quot;</span>, <span class="stringliteral">&quot;rtsp://170.93.143.139:1935/rtplive/0b01b57900060075004d823633235daa&quot;</span> );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_a_v_input.html">AVInput</a> cam2(<span class="stringliteral">&quot;cam2&quot;</span>,<span class="stringliteral">&quot;rtsp://170.93.143.139:1935/rtplive/e0ffa81e00a200ab0050fa36c4235c0a&quot;</span>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;cam1 );</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;cam2 );</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
@@ -207,10 +207,10 @@ $(document).ready(function(){initNavTree('experimenting_8cpp_source.html','');})
 <div class="ttc" id="class_event_recorder_html"><div class="ttname"><a href="class_event_recorder.html">EventRecorder</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_event_recorder_8h_source.html#l00020">ozEventRecorder.h:20</a></div></div>
 <div class="ttc" id="class_motion_detector_html"><div class="ttname"><a href="class_motion_detector.html">MotionDetector</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8h_source.html#l00024">ozMotionDetector.h:24</a></div></div>
 <div class="ttc" id="class_controller_html_a9ddcd6bdc0c9e1f74836fbd8ec353cd1"><div class="ttname"><a href="class_controller.html#a9ddcd6bdc0c9e1f74836fbd8ec353cd1">Controller::addStream</a></div><div class="ttdeci">void addStream(const std::string &amp;streamName, const std::string &amp;streamClass)</div><div class="ttdef"><b>Definition:</b> <a href="oz_controller_8cpp_source.html#l00012">ozController.cpp:12</a></div></div>
-<div class="ttc" id="class_network_a_v_input_html"><div class="ttname"><a href="class_network_a_v_input.html">NetworkAVInput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_network_a_v_input_8h_source.html#l00016">ozNetworkAVInput.h:16</a></div></div>
 <div class="ttc" id="struct_video_parms_html"><div class="ttname"><a href="struct_video_parms.html">VideoParms</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_parameters_8h_source.html#l00012">ozParameters.h:12</a></div></div>
 <div class="ttc" id="class_frame_rate_html"><div class="ttname"><a href="class_frame_rate.html">FrameRate</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_ffmpeg_8h_source.html#l00063">ozFfmpeg.h:63</a></div></div>
 <div class="ttc" id="class_application_html_a14ad8492991aea218c57fa632b69333d"><div class="ttname"><a href="class_application.html#a14ad8492991aea218c57fa632b69333d">Application::addThread</a></div><div class="ttdeci">void addThread(Thread *)</div><div class="ttdef"><b>Definition:</b> <a href="oz_app_8cpp_source.html#l00025">ozApp.cpp:25</a></div></div>
+<div class="ttc" id="class_a_v_input_html"><div class="ttname"><a href="class_a_v_input.html">AVInput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_a_v_input_8h_source.html#l00016">ozAVInput.h:16</a></div></div>
 <div class="ttc" id="class_movie_file_output_html"><div class="ttname"><a href="class_movie_file_output.html">MovieFileOutput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_movie_file_output_8h_source.html#l00017">ozMovieFileOutput.h:17</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a5eac06a868f4dc353d34589207ab99f6"><div class="ttname"><a href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">FeedConsumer::registerProvider</a></div><div class="ttdeci">virtual bool registerProvider(FeedProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00038">ozFeedConsumer.cpp:38</a></div></div>
 <div class="ttc" id="class_listener_html"><div class="ttname"><a href="class_listener.html">Listener</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_listener_8h_source.html#l00021">ozListener.h:21</a></div></div>
@@ -224,7 +224,7 @@ $(document).ready(function(){initNavTree('experimenting_8cpp_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><b>experimenting.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:28 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:14 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

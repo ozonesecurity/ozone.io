@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('example4_8cpp_source.html','');});
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../base/ozApp.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../base/ozListener.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../providers/ozNetworkAVInput.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../providers/ozAVInput.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../protocols/ozHttpController.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../protocols/ozRtspController.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('example4_8cpp_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_application.html">Application</a> app;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_network_a_v_input.html">NetworkAVInput</a> input( <span class="stringliteral">&quot;input&quot;</span>, <span class="stringliteral">&quot;/tmp/movie.mp4&quot;</span> );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_a_v_input.html">AVInput</a> input( <span class="stringliteral">&quot;input&quot;</span>, <span class="stringliteral">&quot;/tmp/movie.mp4&quot;</span> );</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    app.<a class="code" href="class_application.html#a14ad8492991aea218c57fa632b69333d">addThread</a>( &amp;input );</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_listener.html">Listener</a> listener;</div>
@@ -148,9 +148,9 @@ $(document).ready(function(){initNavTree('example4_8cpp_source.html','');});
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="ttc" id="class_listener_html_a7ed36704d35d8f157f53a04bb860ca81"><div class="ttname"><a href="class_listener.html#a7ed36704d35d8f157f53a04bb860ca81">Listener::addController</a></div><div class="ttdeci">void addController(Controller *controller)</div><div class="ttdoc">Add a controller to permit new connections using specific protocol. </div><div class="ttdef"><b>Definition:</b> <a href="oz_listener_8cpp_source.html#l00031">ozListener.cpp:31</a></div></div>
 <div class="ttc" id="class_controller_html_a9ddcd6bdc0c9e1f74836fbd8ec353cd1"><div class="ttname"><a href="class_controller.html#a9ddcd6bdc0c9e1f74836fbd8ec353cd1">Controller::addStream</a></div><div class="ttdeci">void addStream(const std::string &amp;streamName, const std::string &amp;streamClass)</div><div class="ttdef"><b>Definition:</b> <a href="oz_controller_8cpp_source.html#l00012">ozController.cpp:12</a></div></div>
-<div class="ttc" id="class_network_a_v_input_html"><div class="ttname"><a href="class_network_a_v_input.html">NetworkAVInput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_network_a_v_input_8h_source.html#l00016">ozNetworkAVInput.h:16</a></div></div>
 <div class="ttc" id="class_rtsp_controller_html"><div class="ttname"><a href="class_rtsp_controller.html">RtspController</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_controller_8h_source.html#l00018">ozRtspController.h:18</a></div></div>
 <div class="ttc" id="class_application_html_a14ad8492991aea218c57fa632b69333d"><div class="ttname"><a href="class_application.html#a14ad8492991aea218c57fa632b69333d">Application::addThread</a></div><div class="ttdeci">void addThread(Thread *)</div><div class="ttdef"><b>Definition:</b> <a href="oz_app_8cpp_source.html#l00025">ozApp.cpp:25</a></div></div>
+<div class="ttc" id="class_a_v_input_html"><div class="ttname"><a href="class_a_v_input.html">AVInput</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_a_v_input_8h_source.html#l00016">ozAVInput.h:16</a></div></div>
 <div class="ttc" id="class_listener_html"><div class="ttname"><a href="class_listener.html">Listener</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_listener_8h_source.html#l00021">ozListener.h:21</a></div></div>
 <div class="ttc" id="class_http_controller_html"><div class="ttname"><a href="class_http_controller.html">HttpController</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_http_controller_8h_source.html#l00015">ozHttpController.h:15</a></div></div>
 <div class="ttc" id="class_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_app_8h_source.html#l00009">ozApp.h:9</a></div></div>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('example4_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e931c1a3f0014e624d0645a271726ad2.html">examples</a></li><li class="navelem"><b>example4.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:28 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:14 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

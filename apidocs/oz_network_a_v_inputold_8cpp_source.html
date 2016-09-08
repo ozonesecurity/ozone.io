@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../base/ozFfmpeg.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../libgen/libgenDebug.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="class_network_a_v_input.html#adf1ea48667855cf00695f6e91103542f">NetworkAVInput::NetworkAVInput</a>( <span class="keyword">const</span> std::string &amp;name, <span class="keyword">const</span> std::string &amp;source, <span class="keyword">const</span> std::string &amp;format, <span class="keywordtype">bool</span> loop ) :</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;NetworkAVInput::NetworkAVInput( <span class="keyword">const</span> std::string &amp;name, <span class="keyword">const</span> std::string &amp;source, <span class="keyword">const</span> std::string &amp;format, <span class="keywordtype">bool</span> loop ) :</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_audio_video_provider.html">AudioVideoProvider</a>( cClass(), name ),</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_thread.html">Thread</a>( identity() ),</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    mSource( source ),</div>
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_network_a_v_input.html#a0eb9998a2ada5f9d6a77c362b7328427">NetworkAVInput::run</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> NetworkAVInput::run()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//int dictRet = av_dict_set(&amp;dict,&quot;standard&quot;,&quot;ntsc&quot;,0);</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//dictRet = av_dict_set(&amp;dict,&quot;video_size&quot;,&quot;320x240&quot;,0);</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">while</span> ( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> )</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">while</span> ( !mStop )</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">struct </span>timeval now;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            gettimeofday( &amp;now, 0 );</div>
@@ -279,13 +279,13 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            AVPacket packet;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            av_init_packet(&amp;packet);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">while</span>( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> )</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">while</span>( !mStop )</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            {</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordtype">int</span> videoFrameComplete = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordtype">int</span> audioFrameComplete = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="comment">//while ( !frameComplete &amp;&amp; (av_read_frame( formatContext, &amp;packet ) &gt;= 0) )</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordtype">int</span> readLeft = av_read_frame (formatContext, &amp;packet);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordflow">while</span> ( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> &amp;&amp; readLeft  &gt;=0 ) </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keywordflow">while</span> ( !mStop &amp;&amp; readLeft  &gt;=0 ) </div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    Debug( 5, <span class="stringliteral">&quot;Got packet from stream %d&quot;</span>, packet.stream_index );</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    <span class="keywordflow">if</span> ( mBaseTimestamp == 0 )</div>
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    {</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                        videoFrameComplete = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        <span class="keywordflow">if</span> ( avcodec_decode_video2( mVideoCodecContext, avVideoFrame, &amp;videoFrameComplete, &amp;packet ) &lt; 0 )</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                            Fatal( <span class="stringliteral">&quot;%s: Unable to decode video frame at frame %ju&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">VideoProvider::mFrameCount</a> );</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                            Fatal( <span class="stringliteral">&quot;%s: Unable to decode video frame at frame %ju&quot;</span>, cidentity(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">VideoProvider::mFrameCount</a> );</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        int64_t pts;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        <span class="keywordflow">if</span>( packet.dts != AV_NOPTS_VALUE) {</div>
@@ -307,12 +307,12 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                            pts = 0;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                        }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                        Debug( 3, <span class="stringliteral">&quot;%s: Decoded video packet at frame %d, pts %jd&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), mVideoCodecContext-&gt;frame_number, pts );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                        Debug( 3, <span class="stringliteral">&quot;%s: Decoded video packet at frame %d, pts %jd&quot;</span>, cidentity(), mVideoCodecContext-&gt;frame_number, pts );</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                        <span class="keywordflow">if</span> ( videoFrameComplete )</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                        {</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                            <span class="keywordtype">double</span> timeOffset = pts * av_q2d(mVideoStream-&gt;time_base);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                            Debug( 3, <span class="stringliteral">&quot;%s: Got video frame %d, pts %jd (%.3f)&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), mVideoCodecContext-&gt;frame_number, pts, timeOffset );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                            Debug( 3, <span class="stringliteral">&quot;%s: Got video frame %d, pts %jd (%.3f)&quot;</span>, cidentity(), mVideoCodecContext-&gt;frame_number, pts, timeOffset );</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                            avpicture_layout( (AVPicture *)avVideoFrame, mVideoCodecContext-&gt;pix_fmt, mVideoCodecContext-&gt;width, mVideoCodecContext-&gt;height, videoFrameBuffer.data(), videoFrameBuffer.capacity() );</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                            <span class="comment">//Info( &quot;%ld: TS: %jd, TS1: %jd, TS2: %jd, TS3: %.3f&quot;, time( 0 ), timestamp, packet.pts, (uint64_t)(1000000.0L*timeOffset), timeOffset );</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;         </div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                            <a class="code" href="class_video_frame.html">VideoFrame</a> *videoFrame = <span class="keyword">new</span> <a class="code" href="class_video_frame.html">VideoFrame</a>( <span class="keyword">this</span>, mVideoCodecContext-&gt;frame_number, timestamp, videoFrameBuffer );</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( videoFrame ) );</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                            distributeFrame( <a class="code" href="classlinked__ptr.html">FramePtr</a>( videoFrame ) );</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mHasAudio &amp;&amp; packet.stream_index == audioStreamId )</div>
@@ -351,7 +351,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                            <span class="comment">//Debug( 3, &quot;%d: TS: %jd, TS1: %jd, TS2: %jd, TS3: %.3f&quot;, time( 0 ), timestamp, packet.pts, ((1000000LL*packet.pts*mAudioStream-&gt;time_base.num)/mAudioStream-&gt;time_base.den), (((double)packet.pts*mAudioStream-&gt;time_base.num)/mAudioStream-&gt;time_base.den) );</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                            <a class="code" href="class_audio_frame.html">AudioFrame</a> *audioFrame = <span class="keyword">new</span> <a class="code" href="class_audio_frame.html">AudioFrame</a>( <span class="keyword">this</span>, mAudioCodecContext-&gt;frame_number, timestamp, audioFrameBuffer, avAudioFrame-&gt;nb_samples );</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( audioFrame ) );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                            distributeFrame( <a class="code" href="classlinked__ptr.html">FramePtr</a>( audioFrame ) );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                        }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    av_free_packet( &amp;packet );</div>
@@ -365,7 +365,7 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                usleep( INTERFRAME_TIMEOUT );</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            }</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">if</span> ( mHasVideo )</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            {</div>
@@ -393,47 +393,39 @@ $(document).ready(function(){initNavTree('oz_network_a_v_inputold_8cpp_source.ht
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                formatContext = NULL;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="comment">//av_free( formatContext );</span></div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> )</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">if</span> ( !mStop )</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                Warning( <span class="stringliteral">&quot;%s: Reconnecting&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                sleep( <a class="code" href="class_feed_provider.html#a8efbe56a46e166f8356e232513705ed0">RECONNECT_TIMEOUT</a> );</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                Warning( <span class="stringliteral">&quot;%s: Reconnecting&quot;</span>, cidentity() );</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                sleep( RECONNECT_TIMEOUT );</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            }</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">cleanup</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        cleanup();</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">return</span>( !ended() );</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    } <span class="comment">// try</span></div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">catch</span> (std::exception &amp;e)</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        Error (e.what());</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">cleanup</a>();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        cleanup();</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        setError();</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">return</span> (error());</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;           </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    </div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
-<div class="ttc" id="class_feed_base_html_a21fb04c56b16da04d346748ca0c5b2d4"><div class="ttname"><a href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">FeedBase::cidentity</a></div><div class="ttdeci">const char * cidentity() const </div><div class="ttdoc">Return the identity string as a c-style string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00080">ozFeedBase.h:80</a></div></div>
-<div class="ttc" id="class_network_a_v_input_html_adf1ea48667855cf00695f6e91103542f"><div class="ttname"><a href="class_network_a_v_input.html#adf1ea48667855cf00695f6e91103542f">NetworkAVInput::NetworkAVInput</a></div><div class="ttdeci">NetworkAVInput(const std::string &amp;name, const std::string &amp;source, const std::string &amp;format=&quot;&quot;, bool loop=false)</div><div class="ttdef"><b>Definition:</b> <a href="oz_network_a_v_input_8cpp_source.html#l00014">ozNetworkAVInput.cpp:14</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
-<div class="ttc" id="class_network_a_v_input_html_a0eb9998a2ada5f9d6a77c362b7328427"><div class="ttname"><a href="class_network_a_v_input.html#a0eb9998a2ada5f9d6a77c362b7328427">NetworkAVInput::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_network_a_v_input_8cpp_source.html#l00040">ozNetworkAVInput.cpp:40</a></div></div>
-<div class="ttc" id="class_feed_provider_html_a9e6dfca4261b1f3e67fca4543dc24f27"><div class="ttname"><a href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relations before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00126">ozFeedProvider.cpp:126</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
 <div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00173">ozFeedFrame.h:173</a></div></div>
 <div class="ttc" id="class_audio_video_provider_html"><div class="ttname"><a href="class_audio_video_provider.html">AudioVideoProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00188">ozFeedProvider.h:188</a></div></div>
-<div class="ttc" id="class_thread_html_a59c9c8a425d516f50d9adc516eaa67fd"><div class="ttname"><a href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">Thread::mStop</a></div><div class="ttdeci">bool mStop</div><div class="ttdoc">Flag indicating whether this thread has been signalled to stop. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00263">libgenThread.h:263</a></div></div>
 <div class="ttc" id="class_audio_frame_html"><div class="ttname"><a href="class_audio_frame.html">AudioFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00197">ozFeedFrame.h:197</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a113a8127bb5d18b0317e70b850bf2c89"><div class="ttname"><a href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">FeedProvider::mFrameCount</a></div><div class="ttdeci">uint64_t mFrameCount</div><div class="ttdoc">Number of frames, advisory only. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00042">ozFeedProvider.h:42</a></div></div>
 <div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
-<div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00212">ozFeedProvider.cpp:212</a></div></div>
-<div class="ttc" id="class_feed_provider_html_a8efbe56a46e166f8356e232513705ed0"><div class="ttname"><a href="class_feed_provider.html#a8efbe56a46e166f8356e232513705ed0">FeedProvider::RECONNECT_TIMEOUT</a></div><div class="ttdeci">static const int RECONNECT_TIMEOUT</div><div class="ttdoc">How long to wait before reconnecting to a lost source, in seconds. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00024">ozFeedProvider.h:24</a></div></div>
-<div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_306d1f7c2316132a5a1b654ae206deb5.html">providers</a></li><li class="navelem"><b>ozNetworkAVInputold.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:29 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:15 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

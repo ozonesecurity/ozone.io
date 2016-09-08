@@ -1,5 +1,5 @@
 <map id="AudioVideoProvider" name="AudioVideoProvider">
-<area shape="rect" id="node6" href="$class_network_a_v_input.html" title="NetworkAVInput" alt="" coords="60,304,179,331"/>
+<area shape="rect" id="node6" href="$class_a_v_input.html" title="AVInput" alt="" coords="85,304,154,331"/>
 <area shape="rect" id="node2" href="$class_video_provider.html" title="VideoProvider" alt="" coords="5,155,108,181"/>
 <area shape="rect" id="node3" href="$class_feed_provider.html" title="FeedProvider" alt="" coords="70,80,169,107"/>
 <area shape="rect" id="node5" href="$class_audio_provider.html" title="AudioProvider" alt="" coords="132,155,235,181"/>

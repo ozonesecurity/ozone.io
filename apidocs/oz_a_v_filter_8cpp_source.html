@@ -275,22 +275,22 @@ $(document).ready(function(){initNavTree('oz_a_v_filter_8cpp_source.html','');})
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                Debug( 3, <span class="stringliteral">&quot;Got %zd frames on queue&quot;</span>, <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.size() );</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">for</span> ( FrameQueue::iterator iter = <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.begin(); iter != <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.end(); iter++ )</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    <span class="comment">//const VideoFrame *frame = dynamic_cast&lt;const VideoFrame *&gt;(iter-&gt;get());</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    <span class="comment">//FramePtr framePtr( *iter );</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    <span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *frame = (*iter).get();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    inputFrame-&gt;width = inputWidth;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    inputFrame-&gt;height = inputHeight;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    inputFrame-&gt;format = inputPixelFormat;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    inputFrame-&gt;pts = frame-&gt;timestamp();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    avpicture_fill( (AVPicture *)inputFrame, frame-&gt;buffer().data(), inputPixelFormat, inputWidth, inputHeight );</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="keywordflow">if</span> ( av_buffersrc_add_frame( mBufferSrcContext, inputFrame ) &lt; 0 )</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        Error( <span class="stringliteral">&quot;Error while feeding the filtergraph&quot;</span> );</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        Hexdump( 0, inputFrame-&gt;data[0], 16 );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    <span class="keyword">const</span> <a class="code" href="class_video_frame.html">VideoFrame</a> *frame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_video_frame.html">VideoFrame</a> *<span class="keyword">&gt;</span>(iter-&gt;get());</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    <span class="keywordflow">if</span> ( !frame )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    inputFrame-&gt;width = inputWidth;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    inputFrame-&gt;height = inputHeight;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    inputFrame-&gt;format = inputPixelFormat;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    inputFrame-&gt;pts = frame-&gt;timestamp();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    avpicture_fill( (AVPicture *)inputFrame, frame-&gt;buffer().data(), inputPixelFormat, inputWidth, inputHeight );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    <span class="keywordflow">if</span> ( av_buffersrc_add_frame( mBufferSrcContext, inputFrame ) &lt; 0 )</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        Error( <span class="stringliteral">&quot;Error while feeding the filtergraph&quot;</span> );</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="keywordflow">while</span> ( <span class="keyword">true</span> )</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    {</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        <span class="keywordtype">int</span> result = av_buffersink_get_frame( mBufferSinkContext, filterFrame );</div>
@@ -338,7 +338,6 @@ $(document).ready(function(){initNavTree('oz_a_v_filter_8cpp_source.html','');})
 <div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00168">ozFeedConsumer.cpp:168</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_video_provider_html_a5b5ad2235e3bb94f6f21bf82ea0fd9ec"><div class="ttname"><a href="class_video_provider.html#a5b5ad2235e3bb94f6f21bf82ea0fd9ec">VideoProvider::frameRate</a></div><div class="ttdeci">virtual FrameRate frameRate() const =0</div><div class="ttdoc">Return the frame rate at this this provider supplies frames. May not be available or accurate...</div></div>
-<div class="ttc" id="class_feed_frame_html"><div class="ttname"><a href="class_feed_frame.html">FeedFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00025">ozFeedFrame.h:25</a></div></div>
 <div class="ttc" id="class_video_consumer_html_a843010ada945a86ff979dae0d667435c"><div class="ttname"><a href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">VideoConsumer::videoProvider</a></div><div class="ttdeci">VideoProvider * videoProvider() const </div><div class="ttdoc">Return the first provider cast appropriately, shortcut for when providers == 1. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00314">ozFeedConsumer.cpp:314</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a9e6dfca4261b1f3e67fca4543dc24f27"><div class="ttname"><a href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relations before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00126">ozFeedProvider.cpp:126</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
@@ -364,7 +363,7 @@ $(document).ready(function(){initNavTree('oz_a_v_filter_8cpp_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozAVFilter.cpp</b></li>
-    <li class="footer">Generated on Tue Sep 6 2016 16:07:29 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 13:37:15 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
