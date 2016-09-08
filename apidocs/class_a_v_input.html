@@ -500,23 +500,17 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   <table class="params">
     <tr><td class="paramname">name</td><td>instance name </td></tr>
     <tr><td class="paramname">source</td><td>AV source (example "rtsp://foo", "/dev/video0", "/tmp/test.mp4" etc) </td></tr>
-    <tr><td class="paramname">format</td><td></td></tr>
-    <tr><td class="paramname">loop</td><td>if true, loops the source. Makes sense only if you have provided a file</td></tr>
+    <tr><td class="paramname">options</td><td>list of options that you can use to configure the input with</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">nvrcam.cam = <span class="keyword">new</span> <a class="code" href="class_a_v_input.html#abc9eca1d1e1a3c0139ed476ae1a1eddb">AVInput</a> ( <span class="stringliteral">&quot;cam0&quot;</span>, <span class="stringliteral">&quot;/tmp/myvideo.mp4&quot;</span>,<span class="stringliteral">&quot;&quot;</span>,<span class="keyword">true</span> );</div>
-<div class="line">nvrcam.cam = <span class="keyword">new</span> <a class="code" href="class_a_v_input.html#abc9eca1d1e1a3c0139ed476ae1a1eddb">AVInput</a> ( <span class="stringliteral">&quot;cam1&quot;</span>, <span class="stringliteral">&quot;rtsp://user:password@192.168.1.12/videoMain&quot;</span>,<span class="stringliteral">&quot;&quot;</span>,<span class="keyword">false</span> );</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td></td></tr>
-    <tr><td class="paramname">source</td><td></td></tr>
-    <tr><td class="paramname">format</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="oz_a_v_input_8cpp_source.html#l00014">14</a> of file <a class="el" href="oz_a_v_input_8cpp_source.html">ozAVInput.cpp</a>.</p>
+<div class="fragment"><div class="line">AVOptions avOptions;</div>
+<div class="line">avOptions.add(<span class="stringliteral">&quot;realtime&quot;</span>,<span class="keyword">true</span>); <span class="comment">// respects FPS if video is not live</span></div>
+<div class="line">avOptions.add(<span class="stringliteral">&quot;loop&quot;</span>,<span class="keyword">true</span>); <span class="comment">// keeps looping video if file</span></div>
+<div class="line"></div>
+<div class="line">nvrcam.cam = <span class="keyword">new</span> <a class="code" href="class_a_v_input.html#abc9eca1d1e1a3c0139ed476ae1a1eddb">AVInput</a> ( name, source,avOptions );</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="oz_a_v_input_8cpp_source.html#l00007">7</a> of file <a class="el" href="oz_a_v_input_8cpp_source.html">ozAVInput.cpp</a>.</p>
 
 </div>
 </div>
@@ -545,7 +539,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 <p>Implements <a class="el" href="class_thread.html#af4a66c44c91ab79cbd830511f622c4e8">Thread</a>.</p>
 
-<p>Definition at line <a class="el" href="oz_a_v_input_8cpp_source.html#l00132">132</a> of file <a class="el" href="oz_a_v_input_8cpp_source.html">ozAVInput.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_a_v_input_8cpp_source.html#l00125">125</a> of file <a class="el" href="oz_a_v_input_8cpp_source.html">ozAVInput.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -568,7 +562,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_a_v_input.html">AVInput</a></li>
-    <li class="footer">Generated on Thu Sep 8 2016 13:37:15 for oZone Server Framework by
+    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
