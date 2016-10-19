@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('oz_controller_8cpp_source.html','');})
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_controller.html#a9ddcd6bdc0c9e1f74836fbd8ec353cd1">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_controller.html#a9ddcd6bdc0c9e1f74836fbd8ec353cd1">Controller::addStream</a>( <span class="keyword">const</span> std::string &amp;streamName, <span class="keyword">const</span> std::string &amp;streamClass )</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Info( <span class="stringliteral">&quot;Adding stream %s with class %s&quot;</span>, streamName.c_str(), streamClass.c_str() );</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Debug(1, <span class="stringliteral">&quot;Adding stream %s with class %s&quot;</span>, streamName.c_str(), streamClass.c_str() );</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::pair&lt;ApplicationClassMap::iterator,bool&gt; result = <a class="code" href="class_controller.html#ab8f9ea3d72a1a204471746c9e8ae13ab">mApplicationClasses</a>.insert( ApplicationClassMap::value_type( streamName, streamClass ) );</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> ( !result.second )</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Fatal( <span class="stringliteral">&quot;Unable to add stream %s with class %s&quot;</span>, streamName.c_str(), streamClass.c_str() );</div>
@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('oz_controller_8cpp_source.html','');})
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> ( instanceIter != <a class="code" href="class_controller.html#ab8f9ea3d72a1a204471746c9e8ae13ab">mApplicationClasses</a>.end() )</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::string feedId = <a class="code" href="class_feed_base.html#a27d113ac55879058cd684e0c16bf4b1a">FeedProvider::makeIdentity</a>( instanceIter-&gt;second, streamSource );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        Info( <span class="stringliteral">&quot;Looking for feed %s&quot;</span>, feedId.c_str() );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        Debug( 1,<span class="stringliteral">&quot;Looking for feed %s&quot;</span>, feedId.c_str() );</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_feed_provider.html#a2e4659092e97cbf0ec02badf93b34354">FeedProvider::find</a>( feedId ) );</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    Info( <span class="stringliteral">&quot;Failed&quot;</span> );</div>
@@ -186,8 +186,8 @@ $(document).ready(function(){initNavTree('oz_controller_8cpp_source.html','');})
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozController.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_1da4e510ceb0532d20919b87d92f5aa3.html">base</a></li><li class="navelem"><b>ozController.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('oz_memory_output_8cpp_source.html','')
 <div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb">   85</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb">MemoryOutput::storeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_video_frame.html">VideoFrame</a> *videoFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_video_frame.html">VideoFrame</a> *<span class="keyword">&gt;</span>(frame.get());</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Info( <span class="stringliteral">&quot;PF:%d @ %dx%d&quot;</span>, videoFrame-&gt;pixelFormat(), videoFrame-&gt;width(), videoFrame-&gt;height() );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Debug(1, <span class="stringliteral">&quot;PF:%d @ %dx%d&quot;</span>, videoFrame-&gt;pixelFormat(), videoFrame-&gt;width(), videoFrame-&gt;height() );</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_image.html">Image</a> image( videoFrame-&gt;pixelFormat(), videoFrame-&gt;width(), videoFrame-&gt;height(), frame-&gt;buffer().data() );</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
@@ -220,8 +220,8 @@ $(document).ready(function(){initNavTree('oz_memory_output_8cpp_source.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozMemoryOutput.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_13f927c1f8e7cd721a404b89eff7ecbd.html">consumers</a></li><li class="navelem"><b>ozMemoryOutput.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

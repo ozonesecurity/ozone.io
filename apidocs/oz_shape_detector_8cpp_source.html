@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('oz_shape_detector_8cpp_source.html',''
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        AVPixelFormat <a class="code" href="class_shape_detector.html#a9b04be759478770161beb38336ac1a96">pixelFormat</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">pixelFormat</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        int16_t <a class="code" href="class_shape_detector.html#a8dd6d1024087419c5ab72db3e149dccd">width</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        int16_t <a class="code" href="class_shape_detector.html#aa298bb43eb9c18d3321f04cf55171d89">height</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">height</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Info( <span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        Debug( 1,<span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">typedef</span> dlib::scan_fhog_pyramid&lt;dlib::pyramid_down&lt;6&gt; &gt; image_scanner_type;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('oz_shape_detector_8cpp_source.html',''
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        <span class="comment">//dlib::pyramid_up(img);</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        <span class="comment">//Info( &quot;AFT: %d x %d&quot;, num_rows(img), num_columns(img) );</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        std::vector&lt;dlib::rectangle&gt; dets = detector(img);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        Info( <span class="stringliteral">&quot;%jd @ %ju: Got %jd shapes&quot;</span>, frame-&gt;id(), frame-&gt;timestamp(), dets.size() );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        Debug( 1,<span class="stringliteral">&quot;%jd @ %ju: Got %jd shapes&quot;</span>, frame-&gt;id(), frame-&gt;timestamp(), dets.size() );</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <span class="keywordflow">if</span> ( dets.size() &gt; 0 &amp;&amp; mShapeMarkup != OZ_SHAPE_MARKUP_NONE )</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        {</div>
@@ -253,8 +253,8 @@ $(document).ready(function(){initNavTree('oz_shape_detector_8cpp_source.html',''
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozShapeDetector.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozShapeDetector.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

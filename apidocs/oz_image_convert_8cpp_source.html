@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -156,8 +156,8 @@ $(document).ready(function(){initNavTree('oz_image_convert_8cpp_source.html','')
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> ( !mConvertContext )</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Fatal( <span class="stringliteral">&quot;Unable to create conversion context&quot;</span> );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Info( <span class="stringliteral">&quot;Converting from %d x %d @ %d -&gt; %d x %d @ %d&quot;</span>, inputWidth, inputHeight, inputPixelFormat, mWidth, mHeight, mPixelFormat );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        Info( <span class="stringliteral">&quot;%d bytes -&gt; %d bytes&quot;</span>,  avpicture_get_size( inputPixelFormat, inputWidth, inputHeight ), avpicture_get_size( mPixelFormat, mWidth, mHeight ) );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Debug( 1, <span class="stringliteral">&quot;Converting from %d x %d @ %d -&gt; %d x %d @ %d&quot;</span>, inputWidth, inputHeight, inputPixelFormat, mWidth, mHeight, mPixelFormat );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        Debug( 1,<span class="stringliteral">&quot;%d bytes -&gt; %d bytes&quot;</span>,  avpicture_get_size( inputPixelFormat, inputWidth, inputHeight ), avpicture_get_size( mPixelFormat, mWidth, mHeight ) );</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Make space for anything that is going to be output</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_buffer.html">ByteBuffer</a> outputBuffer;</div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('oz_image_convert_8cpp_source.html','')
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    <span class="keywordflow">if</span> ( mWidth != inputWidth || mHeight != inputHeight || mPixelFormat != inputPixelFormat )</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        <span class="comment">// Requires conversion</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        Info( <span class="stringliteral">&quot;%s / Provider: %s, Source: %s, Frame: %p (%ju / %.3f) - %lu&quot;</span>, <a class="code" href="class_feed_base.html#a9c5aad6ef160c9d036aba28ea83df795">cname</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#a410433cd0f566b87251790f099d1f984">originator</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame, frame-&gt;id(), frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>(), frame-&gt;buffer().size() );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        Debug( 1, <span class="stringliteral">&quot;%s / Provider: %s, Source: %s, Frame: %p (%ju / %.3f) - %lu&quot;</span>, <a class="code" href="class_feed_base.html#a9c5aad6ef160c9d036aba28ea83df795">cname</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#a410433cd0f566b87251790f099d1f984">originator</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame, frame-&gt;id(), frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>(), frame-&gt;buffer().size() );</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        avpicture_fill( (AVPicture *)inputFrame, frame-&gt;buffer().data(), inputPixelFormat, inputWidth, inputHeight );</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
@@ -249,8 +249,8 @@ $(document).ready(function(){initNavTree('oz_image_convert_8cpp_source.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozImageConvert.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozImageConvert.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

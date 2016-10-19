@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -163,8 +163,8 @@ $(document).ready(function(){initNavTree('oz_image_scale_8cpp_source.html','');}
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> ( !mScaleContext )</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            Fatal( <span class="stringliteral">&quot;Unable to create scale context&quot;</span> );</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        Info( <span class="stringliteral">&quot;Scaling from %d x %d -&gt; %d x %d&quot;</span>, inputWidth, inputHeight, mWidth, mHeight );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Info( <span class="stringliteral">&quot;%d bytes -&gt; %d bytes&quot;</span>,  avpicture_get_size( pixelFormat, inputWidth, inputHeight ), avpicture_get_size( pixelFormat, mWidth, mHeight ) );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        Debug( 1,<span class="stringliteral">&quot;Scaling from %d x %d -&gt; %d x %d&quot;</span>, inputWidth, inputHeight, mWidth, mHeight );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Debug( 1,<span class="stringliteral">&quot;%d bytes -&gt; %d bytes&quot;</span>,  avpicture_get_size( pixelFormat, inputWidth, inputHeight ), avpicture_get_size( pixelFormat, mWidth, mHeight ) );</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// Make space for anything that is going to be output</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="class_buffer.html">ByteBuffer</a> outputBuffer;</div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('oz_image_scale_8cpp_source.html','');}
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">if</span> ( mWidth != inputWidth || mHeight != inputHeight )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="comment">// Requires conversion</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        Info( <span class="stringliteral">&quot;%s / Provider: %s, Source: %s, Frame: %p (%ju / %.3f) - %lu&quot;</span>, <a class="code" href="class_feed_base.html#a9c5aad6ef160c9d036aba28ea83df795">cname</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#a410433cd0f566b87251790f099d1f984">originator</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame, frame-&gt;id(), frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>(), frame-&gt;buffer().size() );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        Debug( 1,<span class="stringliteral">&quot;%s / Provider: %s, Source: %s, Frame: %p (%ju / %.3f) - %lu&quot;</span>, <a class="code" href="class_feed_base.html#a9c5aad6ef160c9d036aba28ea83df795">cname</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame-&gt;<a class="code" href="class_feed_frame.html#a410433cd0f566b87251790f099d1f984">originator</a>()-&gt;<a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>(), frame, frame-&gt;id(), frame-&gt;<a class="code" href="class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a">age</a>(), frame-&gt;buffer().size() );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        avpicture_fill( (AVPicture *)inputFrame, frame-&gt;buffer().data(), <a class="code" href="class_image_scale.html#a1cc2600818f6ed3a7178ffa60d91af25">pixelFormat</a>, inputWidth, inputHeight );</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
@@ -259,8 +259,8 @@ $(document).ready(function(){initNavTree('oz_image_scale_8cpp_source.html','');}
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozImageScale.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozImageScale.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -203,7 +203,7 @@ $(document).ready(function(){initNavTree('oz_motion_detector_8cpp_source.html','
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        AVPixelFormat <a class="code" href="class_motion_detector.html#a6fbf18f4c5910b207d74da3409fb2ce5">pixelFormat</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">pixelFormat</a>();</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        int16_t <a class="code" href="class_motion_detector.html#a4441ab384634ee0f098644c9108fcede">width</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        int16_t <a class="code" href="class_motion_detector.html#a75f891082b089ccdb0cd3cbaacf0a3e5">height</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">height</a>();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        Info( <span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        Debug( 2,<span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span> ( !mZones.size() )</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
@@ -252,352 +252,353 @@ $(document).ready(function(){initNavTree('oz_motion_detector_8cpp_source.html','
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        <span class="comment">//motionData.reset();</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        <a class="code" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">analyse</a>( &amp;image, motionData, &amp;motionImage );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="keywordflow">if</span> ( mAlarmed )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                            Info( <span class="stringliteral">&quot;ALARM&quot;</span> );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        <span class="comment">// XXX - Generate a new timestamp as using the original frame may be subject to process/decoding delays</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        <span class="comment">// Need to check if there is a better way to handle this generally</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        <a class="code" href="class_motion_frame.html">MotionFrame</a> *motionFrame = <span class="keyword">new</span> <a class="code" href="class_motion_frame.html">MotionFrame</a>( <span class="keyword">this</span>, *iter, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>, time64(), motionImage.buffer(), mAlarmed, motionData );</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( motionFrame ) );</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        <span class="keywordflow">if</span> ( config.blend_alarmed_images || !mAlarmed )</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                            <span class="keywordtype">int</span> refBlend = mRefBlend;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                            <span class="keywordflow">if</span> ( refBlend &gt; (<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1) )</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                            {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                                <span class="keywordflow">while</span> ( refBlend &gt; (<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1) )</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                    refBlend &gt;&gt;= 1;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                <span class="comment">//printf( &quot;Frame: %d, adjusting refBlend = %d\n&quot;, frameCount, refBlend );</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                            }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                            mRefImage.<a class="code" href="class_image.html#af83a2eace8c751bdb46d302f9a9be60a">blend</a>( image, refBlend );</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        <span class="comment">//mRefImage.blend( image, mRefBlend );</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                    }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.clear();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <a class="code" href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">mQueueMutex</a>.unlock();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">checkProviders</a>();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">// Quite short so we can always keep up with the required packet rate for 25/30 fps</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a>();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a>();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keyword">delete</span> mCompImageSlave;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">delete</span> mRefImageSlave;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">delete</span> mDeltaImageSlave;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">delete</span> mVarImageSlave;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">  220</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">MotionDetector::analyse</a>( <span class="keyword">const</span> <a class="code" href="class_image.html">Image</a> *compImage, <a class="code" href="class_motion_data.html">MotionData</a> *motionData, <a class="code" href="class_image.html">Image</a> *motionImage )</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">double</span> score = 0;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> &gt; mReadyCount )</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        std::string cause;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        StringSetMap noteSetMap;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        ZoneSet detectedZones;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        uint64_t motionScore = <a class="code" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">detectMotion</a>( *compImage, detectedZones );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span> ( motionScore )</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            Info( <span class="stringliteral">&quot;Score: %ld&quot;</span>, motionScore );</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">if</span> ( !mAlarmed )</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                score += motionScore;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="keywordflow">if</span> ( cause.length() )</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    cause += <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                cause += MOTION_CAUSE;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                score += motionScore;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            StringSet zoneLabels;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = detectedZones.begin(); zoneIter!= detectedZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">if</span> ( motionData &amp;&amp; zone-&gt;motionData() )</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    *motionData += *(zone-&gt;motionData());</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordflow">if</span> ( motionImage )</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    motionImage-&gt;<a class="code" href="class_image.html#a23c09b67d81e678595d23df911e99a3e">overlay</a>( *(zone-&gt;motionImage()) );</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                zoneLabels.insert( zone-&gt;label() );</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            noteSetMap[MOTION_CAUSE] = zoneLabels;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">if</span> ( score )</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">if</span> ( !mAlarmed )</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                Info( <span class="stringliteral">&quot;%03ju - Gone into alarm state&quot;</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                mAlarmed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            }</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">if</span> ( mAlarmed )</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                Info( <span class="stringliteral">&quot;%03ju - Left alarm state&quot;</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                mAlarmed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">if</span> ( mAlarmed )</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">if</span> ( motionData &amp;&amp; config.create_analysis_images )</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                <span class="keywordtype">bool</span> gotAnalImage = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <a class="code" href="class_image.html">Image</a> alarmImage( *compImage );</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                alarmImage.<a class="code" href="class_image.html#a23c09b67d81e678595d23df911e99a3e">overlay</a>( *(motionData-&gt;image()) );</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <span class="comment">/*</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment">                for ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">                {</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">                    Zone *zone = *zoneIter;</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">                    if ( zone-&gt;isAlarmed() )</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">                    {</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">                        const MotionData *motionData = zone-&gt;motionData();</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">                        alarmImage.overlay( *(motionData-&gt;image()) );</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">                        gotAnalImage = true;</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">                        if ( config.record_event_stats &amp;&amp; mAlarmed )</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">                        {</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">                            //zone-&gt;recordStats( mEvent );</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">                        }</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">                    }</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                }</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                */</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    <span class="keywordflow">if</span> ( zone-&gt;isAlarmed() )</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                        <span class="keywordflow">if</span> ( config.record_event_stats &amp;&amp; mAlarmed )</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                        {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                            <span class="comment">//mZones[i]-&gt;recordStats( mEvent );</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                        }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span>( mAlarmed );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">  325</a></span>&#160;uint32_t <a class="code" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">MotionDetector::detectMotion</a>( <span class="keyword">const</span> <a class="code" href="class_image.html">Image</a> &amp;compImage, ZoneSet &amp;motionZones )</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">bool</span> alarm = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    uint64_t score = 0;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">if</span> ( mZones.size() &lt;= 0 ) <span class="keywordflow">return</span>( alarm );</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        mCompImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( compImage );</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="comment">//compImage.writeJpeg( stringtf( &quot;%s/diag-c.jpg&quot;, config.dir_events ) );</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            compImage.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/comp-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        mRefImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( mRefImage );</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="comment">//mRefImage.writeJpeg( stringtf( &quot;%s/diag-r.jpg&quot;, config.dir_events ) );</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            mRefImage.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/ref2-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="comment">// Get the difference between the captured image and the reference image</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    mDeltaCorrection = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <a class="code" href="class_image.html">Image</a> *deltaImage = 0;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">if</span> ( mColourDeltas )</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        deltaImage = mRefImage.<a class="code" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e">delta2</a>( compImage, mDeltaCorrection );</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        deltaImage = mRefImage.<a class="code" href="class_image.html#ad2d6d0dc402e8cc4694fd44255725b1f">yDelta2</a>( compImage, mDeltaCorrection );</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="comment">//Info( &quot;DI: %dx%d - %d&quot;, deltaImage-&gt;width(), deltaImage-&gt;height(), deltaImage-&gt;format() );</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="comment">// Reduce the size of the diff image, also helps to despeckle</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">if</span> ( mAnalysisScale &gt; 1 )</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        deltaImage-&gt;<a class="code" href="class_image.html#aaa0c6c84bcad391b6bb086df1b5a2c59">shrink</a>( mAnalysisScale );</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        mDeltaImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( *deltaImage );</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//deltaImage-&gt;writeJpeg( stringtf( &quot;%s/diag-d.jpg&quot;, config.dir_events ), 100 );</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            deltaImage-&gt;<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/delta-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="comment">// Pre-populate the variance buffer with noise</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">if</span> ( mVarBuffer.empty() )</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        mVarBuffer.fill( mNoiseLevelSq, deltaImage-&gt;pixels() );</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="comment">// Blank out all exclusion zones</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        zone-&gt;clearAlarmed();</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isInactive() )</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Blanking inactive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        deltaImage-&gt;<a class="code" href="class_image.html#a6df4e9f8c809f45f7f48733cf1c510fc">fill</a>( RGB_BLACK, zone-&gt;getPolygon() );</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">// Check preclusive zones first</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isPreclusive() )</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Checking preclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Preclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        }</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">double</span> topScore = -1.0;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <a class="code" href="class_coord.html">Coord</a> alarmCentre;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="comment">// Find all alarm pixels in active zones</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    {</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isActive() )</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Checking active zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        {</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            alarm = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            score += zone-&gt;score();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            zone-&gt;setAlarmed();</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Active zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            motionZones.insert( zone );</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">if</span> ( alarm )</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        {</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">if</span> ( !zone-&gt;isInclusive() )</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Checking inclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                alarm = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                score += zone-&gt;score();</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                zone-&gt;setAlarmed();</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                Debug( 3, <span class="stringliteral">&quot;Inclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                motionZones.insert( zone );</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    {</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="comment">// Find all alarm pixels in exclusive zones</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        {</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">if</span> ( !zone-&gt;isExclusive() )</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Checking exclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            {</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                alarm = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                score += zone-&gt;score();</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                zone-&gt;setAlarmed();</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                Debug( 3, <span class="stringliteral">&quot;Exclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                motionZones.insert( zone );</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            }</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        }</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    }</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">if</span> ( topScore &gt; 0 )</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    {</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        Info( <span class="stringliteral">&quot;Got alarm centre at %d,%d, at count %ju&quot;</span>, alarmCentre.x(), alarmCentre.y(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="comment">// Update the variance buffer based on the delta image</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    uint8_t *pDelta = deltaImage-&gt;buffer().head();</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    uint32_t *pBuf = mVarBuffer.head();</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordtype">int</span> deltaStep = deltaImage-&gt;pixelStep();</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">int</span> varBufShift = getShift( mVarBlend, mFastStart?<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1:0 );</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">int</span> varDeltaShift = 16 - varBufShift;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">if</span> ( deltaImage-&gt;format() == Image::FMT_GREY16 )</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="keywordflow">while</span>( pDelta != deltaImage-&gt;buffer().tail() )</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        {</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            uint16_t delta = (((uint16_t)*pDelta)&lt;&lt;8)+*(pDelta+1);</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            <span class="comment">//uint32_t long deltaSq = delta*delta*2;</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            uint64_t deltaSq = delta*delta;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            *pBuf = *pBuf - (*pBuf &gt;&gt; varBufShift) + (deltaSq &gt;&gt; varDeltaShift);</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            <span class="comment">// Add a noise threshold</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span> ( *pBuf &lt; mNoiseLevelSq )</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                *pBuf = mNoiseLevelSq;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            pDelta += deltaStep;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            pBuf++;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        }</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordflow">while</span>( pDelta != deltaImage-&gt;buffer().tail() )</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        {</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            uint8_t delta = *pDelta;</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            <span class="comment">//uint16_t deltaSq = delta*delta*2;</span></div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            uint16_t deltaSq = delta*delta;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            *pBuf = *pBuf - (*pBuf &gt;&gt; varBufShift) + (deltaSq &lt;&lt; varDeltaShift);</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            <span class="comment">// Add a noise threshold</span></div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            <span class="keywordflow">if</span> ( *pBuf &lt; mNoiseLevelSq )</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                *pBuf = mNoiseLevelSq;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            pDelta += deltaStep;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            pBuf++;</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        }</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    }</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    {</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="keywordflow">if</span> ( !mVarImage )</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            mVarImage = <span class="keyword">new</span> <a class="code" href="class_image.html">Image</a>( Image::FMT_GREY, deltaImage-&gt;width(), deltaImage-&gt;height() );</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            mVarImage-&gt;erase();</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        uint8_t *pVar = mVarImage-&gt;buffer().head();</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        pBuf = mVarBuffer.head();</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordtype">int</span> varStep = mVarImage-&gt;pixelStep();</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordflow">while</span>( pBuf != mVarBuffer.tail() )</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        {</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            *pVar = (uint8_t)sqrt(*pBuf&gt;&gt;16);</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            pVar += varStep;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            pBuf++;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        }</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        mVarImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( *mVarImage );</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="comment">//mVarImage-&gt;writeJpeg( stringtf( &quot;%s/diag-v.jpg&quot;, config.dir_events ), 100 );</span></div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            mVarImage-&gt;<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/var-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    }</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keyword">delete</span> deltaImage;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="comment">//mRefImage.blend( compImage, mRefBlend );</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="comment">// This is a small and innocent hack to prevent scores of 0 being returned in alarm state</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keywordflow">return</span>( score?score:alarm );</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;} </div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno"><a class="line" href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">  529</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">MotionDetector::inAlarm</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame, <span class="keyword">const</span> <a class="code" href="class_feed_consumer.html">FeedConsumer</a> * )</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;{</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a> *alarmFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_alarm_frame.html">AlarmFrame</a> *<span class="keyword">&gt;</span>(frame.get());</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">//const MotionDetector *motionDetector = dynamic_cast&lt;const MotionDetector *&gt;( videoFrame-&gt;provider() );</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">return</span>( alarmFrame-&gt;alarmed() );</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="comment">/*if ( mAlarmed )</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">                        {</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">                           Info( &quot;ALARM&quot; );</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">                        }*/</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        <span class="comment">// XXX - Generate a new timestamp as using the original frame may be subject to process/decoding delays</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        <span class="comment">// Need to check if there is a better way to handle this generally</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        <a class="code" href="class_motion_frame.html">MotionFrame</a> *motionFrame = <span class="keyword">new</span> <a class="code" href="class_motion_frame.html">MotionFrame</a>( <span class="keyword">this</span>, *iter, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>, time64(), motionImage.buffer(), mAlarmed, motionData );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( motionFrame ) );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        <span class="keywordflow">if</span> ( config.blend_alarmed_images || !mAlarmed )</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                            <span class="keywordtype">int</span> refBlend = mRefBlend;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                            <span class="keywordflow">if</span> ( refBlend &gt; (<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1) )</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                            {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                <span class="keywordflow">while</span> ( refBlend &gt; (<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1) )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                    refBlend &gt;&gt;= 1;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                <span class="comment">//printf( &quot;Frame: %d, adjusting refBlend = %d\n&quot;, frameCount, refBlend );</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                            }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                            mRefImage.<a class="code" href="class_image.html#af83a2eace8c751bdb46d302f9a9be60a">blend</a>( image, refBlend );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        <span class="comment">//mRefImage.blend( image, mRefBlend );</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.clear();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">mQueueMutex</a>.unlock();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">checkProviders</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="comment">// Quite short so we can always keep up with the required packet rate for 25/30 fps</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a>();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">delete</span> mCompImageSlave;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">delete</span> mRefImageSlave;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">delete</span> mDeltaImageSlave;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">delete</span> mVarImageSlave;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">  221</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">MotionDetector::analyse</a>( <span class="keyword">const</span> <a class="code" href="class_image.html">Image</a> *compImage, <a class="code" href="class_motion_data.html">MotionData</a> *motionData, <a class="code" href="class_image.html">Image</a> *motionImage )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">double</span> score = 0;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> &gt; mReadyCount )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        std::string cause;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        StringSetMap noteSetMap;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        ZoneSet detectedZones;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        uint64_t motionScore = <a class="code" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">detectMotion</a>( *compImage, detectedZones );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> ( motionScore )</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            Debug(1, <span class="stringliteral">&quot;Score: %ld&quot;</span>, motionScore );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">if</span> ( !mAlarmed )</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                score += motionScore;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">if</span> ( cause.length() )</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    cause += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                cause += MOTION_CAUSE;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                score += motionScore;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            StringSet zoneLabels;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = detectedZones.begin(); zoneIter!= detectedZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">if</span> ( motionData &amp;&amp; zone-&gt;motionData() )</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    *motionData += *(zone-&gt;motionData());</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">if</span> ( motionImage )</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    motionImage-&gt;<a class="code" href="class_image.html#a23c09b67d81e678595d23df911e99a3e">overlay</a>( *(zone-&gt;motionImage()) );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                zoneLabels.insert( zone-&gt;label() );</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            noteSetMap[MOTION_CAUSE] = zoneLabels;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">if</span> ( score )</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">if</span> ( !mAlarmed )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                Info( <span class="stringliteral">&quot;%03ju - Gone into alarm state&quot;</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                mAlarmed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="keywordflow">if</span> ( mAlarmed )</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                Info( <span class="stringliteral">&quot;%03ju - Left alarm state&quot;</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                mAlarmed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">if</span> ( mAlarmed )</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> ( motionData &amp;&amp; config.create_analysis_images )</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                <span class="keywordtype">bool</span> gotAnalImage = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <a class="code" href="class_image.html">Image</a> alarmImage( *compImage );</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                alarmImage.<a class="code" href="class_image.html#a23c09b67d81e678595d23df911e99a3e">overlay</a>( *(motionData-&gt;image()) );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                <span class="comment">/*</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">                for ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">                {</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">                    Zone *zone = *zoneIter;</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">                    if ( zone-&gt;isAlarmed() )</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment">                    {</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">                        const MotionData *motionData = zone-&gt;motionData();</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">                        alarmImage.overlay( *(motionData-&gt;image()) );</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="comment">                        gotAnalImage = true;</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">                        if ( config.record_event_stats &amp;&amp; mAlarmed )</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">                        {</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">                            //zone-&gt;recordStats( mEvent );</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="comment">                        }</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment">                    }</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">                */</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <span class="keywordflow">if</span> ( zone-&gt;isAlarmed() )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                    {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                        <span class="keywordflow">if</span> ( config.record_event_stats &amp;&amp; mAlarmed )</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                        {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                            <span class="comment">//mZones[i]-&gt;recordStats( mEvent );</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span>( mAlarmed );</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">  326</a></span>&#160;uint32_t <a class="code" href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">MotionDetector::detectMotion</a>( <span class="keyword">const</span> <a class="code" href="class_image.html">Image</a> &amp;compImage, ZoneSet &amp;motionZones )</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;{</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">bool</span> alarm = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    uint64_t score = 0;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">if</span> ( mZones.size() &lt;= 0 ) <span class="keywordflow">return</span>( alarm );</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        mCompImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( compImage );</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="comment">//compImage.writeJpeg( stringtf( &quot;%s/diag-c.jpg&quot;, config.dir_events ) );</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            compImage.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/comp-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        mRefImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( mRefImage );</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">//mRefImage.writeJpeg( stringtf( &quot;%s/diag-r.jpg&quot;, config.dir_events ) );</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            mRefImage.<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/ref2-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">// Get the difference between the captured image and the reference image</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    mDeltaCorrection = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <a class="code" href="class_image.html">Image</a> *deltaImage = 0;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">if</span> ( mColourDeltas )</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        deltaImage = mRefImage.<a class="code" href="class_image.html#a48e2ce7a0e50d31e5ad1b1699281af8e">delta2</a>( compImage, mDeltaCorrection );</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        deltaImage = mRefImage.<a class="code" href="class_image.html#ad2d6d0dc402e8cc4694fd44255725b1f">yDelta2</a>( compImage, mDeltaCorrection );</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="comment">//Info( &quot;DI: %dx%d - %d&quot;, deltaImage-&gt;width(), deltaImage-&gt;height(), deltaImage-&gt;format() );</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="comment">// Reduce the size of the diff image, also helps to despeckle</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">if</span> ( mAnalysisScale &gt; 1 )</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        deltaImage-&gt;<a class="code" href="class_image.html#aaa0c6c84bcad391b6bb086df1b5a2c59">shrink</a>( mAnalysisScale );</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        mDeltaImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( *deltaImage );</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">//deltaImage-&gt;writeJpeg( stringtf( &quot;%s/diag-d.jpg&quot;, config.dir_events ), 100 );</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            deltaImage-&gt;<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/delta-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="comment">// Pre-populate the variance buffer with noise</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">if</span> ( mVarBuffer.empty() )</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        mVarBuffer.fill( mNoiseLevelSq, deltaImage-&gt;pixels() );</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="comment">// Blank out all exclusion zones</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        zone-&gt;clearAlarmed();</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isInactive() )</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Blanking inactive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        deltaImage-&gt;<a class="code" href="class_image.html#a6df4e9f8c809f45f7f48733cf1c510fc">fill</a>( RGB_BLACK, zone-&gt;getPolygon() );</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// Check preclusive zones first</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isPreclusive() )</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Checking preclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Preclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">double</span> topScore = -1.0;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="class_coord.html">Coord</a> alarmCentre;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="comment">// Find all alarm pixels in active zones</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">if</span> ( !zone-&gt;isActive() )</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        Debug( 3, <span class="stringliteral">&quot;Checking active zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            alarm = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            score += zone-&gt;score();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            zone-&gt;setAlarmed();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Active zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            motionZones.insert( zone );</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">if</span> ( alarm )</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">if</span> ( !zone-&gt;isInclusive() )</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Checking inclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                alarm = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                score += zone-&gt;score();</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                zone-&gt;setAlarmed();</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                Debug( 3, <span class="stringliteral">&quot;Inclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                motionZones.insert( zone );</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="comment">// Find all alarm pixels in exclusive zones</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">for</span> ( ZoneSet::iterator zoneIter = mZones.begin(); zoneIter!= mZones.end(); zoneIter++ )</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        {</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <a class="code" href="class_zone.html">Zone</a> *zone = *zoneIter;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <span class="keywordflow">if</span> ( !zone-&gt;isExclusive() )</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            Debug( 3, <span class="stringliteral">&quot;Checking exclusive zone %s&quot;</span>, zone-&gt;label().c_str() );</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            <span class="keywordflow">if</span> ( zone-&gt;<a class="code" href="class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548">checkMotion</a>( deltaImage, mVarBuffer ) )</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            {</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                alarm = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                score += zone-&gt;score();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                zone-&gt;setAlarmed();</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                Debug( 3, <span class="stringliteral">&quot;Exclusive zone %s is alarmed, zone score = %d&quot;</span>, zone-&gt;label().c_str(), zone-&gt;score() );</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                motionZones.insert( zone );</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            }</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">if</span> ( topScore &gt; 0 )</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        Info( <span class="stringliteral">&quot;Got alarm centre at %d,%d, at count %ju&quot;</span>, alarmCentre.x(), alarmCentre.y(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> );</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="comment">// Update the variance buffer based on the delta image</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    uint8_t *pDelta = deltaImage-&gt;buffer().head();</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    uint32_t *pBuf = mVarBuffer.head();</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">int</span> deltaStep = deltaImage-&gt;pixelStep();</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">int</span> varBufShift = getShift( mVarBlend, mFastStart?<a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>+1:0 );</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">int</span> varDeltaShift = 16 - varBufShift;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordflow">if</span> ( deltaImage-&gt;format() == Image::FMT_GREY16 )</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">while</span>( pDelta != deltaImage-&gt;buffer().tail() )</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        {</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            uint16_t delta = (((uint16_t)*pDelta)&lt;&lt;8)+*(pDelta+1);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <span class="comment">//uint32_t long deltaSq = delta*delta*2;</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            uint64_t deltaSq = delta*delta;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            *pBuf = *pBuf - (*pBuf &gt;&gt; varBufShift) + (deltaSq &gt;&gt; varDeltaShift);</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="comment">// Add a noise threshold</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            <span class="keywordflow">if</span> ( *pBuf &lt; mNoiseLevelSq )</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                *pBuf = mNoiseLevelSq;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            pDelta += deltaStep;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            pBuf++;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        }</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    }</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordflow">while</span>( pDelta != deltaImage-&gt;buffer().tail() )</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            uint8_t delta = *pDelta;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            <span class="comment">//uint16_t deltaSq = delta*delta*2;</span></div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            uint16_t deltaSq = delta*delta;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            *pBuf = *pBuf - (*pBuf &gt;&gt; varBufShift) + (deltaSq &lt;&lt; varDeltaShift);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            <span class="comment">// Add a noise threshold</span></div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            <span class="keywordflow">if</span> ( *pBuf &lt; mNoiseLevelSq )</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                *pBuf = mNoiseLevelSq;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            pDelta += deltaStep;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            pBuf++;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        }</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    }</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <span class="keywordflow">if</span> ( config.record_diag_images )</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">if</span> ( !mVarImage )</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            mVarImage = <span class="keyword">new</span> <a class="code" href="class_image.html">Image</a>( Image::FMT_GREY, deltaImage-&gt;width(), deltaImage-&gt;height() );</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            mVarImage-&gt;erase();</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        uint8_t *pVar = mVarImage-&gt;buffer().head();</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        pBuf = mVarBuffer.head();</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordtype">int</span> varStep = mVarImage-&gt;pixelStep();</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">while</span>( pBuf != mVarBuffer.tail() )</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            *pVar = (uint8_t)sqrt(*pBuf&gt;&gt;16);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            pVar += varStep;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            pBuf++;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        mVarImageSlave-&gt;<a class="code" href="class_slave_video.html#a1c25369bbad2da60a3e4b2b882654a54">relayImage</a>( *mVarImage );</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        <span class="comment">//mVarImage-&gt;writeJpeg( stringtf( &quot;%s/diag-v.jpg&quot;, config.dir_events ), 100 );</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        <span class="keywordflow">if</span> ( writeImages )</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            mVarImage-&gt;<a class="code" href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">writeJpeg</a>( stringtf( <span class="stringliteral">&quot;%s/var-%s-%ju.jpg&quot;</span>, writeLocation.c_str(), <a class="code" href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">mName</a>.c_str(), <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a> ), 100 );</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    }</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keyword">delete</span> deltaImage;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="comment">//mRefImage.blend( compImage, mRefBlend );</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="comment">// This is a small and innocent hack to prevent scores of 0 being returned in alarm state</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">return</span>( score?score:alarm );</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;} </div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
+<div class="line"><a name="l00530"></a><span class="lineno"><a class="line" href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">  530</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">MotionDetector::inAlarm</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame, <span class="keyword">const</span> <a class="code" href="class_feed_consumer.html">FeedConsumer</a> * )</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;{</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a> *alarmFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_alarm_frame.html">AlarmFrame</a> *<span class="keyword">&gt;</span>(frame.get());</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="comment">//const MotionDetector *motionDetector = dynamic_cast&lt;const MotionDetector *&gt;( videoFrame-&gt;provider() );</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">return</span>( alarmFrame-&gt;alarmed() );</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;}</div>
 <div class="ttc" id="class_feed_consumer_html_adc13326763ab579da3c33c6cc6c04604"><div class="ttname"><a href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">FeedConsumer::mQueueMutex</a></div><div class="ttdeci">Mutex mQueueMutex</div><div class="ttdoc">Protects the frame queue. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00028">ozFeedConsumer.h:28</a></div></div>
 <div class="ttc" id="class_motion_detector_html_af0b59147c5ec1c704e2389a415657588"><div class="ttname"><a href="class_motion_detector.html#af0b59147c5ec1c704e2389a415657588">MotionDetector::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00109">ozMotionDetector.cpp:109</a></div></div>
 <div class="ttc" id="class_video_provider_html_a025b965717f76ea6abc267626238d493"><div class="ttname"><a href="class_video_provider.html#a025b965717f76ea6abc267626238d493">VideoProvider::width</a></div><div class="ttdeci">virtual uint16_t width() const =0</div><div class="ttdoc">Return the width (in pixels) of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_video_provider_html_a4594d6b84217ad16434bb3ff382a6022"><div class="ttname"><a href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">VideoProvider::height</a></div><div class="ttdeci">virtual uint16_t height() const =0</div><div class="ttdoc">Return the height (in pixels) of video frames supplied by this provider. </div></div>
-<div class="ttc" id="class_motion_detector_html_ab3c14562972b1881b184b2f3814123a6"><div class="ttname"><a href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">MotionDetector::analyse</a></div><div class="ttdeci">bool analyse(const Image *image, MotionData *motionData, Image *motionImage)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00220">ozMotionDetector.cpp:220</a></div></div>
+<div class="ttc" id="class_motion_detector_html_ab3c14562972b1881b184b2f3814123a6"><div class="ttname"><a href="class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6">MotionDetector::analyse</a></div><div class="ttdeci">bool analyse(const Image *image, MotionData *motionData, Image *motionImage)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00221">ozMotionDetector.cpp:221</a></div></div>
 <div class="ttc" id="class_video_provider_html_ac11321473510fcbb4d4a4933722a67d0"><div class="ttname"><a href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">VideoProvider::pixelFormat</a></div><div class="ttdeci">virtual AVPixelFormat pixelFormat() const =0</div><div class="ttdoc">Return the image format of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_image_html_aaa0c6c84bcad391b6bb086df1b5a2c59"><div class="ttname"><a href="class_image.html#aaa0c6c84bcad391b6bb086df1b5a2c59">Image::shrink</a></div><div class="ttdeci">void shrink(unsigned char factor)</div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l06113">libimgImage.cpp:6113</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00168">ozFeedConsumer.cpp:168</a></div></div>
@@ -621,7 +622,7 @@ $(document).ready(function(){initNavTree('oz_motion_detector_8cpp_source.html','
 <div class="ttc" id="class_feed_consumer_html_a5d1815f55c448c80392e2f28a36cde3a"><div class="ttname"><a href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relationships with providers etc before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00008">ozFeedConsumer.cpp:8</a></div></div>
 <div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00173">ozFeedFrame.h:173</a></div></div>
 <div class="ttc" id="class_image_html_af83a2eace8c751bdb46d302f9a9be60a"><div class="ttname"><a href="class_image.html#af83a2eace8c751bdb46d302f9a9be60a">Image::blend</a></div><div class="ttdeci">void blend(const Image &amp;image, unsigned short fraction) const </div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l04564">libimgImage.cpp:4564</a></div></div>
-<div class="ttc" id="class_motion_detector_html_a3bdca29229e49296f36d21b686ee06f9"><div class="ttname"><a href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">MotionDetector::detectMotion</a></div><div class="ttdeci">uint32_t detectMotion(const Image &amp;compImage, ZoneSet &amp;motionZones)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00325">ozMotionDetector.cpp:325</a></div></div>
+<div class="ttc" id="class_motion_detector_html_a3bdca29229e49296f36d21b686ee06f9"><div class="ttname"><a href="class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9">MotionDetector::detectMotion</a></div><div class="ttdeci">uint32_t detectMotion(const Image &amp;compImage, ZoneSet &amp;motionZones)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00326">ozMotionDetector.cpp:326</a></div></div>
 <div class="ttc" id="class_thread_html_a59c9c8a425d516f50d9adc516eaa67fd"><div class="ttname"><a href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">Thread::mStop</a></div><div class="ttdeci">bool mStop</div><div class="ttdoc">Flag indicating whether this thread has been signalled to stop. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00263">libgenThread.h:263</a></div></div>
 <div class="ttc" id="class_feed_base_html_acf70123dea60f65ec68513ebb443af48"><div class="ttname"><a href="class_feed_base.html#acf70123dea60f65ec68513ebb443af48">FeedBase::mName</a></div><div class="ttdeci">std::string mName</div><div class="ttdoc">Unique identifier of this provider/consumer instance. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00047">ozFeedBase.h:47</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a113a8127bb5d18b0317e70b850bf2c89"><div class="ttname"><a href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">FeedProvider::mFrameCount</a></div><div class="ttdeci">uint64_t mFrameCount</div><div class="ttdoc">Number of frames, advisory only. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00042">ozFeedProvider.h:42</a></div></div>
@@ -634,7 +635,7 @@ $(document).ready(function(){initNavTree('oz_motion_detector_8cpp_source.html','
 <div class="ttc" id="class_motion_detector_html_a01553305fb60580912bdae5c60ee5bed"><div class="ttname"><a href="class_motion_detector.html#a01553305fb60580912bdae5c60ee5bed">MotionDetector::addZone</a></div><div class="ttdeci">bool addZone(Zone *zone)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00098">ozMotionDetector.cpp:98</a></div></div>
 <div class="ttc" id="class_image_html_a23c09b67d81e678595d23df911e99a3e"><div class="ttname"><a href="class_image.html#a23c09b67d81e678595d23df911e99a3e">Image::overlay</a></div><div class="ttdeci">void overlay(const Image &amp;image)</div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l03478">libimgImage.cpp:3478</a></div></div>
 <div class="ttc" id="class_motion_detector_html_a6fbf18f4c5910b207d74da3409fb2ce5"><div class="ttname"><a href="class_motion_detector.html#a6fbf18f4c5910b207d74da3409fb2ce5">MotionDetector::pixelFormat</a></div><div class="ttdeci">AVPixelFormat pixelFormat() const </div><div class="ttdoc">Return the image format of video frames supplied by this provider. </div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8h_source.html#l00091">ozMotionDetector.h:91</a></div></div>
-<div class="ttc" id="class_motion_detector_html_a98b7d1e5041982385fa73c20552e7def"><div class="ttname"><a href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">MotionDetector::inAlarm</a></div><div class="ttdeci">static bool inAlarm(FramePtr, const FeedConsumer *)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00529">ozMotionDetector.cpp:529</a></div></div>
+<div class="ttc" id="class_motion_detector_html_a98b7d1e5041982385fa73c20552e7def"><div class="ttname"><a href="class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def">MotionDetector::inAlarm</a></div><div class="ttdeci">static bool inAlarm(FramePtr, const FeedConsumer *)</div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8cpp_source.html#l00530">ozMotionDetector.cpp:530</a></div></div>
 <div class="ttc" id="class_image_html_a5af802879f05abe0ad9b5988e21a5b97"><div class="ttname"><a href="class_image.html#a5af802879f05abe0ad9b5988e21a5b97">Image::writeJpeg</a></div><div class="ttdeci">bool writeJpeg(const std::string &amp;filename, int quality_override=0) const </div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8cpp_source.html#l03044">libimgImage.cpp:3044</a></div></div>
 <div class="ttc" id="class_slave_video_html_a3a6343a92fcc98ee1c0f82b40fc28e5e"><div class="ttname"><a href="class_slave_video.html#a3a6343a92fcc98ee1c0f82b40fc28e5e">SlaveVideo::prepare</a></div><div class="ttdeci">void prepare(uint16_t width, uint16_t height, AVPixelFormat pixelFormat, const FrameRate &amp;frameRate)</div><div class="ttdef"><b>Definition:</b> <a href="oz_slave_video_8cpp_source.html#l00049">ozSlaveVideo.cpp:49</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00212">ozFeedProvider.cpp:212</a></div></div>
@@ -649,8 +650,8 @@ $(document).ready(function(){initNavTree('oz_motion_detector_8cpp_source.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozMotionDetector.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozMotionDetector.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -17,6 +17,15 @@ var group___providers =
       [ "videoCodecContext", "class_a_v_input.html#a35cecc1a81fc9691193cc969f70fe22b", null ],
       [ "width", "class_a_v_input.html#ab3e8c8a9abed018166d21f6b07a581c8", null ]
     ] ],
+    [ "DummyInput", "class_dummy_input.html", [
+      [ "DummyInput", "class_dummy_input.html#a82250bce81e87674726c754edccca865", null ],
+      [ "~DummyInput", "class_dummy_input.html#ac91d2f9d5b0db7c440ae17e46524cb1e", null ],
+      [ "frameRate", "class_dummy_input.html#aa12649c035c9fa0d944e3721df0afab0", null ],
+      [ "height", "class_dummy_input.html#a788c426519e9ce081a317c76991e081a", null ],
+      [ "pixelFormat", "class_dummy_input.html#a7ddff5ab1f17670b806ba4ad449b7a47", null ],
+      [ "run", "class_dummy_input.html#a27e2393485b32ce9654b9bf6e4cfb6d1", null ],
+      [ "width", "class_dummy_input.html#aea73b7b18049bd806a95391e61512dc0", null ]
+    ] ],
     [ "LocalFileInput", "class_local_file_input.html", [
       [ "LocalFileInput", "class_local_file_input.html#ab292f2b0a0a80971e8c4a342d2df860b", null ],
       [ "~LocalFileInput", "class_local_file_input.html#a650f18562f30b22cca61c5487ba58ea5", null ],

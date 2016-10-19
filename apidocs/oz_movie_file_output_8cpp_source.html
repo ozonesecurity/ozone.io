@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        PixelFormat inputPixelFormat = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">pixelFormat</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_frame_rate.html">FrameRate</a> inputFrameRate = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a5b5ad2235e3bb94f6f21bf82ea0fd9ec">frameRate</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        Info( <span class="stringliteral">&quot;Provider framerate = %d/%d&quot;</span>, inputFrameRate.num, inputFrameRate.den );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        Debug(1, <span class="stringliteral">&quot;Provider framerate = %d/%d&quot;</span>, inputFrameRate.num, inputFrameRate.den );</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">/* auto detect the output format from the name. default is mpeg. */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        AVOutputFormat *outputFormat = av_guess_format( <a class="code" href="class_movie_file_output.html#a994bc4719c5f6f8a95267959b409ef29">mFormat</a>.c_str(), NULL, NULL );</div>
@@ -338,7 +338,7 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                        if ( ( !audioStream || (audioTimeOffset &gt;= <a class="code" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">mMaxLength</a>) ) &amp;&amp; ( !videoStream || (videoTimeOffset &gt;= <a class="code" href="class_movie_file_output.html#adb6f68adaac86d7630167f4d1a8e56f8">mMaxLength</a>) ) )</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                            fileComplete = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        Info( <span class="stringliteral">&quot;PTS: %lf, %jd, %jd&quot;</span>, videoTimeOffset, videoCodecContext-&gt;coded_frame-&gt;pts, videoStream-&gt;pts.val );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                        Debug(1, <span class="stringliteral">&quot;PTS: %lf, %jd, %jd&quot;</span>, videoTimeOffset, videoCodecContext-&gt;coded_frame-&gt;pts, videoStream-&gt;pts.val );</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                        <span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *frame = iter-&gt;get();</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        <span class="comment">/* write interleaved audio and video frames */</span></div>
@@ -366,7 +366,7 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        {</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                            <span class="keyword">const</span> <a class="code" href="class_video_frame.html">VideoFrame</a> *videoFrame = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_video_frame.html">VideoFrame</a> *<span class="keyword">&gt;</span>(frame);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                            Info( <span class="stringliteral">&quot;PF:%d @ %dx%d&quot;</span>, videoFrame-&gt;pixelFormat(), videoFrame-&gt;width(), videoFrame-&gt;height() );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                            Debug(1, <span class="stringliteral">&quot;PF:%d @ %dx%d&quot;</span>, videoFrame-&gt;pixelFormat(), videoFrame-&gt;width(), videoFrame-&gt;height() );</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                            avpicture_fill( (AVPicture *)avInputFrame, videoFrame-&gt;buffer().data(), inputPixelFormat, inputWidth, inputHeight );</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                            <span class="comment">// XXX - Hack???</span></div>
@@ -394,7 +394,7 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                            <span class="keywordtype">int</span> result = 0;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                            <span class="keywordflow">if</span> ( outputContext-&gt;oformat-&gt;flags &amp; AVFMT_RAWPICTURE )</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                            {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                                Info( <span class="stringliteral">&quot;Raw frame&quot;</span> );</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                                Debug(1, <span class="stringliteral">&quot;Raw frame&quot;</span> );</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                                <span class="comment">/* raw video case. The API will change slightly in the near futur for that */</span></div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                AVPacket pkt;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                av_init_packet(&amp;pkt);</div>
@@ -408,14 +408,14 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                            }</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                            {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                Info( <span class="stringliteral">&quot;Encoded frame&quot;</span> );</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                Debug( 1,<span class="stringliteral">&quot;Encoded frame&quot;</span> );</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                                <span class="keywordtype">int</span> outSize = 0;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                <span class="keywordflow">do</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                {</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                    <span class="comment">/* encode the image */</span></div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                                    outSize = avcodec_encode_video( videoCodecContext, videoBuffer.data(), videoBuffer.capacity(), avOutputFrame );</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                                    <span class="comment">/* if zero size, it means the image was buffered */</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                    Info( <span class="stringliteral">&quot;Outsize: %d&quot;</span>, outSize );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                    Debug(1, <span class="stringliteral">&quot;Outsize: %d&quot;</span>, outSize );</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                                    <span class="keywordflow">if</span> ( outSize &gt; 0 )</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                    {</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                        AVPacket pkt;</div>
@@ -530,8 +530,8 @@ $(document).ready(function(){initNavTree('oz_movie_file_output_8cpp_source.html'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozMovieFileOutput.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_13f927c1f8e7cd721a404b89eff7ecbd.html">consumers</a></li><li class="navelem"><b>ozMovieFileOutput.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

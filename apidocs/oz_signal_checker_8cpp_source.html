@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -237,7 +237,7 @@ $(document).ready(function(){initNavTree('oz_signal_checker_8cpp_source.html',''
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_signal_checker.html">SignalChecker</a> *signalChecker = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_signal_checker.html">SignalChecker</a> *<span class="keyword">&gt;</span>( videoFrame-&gt;<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>() );</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> ( !signalChecker )</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        Panic( <span class="stringliteral">&quot;Can&#39;t check signal valid, frame source not signal checker&quot;</span> );</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Info( <span class="stringliteral">&quot;Checking valid - %d&quot;</span>, signalChecker-&gt;hasSignal() );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    Debug( 2,<span class="stringliteral">&quot;Checking valid - %d&quot;</span>, signalChecker-&gt;hasSignal() );</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">return</span>( signalChecker-&gt;hasSignal() );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
@@ -288,8 +288,8 @@ $(document).ready(function(){initNavTree('oz_signal_checker_8cpp_source.html',''
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozSignalChecker.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozSignalChecker.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

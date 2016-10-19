@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        AVPixelFormat <a class="code" href="class_face_detector.html#ac2e096062435ffeab3f64ce46c87706e">pixelFormat</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">pixelFormat</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        int16_t <a class="code" href="class_face_detector.html#a5e3ada74344d7158ecff31b527697809">width</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        int16_t <a class="code" href="class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10">height</a> = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">height</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        Info( <span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        Debug( 2, <span class="stringliteral">&quot;pf:%d, %dx%d&quot;</span>, pixelFormat, width, height );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// We need a face detector.  We will use this to get bounding boxes for</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// each face in an image.</span></div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        <span class="comment">//dlib::pyramid_up(img);</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="comment">//Info( &quot;AFT: %d x %d&quot;, num_rows(img), num_columns(img) );</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        std::vector&lt;dlib::rectangle&gt; dets = detector(img);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        Info( <span class="stringliteral">&quot;%jd @ %ju: Got %jd faces&quot;</span>, frame-&gt;id(), frame-&gt;timestamp(), dets.size() );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        Debug( 1, <span class="stringliteral">&quot;%jd @ %ju: Got %jd faces&quot;</span>, frame-&gt;id(), frame-&gt;timestamp(), dets.size() );</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="keywordflow">if</span> ( dets.size() &gt; 0 &amp;&amp; mFaceMarkup != OZ_FACE_MARKUP_NONE )</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        {</div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                <span class="keywordflow">if</span> ( mFaceMarkup &amp; OZ_FACE_MARKUP_DETAIL )</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                    dlib::full_object_detection shape = sp(img, dets[i]);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                    Info( <span class="stringliteral">&quot;Face %u - %ju parts&quot;</span>, i, shape.num_parts() );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                    Debug( 2, <span class="stringliteral">&quot;Face %u - %ju parts&quot;</span>, i, shape.num_parts() );</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                    <span class="comment">// Around Chin. Ear to Ear</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> p = 1; p &lt;= 16; ++p)</div>
@@ -317,8 +317,8 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozFaceDetector.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:47 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_b3c1aa49366d4f5661bcf3ddf63bef0f.html">processors</a></li><li class="navelem"><b>ozFaceDetector.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

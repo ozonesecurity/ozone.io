@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -340,7 +340,7 @@ $(document).ready(function(){initNavTree('oz_mp4_file_output_8cpp_source.html','
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                packet.size = frame-&gt;buffer().size();</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                <span class="comment">//packet.pts = packet.dts = AV_NOPTS_VALUE;</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                                packet.pts = packet.dts = (videoFrameCount * <a class="code" href="class_mp4_file_output.html#a11602c4e2f97c65fed402f2faeb51a31">mVideoParms</a>.frameRate().num * videoCodecContext-&gt;time_base.den) / (<a class="code" href="class_mp4_file_output.html#a11602c4e2f97c65fed402f2faeb51a31">mVideoParms</a>.frameRate().den * videoCodecContext-&gt;time_base.num);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                Info( <span class="stringliteral">&quot;vfc: %ju, vto: %.2lf, kf: %d, pts: %jd&quot;</span>, videoFrameCount, videoTimeOffset, keyFrame, packet.pts );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                Debug(1, <span class="stringliteral">&quot;vfc: %ju, vto: %.2lf, kf: %d, pts: %jd&quot;</span>, videoFrameCount, videoTimeOffset, keyFrame, packet.pts );</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                <span class="keywordtype">int</span> result = av_interleaved_write_frame(outputContext, &amp;packet);</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                <span class="keywordflow">if</span> ( result != 0 )</div>
@@ -388,8 +388,8 @@ $(document).ready(function(){initNavTree('oz_mp4_file_output_8cpp_source.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozMp4FileOutput.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_13f927c1f8e7cd721a404b89eff7ecbd.html">consumers</a></li><li class="navelem"><b>ozMp4FileOutput.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

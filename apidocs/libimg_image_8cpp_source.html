@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -1157,7 +1157,7 @@ $(document).ready(function(){initNavTree('libimg_image_8cpp_source.html','');});
 <div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;</div>
 <div class="line"><a name="l01338"></a><span class="lineno"><a class="line" href="class_image.html#ae7bec14013410d3a2dade2ef57b339b1"> 1338</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_image.html#ae7bec14013410d3a2dade2ef57b339b1">Image::dump</a>( <span class="keywordtype">int</span> lines, <span class="keywordtype">int</span> cols )<span class="keyword"> const</span></div>
 <div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    Info( <span class="stringliteral">&quot;DUMP-F%d, %dx%d&quot;</span>, mFormat, mWidth, mHeight );</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    Debug( 1,<span class="stringliteral">&quot;DUMP-F%d, %dx%d&quot;</span>, mFormat, mWidth, mHeight );</div>
 <div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;    <span class="keywordflow">if</span> ( lines &gt; 0 )</div>
 <div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;    {</div>
 <div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;        <span class="keywordflow">if</span> ( lines &gt; mHeight )</div>
@@ -1166,7 +1166,7 @@ $(document).ready(function(){initNavTree('libimg_image_8cpp_source.html','');});
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;            cols = mWidth;</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;        <span class="keywordflow">if</span> ( mPlanes == 1 )</div>
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;        {</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;            Info( <span class="stringliteral">&quot;DUMP-%d channels&quot;</span>, mChannels );</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;            Debug( 1,<span class="stringliteral">&quot;DUMP-%d channels&quot;</span>, mChannels );</div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> = 0; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> &lt; lines; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>++ )</div>
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;            {</div>
 <div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;                Hexdump( 0, mBuffer.data()+(mStride*<a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>), cols*mChannels*mPixelWidth );</div>
@@ -1175,7 +1175,7 @@ $(document).ready(function(){initNavTree('libimg_image_8cpp_source.html','');});
 <div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;        {</div>
 <div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *yPtr = mBuffer.data();</div>
-<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;            Info( <span class="stringliteral">&quot;DUMP-Y-Channel&quot;</span> );</div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;            Debug( 1,<span class="stringliteral">&quot;DUMP-Y-Channel&quot;</span> );</div>
 <div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> = 0; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> &lt; lines; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>++ )</div>
 <div class="line"><a name="l01360"></a><span class="lineno"> 1360</span>&#160;            {</div>
 <div class="line"><a name="l01361"></a><span class="lineno"> 1361</span>&#160;                Hexdump( 0, yPtr+(mStride*<a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>), cols*mPixelWidth );</div>
@@ -1183,7 +1183,7 @@ $(document).ready(function(){initNavTree('libimg_image_8cpp_source.html','');});
 <div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160;            <span class="keywordflow">if</span> ( mChannels &gt; 1 )</div>
 <div class="line"><a name="l01364"></a><span class="lineno"> 1364</span>&#160;            {</div>
 <div class="line"><a name="l01365"></a><span class="lineno"> 1365</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *uPtr = yPtr+mPlaneSize;</div>
-<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;                Info( <span class="stringliteral">&quot;DUMP-U-Channel&quot;</span> );</div>
+<div class="line"><a name="l01366"></a><span class="lineno"> 1366</span>&#160;                Debug( 1,<span class="stringliteral">&quot;DUMP-U-Channel&quot;</span> );</div>
 <div class="line"><a name="l01367"></a><span class="lineno"> 1367</span>&#160;                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> = 0; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a> &lt; lines; <a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>++ )</div>
 <div class="line"><a name="l01368"></a><span class="lineno"> 1368</span>&#160;                {</div>
 <div class="line"><a name="l01369"></a><span class="lineno"> 1369</span>&#160;                    Hexdump( 0, uPtr+(mStride*<a class="code" href="class_image.html#a03efeabe026bd5ff0f98fb7c91484c29">y</a>), cols*mPixelWidth );</div>
@@ -10034,8 +10034,8 @@ $(document).ready(function(){initNavTree('libimg_image_8cpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_832dcc2fd9c5142824e420d8d124316e.html">libimg</a></li><li class="navelem"><b>libimgImage.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_33c9a122c7f9b8d4ff363c562a15334c.html">libimg</a></li><li class="navelem"><b>libimgImage.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

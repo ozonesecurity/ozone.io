@@ -34,7 +34,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">oZone Server Framework
    </div>
-   <div id="projectbrief">Creating a poweful security surveillance system has never been this easy</div>
+   <div id="projectbrief">Enabling Innovation in Video Applications</div>
   </td>
  </tr>
  </tbody>
@@ -221,10 +221,10 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    avDumpDict( opts );</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    AVFrame *inputFrame = avcodec_alloc_frame();</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Info( <span class="stringliteral">&quot;%s:Waiting&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Debug(1, <span class="stringliteral">&quot;%s:Waiting&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">waitForProviders</a>() )</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        Info( <span class="stringliteral">&quot;%s:Waited&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        Debug( 1,<span class="stringliteral">&quot;%s:Waited&quot;</span>, <a class="code" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4">cidentity</a>() );</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// Find the source codec context</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        uint16_t inputWidth = <a class="code" href="class_video_consumer.html#a843010ada945a86ff979dae0d667435c">videoProvider</a>()-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
@@ -301,7 +301,7 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                Debug( 5, <span class="stringliteral">&quot;Encoding reports %d bytes&quot;</span>, outSize );</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <span class="keywordflow">if</span> ( outSize &gt; 0 )</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    Info( <span class="stringliteral">&quot;CPTS: %jd&quot;</span>, <a class="code" href="class_encoder.html#a727db10075ba66202d924aea1fd64686">mCodecContext</a>-&gt;coded_frame-&gt;pts );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    Debug( 2,<span class="stringliteral">&quot;CPTS: %jd&quot;</span>, <a class="code" href="class_encoder.html#a727db10075ba66202d924aea1fd64686">mCodecContext</a>-&gt;coded_frame-&gt;pts );</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    outputBuffer.size( outSize );</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    <span class="comment">//Debug( 5, &quot;PTS2 %lld&quot;, mCodecContext-&gt;coded_frame-&gt;pts );</span></div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                    <span class="comment">//av_rescale_q(cocontext-&gt;coded_frame-&gt;pts, cocontext-&gt;time_base, videostm-&gt;time_base); </span></div>
@@ -358,8 +358,8 @@ $(document).ready(function(){initNavTree('oz_mpeg_encoder_8cpp_source.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_18e91fceada5d197dcb7aec06d99f041.html">encoders</a></li><li class="navelem"><b>ozMpegEncoder.cpp</b></li>
-    <li class="footer">Generated on Thu Sep 8 2016 15:59:46 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_ed5f052cb61d1694c428a1c5cee4b013.html">encoders</a></li><li class="navelem"><b>ozMpegEncoder.cpp</b></li>
+    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

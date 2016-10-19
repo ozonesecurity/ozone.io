@@ -6,5 +6,6 @@ var classnvr_cameras =
     [ "fileOut", "classnvr_cameras.html#ab3e69455eac2facddcbcef6e3a44f17c", null ],
     [ "motion", "classnvr_cameras.html#a87fefcd97e18ce691dc5650a54c68a09", null ],
     [ "person", "classnvr_cameras.html#af54a0178cf716a2429fea658cf84a178", null ],
-    [ "rate", "classnvr_cameras.html#a1704c375a3a53285de24999239d60eaf", null ]
+    [ "rate", "classnvr_cameras.html#a1704c375a3a53285de24999239d60eaf", null ],
+    [ "scheduleDelete", "classnvr_cameras.html#a0f1e7e50a8e11f583fd8cba85edd7b27", null ]
 ];
