@@ -1,14 +1,12 @@
-<!-- ******FEATURES****** -->
 <section id="innovations" class="about section" style="padding-left:10%">
-
-
     <div class="container">
-    <h2 class="title">oZone makes it easy to create innovative applications around video.</h2>
+    <h2 class="title">oZone server  makes it easy to create innovative applications around video.</h2>
 
     <h3>Stuff you'll love:</h3>
     <ul>
         <li>Simple. Build in days or weeks. Not months or years</li>
         <li>Motion Detection is meh. Real time face and human shape tracking</li>
+        <li>Plug-in your favorite 3rd party libraries easily (license plate analysis, drone detection)</li>
         <li>Our secret sauce is our architecture. Have a cool idea? Write a component, plug it into our system</li>
         <li>React on external triggers (hey, its a 100 degrees, why is this guy wearing a trench coat?)</li>
     </ul>
@@ -52,31 +50,29 @@
 
 </code></pre>
 
-<h4>And making all of this renderable on a browser without any plugins is as simple as:</h4>
-<pre><code class="language-clike">
-    HttpController httpController( "watch", 9292 );
-    httpController.addStream("watchcam1",cam1); // watch livestream of cam1
-    httpController.addStream("watchcam2",cam2); // watch livestream of cam2
-    httpController.addStream( "debug", matrixVideo ); // watch a 4x4 mux stiched from cam1,cam2 and their debug frames
-    httpController.addStream( "debug", faceDetector1 );
-    httpController.addStream( "debug", motionDetector2 );
-    listener.addController( &httpController );
-    app.run();
-</code></pre>
-
 <h3>We really do mean powerful:</h3>
 Take a look at our <a href="http://ozone-framework.readthedocs.io/en/latest/architecture/index.html">architecture</a>.
-
 
 <h2>Looks interesting?</h2>
 <br/>
 How about taking a look at how to write an NVR from scratch? Go <a href="https://github.com/ozonesecurity/ozonebase/tree/master/server/src/examples/nvrcli">here</a>, get started, get coding. Let oZone do the heavy lifting for you.
-<h2>Holy Batman!</h2>
-
-Yeah, we agree. Check out our <a href="http://ozone-framework.readthedocs.io/en/latest/index.html">starter guide</a>, or detailed <a href="/apidocs/index.html">API</a> our, read our <a href="https://github.com/pliablepixels/ozonebase/tree/master/server/src/examples">examples</a>.
-
-</div>
+</section>
+<section id="innovationsmobile" class="features section" style="padding-left:10%">
+    <div class="container">
+            <h2 class="title" style="color:white">oZone Mobile is a high speed cross platform mobile solution</h2>
+    <h3 style="color:white">Key features:</h3>
+    <ul>
+        <li>Super fast, and full featured</li>
+        <li>Works on iOS, Android and Desktops as well (Linux, Windows, Mac, ARM)</li>
+        <li>White-label it for your needs</li>
+        <li>Already has built in adaptation layer for ZoneMinder NVR</li>
+    </ul>
     
+    <h3 style="color:white">Demo:</h3>
+    see it in <a style="color:white" href="https://www.youtube.com/watch?v=Hjsz-EoLiwU">youtube</a>
+    <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hjsz-EoLiwU" frameborder="0" allowfullscreen></iframe>
+    </div>
 
 </section>
-<!--//features-->
+
