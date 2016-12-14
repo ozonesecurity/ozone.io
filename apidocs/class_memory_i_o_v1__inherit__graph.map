@@ -1,3 +1,5 @@
 <map id="MemoryIOV1" name="MemoryIOV1">
 <area shape="rect" id="node2" href="$class_memory_input_v1.html" title="MemoryInputV1" alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$class_memory_output_v1.html" title="MemoryOutputV1" alt="" coords="145,80,269,107"/>
+<area shape="rect" id="node4" href="$class_memory_trigger_v1.html" title="MemoryTriggerV1" alt="" coords="293,80,419,107"/>
 </map>

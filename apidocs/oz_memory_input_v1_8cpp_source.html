@@ -114,12 +114,12 @@ $(document).ready(function(){initNavTree('oz_memory_input_v1_8cpp_source.html','
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ozMemoryInputV1.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../base/ozFeedFrame.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_memory_input_v1.html#aaeaefda309be27cd1abaea97d24f1c52">   17</a></span>&#160;<a class="code" href="class_memory_input_v1.html#aaeaefda309be27cd1abaea97d24f1c52">MemoryInputV1::MemoryInputV1</a>( <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                              <span class="keyword">const</span> std::string &amp;location,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                              <span class="keywordtype">int</span> memoryKey,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                              <span class="keywordtype">int</span> imageCount,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                              PixelFormat pixelFormat,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_memory_input_v1.html#add7fc16b4d33da9449537f1ff4b48cfc">   18</a></span>&#160;<a class="code" href="class_memory_input_v1.html#add7fc16b4d33da9449537f1ff4b48cfc">MemoryInputV1::MemoryInputV1</a>( <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                              <span class="keyword">const</span> std::string &amp;location,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                              <span class="keywordtype">int</span> memoryKey,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                              <span class="keywordtype">int</span> imageCount,</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                              uint16_t imageWidth,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                              uint16_t imageHeight</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;) :</div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('oz_memory_input_v1_8cpp_source.html','
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_memory_i_o_v1.html">MemoryIOV1</a>( location, memoryKey, false ),</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_thread.html">Thread</a>( identity() ),</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    mImageCount( imageCount ),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mPixelFormat( pixelFormat ),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    mPixelFormat( PIX_FMT_RGB24 ),</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mImageWidth( imageWidth ),</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    mImageHeight( imageHeight )</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
@@ -160,63 +160,69 @@ $(document).ready(function(){initNavTree('oz_memory_input_v1_8cpp_source.html','
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>    <span class="comment">//mImageWidth = 720;</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="comment">//mImageHeight = 576;</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_memory_i_o_v1.html#a8eafd103b2f88f7c3a16c78e94e5c115">attachMemory</a>( mImageCount, <a class="code" href="class_memory_input_v1.html#aa70c0e73ce901445df97a1e3ab2122c6">mPixelFormat</a>, <a class="code" href="class_memory_input_v1.html#a7c8008a4afc52e52944d1e0676113fd5">mImageWidth</a>, <a class="code" href="class_memory_input_v1.html#accd20c5906b602a63d573725b028675d">mImageHeight</a> );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> lastWriteIndex = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">while</span>( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> )</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> ( !mSharedData || !mSharedData-&gt;valid )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="class_thread.html#abd50159ecd409936f454c2321f673616">stop</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> ( mSharedData-&gt;last_write_index != lastWriteIndex )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *frame = <a class="code" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">loadFrame</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">//Info( &quot;Sending frame %d&quot;, frame-&gt;id() );</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            lastWriteIndex = mSharedData-&gt;last_write_index;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( frame ) );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">//delete frame;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">cleanup</a>();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">  101</a></span>&#160;<span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *<a class="code" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">MemoryInputV1::loadFrame</a>()</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> index = mSharedData-&gt;last_write_index;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> ( index &lt; 0 || index &gt; mImageCount )</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        Fatal( <span class="stringliteral">&quot;Invalid shared memory index %d&quot;</span>, index );</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="struct_memory_i_o_v1_1_1_snapshot.html">Snapshot</a> *snap = &amp;mImageBuffer[index];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_image.html">Image</a> snapImage( *(snap-&gt;image) );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    attachMemory( mImageCount, <a class="code" href="class_memory_input_v1.html#aa70c0e73ce901445df97a1e3ab2122c6">mPixelFormat</a>, <a class="code" href="class_memory_input_v1.html#a7c8008a4afc52e52944d1e0676113fd5">mImageWidth</a>, <a class="code" href="class_memory_input_v1.html#accd20c5906b602a63d573725b028675d">mImageHeight</a> );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> index = mSharedData-&gt;last_write_index;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> lastIndex = (index+1)%mImageCount;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="struct_memory_i_o_v1_1_1_snapshot.html">Snapshot</a> *snap = &amp;mImageBuffer[index];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> timeDiff = tvDiffUsec( *mImageBuffer[lastIndex].timestamp, *snap-&gt;timestamp );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="class_memory_input_v1.html#a9d4ef0bbccb548e8d90ec66a3659901a">mFrameRate</a> = (int)std::lround((1000000.0*(mImageCount-1))/timeDiff);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> lastWriteIndex = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">while</span>( !<a class="code" href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">mStop</a> )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> ( !mSharedData || !mSharedData-&gt;valid )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="class_thread.html#abd50159ecd409936f454c2321f673616">stop</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> ( mSharedData-&gt;last_write_index != lastWriteIndex )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *frame = <a class="code" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">loadFrame</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//Info( &quot;Sending frame %d&quot;, frame-&gt;id() );</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            lastWriteIndex = mSharedData-&gt;last_write_index;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( frame ) );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">cleanup</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">  107</a></span>&#160;<span class="keyword">const</span> <a class="code" href="class_feed_frame.html">FeedFrame</a> *<a class="code" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">MemoryInputV1::loadFrame</a>()</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> index = mSharedData-&gt;last_write_index;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    uint64_t timestamp = ((uint64_t)snap-&gt;timestamp-&gt;tv_sec*1000000LL)+snap-&gt;timestamp-&gt;tv_usec;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_video_frame.html">VideoFrame</a> *frame = <span class="keyword">new</span> <a class="code" href="class_video_frame.html">VideoFrame</a>( <span class="keyword">this</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>, timestamp, snapImage.buffer() );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> ( index &lt; 0 || index &gt; mImageCount )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        Fatal( <span class="stringliteral">&quot;Invalid shared memory index %d&quot;</span>, index );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span>( frame );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="struct_memory_i_o_v1_1_1_snapshot.html">Snapshot</a> *snap = &amp;mImageBuffer[index];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_image.html">Image</a> snapImage( *(snap-&gt;image) );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    uint64_t timestamp = ((uint64_t)snap-&gt;timestamp-&gt;tv_sec*1000000LL)+snap-&gt;timestamp-&gt;tv_usec;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="class_video_frame.html">VideoFrame</a> *frame = <span class="keyword">new</span> <a class="code" href="class_video_frame.html">VideoFrame</a>( <span class="keyword">this</span>, <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>, timestamp, snapImage.buffer() );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span>( frame );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 <div class="ttc" id="class_memory_input_v1_html_aa70c0e73ce901445df97a1e3ab2122c6"><div class="ttname"><a href="class_memory_input_v1.html#aa70c0e73ce901445df97a1e3ab2122c6">MemoryInputV1::mPixelFormat</a></div><div class="ttdeci">PixelFormat mPixelFormat</div><div class="ttdoc">FFmpeg equivalent image format. </div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8h_source.html#l00025">ozMemoryInputV1.h:25</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="struct_memory_i_o_v1_1_1_shared_data_html"><div class="ttname"><a href="struct_memory_i_o_v1_1_1_shared_data.html">MemoryIOV1::SharedData</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8h_source.html#l00025">ozMemoryIOV1.h:25</a></div></div>
 <div class="ttc" id="class_feed_frame_html"><div class="ttname"><a href="class_feed_frame.html">FeedFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00025">ozFeedFrame.h:25</a></div></div>
 <div class="ttc" id="class_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8h_source.html#l00168">libimgImage.h:168</a></div></div>
 <div class="ttc" id="class_memory_i_o_v1_html_aab6a9837032e1d8b9a26e81be724b523"><div class="ttname"><a href="class_memory_i_o_v1.html#aab6a9837032e1d8b9a26e81be724b523">MemoryIOV1::queryMemory</a></div><div class="ttdeci">bool queryMemory(SharedData *sharedData)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8cpp_source.html#l00059">ozMemoryIOV1.cpp:59</a></div></div>
-<div class="ttc" id="class_memory_input_v1_html_a58d76c64c7e2a5c5fefcce5581d3b285"><div class="ttname"><a href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">MemoryInputV1::loadFrame</a></div><div class="ttdeci">const FeedFrame * loadFrame()</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8cpp_source.html#l00101">ozMemoryInputV1.cpp:101</a></div></div>
+<div class="ttc" id="class_memory_input_v1_html_a58d76c64c7e2a5c5fefcce5581d3b285"><div class="ttname"><a href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285">MemoryInputV1::loadFrame</a></div><div class="ttdeci">const FeedFrame * loadFrame()</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8cpp_source.html#l00107">ozMemoryInputV1.cpp:107</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a9e6dfca4261b1f3e67fca4543dc24f27"><div class="ttname"><a href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdoc">Tidy up relations before destruction. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00126">ozFeedProvider.cpp:126</a></div></div>
 <div class="ttc" id="class_thread_html"><div class="ttname"><a href="class_thread.html">Thread</a></div><div class="ttdoc">Abstract class representing pthread thread. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00250">libgenThread.h:250</a></div></div>
-<div class="ttc" id="struct_memory_i_o_v1_1_1_snapshot_html"><div class="ttname"><a href="struct_memory_i_o_v1_1_1_snapshot.html">MemoryIOV1::Snapshot</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8h_source.html#l00058">ozMemoryIOV1.h:58</a></div></div>
-<div class="ttc" id="class_memory_input_v1_html_aaeaefda309be27cd1abaea97d24f1c52"><div class="ttname"><a href="class_memory_input_v1.html#aaeaefda309be27cd1abaea97d24f1c52">MemoryInputV1::MemoryInputV1</a></div><div class="ttdeci">MemoryInputV1(const std::string &amp;name, const std::string &amp;location, int memoryKey, int imageCount, PixelFormat pixelFormat, uint16_t imageWidth, uint16_t imageHeight)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8cpp_source.html#l00017">ozMemoryInputV1.cpp:17</a></div></div>
+<div class="ttc" id="struct_memory_i_o_v1_1_1_snapshot_html"><div class="ttname"><a href="struct_memory_i_o_v1_1_1_snapshot.html">MemoryIOV1::Snapshot</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8h_source.html#l00073">ozMemoryIOV1.h:73</a></div></div>
 <div class="ttc" id="class_memory_input_v1_html_accd20c5906b602a63d573725b028675d"><div class="ttname"><a href="class_memory_input_v1.html#accd20c5906b602a63d573725b028675d">MemoryInputV1::mImageHeight</a></div><div class="ttdeci">uint16_t mImageHeight</div><div class="ttdoc">Requested video height, applies to all channels. </div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8h_source.html#l00027">ozMemoryInputV1.h:27</a></div></div>
 <div class="ttc" id="class_memory_input_v1_html_a7b43d12964dfeb721ad1a3ea9fe9d334"><div class="ttname"><a href="class_memory_input_v1.html#a7b43d12964dfeb721ad1a3ea9fe9d334">MemoryInputV1::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8cpp_source.html#l00047">ozMemoryInputV1.cpp:47</a></div></div>
+<div class="ttc" id="class_memory_input_v1_html_a9d4ef0bbccb548e8d90ec66a3659901a"><div class="ttname"><a href="class_memory_input_v1.html#a9d4ef0bbccb548e8d90ec66a3659901a">MemoryInputV1::mFrameRate</a></div><div class="ttdeci">FrameRate mFrameRate</div><div class="ttdoc">Requested frame rate. </div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8h_source.html#l00028">ozMemoryInputV1.h:28</a></div></div>
 <div class="ttc" id="class_video_frame_html"><div class="ttname"><a href="class_video_frame.html">VideoFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_frame_8h_source.html#l00173">ozFeedFrame.h:173</a></div></div>
 <div class="ttc" id="class_thread_html_a59c9c8a425d516f50d9adc516eaa67fd"><div class="ttname"><a href="class_thread.html#a59c9c8a425d516f50d9adc516eaa67fd">Thread::mStop</a></div><div class="ttdeci">bool mStop</div><div class="ttdoc">Flag indicating whether this thread has been signalled to stop. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8h_source.html#l00263">libgenThread.h:263</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a113a8127bb5d18b0317e70b850bf2c89"><div class="ttname"><a href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">FeedProvider::mFrameCount</a></div><div class="ttdeci">uint64_t mFrameCount</div><div class="ttdoc">Number of frames, advisory only. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00042">ozFeedProvider.h:42</a></div></div>
+<div class="ttc" id="class_memory_input_v1_html_add7fc16b4d33da9449537f1ff4b48cfc"><div class="ttname"><a href="class_memory_input_v1.html#add7fc16b4d33da9449537f1ff4b48cfc">MemoryInputV1::MemoryInputV1</a></div><div class="ttdeci">MemoryInputV1(const std::string &amp;name, const std::string &amp;location, int memoryKey, int imageCount, uint16_t imageWidth, uint16_t imageHeight)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_input_v1_8cpp_source.html#l00018">ozMemoryInputV1.cpp:18</a></div></div>
 <div class="ttc" id="class_thread_html_abd50159ecd409936f454c2321f673616"><div class="ttname"><a href="class_thread.html#abd50159ecd409936f454c2321f673616">Thread::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop the thread, by setting the mStop flag. Thread is responsible for actually existing. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8cpp_source.html#l00333">libgenThread.cpp:333</a></div></div>
-<div class="ttc" id="class_memory_i_o_v1_html_a8eafd103b2f88f7c3a16c78e94e5c115"><div class="ttname"><a href="class_memory_i_o_v1.html#a8eafd103b2f88f7c3a16c78e94e5c115">MemoryIOV1::attachMemory</a></div><div class="ttdeci">void attachMemory(int imageCount, AVPixelFormat imageFormat, uint16_t imageWidth, uint16_t imageHeight)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8cpp_source.html#l00140">ozMemoryIOV1.cpp:140</a></div></div>
 <div class="ttc" id="class_memory_i_o_v1_html"><div class="ttname"><a href="class_memory_i_o_v1.html">MemoryIOV1</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8h_source.html#l00008">ozMemoryIOV1.h:8</a></div></div>
 <div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00212">ozFeedProvider.cpp:212</a></div></div>
 <div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
@@ -227,8 +233,8 @@ $(document).ready(function(){initNavTree('oz_memory_input_v1_8cpp_source.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_d19bb51ec5003c334b95561b705c261e.html">providers</a></li><li class="navelem"><b>ozMemoryInputV1.cpp</b></li>
-    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_306d1f7c2316132a5a1b654ae206deb5.html">providers</a></li><li class="navelem"><b>ozMemoryInputV1.cpp</b></li>
+    <li class="footer">Generated on Wed Dec 14 2016 09:40:21 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

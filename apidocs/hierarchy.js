@@ -53,6 +53,7 @@ var hierarchy =
     [ "Condition", "class_condition.html", [
       [ "Semaphore", "class_semaphore.html", null ]
     ] ],
+    [ "Zone::Config", "class_zone_1_1_config.html", null ],
     [ "Config", "class_config.html", null ],
     [ "ConfigItem", "class_config_item.html", null ],
     [ "ConfigRegistration", "class_config_registration.html", null ],
@@ -117,6 +118,8 @@ var hierarchy =
           [ "LocalFileOutput", "class_local_file_output.html", null ],
           [ "MatrixVideo", "class_matrix_video.html", null ],
           [ "MemoryOutput", "class_memory_output.html", null ],
+          [ "MemoryOutputV1", "class_memory_output_v1.html", null ],
+          [ "MemoryTriggerV1", "class_memory_trigger_v1.html", null ],
           [ "MovieFileOutput", "class_movie_file_output.html", null ],
           [ "QueuedVideoFilter", "class_queued_video_filter.html", null ],
           [ "RateLimiter", "class_rate_limiter.html", null ],
@@ -209,7 +212,9 @@ var hierarchy =
       [ "MemoryOutput", "class_memory_output.html", null ]
     ] ],
     [ "MemoryIOV1", "class_memory_i_o_v1.html", [
-      [ "MemoryInputV1", "class_memory_input_v1.html", null ]
+      [ "MemoryInputV1", "class_memory_input_v1.html", null ],
+      [ "MemoryOutputV1", "class_memory_output_v1.html", null ],
+      [ "MemoryTriggerV1", "class_memory_trigger_v1.html", null ]
     ] ],
     [ "MotionData", "class_motion_data.html", null ],
     [ "Mutex", "class_mutex.html", null ],
@@ -239,8 +244,8 @@ var hierarchy =
     [ "Select", "class_select.html", null ],
     [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
     [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
-    [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
+    [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "SockAddr", "class_sock_addr.html", [
       [ "SockAddrInet", "class_sock_addr_inet.html", null ],
       [ "SockAddrUnix", "class_sock_addr_unix.html", null ]
@@ -281,6 +286,8 @@ var hierarchy =
       [ "MemoryInput", "class_memory_input.html", null ],
       [ "MemoryInputV1", "class_memory_input_v1.html", null ],
       [ "MemoryOutput", "class_memory_output.html", null ],
+      [ "MemoryOutputV1", "class_memory_output_v1.html", null ],
+      [ "MemoryTriggerV1", "class_memory_trigger_v1.html", null ],
       [ "MovieFileOutput", "class_movie_file_output.html", null ],
       [ "Mp4FileOutput", "class_mp4_file_output.html", null ],
       [ "MpegEncoder", "class_mpeg_encoder.html", null ],

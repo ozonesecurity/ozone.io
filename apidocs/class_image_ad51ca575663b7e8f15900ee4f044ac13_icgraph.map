@@ -1,5 +1,7 @@
 <map id="Image::copy" name="Image::copy">
-<area shape="rect" id="node2" href="$class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb" title="MemoryOutput::storeFrame" alt="" coords="148,5,331,32"/>
-<area shape="rect" id="node4" href="$class_image.html#a34410a36b132ab597a8878d45facc89a" title="Image::Image" alt="" coords="188,56,291,83"/>
-<area shape="rect" id="node3" href="$class_memory_output.html#ad78a4a552afecace71b15cb3c248d206" title="MemoryOutput::run" alt="" coords="379,5,513,32"/>
+<area shape="rect" id="node2" href="$class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb" title="MemoryOutput::storeFrame" alt="" coords="156,5,339,32"/>
+<area shape="rect" id="node4" href="$class_memory_output_v1.html#a9f3dbf9b280eb09a63cccff2b29f9709" title="MemoryOutputV1::storeFrame" alt="" coords="148,56,347,83"/>
+<area shape="rect" id="node6" href="$class_image.html#a34410a36b132ab597a8878d45facc89a" title="Image::Image" alt="" coords="196,107,299,133"/>
+<area shape="rect" id="node3" href="$class_memory_output.html#ad78a4a552afecace71b15cb3c248d206" title="MemoryOutput::run" alt="" coords="403,5,537,32"/>
+<area shape="rect" id="node5" href="$class_memory_output_v1.html#a67b923ac652eebc3eb3ca7a92af4bf71" title="MemoryOutputV1::run" alt="" coords="395,56,545,83"/>
 </map>

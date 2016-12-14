@@ -85,6 +85,8 @@ var annotated =
     [ "MemoryIO", "class_memory_i_o.html", "class_memory_i_o" ],
     [ "MemoryIOV1", "class_memory_i_o_v1.html", "class_memory_i_o_v1" ],
     [ "MemoryOutput", "class_memory_output.html", "class_memory_output" ],
+    [ "MemoryOutputV1", "class_memory_output_v1.html", "class_memory_output_v1" ],
+    [ "MemoryTriggerV1", "class_memory_trigger_v1.html", "class_memory_trigger_v1" ],
     [ "MotionData", "class_motion_data.html", "class_motion_data" ],
     [ "MotionDetector", "class_motion_detector.html", "class_motion_detector" ],
     [ "MotionFrame", "class_motion_frame.html", "class_motion_frame" ],

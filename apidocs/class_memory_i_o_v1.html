@@ -125,7 +125,7 @@ Inheritance diagram for MemoryIOV1:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_memory_i_o_v1__inherit__graph.png" border="0" usemap="#_memory_i_o_v1_inherit__map" alt="Inheritance graph"/></div>
 <map name="_memory_i_o_v1_inherit__map" id="_memory_i_o_v1_inherit__map">
-<area shape="rect" id="node2" href="class_memory_input_v1.html" title="MemoryInputV1" alt="" coords="5,80,120,107"/></map>
+<area shape="rect" id="node2" href="class_memory_input_v1.html" title="MemoryInputV1" alt="" coords="5,80,120,107"/><area shape="rect" id="node3" href="class_memory_output_v1.html" title="MemoryOutputV1" alt="" coords="145,80,269,107"/><area shape="rect" id="node4" href="class_memory_trigger_v1.html" title="MemoryTriggerV1" alt="" coords="293,80,419,107"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -141,6 +141,12 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8f49a8451701d081fd8ea657c574a6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_i_o_v1.html#ab8f49a8451701d081fd8ea657c574a6f">MemoryIOV1</a> (const std::string &amp;location, int id, bool owner)</td></tr>
 <tr class="separator:ab8f49a8451701d081fd8ea657c574a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a8fe194a44ce98c02cad9a039da188"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59a8fe194a44ce98c02cad9a039da188"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>setTrigger</b> (uint32_t score, const std::string &amp;cause, const std::string &amp;detail)</td></tr>
+<tr class="separator:a59a8fe194a44ce98c02cad9a039da188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4564e624c303ca940f876cfe9d6d4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e4564e624c303ca940f876cfe9d6d4f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clearTrigger</b> ()</td></tr>
+<tr class="separator:a4e4564e624c303ca940f876cfe9d6d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -164,8 +170,12 @@ Protected Types</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab6a9837032e1d8b9a26e81be724b523"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_i_o_v1.html#aab6a9837032e1d8b9a26e81be724b523">queryMemory</a> (<a class="el" href="struct_memory_i_o_v1_1_1_shared_data.html">SharedData</a> *sharedData)</td></tr>
 <tr class="separator:aab6a9837032e1d8b9a26e81be724b523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eafd103b2f88f7c3a16c78e94e5c115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_i_o_v1.html#a8eafd103b2f88f7c3a16c78e94e5c115">attachMemory</a> (int imageCount, AVPixelFormat imageFormat, uint16_t imageWidth, uint16_t imageHeight)</td></tr>
-<tr class="separator:a8eafd103b2f88f7c3a16c78e94e5c115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafca6f2cb18d22136a77a4f465497ef0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafca6f2cb18d22136a77a4f465497ef0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>attachMemory</b> (int imageBufferCount, PixelFormat imageFormat, uint16_t imageWidth, uint16_t imageHeight)</td></tr>
+<tr class="separator:aafca6f2cb18d22136a77a4f465497ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22830d1c399ba6bd16a34ad7f3cd30b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22830d1c399ba6bd16a34ad7f3cd30b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>attachMemory</b> ()</td></tr>
+<tr class="separator:a22830d1c399ba6bd16a34ad7f3cd30b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6082d9a1711553faf4a3fe2f1ee69d27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6082d9a1711553faf4a3fe2f1ee69d27"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>detachMemory</b> ()</td></tr>
 <tr class="separator:a6082d9a1711553faf4a3fe2f1ee69d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,9 +191,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mMemoryKey</b></td></t
 <tr class="memitem:aba2592becbdf64b39c087d70d2a9bde9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba2592becbdf64b39c087d70d2a9bde9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mOwner</b></td></tr>
 <tr class="separator:aba2592becbdf64b39c087d70d2a9bde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069c0652d3b599f5d24a85e7343c46c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a069c0652d3b599f5d24a85e7343c46c4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mImageCount</b></td></tr>
-<tr class="separator:a069c0652d3b599f5d24a85e7343c46c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789b0ab08387f6f849272eb5d2985d69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a789b0ab08387f6f849272eb5d2985d69"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mImageBufferCount</b></td></tr>
+<tr class="separator:a789b0ab08387f6f849272eb5d2985d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d9cf00d7e09d195d2a7dc66c85da6cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d9cf00d7e09d195d2a7dc66c85da6cc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>mShmId</b></td></tr>
 <tr class="separator:a4d9cf00d7e09d195d2a7dc66c85da6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,72 +260,6 @@ unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>mMemPtr</b
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8eafd103b2f88f7c3a16c78e94e5c115"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MemoryIOV1::attachMemory </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>imageCount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">AVPixelFormat&#160;</td>
-          <td class="paramname"><em>imageFormat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>imageWidth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>imageHeight</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">imageCount</td><td></td></tr>
-    <tr><td class="paramname">imageFormat</td><td></td></tr>
-    <tr><td class="paramname">imageWidth</td><td></td></tr>
-    <tr><td class="paramname">imageHeight</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="oz_memory_i_o_v1_8cpp_source.html#l00140">140</a> of file <a class="el" href="oz_memory_i_o_v1_8cpp_source.html">ozMemoryIOV1.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_memory_i_o_v1_a8eafd103b2f88f7c3a16c78e94e5c115_icgraph.png" border="0" usemap="#class_memory_i_o_v1_a8eafd103b2f88f7c3a16c78e94e5c115_icgraph" alt=""/></div>
-<map name="class_memory_i_o_v1_a8eafd103b2f88f7c3a16c78e94e5c115_icgraph" id="class_memory_i_o_v1_a8eafd103b2f88f7c3a16c78e94e5c115_icgraph">
-<area shape="rect" id="node2" href="class_memory_input_v1.html#a7b43d12964dfeb721ad1a3ea9fe9d334" title="MemoryInputV1::run" alt="" coords="244,5,384,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="aab6a9837032e1d8b9a26e81be724b523"></a>
 <div class="memitem">
 <div class="memproto">
@@ -368,7 +312,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_memory_i_o_v1.html">MemoryIOV1</a></li>
-    <li class="footer">Generated on Wed Oct 19 2016 13:07:02 for oZone Server Framework by
+    <li class="footer">Generated on Wed Dec 14 2016 09:40:22 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

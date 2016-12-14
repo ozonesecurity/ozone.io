@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('oz_options_8cpp_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">const</span> <a class="code" href="class_options.html">Options</a> gNullOptions;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Options::load( <span class="keyword">const</span> std::string &amp;prefix )</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Options::load( <span class="keyword">const</span> std::string &amp;prefix, <span class="keywordtype">bool</span> replace )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">char</span> **envPtr = environ;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> numOptions = 0;</div>
@@ -131,54 +131,56 @@ $(document).ready(function(){initNavTree('oz_options_8cpp_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">if</span>  ( env.substr( 0, prefix.length() ) == prefix )</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                std::string name = env.substr( prefix.length(), pos-prefix.length() );</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                std::string value = env.substr( pos+1 );</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">if</span> ( value == <span class="stringliteral">&quot;true&quot;</span> || value == <span class="stringliteral">&quot;false&quot;</span> )</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    add( name, value == <span class="stringliteral">&quot;true&quot;</span> );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( value.find_first_not_of( <span class="stringliteral">&quot;0123456789.&quot;</span> ) == std::string::npos )</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <span class="keywordflow">if</span> ( value.find_first_of( <span class="stringliteral">&quot;.&quot;</span> ) == std::string::npos )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        add( name, stoi(value) );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        add( name, stod(value) );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    add( name, value );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                numOptions++;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        envPtr++;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span>( numOptions );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> Options::dump( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> level )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> ( OptionMap::const_iterator iter = mOptionMap.begin(); iter != mOptionMap.end(); iter++ )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//printf( &quot;%s == %s\n&quot;, iter-&gt;second-&gt;type().c_str(), typeid(*this).name() );</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> ( iter-&gt;second-&gt;type() == <span class="keyword">typeid</span>(*this).name() )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            std::cout &lt;&lt; std::string(level+1,<span class="charliteral">&#39;.&#39;</span>) &lt;&lt; iter-&gt;first &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; iter-&gt;second-&gt;type() &lt;&lt; <span class="stringliteral">&quot;) =&gt; &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">//printf( &quot;%*s%s (%s) =&gt;\n&quot;, level*2, &quot;&quot;, iter-&gt;first.c_str(), iter-&gt;second-&gt;type().c_str() );</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="class___option.html">_Option</a> *optionPtr = iter-&gt;second.get();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="class_option.html">Option&lt;Options&gt;</a> *optionsPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_option.html">Option&lt;Options&gt;</a> *<span class="keyword">&gt;</span>(optionPtr);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            optionsPtr-&gt;value().dump( level+1 );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            std::cout &lt;&lt; std::string(level+1,<span class="charliteral">&#39;.&#39;</span>) &lt;&lt; iter-&gt;first &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; iter-&gt;second-&gt;type() &lt;&lt; <span class="stringliteral">&quot;) =&gt; &quot;</span> &lt;&lt;  iter-&gt;second-&gt;valueString() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//printf( &quot;%*s%s (%s) =&gt; %s\n&quot;, level*2, &quot;&quot;, iter-&gt;first.c_str(), iter-&gt;second-&gt;type().c_str(), iter-&gt;second-&gt;valueString().c_str() );</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keywordflow">if</span> ( replace )</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    mOptionMap.erase( name );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                std::string value = env.substr( pos+1 );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">if</span> ( value == <span class="stringliteral">&quot;true&quot;</span> || value == <span class="stringliteral">&quot;false&quot;</span> )</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    add( name, value == <span class="stringliteral">&quot;true&quot;</span> );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( value.find_first_not_of( <span class="stringliteral">&quot;0123456789.&quot;</span> ) == std::string::npos )</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordflow">if</span> ( value.find_first_of( <span class="stringliteral">&quot;.&quot;</span> ) == std::string::npos )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        add( name, stoi(value) );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        add( name, stod(value) );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    add( name, value );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                numOptions++;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        envPtr++;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span>( numOptions );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> Options::dump( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> level )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> ( OptionMap::const_iterator iter = mOptionMap.begin(); iter != mOptionMap.end(); iter++ )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">//printf( &quot;%s == %s\n&quot;, iter-&gt;second-&gt;type().c_str(), typeid(*this).name() );</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> ( iter-&gt;second-&gt;type() == <span class="keyword">typeid</span>(*this).name() )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            std::cout &lt;&lt; std::string(level+1,<span class="charliteral">&#39;.&#39;</span>) &lt;&lt; iter-&gt;first &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; iter-&gt;second-&gt;type() &lt;&lt; <span class="stringliteral">&quot;) =&gt; &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">//printf( &quot;%*s%s (%s) =&gt;\n&quot;, level*2, &quot;&quot;, iter-&gt;first.c_str(), iter-&gt;second-&gt;type().c_str() );</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="class___option.html">_Option</a> *optionPtr = iter-&gt;second.get();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_option.html">Option&lt;Options&gt;</a> *optionsPtr = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_option.html">Option&lt;Options&gt;</a> *<span class="keyword">&gt;</span>(optionPtr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            optionsPtr-&gt;value().dump( level+1 );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            std::cout &lt;&lt; std::string(level+1,<span class="charliteral">&#39;.&#39;</span>) &lt;&lt; iter-&gt;first &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; iter-&gt;second-&gt;type() &lt;&lt; <span class="stringliteral">&quot;) =&gt; &quot;</span> &lt;&lt;  iter-&gt;second-&gt;valueString() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">//printf( &quot;%*s%s (%s) =&gt; %s\n&quot;, level*2, &quot;&quot;, iter-&gt;first.c_str(), iter-&gt;second-&gt;type().c_str(), iter-&gt;second-&gt;valueString().c_str() );</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="class_options_html"><div class="ttname"><a href="class_options.html">Options</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_options_8h_source.html#l00062">ozOptions.h:62</a></div></div>
 <div class="ttc" id="class___option_html"><div class="ttname"><a href="class___option.html">_Option</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_options_8h_source.html#l00013">ozOptions.h:13</a></div></div>
 <div class="ttc" id="class_option_html"><div class="ttname"><a href="class_option.html">Option</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_options_8h_source.html#l00035">ozOptions.h:35</a></div></div>
@@ -187,8 +189,8 @@ $(document).ready(function(){initNavTree('oz_options_8cpp_source.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_1da4e510ceb0532d20919b87d92f5aa3.html">base</a></li><li class="navelem"><b>ozOptions.cpp</b></li>
-    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozOptions.cpp</b></li>
+    <li class="footer">Generated on Wed Dec 14 2016 09:40:20 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

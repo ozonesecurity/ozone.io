@@ -9,6 +9,8 @@ var searchData=
   ['memoryio',['MemoryIO',['../class_memory_i_o.html',1,'']]],
   ['memoryiov1',['MemoryIOV1',['../class_memory_i_o_v1.html',1,'']]],
   ['memoryoutput',['MemoryOutput',['../class_memory_output.html',1,'']]],
+  ['memoryoutputv1',['MemoryOutputV1',['../class_memory_output_v1.html',1,'']]],
+  ['memorytriggerv1',['MemoryTriggerV1',['../class_memory_trigger_v1.html',1,'']]],
   ['motiondata',['MotionData',['../class_motion_data.html',1,'']]],
   ['motiondetector',['MotionDetector',['../class_motion_detector.html',1,'']]],
   ['motionframe',['MotionFrame',['../class_motion_frame.html',1,'']]],

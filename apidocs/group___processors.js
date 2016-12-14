@@ -95,8 +95,8 @@ var group___processors =
       [ "width", "class_matrix_video.html#a294827189bea6abba1f837eed1d34547", null ]
     ] ],
     [ "MotionDetector", "class_motion_detector.html", [
-      [ "MotionDetector", "class_motion_detector.html#a1824001d9fbac38f7a736f071e52d08e", null ],
-      [ "MotionDetector", "class_motion_detector.html#a20d2964605c87c02b8a405eaf437dbb6", null ],
+      [ "MotionDetector", "class_motion_detector.html#a6c7348570ce4b805d17f96cbbe034ee6", null ],
+      [ "MotionDetector", "class_motion_detector.html#a9da43148763eb055e95e84c9b6e45ed7", null ],
       [ "~MotionDetector", "class_motion_detector.html#af191d9f7658236de50fdb9c8b9cc66dd", null ],
       [ "addZone", "class_motion_detector.html#a01553305fb60580912bdae5c60ee5bed", null ],
       [ "alarmed", "class_motion_detector.html#a89a5c3b10259f1bd8bd21097bba8f3c3", null ],

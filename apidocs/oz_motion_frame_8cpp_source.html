@@ -112,13 +112,48 @@ $(document).ready(function(){initNavTree('oz_motion_frame_8cpp_source.html','');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;oz.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ozMotionFrame.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;ozZone.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../processors/ozMotionDetector.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;MotionFrame::MotionFrame( <a class="code" href="class_motion_detector.html">MotionDetector</a> *provider, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer, <span class="keywordtype">bool</span> alarmed, <span class="keyword">const</span> <a class="code" href="class_motion_data.html">MotionData</a> *motionData ) :</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( provider, id, timestamp, buffer, alarmed ),</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    mMotionDetector( provider ),</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    mMotionData( motionData )</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;MotionFrame::MotionFrame( <a class="code" href="class_motion_detector.html">MotionDetector</a> *provider, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer, <span class="keywordtype">bool</span> alarmed, <span class="keyword">const</span> <a class="code" href="class_motion_data.html">MotionData</a> *motionData ) :</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( provider, parent, id, timestamp, buffer, alarmed ),</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    mMotionDetector( provider ),</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    mMotionData( motionData )</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;MotionFrame::MotionFrame( <a class="code" href="class_motion_detector.html">MotionDetector</a> *provider, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, <span class="keywordtype">bool</span> alarmed, <span class="keyword">const</span> <a class="code" href="class_motion_data.html">MotionData</a> *motionData ) :</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( provider, parent, alarmed ),</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    mMotionDetector( provider ),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    mMotionData( motionData )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;MotionFrame::~MotionFrame()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_motion_frame.html#a7876c83970b126cd5d25666b4867af8f">mMotionData</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="class_motion_frame_html_a7876c83970b126cd5d25666b4867af8f"><div class="ttname"><a href="class_motion_frame.html#a7876c83970b126cd5d25666b4867af8f">MotionFrame::mMotionData</a></div><div class="ttdeci">const MotionData * mMotionData</div><div class="ttdoc">Pointer to motion data describing motion objects in this frame. </div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_frame_8h_source.html#l00016">ozMotionFrame.h:16</a></div></div>
+<div class="ttc" id="class_motion_detector_html"><div class="ttname"><a href="class_motion_detector.html">MotionDetector</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_detector_8h_source.html#l00025">ozMotionDetector.h:25</a></div></div>
+<div class="ttc" id="class_alarm_frame_html"><div class="ttname"><a href="class_alarm_frame.html">AlarmFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00009">ozAlarmFrame.h:9</a></div></div>
+<div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
+<div class="ttc" id="class_motion_data_html"><div class="ttname"><a href="class_motion_data.html">MotionData</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_motion_data_8h_source.html#l00010">ozMotionData.h:10</a></div></div>
+<div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4228791603ab5ada14d78466fc357f12.html">src</a></li><li class="navelem"><a class="el" href="dir_1da4e510ceb0532d20919b87d92f5aa3.html">base</a></li><li class="navelem"><b>ozMotionFrame.cpp</b></li>
-    <li class="footer">Generated on Wed Oct 19 2016 13:07:01 for oZone Server Framework by
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozMotionFrame.cpp</b></li>
+    <li class="footer">Generated on Wed Dec 14 2016 09:40:20 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
