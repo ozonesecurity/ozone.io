@@ -6,5 +6,6 @@ var searchData=
   ['imagemask',['ImageMask',['../class_image_mask.html',1,'']]],
   ['imagescale',['ImageScale',['../class_image_scale.html',1,'']]],
   ['imagetimestamper',['ImageTimestamper',['../class_image_timestamper.html',1,'']]],
-  ['inetsocket',['InetSocket',['../class_inet_socket.html',1,'']]]
+  ['inetsocket',['InetSocket',['../class_inet_socket.html',1,'']]],
+  ['inputfallback',['InputFallback',['../class_input_fallback.html',1,'']]]
 ];

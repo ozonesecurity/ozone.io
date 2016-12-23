@@ -1,5 +1,5 @@
 <map id="ShapeDetector::run" name="ShapeDetector::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="699,590,916,617"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="699,590,916,617"/>
 <area shape="rect" id="node4" href="$class_shape_detector.html#a9b04be759478770161beb38336ac1a96" title="Return the image format of video frames supplied by this provider. " alt="" coords="200,249,385,275"/>
 <area shape="rect" id="node6" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="447,73,649,99"/>
 <area shape="rect" id="node8" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="203,198,382,225"/>

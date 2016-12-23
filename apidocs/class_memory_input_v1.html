@@ -130,8 +130,8 @@ Inheritance diagram for MemoryInputV1:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:add7fc16b4d33da9449537f1ff4b48cfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_input_v1.html#add7fc16b4d33da9449537f1ff4b48cfc">MemoryInputV1</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const std::string &amp;location, int memoryKey, int imageCount, uint16_t imageWidth, uint16_t imageHeight)</td></tr>
-<tr class="separator:add7fc16b4d33da9449537f1ff4b48cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaefda309be27cd1abaea97d24f1c52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_input_v1.html#aaeaefda309be27cd1abaea97d24f1c52">MemoryInputV1</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const std::string &amp;location, int memoryKey, int imageCount, PixelFormat <a class="el" href="class_memory_input_v1.html#ad87f30a5dea51b803e49a3ca3ab5ddf9">pixelFormat</a>, uint16_t imageWidth, uint16_t imageHeight)</td></tr>
+<tr class="separator:aaeaefda309be27cd1abaea97d24f1c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87f30a5dea51b803e49a3ca3ab5ddf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad87f30a5dea51b803e49a3ca3ab5ddf9"></a>
 PixelFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_memory_input_v1.html#ad87f30a5dea51b803e49a3ca3ab5ddf9">pixelFormat</a> () const </td></tr>
 <tr class="memdesc:ad87f30a5dea51b803e49a3ca3ab5ddf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the image format of video frames supplied by this provider. <br /></td></tr>
@@ -526,7 +526,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 <p>Definition at line <a class="el" href="oz_memory_input_v1_8h_source.html#l00019">19</a> of file <a class="el" href="oz_memory_input_v1_8h_source.html">ozMemoryInputV1.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="add7fc16b4d33da9449537f1ff4b48cfc"></a>
+<a class="anchor" id="aaeaefda309be27cd1abaea97d24f1c52"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -553,6 +553,12 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
           <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>imageCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PixelFormat&#160;</td>
+          <td class="paramname"><em>pixelFormat</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -650,14 +656,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_thread.html#af4a66c44c91ab79cbd830511f622c4e8">Thread</a>.</p>
 
-<p>Definition at line <a class="el" href="oz_memory_input_v1_8cpp_source.html#l00047">47</a> of file <a class="el" href="oz_memory_input_v1_8cpp_source.html">ozMemoryInputV1.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_memory_input_v1_8cpp_source.html#l00048">48</a> of file <a class="el" href="oz_memory_input_v1_8cpp_source.html">ozMemoryInputV1.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_memory_input_v1_a7b43d12964dfeb721ad1a3ea9fe9d334_cgraph.png" border="0" usemap="#class_memory_input_v1_a7b43d12964dfeb721ad1a3ea9fe9d334_cgraph" alt=""/></div>
 <map name="class_memory_input_v1_a7b43d12964dfeb721ad1a3ea9fe9d334_cgraph" id="class_memory_input_v1_a7b43d12964dfeb721ad1a3ea9fe9d334_cgraph">
-<area shape="rect" id="node2" href="class_memory_i_o_v1.html#aab6a9837032e1d8b9a26e81be724b523" title="MemoryIOV1::queryMemory" alt="" coords="193,5,380,32"/><area shape="rect" id="node3" href="class_thread.html#abd50159ecd409936f454c2321f673616" title="Stop the thread, by setting the mStop flag. Thread is responsible for actually existing. " alt="" coords="239,56,334,83"/><area shape="rect" id="node4" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285" title="MemoryInputV1::loadFrame" alt="" coords="195,107,378,133"/><area shape="rect" id="node5" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="207,158,367,199"/><area shape="rect" id="node11" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="211,249,363,276"/><area shape="rect" id="node6" href="class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="449,146,613,187"/><area shape="rect" id="node7" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="942,212,1081,239"/><area shape="rect" id="node8" href="class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="681,95,869,121"/><area shape="rect" id="node9" href="class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="687,146,863,187"/><area shape="rect" id="node10" href="class_feed_provider.html#a55fc4d795ba5c0055eaa9f77465139c1" title="FeedProvider::hasConsumer" alt="" coords="917,153,1105,180"/><area shape="rect" id="node12" href="class_feed_provider.html#a0e59944ab9228929539fde3da0fe65ef" title="Remove this provider from the static provider map. " alt="" coords="428,263,633,289"/><area shape="rect" id="node13" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a" title="Return the identity string. " alt="" coords="710,263,841,289"/></map>
+<area shape="rect" id="node2" href="class_memory_i_o_v1.html#aab6a9837032e1d8b9a26e81be724b523" title="MemoryIOV1::queryMemory" alt="" coords="193,5,380,32"/><area shape="rect" id="node3" href="class_memory_input_v1.html#a58d76c64c7e2a5c5fefcce5581d3b285" title="MemoryInputV1::loadFrame" alt="" coords="195,56,378,83"/><area shape="rect" id="node4" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="207,107,367,149"/><area shape="rect" id="node10" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="211,199,363,225"/><area shape="rect" id="node5" href="class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="449,95,613,137"/><area shape="rect" id="node6" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="942,161,1081,188"/><area shape="rect" id="node7" href="class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="681,44,869,71"/><area shape="rect" id="node8" href="class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="687,95,863,137"/><area shape="rect" id="node9" href="class_feed_provider.html#a55fc4d795ba5c0055eaa9f77465139c1" title="FeedProvider::hasConsumer" alt="" coords="917,103,1105,129"/><area shape="rect" id="node11" href="class_feed_provider.html#a0e59944ab9228929539fde3da0fe65ef" title="Remove this provider from the static provider map. " alt="" coords="428,212,633,239"/><area shape="rect" id="node12" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a" title="Return the identity string. " alt="" coords="710,212,841,239"/></map>
 </div>
 </p>
 
@@ -673,7 +679,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_memory_input_v1.html">MemoryInputV1</a></li>
-    <li class="footer">Generated on Wed Dec 14 2016 09:40:22 for oZone Server Framework by
+    <li class="footer">Generated on Fri Dec 23 2016 18:17:25 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -68,6 +68,7 @@ var annotated =
     [ "ImageScale", "class_image_scale.html", "class_image_scale" ],
     [ "ImageTimestamper", "class_image_timestamper.html", "class_image_timestamper" ],
     [ "InetSocket", "class_inet_socket.html", "class_inet_socket" ],
+    [ "InputFallback", "class_input_fallback.html", "class_input_fallback" ],
     [ "JpegEncoder", "class_jpeg_encoder.html", "class_jpeg_encoder" ],
     [ "linked_ptr", "classlinked__ptr.html", "classlinked__ptr" ],
     [ "Listener", "class_listener.html", "class_listener" ],

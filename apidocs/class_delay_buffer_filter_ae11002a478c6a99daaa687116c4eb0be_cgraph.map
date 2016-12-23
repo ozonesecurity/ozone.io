@@ -1,5 +1,5 @@
 <map id="DelayBufferFilter::run" name="DelayBufferFilter::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="457,274,675,301"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="457,274,675,301"/>
 <area shape="rect" id="node4" href="$class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a" title="How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. " alt="" coords="246,173,363,199"/>
 <area shape="rect" id="node5" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="225,85,385,127"/>
 <area shape="rect" id="node10" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="200,223,409,250"/>

@@ -14,7 +14,7 @@ var class_feed_consumer =
     [ "provider", "class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25", null ],
     [ "queueFrame", "class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4", null ],
     [ "registerProvider", "class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6", null ],
-    [ "waitForProviders", "class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d", null ],
+    [ "waitForProviders", "class_feed_consumer.html#aed564300bea459da045829eecce52b5c", null ],
     [ "mFrameQueue", "class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a", null ],
     [ "mProviderLimit", "class_feed_consumer.html#abc2e76234b98a40a07fe0c88d6701b46", null ],
     [ "mProviderMutex", "class_feed_consumer.html#afe94f1ac1b89d0f95db1dbabac398187", null ],

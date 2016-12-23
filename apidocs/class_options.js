@@ -9,7 +9,7 @@ var class_options =
     [ "dump", "class_options.html#ad96cd822ed7934d75e9c05cdc7630b32", null ],
     [ "extract", "class_options.html#af885b2b72b35a2f81acef47cbfb2b19a", null ],
     [ "extract", "class_options.html#acfbe5808defe1d118dcb78ad88ac500f", null ],
-    [ "get", "class_options.html#af477611b3ec68f7538869f8b973960c7", null ],
+    [ "get", "class_options.html#af5a1671f5eb23d2c020607022c8f7f40", null ],
     [ "get", "class_options.html#a8def74e0500acd9f536dbe4974543b69", null ],
     [ "load", "class_options.html#aa40ef6ce8c58da5d71aed93ba1e291d8", null ],
     [ "remove", "class_options.html#a60129f0806c084eeb76c8e46a4f531f9", null ],

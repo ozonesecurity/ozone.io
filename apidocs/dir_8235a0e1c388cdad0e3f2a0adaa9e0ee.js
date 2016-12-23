@@ -14,6 +14,8 @@ var dir_8235a0e1c388cdad0e3f2a0adaa9e0ee =
     [ "ozImageScale.h", "oz_image_scale_8h_source.html", null ],
     [ "ozImageTimestamper.cpp", "oz_image_timestamper_8cpp_source.html", null ],
     [ "ozImageTimestamper.h", "oz_image_timestamper_8h_source.html", null ],
+    [ "ozInputFallback.cpp", "oz_input_fallback_8cpp_source.html", null ],
+    [ "ozInputFallback.h", "oz_input_fallback_8h_source.html", null ],
     [ "ozMatrixVideo.cpp", "oz_matrix_video_8cpp_source.html", null ],
     [ "ozMatrixVideo.h", "oz_matrix_video_8h_source.html", null ],
     [ "ozMotionDetector.cpp", "oz_motion_detector_8cpp_source.html", null ],

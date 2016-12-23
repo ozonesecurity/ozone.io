@@ -1,6 +1,6 @@
 <map id="H264Encoder::run" name="H264Encoder::run">
 <area shape="rect" id="node2" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="1177,255,1315,282"/>
-<area shape="rect" id="node3" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="651,367,868,394"/>
+<area shape="rect" id="node3" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="651,367,868,394"/>
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="183,63,386,90"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="213,165,356,191"/>
 <area shape="rect" id="node7" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="211,215,358,242"/>

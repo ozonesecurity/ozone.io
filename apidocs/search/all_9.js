@@ -10,6 +10,7 @@ var searchData=
   ['imsiwhitelist',['imsiWhitelist',['../class_config_1_1_values.html#ab4cbfe49d9bfa415c86ca4511b2f4aef',1,'Config::Values']]],
   ['inalarm',['inAlarm',['../class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def',1,'MotionDetector']]],
   ['inetsocket',['InetSocket',['../class_inet_socket.html',1,'']]],
+  ['inputfallback',['InputFallback',['../class_input_fallback.html',1,'InputFallback'],['../class_input_fallback.html#a7ab1adbe282b93807386f6cdee090732',1,'InputFallback::InputFallback()']]],
   ['integervalue',['IntegerValue',['../class_config_item.html#a69e0eac5d4b67e7457aef98bbe47fed4',1,'ConfigItem']]],
   ['interframe_5ftimeout',['INTERFRAME_TIMEOUT',['../class_feed_base.html#a782956651d65d7a04ae759e9d0129961',1,'FeedBase']]],
   ['isinside',['isInside',['../class_polygon.html#a8e30851018eb96d7a43e2d9f0f2d5ef7',1,'Polygon']]],

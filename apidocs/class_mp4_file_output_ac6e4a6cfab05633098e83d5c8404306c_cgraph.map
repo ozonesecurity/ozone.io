@@ -1,5 +1,5 @@
 <map id="Mp4FileOutput::run" name="Mp4FileOutput::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="187,80,404,107"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="187,80,404,107"/>
 <area shape="rect" id="node4" href="$class_image.html#a5af802879f05abe0ad9b5988e21a5b97" title="Image::writeJpeg" alt="" coords="234,29,357,56"/>
 <area shape="rect" id="node6" href="$class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a" title="How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. " alt="" coords="237,131,354,157"/>
 <area shape="rect" id="node7" href="$class_mp4_file_output.html#aaeb621cd587bba70f4e7d96df42308a7" title="Mp4FileOutput::openFile" alt="" coords="213,283,377,309"/>

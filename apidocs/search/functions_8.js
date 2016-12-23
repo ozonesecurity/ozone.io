@@ -8,6 +8,7 @@ var searchData=
   ['imagescale',['ImageScale',['../class_image_scale.html#a0c258d60ee814cb63157adbd6f3248f9',1,'ImageScale::ImageScale(const std::string &amp;name, const Rational &amp;scale)'],['../class_image_scale.html#a8f09ffb5e198c6d0ad7c3e6eee19389e',1,'ImageScale::ImageScale(const Rational &amp;scale, VideoProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)']]],
   ['imagetimestamper',['ImageTimestamper',['../class_image_timestamper.html#a9e5b307b48d8de92ffcbaa4a5725be73',1,'ImageTimestamper::ImageTimestamper(const std::string &amp;name)'],['../class_image_timestamper.html#a69a988470b37c6be522dd11b201f8105',1,'ImageTimestamper::ImageTimestamper(VideoProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)']]],
   ['inalarm',['inAlarm',['../class_motion_detector.html#a98b7d1e5041982385fa73c20552e7def',1,'MotionDetector']]],
+  ['inputfallback',['InputFallback',['../class_input_fallback.html#a7ab1adbe282b93807386f6cdee090732',1,'InputFallback']]],
   ['integervalue',['IntegerValue',['../class_config_item.html#a69e0eac5d4b67e7457aef98bbe47fed4',1,'ConfigItem']]],
   ['isinside',['isInside',['../class_polygon.html#a8e30851018eb96d7a43e2d9f0f2d5ef7',1,'Polygon']]],
   ['item',['Item',['../class_config.html#a14b18a291292159d1bc867f869c00dba',1,'Config']]]

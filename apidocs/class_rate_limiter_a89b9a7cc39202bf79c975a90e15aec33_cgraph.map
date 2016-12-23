@@ -1,5 +1,5 @@
 <map id="RateLimiter::run" name="RateLimiter::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="425,274,643,301"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="425,274,643,301"/>
 <area shape="rect" id="node4" href="$class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25" title="Return the first provider, shortcut for when providers == 1. " alt="" coords="190,122,355,149"/>
 <area shape="rect" id="node5" href="$class_feed_provider.html#a82a778099d252f7fa5c78d500fcf38f2" title="Return a reference to the last generated frame. " alt="" coords="191,173,355,199"/>
 <area shape="rect" id="node6" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="193,56,353,97"/>

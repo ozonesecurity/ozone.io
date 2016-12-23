@@ -16,7 +16,7 @@ var searchData=
   ['deltatimeval',['DeltaTimeval',['../struct_delta_timeval.html',1,'']]],
   ['deregisterallproviders',['deregisterAllProviders',['../class_feed_consumer.html#ac77312f2cb04b457f44accce96e9ae9b',1,'FeedConsumer']]],
   ['deregisterconsumer',['deregisterConsumer',['../class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1',1,'FeedProvider::deregisterConsumer()'],['../class_h264_encoder.html#a6f5f6fc05bc1a12d4124277161971a8d',1,'H264Encoder::deregisterConsumer()'],['../class_h264_relay.html#a88a15610c98409aa9f59e03c072762ed',1,'H264Relay::deregisterConsumer()']]],
-  ['deregisterprovider',['deregisterProvider',['../class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1',1,'FeedConsumer::deregisterProvider()'],['../class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b',1,'MatrixVideo::deregisterProvider()']]],
+  ['deregisterprovider',['deregisterProvider',['../class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1',1,'FeedConsumer::deregisterProvider()'],['../class_input_fallback.html#a6559477834bfcf7cfff248b93a1e9a6e',1,'InputFallback::deregisterProvider()'],['../class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b',1,'MatrixVideo::deregisterProvider()']]],
   ['despecklefilter',['despeckleFilter',['../class_image.html#af800b8a9e1e01ce573f7dd05b2b1935a',1,'Image']]],
   ['detectmotion',['detectMotion',['../class_motion_detector.html#a3bdca29229e49296f36d21b686ee06f9',1,'MotionDetector']]],
   ['detector',['Detector',['../class_detector.html',1,'']]],

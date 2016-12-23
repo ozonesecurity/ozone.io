@@ -20,10 +20,11 @@
 <area shape="rect" id="node20" href="$class_image_convert.html#ab1eda5b14ac0ae1f07cad4230dc90fc2" title="ImageConvert::run" alt="" coords="277,917,408,944"/>
 <area shape="rect" id="node21" href="$class_image_scale.html#a443f8e25d59b666eba9940b53a5803de" title="ImageScale::run" alt="" coords="284,968,401,995"/>
 <area shape="rect" id="node22" href="$class_image_timestamper.html#aa36263a77e76737f883c4a868eeddeaf" title="ImageTimestamper::run" alt="" coords="263,1019,423,1045"/>
-<area shape="rect" id="node23" href="$class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca" title="MatrixVideo::run" alt="" coords="284,1069,401,1096"/>
-<area shape="rect" id="node24" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="274,1120,411,1147"/>
-<area shape="rect" id="node25" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="285,1171,400,1197"/>
-<area shape="rect" id="node26" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="275,1221,410,1248"/>
-<area shape="rect" id="node27" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="276,1272,409,1299"/>
-<area shape="rect" id="node28" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="265,1323,420,1349"/>
+<area shape="rect" id="node23" href="$class_input_fallback.html#ab85334e4357fed2d008ceff69d99101b" title="InputFallback::run" alt="" coords="279,1069,406,1096"/>
+<area shape="rect" id="node24" href="$class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca" title="MatrixVideo::run" alt="" coords="284,1120,401,1147"/>
+<area shape="rect" id="node25" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="274,1171,411,1197"/>
+<area shape="rect" id="node26" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="285,1221,400,1248"/>
+<area shape="rect" id="node27" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="275,1272,410,1299"/>
+<area shape="rect" id="node28" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="276,1323,409,1349"/>
+<area shape="rect" id="node29" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="265,1373,420,1400"/>
 </map>

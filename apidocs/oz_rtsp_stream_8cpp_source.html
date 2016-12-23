@@ -360,7 +360,7 @@ $(document).ready(function(){initNavTree('oz_rtsp_stream_8cpp_source.html','');}
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    Debug( 3, <span class="stringliteral">&quot;Dest address = %s&quot;</span>, mDestAddr.c_str() );</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> ( !<a class="code" href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">waitForProviders</a>() )</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> ( !<a class="code" href="class_feed_consumer.html#aed564300bea459da045829eecce52b5c">waitForProviders</a>() )</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span>( 1 );</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">// Set up the local and remote addresses and sockets</span></div>
@@ -561,9 +561,9 @@ $(document).ready(function(){initNavTree('oz_rtsp_stream_8cpp_source.html','');}
 <div class="ttc" id="class_select_html"><div class="ttname"><a href="class_select.html">Select</a></div><div class="ttdoc">Class representing the Unxi select system call that waits on sockets for notifications of readiness t...</div><div class="ttdef"><b>Definition:</b> <a href="libgen_comms_8h_source.html#l00973">libgenComms.h:973</a></div></div>
 <div class="ttc" id="class_feed_base_html_aa59409b5f2ed4f9e5357590c101d860d"><div class="ttname"><a href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">FeedBase::cl4ss</a></div><div class="ttdeci">const std::string &amp; cl4ss() const </div><div class="ttdoc">Return the class string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00075">ozFeedBase.h:75</a></div></div>
 <div class="ttc" id="class_rtp_data_manager_html"><div class="ttname"><a href="class_rtp_data_manager.html">RtpDataManager</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_rtp_data_8h_source.html#l00042">ozRtpData.h:42</a></div></div>
-<div class="ttc" id="class_feed_consumer_html_a80b6eb167765c37712347db232c8e41d"><div class="ttname"><a href="class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders()</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
 <div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 <div class="ttc" id="class_rtsp_connection_html_a875a0d2807a5b53c3931e1a3420e4360"><div class="ttname"><a href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">RtspConnection::sendInterleavedPacket</a></div><div class="ttdeci">bool sendInterleavedPacket(uint8_t channel, const ByteBuffer &amp;packet)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00433">ozRtspConnection.cpp:433</a></div></div>
+<div class="ttc" id="class_feed_consumer_html_aed564300bea459da045829eecce52b5c"><div class="ttname"><a href="class_feed_consumer.html#aed564300bea459da045829eecce52b5c">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders(unsigned int=0)</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
 <div class="ttc" id="class_rtsp_stream_html_a7e3fd09be7460edefe2831eb814b3eb5"><div class="ttname"><a href="class_rtsp_stream.html#a7e3fd09be7460edefe2831eb814b3eb5">RtspStream::packetiseFrame</a></div><div class="ttdeci">void packetiseFrame(FramePtr frame)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_stream_8cpp_source.html#l00183">ozRtspStream.cpp:183</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -571,7 +571,7 @@ $(document).ready(function(){initNavTree('oz_rtsp_stream_8cpp_source.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_79690749eba542503bb1a9a3dbb495e1.html">protocols</a></li><li class="navelem"><b>ozRtspStream.cpp</b></li>
-    <li class="footer">Generated on Wed Dec 14 2016 09:40:21 for oZone Server Framework by
+    <li class="footer">Generated on Fri Dec 23 2016 18:17:24 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

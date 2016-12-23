@@ -1,5 +1,5 @@
 <map id="VideoRecorder::run" name="VideoRecorder::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="699,12,916,39"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="699,12,916,39"/>
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="191,252,394,279"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a5b5ad2235e3bb94f6f21bf82ea0fd9ec" title="Return the frame rate at this this provider supplies frames. May not be available or accurate..." alt="" coords="207,303,379,329"/>
 <area shape="rect" id="node7" href="$class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba" title="VideoRecorder::processFrame" alt="" coords="193,201,392,228"/>

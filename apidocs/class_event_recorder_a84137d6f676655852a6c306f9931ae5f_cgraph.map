@@ -1,5 +1,5 @@
 <map id="EventRecorder::run" name="EventRecorder::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="911,374,1128,401"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="911,374,1128,401"/>
 <area shape="rect" id="node4" href="$class_event_recorder.html#a84a608c8ab801d830856408647e1785e" title="EventRecorder::processFrame" alt="" coords="193,109,393,135"/>
 <area shape="rect" id="node13" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="188,247,397,274"/>
 <area shape="rect" id="node15" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="217,323,369,350"/>

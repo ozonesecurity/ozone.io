@@ -1,5 +1,5 @@
 <map id="MotionDetector::run" name="MotionDetector::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="1335,5,1552,32"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="1335,5,1552,32"/>
 <area shape="rect" id="node4" href="$class_motion_detector.html#a6fbf18f4c5910b207d74da3409fb2ce5" title="Return the image format of video frames supplied by this provider. " alt="" coords="202,1003,389,1029"/>
 <area shape="rect" id="node5" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="449,928,652,955"/>
 <area shape="rect" id="node7" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="206,1128,385,1155"/>

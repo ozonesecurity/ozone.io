@@ -1,5 +1,5 @@
 <map id="FaceDetector::run" name="FaceDetector::run">
-<area shape="rect" id="node2" href="$class_feed_consumer.html#a80b6eb167765c37712347db232c8e41d" title="FeedConsumer::waitForProviders" alt="" coords="691,590,908,617"/>
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="691,590,908,617"/>
 <area shape="rect" id="node4" href="$class_face_detector.html#ac2e096062435ffeab3f64ce46c87706e" title="Return the image format of video frames supplied by this provider. " alt="" coords="196,249,373,276"/>
 <area shape="rect" id="node6" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="439,73,641,100"/>
 <area shape="rect" id="node8" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="195,198,374,225"/>
