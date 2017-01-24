@@ -22,6 +22,8 @@ var dir_8235a0e1c388cdad0e3f2a0adaa9e0ee =
     [ "ozMotionDetector.h", "oz_motion_detector_8h_source.html", null ],
     [ "ozRateLimiter.cpp", "oz_rate_limiter_8cpp_source.html", null ],
     [ "ozRateLimiter.h", "oz_rate_limiter_8h_source.html", null ],
+    [ "ozRecognizer.cpp", "oz_recognizer_8cpp_source.html", null ],
+    [ "ozRecognizer.h", "oz_recognizer_8h_source.html", null ],
     [ "ozShapeDetector.cpp", "oz_shape_detector_8cpp_source.html", null ],
     [ "ozShapeDetector.h", "oz_shape_detector_8h_source.html", null ],
     [ "ozSignalChecker.cpp", "oz_signal_checker_8cpp_source.html", null ],

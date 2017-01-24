@@ -32,8 +32,8 @@ var group___processors =
         [ "OZ_FACE_MARKUP_DETAIL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95cab4aa41d96497f892c831ac90008903e3", null ],
         [ "OZ_FACE_MARKUP_ALL", "group___processors.html#ggaac1caac0fbdab2c03004170d4f7db95ca343a3864188ccd07ed656cdd9c699e28", null ]
       ] ],
-      [ "FaceDetector", "class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293", null ],
-      [ "FaceDetector", "class_face_detector.html#a9ed69824aa48c57cc74982a86a6ba4d0", null ],
+      [ "FaceDetector", "class_face_detector.html#aa705cc4f53e8409bf18f1460d6dd8146", null ],
+      [ "FaceDetector", "class_face_detector.html#a181a8b0dd0e52b7de03e304c1fef79ed", null ],
       [ "~FaceDetector", "class_face_detector.html#a3aa4f1c3b08ef02351ec458dd90b04e2", null ],
       [ "frameRate", "class_face_detector.html#a53b8f5134d8ad6dc270df9d65bf88eee", null ],
       [ "height", "class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10", null ],
@@ -133,6 +133,20 @@ var group___processors =
       [ "pixelFormat", "class_rate_limiter.html#ae0a7680c92a4830837c307e743491b10", null ],
       [ "run", "class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33", null ],
       [ "width", "class_rate_limiter.html#a0a58de58e9536c33b0de925a76818e3a", null ]
+    ] ],
+    [ "Recognizer", "class_recognizer.html", [
+      [ "RecognizerFlags", "group___processors.html#ga492aff5cdb69a7037fbca09d6bf670a8", [
+        [ "OZ_RECOGNIZER_OPENALPR", "group___processors.html#gga492aff5cdb69a7037fbca09d6bf670a8acf01f4a55fa377d8494d659e6cc7529b", null ],
+        [ "OZ_RECONIZER_OPENCV_OCR", "group___processors.html#gga492aff5cdb69a7037fbca09d6bf670a8abc9c6e1b7d6e262dc85a564d028b9edb", null ]
+      ] ],
+      [ "Recognizer", "class_recognizer.html#ae2d409ce6349c0cb6a0091b6081d8855", null ],
+      [ "Recognizer", "class_recognizer.html#a5069cb7ac44bc4d5c388e4eb7e3fcb96", null ],
+      [ "~Recognizer", "class_recognizer.html#aa0035e71951a13fe00764a54913d0e5a", null ],
+      [ "frameRate", "class_recognizer.html#a71986d2532faf849778398272cb950f9", null ],
+      [ "height", "class_recognizer.html#a9589ffc956724686ba6f74c1a25769df", null ],
+      [ "pixelFormat", "class_recognizer.html#a7445c3131d80deb7e6599ba9c6c5c647", null ],
+      [ "run", "class_recognizer.html#ad641e21f00126ef8e18b21c242d0b049", null ],
+      [ "width", "class_recognizer.html#ad4eac5f763d54414001c028670c62ad8", null ]
     ] ],
     [ "ShapeDetector", "class_shape_detector.html", [
       [ "ShapeMarkup", "group___processors.html#ga940c27b65b82690b52fc1b2263b5faba", [

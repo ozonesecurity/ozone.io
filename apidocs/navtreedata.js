@@ -30,11 +30,12 @@ var NAVTREEINDEX =
 "class_h264_relay.html#abc5f8713d4e754d27de135370bc82ac7",
 "class_image_timestamper.html#aea8e52145c7486e84d3c8fd28baba7d2",
 "class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8",
-"class_rtmp_session.html#af5f299224ed9a45e5a30bee59ea395f7",
-"class_socket_protocol.html#ad1785343c0933b6aef7163246adbe9dc",
-"class_video_recorder.html#a54e74957df0efa63291a0715ab9b0596",
-"group___protocols.html#gga797683e1085dd5c8583c59ac8faa94d8a06c394344d15429896e267e59b60485a",
-"oz_rtsp_8cpp_source.html"
+"class_rtmp_request.html#a9f4f9037ec99f51ab2bb32d8ff4767be",
+"class_socket.html#abc41c93fdc98f1007f6adfe4f37edb3e",
+"class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022",
+"group___protocols.html#gga3766eb07ef66963bd933311945363197a607f5e279fe17bd2ddfe188d221ca3c9",
+"oz_rtmp_8h_source.html",
+"structlocal__error__mgr.html#accadba0aae7bf4bb517ba53b238e4eaa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

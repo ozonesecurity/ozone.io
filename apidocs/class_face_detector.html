@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('class_face_detector.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -157,10 +158,10 @@ typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadFun
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac75b42ef47ca64729457fb1a4da49293"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293">FaceDetector</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const std::string &amp;objectData, FaceMarkup faceMarkup=OZ_FACE_MARKUP_ALL)</td></tr>
-<tr class="separator:ac75b42ef47ca64729457fb1a4da49293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ed69824aa48c57cc74982a86a6ba4d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html#a9ed69824aa48c57cc74982a86a6ba4d0">FaceDetector</a> (const std::string &amp;objectData, FaceMarkup faceMarkup, <a class="el" href="class_video_provider.html">VideoProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>, const <a class="el" href="class_feed_link.html">FeedLink</a> &amp;link=gQueuedVideoLink)</td></tr>
-<tr class="separator:a9ed69824aa48c57cc74982a86a6ba4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa705cc4f53e8409bf18f1460d6dd8146"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html#aa705cc4f53e8409bf18f1460d6dd8146">FaceDetector</a> (const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, const <a class="el" href="class_options.html">Options</a> &amp;options=gNullOptions)</td></tr>
+<tr class="separator:aa705cc4f53e8409bf18f1460d6dd8146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181a8b0dd0e52b7de03e304c1fef79ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html#a181a8b0dd0e52b7de03e304c1fef79ed">FaceDetector</a> (<a class="el" href="class_video_provider.html">VideoProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>, const <a class="el" href="class_options.html">Options</a> &amp;options=gNullOptions, const <a class="el" href="class_feed_link.html">FeedLink</a> &amp;link=gQueuedVideoLink)</td></tr>
+<tr class="separator:a181a8b0dd0e52b7de03e304c1fef79ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e3ada74344d7158ecff31b527697809"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e3ada74344d7158ecff31b527697809"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_face_detector.html#a5e3ada74344d7158ecff31b527697809">width</a> () const </td></tr>
 <tr class="memdesc:a5e3ada74344d7158ecff31b527697809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the width (in pixels) of video frames supplied by this provider. <br /></td></tr>
@@ -513,9 +514,9 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Processor that detects faces on a video frame feed This processor uses dlib and also requires presence of the dlib shape detector dat file You can get the shape_predictor_68_face_landmarks.dat file from: <a href="http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2">http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2</a> </p>
 
-<p>Definition at line <a class="el" href="oz_face_detector_8h_source.html#l00023">23</a> of file <a class="el" href="oz_face_detector_8h_source.html">ozFaceDetector.h</a>.</p>
+<p>Definition at line <a class="el" href="oz_face_detector_8h_source.html#l00029">29</a> of file <a class="el" href="oz_face_detector_8h_source.html">ozFaceDetector.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac75b42ef47ca64729457fb1a4da49293"></a>
+<a class="anchor" id="aa705cc4f53e8409bf18f1460d6dd8146"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -528,14 +529,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>objectData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FaceMarkup&#160;</td>
-          <td class="paramname"><em>faceMarkup</em> = <code>OZ_FACE_MARKUP_ALL</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_options.html">Options</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>gNullOptions</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -546,43 +541,30 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>Name of instance</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line">nvrcam.face = <span class="keyword">new</span> <a class="code" href="class_face_detector.html#ac75b42ef47ca64729457fb1a4da49293">FaceDetector</a>( <span class="stringliteral">&quot;face-cam0&quot;</span> );</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00016">16</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00173">173</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9ed69824aa48c57cc74982a86a6ba4d0"></a>
+<a class="anchor" id="a181a8b0dd0e52b7de03e304c1fef79ed"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">FaceDetector::FaceDetector </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>objectData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FaceMarkup&#160;</td>
-          <td class="paramname"><em>faceMarkup</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="class_video_provider.html">VideoProvider</a> &amp;&#160;</td>
           <td class="paramname"><em>provider</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_options.html">Options</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>gNullOptions</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -606,7 +588,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00032">32</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00189">189</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +617,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 <p>Implements <a class="el" href="class_thread.html#af4a66c44c91ab79cbd830511f622c4e8">Thread</a>.</p>
 
-<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00053">53</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
+<p>Definition at line <a class="el" href="oz_face_detector_8cpp_source.html#l00212">212</a> of file <a class="el" href="oz_face_detector_8cpp_source.html">ozFaceDetector.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -658,7 +640,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_face_detector.html">FaceDetector</a></li>
-    <li class="footer">Generated on Fri Dec 23 2016 18:17:25 for oZone Server Framework by
+    <li class="footer">Generated on Tue Jan 24 2017 07:10:57 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

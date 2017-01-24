@@ -24,10 +24,11 @@
 <area shape="rect" id="node24" href="$class_matrix_video.html#a88fe34f02a06999ceb3f95d6899d2cca" title="MatrixVideo::run" alt="" coords="292,1120,409,1147"/>
 <area shape="rect" id="node25" href="$class_motion_detector.html#af0b59147c5ec1c704e2389a415657588" title="MotionDetector::run" alt="" coords="282,1171,419,1197"/>
 <area shape="rect" id="node26" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="293,1221,408,1248"/>
-<area shape="rect" id="node27" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="283,1272,418,1299"/>
-<area shape="rect" id="node28" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="284,1323,417,1349"/>
-<area shape="rect" id="node29" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="273,1373,428,1400"/>
-<area shape="rect" id="node30" href="$class_http_stream.html#a40617245576269e0ab65ba80485ec1ae" title="HttpStream::run" alt="" coords="293,1424,408,1451"/>
-<area shape="rect" id="node31" href="$class_rtmp_stream.html#a7cffd1820173a7603f5ca0bf49551e4c" title="Thread code, must be overriden to do actual thread work. " alt="" coords="289,1475,412,1501"/>
-<area shape="rect" id="node32" href="$class_rtsp_stream.html#a2062f21b96866c4c92f552c660728711" title="RtspStream::run" alt="" coords="291,1525,410,1552"/>
+<area shape="rect" id="node27" href="$class_recognizer.html#ad641e21f00126ef8e18b21c242d0b049" title="Recognizer::run" alt="" coords="293,1272,408,1299"/>
+<area shape="rect" id="node28" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="283,1323,418,1349"/>
+<area shape="rect" id="node29" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="284,1373,417,1400"/>
+<area shape="rect" id="node30" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="273,1424,428,1451"/>
+<area shape="rect" id="node31" href="$class_http_stream.html#a40617245576269e0ab65ba80485ec1ae" title="HttpStream::run" alt="" coords="293,1475,408,1501"/>
+<area shape="rect" id="node32" href="$class_rtmp_stream.html#a7cffd1820173a7603f5ca0bf49551e4c" title="Thread code, must be overriden to do actual thread work. " alt="" coords="289,1525,412,1552"/>
+<area shape="rect" id="node33" href="$class_rtsp_stream.html#a2062f21b96866c4c92f552c660728711" title="RtspStream::run" alt="" coords="291,1576,410,1603"/>
 </map>

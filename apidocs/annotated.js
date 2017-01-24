@@ -107,6 +107,7 @@ var annotated =
     [ "RateLimiter", "class_rate_limiter.html", "class_rate_limiter" ],
     [ "Rational", "class_rational.html", "class_rational" ],
     [ "RawH264Input", "class_raw_h264_input.html", "class_raw_h264_input" ],
+    [ "Recognizer", "class_recognizer.html", "class_recognizer" ],
     [ "Recorder", "class_recorder.html", null ],
     [ "Region", "class_region.html", "class_region" ],
     [ "RemoteVideoInput", "class_remote_video_input.html", "class_remote_video_input" ],

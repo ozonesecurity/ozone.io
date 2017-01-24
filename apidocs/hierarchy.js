@@ -102,6 +102,7 @@ var hierarchy =
           [ "Detector", "class_detector.html", [
             [ "FaceDetector", "class_face_detector.html", null ],
             [ "MotionDetector", "class_motion_detector.html", null ],
+            [ "Recognizer", "class_recognizer.html", null ],
             [ "ShapeDetector", "class_shape_detector.html", null ]
           ] ],
           [ "DirectVideoFilter", "class_direct_video_filter.html", null ],
@@ -244,8 +245,8 @@ var hierarchy =
     [ "RtspSession", "class_rtsp_session.html", null ],
     [ "ScopedMutex", "class_scoped_mutex.html", null ],
     [ "Select", "class_select.html", null ],
-    [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
     [ "MemoryIOV1::SharedData", "struct_memory_i_o_v1_1_1_shared_data.html", null ],
+    [ "MemoryIO::SharedData", "struct_memory_i_o_1_1_shared_data.html", null ],
     [ "MemoryIOV1::Snapshot", "struct_memory_i_o_v1_1_1_snapshot.html", null ],
     [ "MemoryIO::Snapshot", "struct_memory_i_o_1_1_snapshot.html", null ],
     [ "SockAddr", "class_sock_addr.html", [

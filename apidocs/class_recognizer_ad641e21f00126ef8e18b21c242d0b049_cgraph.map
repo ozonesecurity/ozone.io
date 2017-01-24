@@ -1,0 +1,19 @@
+<map id="Recognizer::run" name="Recognizer::run">
+<area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="425,459,643,485"/>
+<area shape="rect" id="node4" href="$class_recognizer.html#a7445c3131d80deb7e6599ba9c6c5c647" title="Return the image format of video frames supplied by this provider. " alt="" coords="191,256,355,283"/>
+<area shape="rect" id="node6" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="433,104,635,131"/>
+<area shape="rect" id="node8" href="$class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0" title="Return the image format of video frames supplied by this provider. " alt="" coords="183,205,362,232"/>
+<area shape="rect" id="node9" href="$class_recognizer.html#ad4eac5f763d54414001c028670c62ad8" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="209,29,336,56"/>
+<area shape="rect" id="node10" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="201,307,344,333"/>
+<area shape="rect" id="node11" href="$class_recognizer.html#a9589ffc956724686ba6f74c1a25769df" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="207,104,338,131"/>
+<area shape="rect" id="node12" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="199,408,346,435"/>
+<area shape="rect" id="node13" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="168,357,377,384"/>
+<area shape="rect" id="node15" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="197,509,349,536"/>
+<area shape="rect" id="node18" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="191,560,355,587"/>
+<area shape="rect" id="node3" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="704,459,843,485"/>
+<area shape="rect" id="node5" href="$class_image.html#acf081289e3dde561d654bcbfc194658a" title="Image::getFfPixFormat" alt="" coords="456,256,612,283"/>
+<area shape="rect" id="node7" href="$class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25" title="Return the first provider, shortcut for when providers == 1. " alt="" coords="691,104,856,131"/>
+<area shape="rect" id="node14" href="$class_thread.html#abd50159ecd409936f454c2321f673616" title="Stop the thread, by setting the mStop flag. Thread is responsible for actually existing. " alt="" coords="487,408,581,435"/>
+<area shape="rect" id="node16" href="$class_feed_provider.html#a0e59944ab9228929539fde3da0fe65ef" title="Remove this provider from the static provider map. " alt="" coords="431,509,637,536"/>
+<area shape="rect" id="node17" href="$class_feed_base.html#aada1551e2fc238c1435be539ae27588a" title="Return the identity string. " alt="" coords="708,509,839,536"/>
+</map>

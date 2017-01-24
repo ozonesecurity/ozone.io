@@ -5,6 +5,7 @@ var searchData=
   ['ratelimiter',['RateLimiter',['../class_rate_limiter.html',1,'']]],
   ['rational',['Rational',['../class_rational.html',1,'']]],
   ['rawh264input',['RawH264Input',['../class_raw_h264_input.html',1,'']]],
+  ['recognizer',['Recognizer',['../class_recognizer.html',1,'']]],
   ['recorder',['Recorder',['../class_recorder.html',1,'']]],
   ['region',['Region',['../class_region.html',1,'']]],
   ['remotevideoinput',['RemoteVideoInput',['../class_remote_video_input.html',1,'']]],
