@@ -37,7 +37,6 @@ var class_image =
     [ "Image", "class_image.html#a58edd1c45b4faeb5f789b0d036d02313", null ],
     [ "Image", "class_image.html#a9700f58efb58b13e23666f19c67d3839", null ],
     [ "Image", "class_image.html#ab2ec05df4fa34b6e6e1ca8cfbb3e325d", null ],
-    [ "Image", "class_image.html#a283d7e656d2dadbc5e9b151357341c0e", null ],
     [ "Image", "class_image.html#ad8d590c25630467959a490402703fec6", null ],
     [ "Image", "class_image.html#a34410a36b132ab597a8878d45facc89a", null ],
     [ "Image", "class_image.html#a52a52fec18ca3490df4ad80ec3aae96a", null ],

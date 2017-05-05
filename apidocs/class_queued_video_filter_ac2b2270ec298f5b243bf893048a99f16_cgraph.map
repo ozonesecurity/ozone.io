@@ -1,6 +1,6 @@
 <map id="QueuedVideoFilter::run" name="QueuedVideoFilter::run">
 <area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="465,274,683,301"/>
-<area shape="rect" id="node4" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="233,111,393,152"/>
+<area shape="rect" id="node4" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="233,111,393,152"/>
 <area shape="rect" id="node9" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="208,223,417,250"/>
 <area shape="rect" id="node11" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="237,325,389,351"/>
 <area shape="rect" id="node14" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="231,375,395,402"/>

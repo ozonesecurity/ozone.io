@@ -8,7 +8,7 @@
 <area shape="rect" id="node19" href="$class_image.html#aaa0c6c84bcad391b6bb086df1b5a2c59" title="Image::shrink" alt="" coords="697,423,799,449"/>
 <area shape="rect" id="node21" href="$class_image.html#a6df4e9f8c809f45f7f48733cf1c510fc" title="Image::fill" alt="" coords="709,524,787,551"/>
 <area shape="rect" id="node22" href="$class_zone.html#a6e88d4cdbfec2ae9853e539df56e0548" title="Zone::checkMotion" alt="" coords="473,625,607,652"/>
-<area shape="rect" id="node4" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="668,53,828,94"/>
+<area shape="rect" id="node4" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="668,53,828,94"/>
 <area shape="rect" id="node5" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="876,53,1040,94"/>
 <area shape="rect" id="node6" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="1349,5,1487,32"/>
 <area shape="rect" id="node7" href="$class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="1088,119,1276,145"/>

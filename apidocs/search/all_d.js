@@ -6,7 +6,7 @@ var searchData=
   ['newsession',['newSession',['../class_http_controller.html#a88a1b384856e74324ab1e8b14e752e24',1,'HttpController::newSession()'],['../class_rtsp_controller.html#a7ac3be3b899a058468a5874226664e81',1,'RtspController::newSession()']]],
   ['newsockaddr',['newSockAddr',['../class_sock_addr.html#a64044fb2db81add97a8126e51fe6bd9b',1,'SockAddr::newSockAddr(const struct sockaddr &amp;addr, socklen_t len)'],['../class_sock_addr.html#ab9961603ff70fe3b141ba3fa4044569f',1,'SockAddr::newSockAddr(const SockAddr *addr)']]],
   ['newstream',['newStream',['../class_rtsp_session.html#aab38c3a0dcd44c6fb6fa2ca1799f3b6e',1,'RtspSession']]],
-  ['noframes',['noFrames',['../class_feed_provider.html#a58d6e4e3d037fe525e1ad28e48afd951',1,'FeedProvider']]],
+  ['noframes',['noFrames',['../class_feed_provider.html#a5223abbb2d151add6905529163f6fc3e',1,'FeedProvider']]],
   ['notifyframe',['NotifyFrame',['../class_notify_frame.html',1,'']]],
   ['notifyoutput',['NotifyOutput',['../class_notify_output.html',1,'']]],
   ['nvrcameras',['nvrCameras',['../classnvr_cameras.html',1,'']]]

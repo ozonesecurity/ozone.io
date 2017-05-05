@@ -133,8 +133,8 @@ Inheritance diagram for Encoder:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a76e85b282cf1567b0cc3431bc713314e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#a76e85b282cf1567b0cc3431bc713314e">Encoder</a> (const std::string &amp;<a class="el" href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">cl4ss</a>, const std::string &amp;<a class="el" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>)</td></tr>
 <tr class="separator:a76e85b282cf1567b0cc3431bc713314e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ec5bb22c90439af4c9d48f5a4144560"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#a9ec5bb22c90439af4c9d48f5a4144560">queueFrame</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, <a class="el" href="class_feed_provider.html">FeedProvider</a> *)</td></tr>
-<tr class="separator:a9ec5bb22c90439af4c9d48f5a4144560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68108109b1267d928e9cfabc23ae07e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#ab68108109b1267d928e9cfabc23ae07e">queueFrame</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, <a class="el" href="class_feed_provider.html">FeedProvider</a> *)</td></tr>
+<tr class="separator:ab68108109b1267d928e9cfabc23ae07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35555a54f3ebe399afd0a8e21580b4a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35555a54f3ebe399afd0a8e21580b4a6"></a>
 virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a> (int trackId) const </td></tr>
 <tr class="memdesc:a35555a54f3ebe399afd0a8e21580b4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Virtual as some encoders may need to generate it first <br /></td></tr>
@@ -269,19 +269,19 @@ static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memitem:a2e4659092e97cbf0ec02badf93b34354 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_feed_provider.html">FeedProvider</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a2e4659092e97cbf0ec02badf93b34354">find</a> (const std::string &amp;<a class="el" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>)</td></tr>
 <tr class="memdesc:a2e4659092e97cbf0ec02badf93b34354 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locate a provider with the given identity.  <a href="#a2e4659092e97cbf0ec02badf93b34354">More...</a><br /></td></tr>
 <tr class="separator:a2e4659092e97cbf0ec02badf93b34354 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6549b70fd19c43b6b8d507ed6f1911ee inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a6549b70fd19c43b6b8d507ed6f1911ee">videoFramesOnly</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
-<tr class="memdesc:a6549b70fd19c43b6b8d507ed6f1911ee inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only video frames.  <a href="#a6549b70fd19c43b6b8d507ed6f1911ee">More...</a><br /></td></tr>
-<tr class="separator:a6549b70fd19c43b6b8d507ed6f1911ee inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9d719f3dea903d919aa9290f9799846 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#ac9d719f3dea903d919aa9290f9799846">audioFramesOnly</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
-<tr class="memdesc:ac9d719f3dea903d919aa9290f9799846 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only audio frames.  <a href="#ac9d719f3dea903d919aa9290f9799846">More...</a><br /></td></tr>
-<tr class="separator:ac9d719f3dea903d919aa9290f9799846 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28ed365e84af8f4825dce8caee01d4d inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#ae28ed365e84af8f4825dce8caee01d4d">dataFramesOnly</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
-<tr class="memdesc:ae28ed365e84af8f4825dce8caee01d4d inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only data frames.  <a href="#ae28ed365e84af8f4825dce8caee01d4d">More...</a><br /></td></tr>
-<tr class="separator:ae28ed365e84af8f4825dce8caee01d4d inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d6e4e3d037fe525e1ad28e48afd951 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d6e4e3d037fe525e1ad28e48afd951"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a58d6e4e3d037fe525e1ad28e48afd951">noFrames</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
-<tr class="memdesc:a58d6e4e3d037fe525e1ad28e48afd951 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function that can be used to suppress frames. <br /></td></tr>
-<tr class="separator:a58d6e4e3d037fe525e1ad28e48afd951 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fc142e97ab1c149316928e51fb0242 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a07fc142e97ab1c149316928e51fb0242">videoFramesOnly</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
+<tr class="memdesc:a07fc142e97ab1c149316928e51fb0242 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only video frames.  <a href="#a07fc142e97ab1c149316928e51fb0242">More...</a><br /></td></tr>
+<tr class="separator:a07fc142e97ab1c149316928e51fb0242 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc5ee353de42ae0cc5ee4134b5ba4b9 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#aabc5ee353de42ae0cc5ee4134b5ba4b9">audioFramesOnly</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
+<tr class="memdesc:aabc5ee353de42ae0cc5ee4134b5ba4b9 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only audio frames.  <a href="#aabc5ee353de42ae0cc5ee4134b5ba4b9">More...</a><br /></td></tr>
+<tr class="separator:aabc5ee353de42ae0cc5ee4134b5ba4b9 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8706c4f4ec705d4701813691eef9e3f7 inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a8706c4f4ec705d4701813691eef9e3f7">dataFramesOnly</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
+<tr class="memdesc:a8706c4f4ec705d4701813691eef9e3f7 inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function to allow consumers to select only data frames.  <a href="#a8706c4f4ec705d4701813691eef9e3f7">More...</a><br /></td></tr>
+<tr class="separator:a8706c4f4ec705d4701813691eef9e3f7 inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5223abbb2d151add6905529163f6fc3e inherit pub_static_methods_class_feed_provider"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5223abbb2d151add6905529163f6fc3e"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_provider.html#a5223abbb2d151add6905529163f6fc3e">noFrames</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, const <a class="el" href="class_feed_consumer.html">FeedConsumer</a> *)</td></tr>
+<tr class="memdesc:a5223abbb2d151add6905529163f6fc3e inherit pub_static_methods_class_feed_provider"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator function that can be used to suppress frames. <br /></td></tr>
+<tr class="separator:a5223abbb2d151add6905529163f6fc3e inherit pub_static_methods_class_feed_provider"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -292,9 +292,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a72458e3f8aec8f71e71583abaddc7b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72458e3f8aec8f71e71583abaddc7b72"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>poolingExpired</b> ()=0</td></tr>
 <tr class="separator:a72458e3f8aec8f71e71583abaddc7b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc731ccbc4c05090a66c8dc61d254940"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#acc731ccbc4c05090a66c8dc61d254940">distributeFrame</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a> frame)</td></tr>
-<tr class="memdesc:acc731ccbc4c05090a66c8dc61d254940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a frame on to all registered consumers.  <a href="#acc731ccbc4c05090a66c8dc61d254940">More...</a><br /></td></tr>
-<tr class="separator:acc731ccbc4c05090a66c8dc61d254940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34206bfb35743d261321dfdd4d7b30f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_encoder.html#aa34206bfb35743d261321dfdd4d7b30f">distributeFrame</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;frame)</td></tr>
+<tr class="memdesc:aa34206bfb35743d261321dfdd4d7b30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a frame on to all registered consumers.  <a href="#aa34206bfb35743d261321dfdd4d7b30f">More...</a><br /></td></tr>
+<tr class="separator:aa34206bfb35743d261321dfdd4d7b30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_video_consumer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_video_consumer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_video_consumer.html">VideoConsumer</a></td></tr>
 <tr class="memitem:a8ac7118272436baf141db33d96ad2b70 inherit pro_methods_class_video_consumer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_consumer.html#a8ac7118272436baf141db33d96ad2b70">VideoConsumer</a> (const std::string &amp;tag, const std::string &amp;id, int providerLimit=1)</td></tr>
 <tr class="separator:a8ac7118272436baf141db33d96ad2b70 inherit pro_methods_class_video_consumer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -502,7 +502,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acc731ccbc4c05090a66c8dc61d254940"></a>
+<a class="anchor" id="aa34206bfb35743d261321dfdd4d7b30f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -512,7 +512,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
         <tr>
           <td class="memname">void Encoder::distributeFrame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classlinked__ptr.html">FramePtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
           <td></td>
         </tr>
@@ -532,24 +532,24 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider</a>.</p>
+<p>Reimplemented from <a class="el" href="class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb">FeedProvider</a>.</p>
 
 <p>Definition at line <a class="el" href="oz_encoder_8h_source.html#l00060">60</a> of file <a class="el" href="oz_encoder_8h_source.html">ozEncoder.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_encoder_acc731ccbc4c05090a66c8dc61d254940_cgraph.png" border="0" usemap="#class_encoder_acc731ccbc4c05090a66c8dc61d254940_cgraph" alt=""/></div>
-<map name="class_encoder_acc731ccbc4c05090a66c8dc61d254940_cgraph" id="class_encoder_acc731ccbc4c05090a66c8dc61d254940_cgraph">
-<area shape="rect" id="node2" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="221,52,381,93"/><area shape="rect" id="node3" href="class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="429,52,593,93"/><area shape="rect" id="node4" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="902,8,1041,35"/><area shape="rect" id="node5" href="class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="641,30,829,56"/><area shape="rect" id="node6" href="class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="647,81,823,122"/><area shape="rect" id="node7" href="class_feed_provider.html#a55fc4d795ba5c0055eaa9f77465139c1" title="FeedProvider::hasConsumer" alt="" coords="877,88,1065,115"/></map>
+<div class="center"><img src="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_cgraph.png" border="0" usemap="#class_encoder_aa34206bfb35743d261321dfdd4d7b30f_cgraph" alt=""/></div>
+<map name="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_cgraph" id="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_cgraph">
+<area shape="rect" id="node2" href="class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="221,52,381,93"/><area shape="rect" id="node3" href="class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="429,52,593,93"/><area shape="rect" id="node4" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="902,8,1041,35"/><area shape="rect" id="node5" href="class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="641,30,829,56"/><area shape="rect" id="node6" href="class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="647,81,823,122"/><area shape="rect" id="node7" href="class_feed_provider.html#a55fc4d795ba5c0055eaa9f77465139c1" title="FeedProvider::hasConsumer" alt="" coords="877,88,1065,115"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_encoder_acc731ccbc4c05090a66c8dc61d254940_icgraph.png" border="0" usemap="#class_encoder_acc731ccbc4c05090a66c8dc61d254940_icgraph" alt=""/></div>
-<map name="class_encoder_acc731ccbc4c05090a66c8dc61d254940_icgraph" id="class_encoder_acc731ccbc4c05090a66c8dc61d254940_icgraph">
+<div class="center"><img src="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_icgraph.png" border="0" usemap="#class_encoder_aa34206bfb35743d261321dfdd4d7b30f_icgraph" alt=""/></div>
+<map name="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_icgraph" id="class_encoder_aa34206bfb35743d261321dfdd4d7b30f_icgraph">
 <area shape="rect" id="node2" href="class_h264_encoder.html#a48d38071526f547986d4e61084a23433" title="H264Encoder::run" alt="" coords="222,5,349,32"/><area shape="rect" id="node3" href="class_h264_relay.html#a78d8b75067ae59ecbe807f9f98924f27" title="H264Relay::run" alt="" coords="229,56,342,83"/><area shape="rect" id="node4" href="class_jpeg_encoder.html#a05e016fec90d083cfa68a282be27743c" title="JpegEncoder::run" alt="" coords="223,107,347,133"/><area shape="rect" id="node5" href="class_mpeg_encoder.html#a0fa085fc6da907f0d9b90065ffcd80cf" title="MpegEncoder::run" alt="" coords="221,157,349,184"/></map>
 </div>
 </p>
@@ -643,7 +643,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a9ec5bb22c90439af4c9d48f5a4144560"></a>
+<a class="anchor" id="ab68108109b1267d928e9cfabc23ae07e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -653,7 +653,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool Encoder::queueFrame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classlinked__ptr.html">FramePtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -683,16 +683,16 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Reimplemented from <a class="el" href="class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4">FeedConsumer</a>.</p>
+<p>Reimplemented from <a class="el" href="class_feed_consumer.html#aa2f86bda25f48b6b645f6655d1dde3e6">FeedConsumer</a>.</p>
 
 <p>Definition at line <a class="el" href="oz_encoder_8cpp_source.html#l00053">53</a> of file <a class="el" href="oz_encoder_8cpp_source.html">ozEncoder.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_encoder_a9ec5bb22c90439af4c9d48f5a4144560_cgraph.png" border="0" usemap="#class_encoder_a9ec5bb22c90439af4c9d48f5a4144560_cgraph" alt=""/></div>
-<map name="class_encoder_a9ec5bb22c90439af4c9d48f5a4144560_cgraph" id="class_encoder_a9ec5bb22c90439af4c9d48f5a4144560_cgraph">
-<area shape="rect" id="node2" href="class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4" title="FeedConsumer::queueFrame" alt="" coords="204,5,395,32"/><area shape="rect" id="node3" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="443,5,581,32"/></map>
+<div class="center"><img src="class_encoder_ab68108109b1267d928e9cfabc23ae07e_cgraph.png" border="0" usemap="#class_encoder_ab68108109b1267d928e9cfabc23ae07e_cgraph" alt=""/></div>
+<map name="class_encoder_ab68108109b1267d928e9cfabc23ae07e_cgraph" id="class_encoder_ab68108109b1267d928e9cfabc23ae07e_cgraph">
+<area shape="rect" id="node2" href="class_feed_consumer.html#aa2f86bda25f48b6b645f6655d1dde3e6" title="FeedConsumer::queueFrame" alt="" coords="204,5,395,32"/><area shape="rect" id="node3" href="class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="443,5,581,32"/></map>
 </div>
 </p>
 
@@ -752,7 +752,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_encoder.html">Encoder</a></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:57 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:31 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

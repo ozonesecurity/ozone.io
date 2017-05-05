@@ -1,8 +1,8 @@
 <map id="FeedProvider::distributeFrame" name="FeedProvider::distributeFrame">
-<area shape="rect" id="node2" href="$class_encoder.html#acc731ccbc4c05090a66c8dc61d254940" title="Pass a frame on to all registered consumers. " alt="" coords="229,107,397,133"/>
-<area shape="rect" id="node7" href="$class_event_recorder.html#a84a608c8ab801d830856408647e1785e" title="EventRecorder::processFrame" alt="" coords="213,183,413,209"/>
+<area shape="rect" id="node2" href="$class_encoder.html#aa34206bfb35743d261321dfdd4d7b30f" title="Pass a frame on to all registered consumers. " alt="" coords="229,107,397,133"/>
+<area shape="rect" id="node7" href="$class_event_recorder.html#a8cd5453589f6e2f31677a18a0790f033" title="EventRecorder::processFrame" alt="" coords="213,183,413,209"/>
 <area shape="rect" id="node9" href="$class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8" title="MovieFileOutput::run" alt="" coords="242,233,385,260"/>
-<area shape="rect" id="node10" href="$class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba" title="VideoRecorder::processFrame" alt="" coords="214,284,413,311"/>
+<area shape="rect" id="node10" href="$class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35" title="VideoRecorder::processFrame" alt="" coords="214,284,413,311"/>
 <area shape="rect" id="node12" href="$class_video_filter.html#a04324dbaf442e6c8b1d5109eeecd400c" title="VideoFilter::run" alt="" coords="258,335,369,361"/>
 <area shape="rect" id="node13" href="$class_delay_buffer_filter.html#ae11002a478c6a99daaa687116c4eb0be" title="DelayBufferFilter::run" alt="" coords="240,385,387,412"/>
 <area shape="rect" id="node14" href="$class_face_detector.html#a7778cbc2fbf8c61eceee8b33a8e781f8" title="FaceDetector::run" alt="" coords="250,436,377,463"/>
@@ -16,7 +16,7 @@
 <area shape="rect" id="node22" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="256,841,371,868"/>
 <area shape="rect" id="node23" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="246,892,381,919"/>
 <area shape="rect" id="node24" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="247,943,380,969"/>
-<area shape="rect" id="node25" href="$class_direct_video_filter.html#a90099ea58458f513477c14de85c8a8f7" title="DirectVideoFilter::\lqueueFrame" alt="" coords="250,994,377,1035"/>
+<area shape="rect" id="node25" href="$class_direct_video_filter.html#a0a01ca6879ff389e0c9cb0f89c110858" title="DirectVideoFilter::\lqueueFrame" alt="" coords="250,994,377,1035"/>
 <area shape="rect" id="node26" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="236,1060,391,1087"/>
 <area shape="rect" id="node27" href="$class_dummy_input.html#a27e2393485b32ce9654b9bf6e4cfb6d1" title="DummyInput::run" alt="" coords="252,1111,375,1137"/>
 <area shape="rect" id="node28" href="$class_local_file_input.html#a7fed56a720b51c3b9c88b90d8d4b3904" title="LocalFileInput::run" alt="" coords="249,1161,378,1188"/>

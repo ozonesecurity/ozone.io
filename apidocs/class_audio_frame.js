@@ -2,9 +2,9 @@ var class_audio_frame =
 [
     [ "AudioFrame", "class_audio_frame.html#a3a360ce29c1d1388f7ac607373d99388", null ],
     [ "AudioFrame", "class_audio_frame.html#a0e38bf58780e7f211ece37e489ec705b", null ],
-    [ "AudioFrame", "class_audio_frame.html#a03f7b788d75cca21d3f70c6004634f2d", null ],
-    [ "AudioFrame", "class_audio_frame.html#afdafa240caa777d7a0d99582ea9f58ef", null ],
-    [ "AudioFrame", "class_audio_frame.html#a4f61ecf612f6d96c594119f91c267450", null ],
+    [ "AudioFrame", "class_audio_frame.html#ae61c6f9561e12f284a511ee28cc41783", null ],
+    [ "AudioFrame", "class_audio_frame.html#a58befc56dac03e709ba4cc31aaa47037", null ],
+    [ "AudioFrame", "class_audio_frame.html#a8d3ac729e096857387cc5a32ba8c4ac2", null ],
     [ "audioProvider", "class_audio_frame.html#a90a30a213b595775658b34d4374fa6c1", null ],
     [ "channels", "class_audio_frame.html#a734e693226b203c20c9370087201539a", null ],
     [ "sampleFormat", "class_audio_frame.html#ab5cd17ba48776dae9a56ddd4b7a31df4", null ],

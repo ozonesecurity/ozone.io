@@ -1,5 +1,5 @@
 <map id="EventRecorder::processFrame" name="EventRecorder::processFrame">
-<area shape="rect" id="node2" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="253,52,413,93"/>
+<area shape="rect" id="node2" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="253,52,413,93"/>
 <area shape="rect" id="node8" href="$class_image.html#a5af802879f05abe0ad9b5988e21a5b97" title="Image::writeJpeg" alt="" coords="272,142,395,168"/>
 <area shape="rect" id="node10" href="$class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a" title="How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. " alt="" coords="275,192,392,219"/>
 <area shape="rect" id="node3" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="461,52,625,93"/>

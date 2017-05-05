@@ -131,12 +131,12 @@ $(document).ready(function(){initNavTree('oz_notify_frame_8h_source.html','');})
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        mUrgency( urgency )</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_notify_frame.html">NotifyFrame</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, Urgency urgency ) :</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_notify_frame.html">NotifyFrame</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, Urgency urgency ) :</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_data_frame.html">DataFrame</a>( provider, parent, id, timestamp ),</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        mUrgency( urgency )</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_notify_frame.html">NotifyFrame</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, Urgency urgency ) :</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_notify_frame.html">NotifyFrame</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, Urgency urgency ) :</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_data_frame.html">DataFrame</a>( provider, parent ),</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        mUrgency( urgency )</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
@@ -201,12 +201,12 @@ $(document).ready(function(){initNavTree('oz_notify_frame_8h_source.html','');})
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745">DiskIONotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> DiskIODetail &amp;detail ) :</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745">DiskIONotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> DiskIODetail &amp;detail ) :</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="class_notify_frame.html">NotifyFrame</a>( provider, parent, id, timestamp, detail.failure()?IMPORTANT:ADVISORY ),</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745">DiskIONotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, <span class="keyword">const</span> DiskIODetail &amp;detail ) :</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745">DiskIONotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, <span class="keyword">const</span> DiskIODetail &amp;detail ) :</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="class_notify_frame.html">NotifyFrame</a>( provider, parent, detail.failure()?IMPORTANT:ADVISORY ),</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
@@ -266,12 +266,12 @@ $(document).ready(function(){initNavTree('oz_notify_frame_8h_source.html','');})
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="class_event_notification.html#acccea36cc6c52480b278c8adc469b286">EventNotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> EventDetail &amp;detail ) :</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="class_event_notification.html#acccea36cc6c52480b278c8adc469b286">EventNotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, uint64_t <span class="keywordtype">id</span>, uint64_t timestamp, <span class="keyword">const</span> EventDetail &amp;detail ) :</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="class_notify_frame.html">NotifyFrame</a>( provider, parent, id, timestamp, ADVISORY ),</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_event_notification.html#acccea36cc6c52480b278c8adc469b286">EventNotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <a class="code" href="classlinked__ptr.html">FramePtr</a> parent, <span class="keyword">const</span> EventDetail &amp;detail ) :</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_event_notification.html#acccea36cc6c52480b278c8adc469b286">EventNotification</a>( <a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_feed_frame.html#afbd33229a1867f0ba6d907bfb00a264d">provider</a>, <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;parent, <span class="keyword">const</span> EventDetail &amp;detail ) :</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="class_notify_frame.html">NotifyFrame</a>( provider, parent, ADVISORY ),</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        mDetail( detail )</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
@@ -323,7 +323,7 @@ $(document).ready(function(){initNavTree('oz_notify_frame_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><b>ozNotifyFrame.h</b></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:56 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:30 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

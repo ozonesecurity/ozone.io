@@ -9,7 +9,7 @@ var class_event_recorder =
     ] ],
     [ "EventRecorder", "class_event_recorder.html#af8cb64074d1534b6ba6ec63d947c718c", null ],
     [ "~EventRecorder", "class_event_recorder.html#a54c194d6913c8d12ba30c76dd4d9d369", null ],
-    [ "processFrame", "class_event_recorder.html#a84a608c8ab801d830856408647e1785e", null ],
+    [ "processFrame", "class_event_recorder.html#a8cd5453589f6e2f31677a18a0790f033", null ],
     [ "run", "class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f", null ],
     [ "mAlarmTime", "class_event_recorder.html#a72baac56d18c13582976ca44397e650c", null ],
     [ "mEventCount", "class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2", null ],

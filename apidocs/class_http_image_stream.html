@@ -156,8 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02aefeb0dd9715a0c62a79f0ab18c8c5 inherit pub_methods_class_feed_consumer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ac1d96d15bdc8fb64ad115dbcc15a3f inherit pub_methods_class_feed_consumer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_consumer.html#a2ac1d96d15bdc8fb64ad115dbcc15a3f">hasProvider</a> (<a class="el" href="class_feed_provider.html">FeedProvider</a> &amp;<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>) const </td></tr>
 <tr class="separator:a2ac1d96d15bdc8fb64ad115dbcc15a3f inherit pub_methods_class_feed_consumer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34c94d306a178ab2049498a02ced5fe4 inherit pub_methods_class_feed_consumer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4">queueFrame</a> (<a class="el" href="classlinked__ptr.html">FramePtr</a>, <a class="el" href="class_feed_provider.html">FeedProvider</a> *)</td></tr>
-<tr class="separator:a34c94d306a178ab2049498a02ced5fe4 inherit pub_methods_class_feed_consumer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f86bda25f48b6b645f6655d1dde3e6 inherit pub_methods_class_feed_consumer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_consumer.html#aa2f86bda25f48b6b645f6655d1dde3e6">queueFrame</a> (const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;, <a class="el" href="class_feed_provider.html">FeedProvider</a> *)</td></tr>
+<tr class="separator:aa2f86bda25f48b6b645f6655d1dde3e6 inherit pub_methods_class_feed_consumer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_feed_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_feed_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_feed_base.html">FeedBase</a></td></tr>
 <tr class="memitem:aa59409b5f2ed4f9e5357590c101d860d inherit pub_methods_class_feed_base"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa59409b5f2ed4f9e5357590c101d860d"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">cl4ss</a> () const </td></tr>
@@ -214,8 +214,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a006ef2a5f90531ea62555e39f977aacb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http_image_stream.html#a006ef2a5f90531ea62555e39f977aacb">sendFrame</a> (Select::CommsList &amp;writeable, <a class="el" href="classlinked__ptr.html">FramePtr</a> frame)</td></tr>
-<tr class="separator:a006ef2a5f90531ea62555e39f977aacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3629fd933ea5bedeabc7c91aa5e2411c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http_image_stream.html#a3629fd933ea5bedeabc7c91aa5e2411c">sendFrame</a> (Select::CommsList &amp;writeable, const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;frame)</td></tr>
+<tr class="separator:a3629fd933ea5bedeabc7c91aa5e2411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_http_stream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_http_stream')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_http_stream.html">HttpStream</a></td></tr>
 <tr class="memitem:a505e7677b1c4152aadd1d5d3e4bcc430 inherit pro_methods_class_http_stream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_http_stream.html#a505e7677b1c4152aadd1d5d3e4bcc430">HttpStream</a> (const std::string &amp;tag, <a class="el" href="class_http_session.html">HttpSession</a> *session, <a class="el" href="class_connection.html">Connection</a> *connection, <a class="el" href="class_feed_provider.html">FeedProvider</a> *<a class="el" href="class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25">provider</a>)</td></tr>
 <tr class="separator:a505e7677b1c4152aadd1d5d3e4bcc430 inherit pro_methods_class_http_stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -444,7 +444,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a006ef2a5f90531ea62555e39f977aacb"></a>
+<a class="anchor" id="a3629fd933ea5bedeabc7c91aa5e2411c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -460,7 +460,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classlinked__ptr.html">FramePtr</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classlinked__ptr.html">FramePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>frame</em>&#160;</td>
         </tr>
         <tr>
@@ -491,8 +491,8 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_http_image_stream_a006ef2a5f90531ea62555e39f977aacb_cgraph.png" border="0" usemap="#class_http_image_stream_a006ef2a5f90531ea62555e39f977aacb_cgraph" alt=""/></div>
-<map name="class_http_image_stream_a006ef2a5f90531ea62555e39f977aacb_cgraph" id="class_http_image_stream_a006ef2a5f90531ea62555e39f977aacb_cgraph">
+<div class="center"><img src="class_http_image_stream_a3629fd933ea5bedeabc7c91aa5e2411c_cgraph.png" border="0" usemap="#class_http_image_stream_a3629fd933ea5bedeabc7c91aa5e2411c_cgraph" alt=""/></div>
+<map name="class_http_image_stream_a3629fd933ea5bedeabc7c91aa5e2411c_cgraph" id="class_http_image_stream_a3629fd933ea5bedeabc7c91aa5e2411c_cgraph">
 <area shape="rect" id="node2" href="class_feed_frame.html#a41024f6e629faefbf46dc745766951ab" title="Return the ultimate ancestor frame. " alt="" coords="252,5,424,32"/></map>
 </div>
 </p>
@@ -509,7 +509,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_http_image_stream.html">HttpImageStream</a></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:57 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:32 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

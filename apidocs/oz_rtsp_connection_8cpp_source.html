@@ -127,386 +127,390 @@ $(document).ready(function(){initNavTree('oz_rtsp_connection_8cpp_source.html','
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;sys/uio.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">   24</a></span>&#160;<a class="code" href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">RtspConnection::RtspConnection</a>( <a class="code" href="class_controller.html">Controller</a> *controller, <a class="code" href="class_tcp_inet_socket.html">TcpInetSocket</a> *socket ) :</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_binary_connection.html">BinaryConnection</a>( controller, socket ),</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mRtspController( dynamic_cast&lt;<a class="code" href="class_rtsp_controller.html">RtspController</a> *&gt;( controller ) ),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    mEncoder( NULL )</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">   42</a></span>&#160;<a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">RtspConnection::validateRequestUrl</a>( <span class="keyword">const</span> std::string &amp;url, std::string *host, std::string *streamName, std::string *streamSource, <span class="keywordtype">int</span> *track )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">char</span> tempHost[64]=<span class="stringliteral">&quot;&quot;</span>, tempStreamName[64]=<span class="stringliteral">&quot;&quot;</span>, tempStreamSource[64]=<span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> tempTrackId = -1;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> ( sscanf( url.c_str(), <span class="stringliteral">&quot;rtsp://%[a-zA-Z0-9_-.:]/%[^/]/%[^/]/trackID=%d&quot;</span>, tempHost, tempStreamName, tempStreamSource, &amp;tempTrackId ) != 4 )</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> ( sscanf( url.c_str(), <span class="stringliteral">&quot;rtsp://%[a-zA-Z0-9_-.:]/%[^/]/%[^/]&quot;</span>, tempHost, tempStreamName, tempStreamSource ) != 3 )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            Error( <span class="stringliteral">&quot;Unable to parse request URL &#39;%s&#39;&quot;</span>, url.c_str() );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span>( NULL );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> ( host )</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        *host = tempHost;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> ( streamName )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        *streamName = tempStreamName;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> ( streamSource )</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        *streamSource = tempStreamSource;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> ( track )</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        *track = tempTrackId;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> ( !<a class="code" href="class_connection.html#a01e20ea1ebeb7ebcd96aaf6188758b29">mController</a>-&gt;<a class="code" href="class_controller.html#a8023c903e8826ff80a1815a4ed2fcadb">verifyStreamName</a>( tempStreamName ) )</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        Error( <span class="stringliteral">&quot;Invalid request streamName &#39;%s&#39;&quot;</span>, tempStreamName );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span>( NULL );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="class_feed_provider.html">FeedProvider</a> *provider = <a class="code" href="class_connection.html#a01e20ea1ebeb7ebcd96aaf6188758b29">mController</a>-&gt;<a class="code" href="class_controller.html#a05fce63816dc0d68201e530ad3101816">findStream</a>( tempStreamName, tempStreamSource );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> ( !provider )</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        Error( <span class="stringliteral">&quot;Invalid request stream &#39;%s/%s&#39;&quot;</span>, tempStreamName, tempStreamSource );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span>( NULL );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span>( provider );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// Handle interleaved RTP commands that are not related to established streams</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">   87</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a>( <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> channel= buffer[1];</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    uint16_t length = buffer.size()-4;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Got %d byte packet on channel %d&quot;</span>, length, channel );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Hexdump( 2, buffer+4, length );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// Handle RTSP commands that are not related to established streams</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a8864466b9ec035a67c9973fa4d0aa126">  104</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a>( <span class="keyword">const</span> std::string &amp;request )</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Handling RTSP request: %s (%zd bytes)&quot;</span>, request.c_str(), request.size() );</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="class_string_token_list.html">StringTokenList</a> lines( request, <span class="stringliteral">&quot;\r\n&quot;</span> );</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> ( lines.size() &lt;= 0 )</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        Error( <span class="stringliteral">&quot;Unable to split request &#39;%s&#39; into tokens&quot;</span>, request.c_str() );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="class_string_token_list.html">StringTokenList</a> parts( lines[0], <span class="stringliteral">&quot; &quot;</span> );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">if</span> ( parts.size() != 3 )</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        Error( <span class="stringliteral">&quot;Unable to split request part &#39;%s&#39; into tokens&quot;</span>, lines[0].c_str() );</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::string requestType = parts[0];</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got request &#39;%s&#39;&quot;</span>, requestType.c_str() );</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::string requestUrl = parts[1];</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got requestUrl &#39;%s&#39;&quot;</span>, requestUrl.c_str() );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    std::string requestVer = parts[2];</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got requestVer &#39;%s&#39;&quot;</span>, requestVer.c_str() );</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> ( requestVer != <span class="stringliteral">&quot;RTSP/1.0&quot;</span> )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        Error( <span class="stringliteral">&quot;Unexpected RTSP version &#39;%s&#39;&quot;</span>, requestVer.c_str() );</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// Extract headers from request</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Headers requestHeaders;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 1; i &lt; lines.size(); i++ )</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="class_string_token_list.html">StringTokenList</a> parts( lines[i], <span class="stringliteral">&quot;: &quot;</span> );</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> ( parts.size() != 2 )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            Error( <span class="stringliteral">&quot;Unable to split request header &#39;%s&#39; into tokens&quot;</span>, lines[i].c_str() );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        Debug( 4, <span class="stringliteral">&quot;Got header &#39;%s&#39;, value &#39;%s&#39;&quot;</span>, parts[0].c_str(), parts[1].c_str() );</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        requestHeaders.insert( Headers::value_type( parts[0], parts[1] ) );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> ( requestHeaders.find(<span class="stringliteral">&quot;CSeq&quot;</span>) == requestHeaders.end() )</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        Error( <span class="stringliteral">&quot;No CSeq header found&quot;</span> );</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got sequence number %s&quot;</span>, requestHeaders[<span class="stringliteral">&quot;CSeq&quot;</span>].c_str() );</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    uint32_t session = 0;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">if</span> ( requestHeaders.find(<span class="stringliteral">&quot;Session&quot;</span>) != requestHeaders.end() )</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        Debug( 4, <span class="stringliteral">&quot;Got session header, &#39;%s&#39;, passing to session&quot;</span>, requestHeaders[<span class="stringliteral">&quot;Session&quot;</span>].c_str() );</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        session = strtol( requestHeaders[<span class="stringliteral">&quot;Session&quot;</span>].c_str(), NULL, 16 );</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    Headers responseHeaders;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;CSeq&quot;</span>, requestHeaders[<span class="stringliteral">&quot;CSeq&quot;</span>] ) );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;OPTIONS&quot;</span> )</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Public&quot;</span>, <span class="stringliteral">&quot;DESCRIBE, SETUP, PLAY, GET_PARAMETER, TEARDOWN&quot;</span> ) );</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;DESCRIBE&quot;</span> )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="class_feed_provider.html">FeedProvider</a> *provider = <a class="code" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">validateRequestUrl</a>( requestUrl );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> ( !provider )</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 404, <span class="stringliteral">&quot;Not Found&quot;</span> );</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_video_provider.html">VideoProvider</a> *videoProvider = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_video_provider.html">VideoProvider</a> *<span class="keyword">&gt;</span>(provider);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">int</span> codec = AV_CODEC_ID_MPEG4;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">int</span> width = videoProvider-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">int</span> height = videoProvider-&gt;<a class="code" href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">height</a>();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="class_frame_rate.html">FrameRate</a> frameRate = 15;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="comment">//FrameRate frameRate = videoProvider-&gt;frameRate();</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">int</span> bitRate = 90000;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">int</span> quality = 70;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        std::string sdpFormatString =</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="stringliteral">&quot;v=0\r\n&quot;</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="stringliteral">&quot;o=- %jd %jd IN IP4 %s\r\n&quot;</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="stringliteral">&quot;s=ZoneMinder Stream\r\n&quot;</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="stringliteral">&quot;i=Media Streamers\r\n&quot;</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="stringliteral">&quot;c=IN IP4 0.0.0.0\r\n&quot;</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="stringliteral">&quot;t=0 0\r\n&quot;</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="stringliteral">&quot;a=control:*\r\n&quot;</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="stringliteral">&quot;a=range:npt=0.000000-\r\n&quot;</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        uint64_t now64 = time64();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordtype">char</span> hostname[HOST_NAME_MAX] = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> ( gethostname( hostname, <span class="keyword">sizeof</span>(hostname) ) &lt; 0 )</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            Fatal( <span class="stringliteral">&quot;Can&#39;t gethostname: %s&quot;</span>, strerror(errno) );</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        std::string sdpString = stringtf( sdpFormatString, now64, now64, hostname );</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> ( codec == AV_CODEC_ID_H264 )</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> ( provider-&gt;<a class="code" href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">cl4ss</a>() == <span class="stringliteral">&quot;RawH264Input&quot;</span> )</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                std::string encoderKey = <a class="code" href="class_h264_relay.html#aac70489ab66177821fa523ed1ca62d64">H264Relay::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    <a class="code" href="class_h264_relay.html">H264Relay</a> *h264Relay = NULL;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    mEncoder = h264Relay = <span class="keyword">new</span> <a class="code" href="class_h264_relay.html">H264Relay</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    h264Relay-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                std::string encoderKey = <a class="code" href="class_h264_encoder.html#aba7652f830d3d3aeddbdb4765d2340c9">H264Encoder::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    <a class="code" href="class_h264_encoder.html">H264Encoder</a> *h264Encoder = NULL;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    mEncoder = h264Encoder = <span class="keyword">new</span> <a class="code" href="class_h264_encoder.html">H264Encoder</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    h264Encoder-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( codec == AV_CODEC_ID_MPEG4 )</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            std::string encoderKey = <a class="code" href="class_mpeg_encoder.html#a5d935758db67f5639cecb19d85487354">MpegEncoder::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <a class="code" href="class_mpeg_encoder.html">MpegEncoder</a> *mpegEncoder = NULL;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                mEncoder = mpegEncoder = <span class="keyword">new</span> <a class="code" href="class_mpeg_encoder.html">MpegEncoder</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                mpegEncoder-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, sdpString ) );</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;SETUP&quot;</span> )</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">// These commands are handled by RTSP session so pass them on and send any required responses</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="class_rtsp_session.html">RtspSession</a> *rtspSession = 0;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">if</span> ( session )</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a35a21b686b698046766230b2a976af85">getSession</a>( session );</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef HOST_NAME_MAX</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define HOST_NAME_MAX 64</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">   28</a></span>&#160;<a class="code" href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">RtspConnection::RtspConnection</a>( <a class="code" href="class_controller.html">Controller</a> *controller, <a class="code" href="class_tcp_inet_socket.html">TcpInetSocket</a> *socket ) :</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_binary_connection.html">BinaryConnection</a>( controller, socket ),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mRtspController( dynamic_cast&lt;<a class="code" href="class_rtsp_controller.html">RtspController</a> *&gt;( controller ) ),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    mEncoder( NULL )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">   46</a></span>&#160;<a class="code" href="class_feed_provider.html">FeedProvider</a> *<a class="code" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">RtspConnection::validateRequestUrl</a>( <span class="keyword">const</span> std::string &amp;url, std::string *host, std::string *streamName, std::string *streamSource, <span class="keywordtype">int</span> *track )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">char</span> tempHost[64]=<span class="stringliteral">&quot;&quot;</span>, tempStreamName[64]=<span class="stringliteral">&quot;&quot;</span>, tempStreamSource[64]=<span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> tempTrackId = -1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> ( sscanf( url.c_str(), <span class="stringliteral">&quot;rtsp://%[a-zA-Z0-9_-.:]/%[^/]/%[^/]/trackID=%d&quot;</span>, tempHost, tempStreamName, tempStreamSource, &amp;tempTrackId ) != 4 )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> ( sscanf( url.c_str(), <span class="stringliteral">&quot;rtsp://%[a-zA-Z0-9_-.:]/%[^/]/%[^/]&quot;</span>, tempHost, tempStreamName, tempStreamSource ) != 3 )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            Error( <span class="stringliteral">&quot;Unable to parse request URL &#39;%s&#39;&quot;</span>, url.c_str() );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span>( NULL );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> ( host )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        *host = tempHost;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> ( streamName )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        *streamName = tempStreamName;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> ( streamSource )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        *streamSource = tempStreamSource;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> ( track )</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        *track = tempTrackId;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> ( !<a class="code" href="class_connection.html#a01e20ea1ebeb7ebcd96aaf6188758b29">mController</a>-&gt;<a class="code" href="class_controller.html#a8023c903e8826ff80a1815a4ed2fcadb">verifyStreamName</a>( tempStreamName ) )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Error( <span class="stringliteral">&quot;Invalid request streamName &#39;%s&#39;&quot;</span>, tempStreamName );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span>( NULL );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_feed_provider.html">FeedProvider</a> *provider = <a class="code" href="class_connection.html#a01e20ea1ebeb7ebcd96aaf6188758b29">mController</a>-&gt;<a class="code" href="class_controller.html#a05fce63816dc0d68201e530ad3101816">findStream</a>( tempStreamName, tempStreamSource );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> ( !provider )</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        Error( <span class="stringliteral">&quot;Invalid request stream &#39;%s/%s&#39;&quot;</span>, tempStreamName, tempStreamSource );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span>( NULL );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span>( provider );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// Handle interleaved RTP commands that are not related to established streams</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">   91</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a>( <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> channel= buffer[1];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    uint16_t length = buffer.size()-4;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Got %d byte packet on channel %d&quot;</span>, length, channel );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    Hexdump( 2, buffer+4, length );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// Handle RTSP commands that are not related to established streams</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a8864466b9ec035a67c9973fa4d0aa126">  108</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a>( <span class="keyword">const</span> std::string &amp;request )</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Handling RTSP request: %s (%zd bytes)&quot;</span>, request.c_str(), request.size() );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="class_string_token_list.html">StringTokenList</a> lines( request, <span class="stringliteral">&quot;\r\n&quot;</span> );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> ( lines.size() &lt;= 0 )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        Error( <span class="stringliteral">&quot;Unable to split request &#39;%s&#39; into tokens&quot;</span>, request.c_str() );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="class_string_token_list.html">StringTokenList</a> parts( lines[0], <span class="stringliteral">&quot; &quot;</span> );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> ( parts.size() != 3 )</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        Error( <span class="stringliteral">&quot;Unable to split request part &#39;%s&#39; into tokens&quot;</span>, lines[0].c_str() );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    std::string requestType = parts[0];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got request &#39;%s&#39;&quot;</span>, requestType.c_str() );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::string requestUrl = parts[1];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got requestUrl &#39;%s&#39;&quot;</span>, requestUrl.c_str() );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::string requestVer = parts[2];</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got requestVer &#39;%s&#39;&quot;</span>, requestVer.c_str() );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> ( requestVer != <span class="stringliteral">&quot;RTSP/1.0&quot;</span> )</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        Error( <span class="stringliteral">&quot;Unexpected RTSP version &#39;%s&#39;&quot;</span>, requestVer.c_str() );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">// Extract headers from request</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    Headers requestHeaders;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 1; i &lt; lines.size(); i++ )</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="class_string_token_list.html">StringTokenList</a> parts( lines[i], <span class="stringliteral">&quot;: &quot;</span> );</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> ( parts.size() != 2 )</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            Error( <span class="stringliteral">&quot;Unable to split request header &#39;%s&#39; into tokens&quot;</span>, lines[i].c_str() );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        Debug( 4, <span class="stringliteral">&quot;Got header &#39;%s&#39;, value &#39;%s&#39;&quot;</span>, parts[0].c_str(), parts[1].c_str() );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        requestHeaders.insert( Headers::value_type( parts[0], parts[1] ) );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> ( requestHeaders.find(<span class="stringliteral">&quot;CSeq&quot;</span>) == requestHeaders.end() )</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        Error( <span class="stringliteral">&quot;No CSeq header found&quot;</span> );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    Debug( 4, <span class="stringliteral">&quot;Got sequence number %s&quot;</span>, requestHeaders[<span class="stringliteral">&quot;CSeq&quot;</span>].c_str() );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    uint32_t session = 0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span> ( requestHeaders.find(<span class="stringliteral">&quot;Session&quot;</span>) != requestHeaders.end() )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        Debug( 4, <span class="stringliteral">&quot;Got session header, &#39;%s&#39;, passing to session&quot;</span>, requestHeaders[<span class="stringliteral">&quot;Session&quot;</span>].c_str() );</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        session = strtol( requestHeaders[<span class="stringliteral">&quot;Session&quot;</span>].c_str(), NULL, 16 );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Headers responseHeaders;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;CSeq&quot;</span>, requestHeaders[<span class="stringliteral">&quot;CSeq&quot;</span>] ) );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;OPTIONS&quot;</span> )</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Public&quot;</span>, <span class="stringliteral">&quot;DESCRIBE, SETUP, PLAY, GET_PARAMETER, TEARDOWN&quot;</span> ) );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;DESCRIBE&quot;</span> )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="class_feed_provider.html">FeedProvider</a> *provider = <a class="code" href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">validateRequestUrl</a>( requestUrl );</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> ( !provider )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 404, <span class="stringliteral">&quot;Not Found&quot;</span> );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_video_provider.html">VideoProvider</a> *videoProvider = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="class_video_provider.html">VideoProvider</a> *<span class="keyword">&gt;</span>(provider);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">int</span> codec = AV_CODEC_ID_MPEG4;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">int</span> width = videoProvider-&gt;<a class="code" href="class_video_provider.html#a025b965717f76ea6abc267626238d493">width</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">int</span> height = videoProvider-&gt;<a class="code" href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">height</a>();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="class_frame_rate.html">FrameRate</a> frameRate = 15;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">//FrameRate frameRate = videoProvider-&gt;frameRate();</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordtype">int</span> bitRate = 90000;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">int</span> quality = 70;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        std::string sdpFormatString =</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="stringliteral">&quot;v=0\r\n&quot;</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="stringliteral">&quot;o=- %jd %jd IN IP4 %s\r\n&quot;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="stringliteral">&quot;s=ZoneMinder Stream\r\n&quot;</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="stringliteral">&quot;i=Media Streamers\r\n&quot;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="stringliteral">&quot;c=IN IP4 0.0.0.0\r\n&quot;</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="stringliteral">&quot;t=0 0\r\n&quot;</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="stringliteral">&quot;a=control:*\r\n&quot;</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="stringliteral">&quot;a=range:npt=0.000000-\r\n&quot;</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        uint64_t now64 = time64();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">char</span> hostname[HOST_NAME_MAX] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">if</span> ( gethostname( hostname, <span class="keyword">sizeof</span>(hostname) ) &lt; 0 )</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            Fatal( <span class="stringliteral">&quot;Can&#39;t gethostname: %s&quot;</span>, strerror(errno) );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        std::string sdpString = stringtf( sdpFormatString, now64, now64, hostname );</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> ( codec == AV_CODEC_ID_H264 )</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">if</span> ( provider-&gt;<a class="code" href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">cl4ss</a>() == <span class="stringliteral">&quot;RawH264Input&quot;</span> )</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                std::string encoderKey = <a class="code" href="class_h264_relay.html#aac70489ab66177821fa523ed1ca62d64">H264Relay::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    <a class="code" href="class_h264_relay.html">H264Relay</a> *h264Relay = NULL;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    mEncoder = h264Relay = <span class="keyword">new</span> <a class="code" href="class_h264_relay.html">H264Relay</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    h264Relay-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                std::string encoderKey = <a class="code" href="class_h264_encoder.html#aba7652f830d3d3aeddbdb4765d2340c9">H264Encoder::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    <a class="code" href="class_h264_encoder.html">H264Encoder</a> *h264Encoder = NULL;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    mEncoder = h264Encoder = <span class="keyword">new</span> <a class="code" href="class_h264_encoder.html">H264Encoder</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    h264Encoder-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( codec == AV_CODEC_ID_MPEG4 )</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            std::string encoderKey = <a class="code" href="class_mpeg_encoder.html#a5d935758db67f5639cecb19d85487354">MpegEncoder::getPoolKey</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> ( !(mEncoder = <a class="code" href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a>( encoderKey )) )</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <a class="code" href="class_mpeg_encoder.html">MpegEncoder</a> *mpegEncoder = NULL;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                mEncoder = mpegEncoder = <span class="keyword">new</span> <a class="code" href="class_mpeg_encoder.html">MpegEncoder</a>( provider-&gt;<a class="code" href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">identity</a>(), width, height, frameRate, bitRate, quality );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                mEncoder-&gt;<a class="code" href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">registerProvider</a>( *provider );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <a class="code" href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a>( mEncoder );</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                mpegEncoder-&gt;<a class="code" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a>();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            sdpString += mEncoder-&gt;<a class="code" href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">sdpString</a>( 1 ); <span class="comment">// XXX - Should be variable</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            responseHeaders.insert( Headers::value_type( <span class="stringliteral">&quot;Content-length&quot;</span>, stringtf( <span class="stringliteral">&quot;%zd&quot;</span>, sdpString.length() ) ) );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, sdpString ) );</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;SETUP&quot;</span> )</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="comment">// These commands are handled by RTSP session so pass them on and send any required responses</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="class_rtsp_session.html">RtspSession</a> *rtspSession = 0;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">if</span> ( session )</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a7ac3be3b899a058468a5874226664e81">newSession</a>( <span class="keyword">this</span>, mEncoder );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a35a21b686b698046766230b2a976af85">getSession</a>( session );</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">if</span> ( rtspSession-&gt;<a class="code" href="class_rtsp_session.html#a9a7277bf63281d6e4bd5c1893f776978">recvRequest</a>( requestType, requestUrl, requestHeaders, responseHeaders ) )</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;PLAY&quot;</span> || requestType == <span class="stringliteral">&quot;GET_PARAMETER&quot;</span> || requestType == <span class="stringliteral">&quot;TEARDOWN&quot;</span> )</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// These commands are handled by RTSP session so pass them on and send any required responses</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="class_rtsp_session.html">RtspSession</a> *rtspSession = 0;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span> ( session )</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a35a21b686b698046766230b2a976af85">getSession</a>( session );</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">if</span> ( rtspSession &amp;&amp; rtspSession-&gt;<a class="code" href="class_rtsp_session.html#a9a7277bf63281d6e4bd5c1893f776978">recvRequest</a>( requestType, requestUrl, requestHeaders, responseHeaders ) )</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 454, <span class="stringliteral">&quot;Session Not Found&quot;</span> ) );</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    Error( <span class="stringliteral">&quot;Unrecognised RTSP command &#39;%s&#39;&quot;</span>, requestType.c_str() );</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 405, <span class="stringliteral">&quot;Method not implemented&quot;</span> ) );</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">// Receive, assemble and handle RTSP commands that are not related to established streams</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">  292</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">RtspConnection::recvRequest</a>( <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer )</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;{</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Received RTSP message, %zd bytes&quot;</span>, buffer.size() );</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">while</span>( !buffer.empty() )</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">if</span> ( buffer[0] == <span class="charliteral">&#39;$&#39;</span> || (!<a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.empty() &amp;&amp; <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>[0] == <span class="charliteral">&#39;$&#39;</span>) )</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">// Interleaved request</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> )</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                buffer = <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>+buffer;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.clear();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Merging with saved request, total bytes: %zd&quot;</span>, buffer.size() );</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            Debug( 2, <span class="stringliteral">&quot;Got RTP interleaved request&quot;</span> );</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">if</span> ( buffer.size() &lt;= 4 )</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request is incomplete, storing&quot;</span> );</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = buffer;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="comment">//int channel= buffer[1];</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            uint16_t rawLength;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            memcpy( &amp;rawLength, &amp;buffer[2], <span class="keyword">sizeof</span>(rawLength) );</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            uint16_t length = be16toh( rawLength );</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">if</span> ( (length+2) &gt; buffer.size() )</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request is incomplete, storing&quot;</span> );</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    Hexdump( 2, buffer.data(), buffer.size() );</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = buffer;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <a class="code" href="class_buffer.html">ByteBuffer</a> request = buffer.range( 0, 4+length );</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            buffer.consume( 4+length );</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">handleRequest</a>( request ) )</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            Debug( 2, <span class="stringliteral">&quot;Got RTSP request&quot;</span> );</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            std::string request( reinterpret_cast&lt;const char *&gt;(buffer.data()), buffer.size() );</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.size() &gt; 0 )</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="comment">//request = mRequest+request;</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                request = std::string( reinterpret_cast&lt;const char *&gt;(<a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.data()), <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.size() )+request;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.clear();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Merging with saved request, total: %s&quot;</span>, request.c_str() );</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> *endOfMessage = strstr( request.c_str(), <span class="stringliteral">&quot;\r\n\r\n&quot;</span> );</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">if</span> ( !endOfMessage )</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request &#39;%s&#39; is incomplete, storing&quot;</span>, request.c_str() );</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = <a class="code" href="class_buffer.html">ByteBuffer</a>( reinterpret_cast&lt;const unsigned char *&gt;(request.data()), request.size() );</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            }</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keywordtype">size_t</span> messageLen = endOfMessage-request.c_str();</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            request.erase( messageLen );</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            buffer.consume( messageLen+4 );</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">handleRequest</a>( request ) )</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">// Transmit an RTSP response message over an established connection</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">  374</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">RtspConnection::sendResponse</a>( Headers &amp;headers, std::string payload, <span class="keywordtype">int</span> statusCode, std::string statusText )</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;{</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    std::string response;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    response = stringtf( <span class="stringliteral">&quot;RTSP/1.0 %d %s\r\n&quot;</span>, statusCode, statusText.c_str() );</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">//headers.insert( Headers::value_type( &quot;Server&quot;, &quot;ZoneMinder Streamer V2.0&quot; ) );</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    headers.insert( Headers::value_type( <span class="stringliteral">&quot;Date&quot;</span>, datetimeInet() ) );</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">for</span> ( Headers::iterator iter = headers.begin(); iter != headers.end(); iter++ )</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        response += iter-&gt;first+<span class="stringliteral">&quot;: &quot;</span>+iter-&gt;second+<span class="stringliteral">&quot;\r\n&quot;</span>;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    response += <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">if</span> ( payload.size() )</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        response += payload;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    }</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Sending RTSP response: %s&quot;</span>, response.c_str() );</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_connection.html#a5185934b0343ff8039ce3f8a7c3a8930">mSocket</a>-&gt;send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">// Not currently used. If RTSP over HTTP ever required then will need to do something like this</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">if</span> ( mMethod == RTP_OZ_RTSP_HTTP )</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        response = base64Encode( response );</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        Debug( 2, <span class="stringliteral">&quot;Sending encoded RTSP response: %s&quot;</span>, response.c_str() );</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">if</span> ( mRtspSocket2.send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> ( mRtspSocket.send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        {</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;}</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">  433</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">RtspConnection::sendInterleavedPacket</a>( uint8_t channel, <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;packet )</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> header[4] = <span class="stringliteral">&quot;$&quot;</span>;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    header[1] = channel;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    uint16_t length = htobe16(packet.size());</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    memcpy( &amp;header[2], &amp;length, <span class="keyword">sizeof</span>(length) );</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <span class="keyword">struct </span>iovec iovecs[2];</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    iovecs[0].iov_base = header;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    iovecs[0].iov_len = <span class="keyword">sizeof</span>(header);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    iovecs[1].iov_base = packet.data();</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    iovecs[1].iov_len = packet.size();</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_connection.html#a5185934b0343ff8039ce3f8a7c3a8930">mSocket</a>-&gt;writeV( iovecs, <span class="keyword">sizeof</span>(iovecs)/<span class="keyword">sizeof</span>(*iovecs) ) != (<span class="keyword">sizeof</span>(header)+packet.size()) )</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        Error( <span class="stringliteral">&quot;Unable to send interleaved packet of %zd bytes on channel %d: %s&quot;</span>, <span class="keyword">sizeof</span>(header)+packet.size(), channel, strerror(errno) );</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a7ac3be3b899a058468a5874226664e81">newSession</a>( <span class="keyword">this</span>, mEncoder );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">if</span> ( rtspSession-&gt;<a class="code" href="class_rtsp_session.html#a9a7277bf63281d6e4bd5c1893f776978">recvRequest</a>( requestType, requestUrl, requestHeaders, responseHeaders ) )</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( requestType == <span class="stringliteral">&quot;PLAY&quot;</span> || requestType == <span class="stringliteral">&quot;GET_PARAMETER&quot;</span> || requestType == <span class="stringliteral">&quot;TEARDOWN&quot;</span> )</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// These commands are handled by RTSP session so pass them on and send any required responses</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="class_rtsp_session.html">RtspSession</a> *rtspSession = 0;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> ( session )</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            rtspSession = mRtspController-&gt;<a class="code" href="class_rtsp_controller.html#a35a21b686b698046766230b2a976af85">getSession</a>( session );</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">if</span> ( rtspSession &amp;&amp; rtspSession-&gt;<a class="code" href="class_rtsp_session.html#a9a7277bf63281d6e4bd5c1893f776978">recvRequest</a>( requestType, requestUrl, requestHeaders, responseHeaders ) )</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders ) );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 454, <span class="stringliteral">&quot;Session Not Found&quot;</span> ) );</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    Error( <span class="stringliteral">&quot;Unrecognised RTSP command &#39;%s&#39;&quot;</span>, requestType.c_str() );</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span>( <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">sendResponse</a>( responseHeaders, <span class="stringliteral">&quot;&quot;</span>, 405, <span class="stringliteral">&quot;Method not implemented&quot;</span> ) );</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="comment">// Receive, assemble and handle RTSP commands that are not related to established streams</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">  296</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">RtspConnection::recvRequest</a>( <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;buffer )</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Received RTSP message, %zd bytes&quot;</span>, buffer.size() );</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">while</span>( !buffer.empty() )</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">if</span> ( buffer[0] == <span class="charliteral">&#39;$&#39;</span> || (!<a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.empty() &amp;&amp; <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>[0] == <span class="charliteral">&#39;$&#39;</span>) )</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// Interleaved request</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> )</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                buffer = <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>+buffer;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.clear();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Merging with saved request, total bytes: %zd&quot;</span>, buffer.size() );</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            Debug( 2, <span class="stringliteral">&quot;Got RTP interleaved request&quot;</span> );</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">if</span> ( buffer.size() &lt;= 4 )</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request is incomplete, storing&quot;</span> );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = buffer;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="comment">//int channel= buffer[1];</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            uint16_t rawLength;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            memcpy( &amp;rawLength, &amp;buffer[2], <span class="keyword">sizeof</span>(rawLength) );</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            uint16_t length = be16toh( rawLength );</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">if</span> ( (length+2) &gt; buffer.size() )</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request is incomplete, storing&quot;</span> );</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    Hexdump( 2, buffer.data(), buffer.size() );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = buffer;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="class_buffer.html">ByteBuffer</a> request = buffer.range( 0, 4+length );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            buffer.consume( 4+length );</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">handleRequest</a>( request ) )</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            Debug( 2, <span class="stringliteral">&quot;Got RTSP request&quot;</span> );</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            std::string request( reinterpret_cast&lt;const char *&gt;(buffer.data()), buffer.size() );</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.size() &gt; 0 )</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="comment">//request = mRequest+request;</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                request = std::string( reinterpret_cast&lt;const char *&gt;(<a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.data()), <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.size() )+request;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a>.clear();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Merging with saved request, total: %s&quot;</span>, request.c_str() );</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">char</span> *endOfMessage = strstr( request.c_str(), <span class="stringliteral">&quot;\r\n\r\n&quot;</span> );</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">if</span> ( !endOfMessage )</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                Debug( 6, <span class="stringliteral">&quot;Request &#39;%s&#39; is incomplete, storing&quot;</span>, request.c_str() );</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <a class="code" href="class_binary_connection.html#a6741e631509e52efb764672125f61152">mRequest</a> = <a class="code" href="class_buffer.html">ByteBuffer</a>( reinterpret_cast&lt;const unsigned char *&gt;(request.data()), request.size() );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordtype">size_t</span> messageLen = endOfMessage-request.c_str();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            request.erase( messageLen );</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            buffer.consume( messageLen+4 );</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keywordflow">if</span> ( !<a class="code" href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">handleRequest</a>( request ) )</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">// Transmit an RTSP response message over an established connection</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">  378</a></span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">RtspConnection::sendResponse</a>( Headers &amp;headers, std::string payload, <span class="keywordtype">int</span> statusCode, std::string statusText )</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    std::string response;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    response = stringtf( <span class="stringliteral">&quot;RTSP/1.0 %d %s\r\n&quot;</span>, statusCode, statusText.c_str() );</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="comment">//headers.insert( Headers::value_type( &quot;Server&quot;, &quot;ZoneMinder Streamer V2.0&quot; ) );</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    headers.insert( Headers::value_type( <span class="stringliteral">&quot;Date&quot;</span>, datetimeInet() ) );</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">for</span> ( Headers::iterator iter = headers.begin(); iter != headers.end(); iter++ )</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        response += iter-&gt;first+<span class="stringliteral">&quot;: &quot;</span>+iter-&gt;second+<span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    response += <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordflow">if</span> ( payload.size() )</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        response += payload;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    Debug( 2, <span class="stringliteral">&quot;Sending RTSP response: %s&quot;</span>, response.c_str() );</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_connection.html#a5185934b0343ff8039ce3f8a7c3a8930">mSocket</a>-&gt;send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="comment">// Not currently used. If RTSP over HTTP ever required then will need to do something like this</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">if</span> ( mMethod == RTP_OZ_RTSP_HTTP )</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        response = base64Encode( response );</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        Debug( 2, <span class="stringliteral">&quot;Sending encoded RTSP response: %s&quot;</span>, response.c_str() );</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">if</span> ( mRtspSocket2.send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span> ( mRtspSocket.send( response.c_str(), response.size() ) != (<span class="keywordtype">int</span>)response.length() )</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            Error( <span class="stringliteral">&quot;Unable to send response &#39;%s&#39;: %s&quot;</span>, response.c_str(), strerror(errno) );</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">  437</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">RtspConnection::sendInterleavedPacket</a>( uint8_t channel, <span class="keyword">const</span> <a class="code" href="class_buffer.html">ByteBuffer</a> &amp;packet )</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;{</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> header[4] = <span class="stringliteral">&quot;$&quot;</span>;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    header[1] = channel;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    uint16_t length = htobe16(packet.size());</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    memcpy( &amp;header[2], &amp;length, <span class="keyword">sizeof</span>(length) );</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keyword">struct </span>iovec iovecs[2];</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    iovecs[0].iov_base = header;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    iovecs[0].iov_len = <span class="keyword">sizeof</span>(header);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    iovecs[1].iov_base = packet.data();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    iovecs[1].iov_len = packet.size();</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="class_connection.html#a5185934b0343ff8039ce3f8a7c3a8930">mSocket</a>-&gt;writeV( iovecs, <span class="keyword">sizeof</span>(iovecs)/<span class="keyword">sizeof</span>(*iovecs) ) != (<span class="keyword">sizeof</span>(header)+packet.size()) )</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        Error( <span class="stringliteral">&quot;Unable to send interleaved packet of %zd bytes on channel %d: %s&quot;</span>, <span class="keyword">sizeof</span>(header)+packet.size(), channel, strerror(errno) );</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keywordflow">return</span>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keywordflow">return</span>( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
 <div class="ttc" id="class_connection_html_a01e20ea1ebeb7ebcd96aaf6188758b29"><div class="ttname"><a href="class_connection.html#a01e20ea1ebeb7ebcd96aaf6188758b29">Connection::mController</a></div><div class="ttdeci">Controller * mController</div><div class="ttdoc">Pointer to controller that generated this connection. </div><div class="ttdef"><b>Definition:</b> <a href="oz_connection_8h_source.html#l00024">ozConnection.h:24</a></div></div>
 <div class="ttc" id="class_video_provider_html_a025b965717f76ea6abc267626238d493"><div class="ttname"><a href="class_video_provider.html#a025b965717f76ea6abc267626238d493">VideoProvider::width</a></div><div class="ttdeci">virtual uint16_t width() const =0</div><div class="ttdoc">Return the width (in pixels) of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_video_provider_html_a4594d6b84217ad16434bb3ff382a6022"><div class="ttname"><a href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">VideoProvider::height</a></div><div class="ttdeci">virtual uint16_t height() const =0</div><div class="ttdoc">Return the height (in pixels) of video frames supplied by this provider. </div></div>
@@ -517,32 +521,32 @@ $(document).ready(function(){initNavTree('oz_rtsp_connection_8cpp_source.html','
 <div class="ttc" id="class_h264_relay_html_aac70489ab66177821fa523ed1ca62d64"><div class="ttname"><a href="class_h264_relay.html#aac70489ab66177821fa523ed1ca62d64">H264Relay::getPoolKey</a></div><div class="ttdeci">static std::string getPoolKey(const std::string &amp;name, uint16_t width, uint16_t height, FrameRate frameRate, uint32_t bitRate, uint8_t quality)</div><div class="ttdef"><b>Definition:</b> <a href="oz_h264_relay_8cpp_source.html#l00021">ozH264Relay.cpp:21</a></div></div>
 <div class="ttc" id="class_mpeg_encoder_html_a5d935758db67f5639cecb19d85487354"><div class="ttname"><a href="class_mpeg_encoder.html#a5d935758db67f5639cecb19d85487354">MpegEncoder::getPoolKey</a></div><div class="ttdeci">static std::string getPoolKey(const std::string &amp;name, uint16_t width, uint16_t height, FrameRate frameRate, uint32_t bitRate, uint8_t quality)</div><div class="ttdef"><b>Definition:</b> <a href="oz_mpeg_encoder_8cpp_source.html#l00020">ozMpegEncoder.cpp:20</a></div></div>
 <div class="ttc" id="class_rtsp_controller_html"><div class="ttname"><a href="class_rtsp_controller.html">RtspController</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_controller_8h_source.html#l00018">ozRtspController.h:18</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_a7d409c0a11948b652c97302f0c09140b"><div class="ttname"><a href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a></div><div class="ttdeci">bool handleRequest(const ByteBuffer &amp;buffer)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00087">ozRtspConnection.cpp:87</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_ab2cde45424b4b147a6276bb054a6cf6f"><div class="ttname"><a href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">RtspConnection::validateRequestUrl</a></div><div class="ttdeci">FeedProvider * validateRequestUrl(const std::string &amp;url, std::string *host=NULL, std::string *app=NULL, std::string *stream=NULL, int *track=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00042">ozRtspConnection.cpp:42</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_a7d409c0a11948b652c97302f0c09140b"><div class="ttname"><a href="class_rtsp_connection.html#a7d409c0a11948b652c97302f0c09140b">RtspConnection::handleRequest</a></div><div class="ttdeci">bool handleRequest(const ByteBuffer &amp;buffer)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00091">ozRtspConnection.cpp:91</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_ab2cde45424b4b147a6276bb054a6cf6f"><div class="ttname"><a href="class_rtsp_connection.html#ab2cde45424b4b147a6276bb054a6cf6f">RtspConnection::validateRequestUrl</a></div><div class="ttdeci">FeedProvider * validateRequestUrl(const std::string &amp;url, std::string *host=NULL, std::string *app=NULL, std::string *stream=NULL, int *track=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00046">ozRtspConnection.cpp:46</a></div></div>
 <div class="ttc" id="class_rtsp_session_html_a9a7277bf63281d6e4bd5c1893f776978"><div class="ttname"><a href="class_rtsp_session.html#a9a7277bf63281d6e4bd5c1893f776978">RtspSession::recvRequest</a></div><div class="ttdeci">bool recvRequest(const std::string &amp;requestType, const std::string &amp;requestUrl, const Connection::Headers &amp;requestHeaders, Connection::Headers &amp;responseHeaders)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_session_8cpp_source.html#l00046">ozRtspSession.cpp:46</a></div></div>
 <div class="ttc" id="class_rtsp_controller_html_a35a21b686b698046766230b2a976af85"><div class="ttname"><a href="class_rtsp_controller.html#a35a21b686b698046766230b2a976af85">RtspController::getSession</a></div><div class="ttdeci">RtspSession * getSession(uint32_t session)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_controller_8cpp_source.html#l00050">ozRtspController.cpp:50</a></div></div>
 <div class="ttc" id="class_frame_rate_html"><div class="ttname"><a href="class_frame_rate.html">FrameRate</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_ffmpeg_8h_source.html#l00063">ozFfmpeg.h:63</a></div></div>
 <div class="ttc" id="class_encoder_html_aa85c291345bdc0d71dbf096491ac0b04"><div class="ttname"><a href="class_encoder.html#aa85c291345bdc0d71dbf096491ac0b04">Encoder::poolEncoder</a></div><div class="ttdeci">static bool poolEncoder(Encoder *encoder)</div><div class="ttdoc">Add the supplied encoder to the encoder pool. </div><div class="ttdef"><b>Definition:</b> <a href="oz_encoder_8cpp_source.html#l00087">ozEncoder.cpp:87</a></div></div>
 <div class="ttc" id="class_encoder_html_aaf8c767c8d75c360c985a1468b603ddb"><div class="ttname"><a href="class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb">Encoder::getPooledEncoder</a></div><div class="ttdeci">static Encoder * getPooledEncoder(const std::string &amp;key)</div><div class="ttdef"><b>Definition:</b> <a href="oz_encoder_8cpp_source.html#l00071">ozEncoder.cpp:71</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_aa3b7807cf3e5e112ee2246729caec6b3"><div class="ttname"><a href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">RtspConnection::sendResponse</a></div><div class="ttdeci">bool sendResponse(Headers &amp;headers, std::string payload=&quot;&quot;, int statusCode=200, std::string statusText=&quot;OK&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00374">ozRtspConnection.cpp:374</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_a490a0d74d12ab1fbf24af340c2cb933e"><div class="ttname"><a href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">RtspConnection::recvRequest</a></div><div class="ttdeci">bool recvRequest(ByteBuffer &amp;request)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00292">ozRtspConnection.cpp:292</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_aa3b7807cf3e5e112ee2246729caec6b3"><div class="ttname"><a href="class_rtsp_connection.html#aa3b7807cf3e5e112ee2246729caec6b3">RtspConnection::sendResponse</a></div><div class="ttdeci">bool sendResponse(Headers &amp;headers, std::string payload=&quot;&quot;, int statusCode=200, std::string statusText=&quot;OK&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00378">ozRtspConnection.cpp:378</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_a490a0d74d12ab1fbf24af340c2cb933e"><div class="ttname"><a href="class_rtsp_connection.html#a490a0d74d12ab1fbf24af340c2cb933e">RtspConnection::recvRequest</a></div><div class="ttdeci">bool recvRequest(ByteBuffer &amp;request)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00296">ozRtspConnection.cpp:296</a></div></div>
 <div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_controller_8h_source.html#l00016">ozController.h:16</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_ae13cc1cb2fec3e8cad54c0d66ecbcb4d"><div class="ttname"><a href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">RtspConnection::RtspConnection</a></div><div class="ttdeci">RtspConnection(Controller *controller, TcpInetSocket *socket)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00024">ozRtspConnection.cpp:24</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_ae13cc1cb2fec3e8cad54c0d66ecbcb4d"><div class="ttname"><a href="class_rtsp_connection.html#ae13cc1cb2fec3e8cad54c0d66ecbcb4d">RtspConnection::RtspConnection</a></div><div class="ttdeci">RtspConnection(Controller *controller, TcpInetSocket *socket)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00028">ozRtspConnection.cpp:28</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a5eac06a868f4dc353d34589207ab99f6"><div class="ttname"><a href="class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6">FeedConsumer::registerProvider</a></div><div class="ttdeci">virtual bool registerProvider(FeedProvider &amp;provider, const FeedLink &amp;link=gQueuedFeedLink)</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00038">ozFeedConsumer.cpp:38</a></div></div>
-<div class="ttc" id="class_thread_html_a1f53ee62bd30a7924186ef26150ce262"><div class="ttname"><a href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">Thread::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Start the thread and invoke the run method, called by invoker. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8cpp_source.html#l00303">libgenThread.cpp:303</a></div></div>
+<div class="ttc" id="class_thread_html_a1f53ee62bd30a7924186ef26150ce262"><div class="ttname"><a href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">Thread::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Start the thread and invoke the run method, called by invoker. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_thread_8cpp_source.html#l00336">libgenThread.cpp:336</a></div></div>
 <div class="ttc" id="class_binary_connection_html_a6741e631509e52efb764672125f61152"><div class="ttname"><a href="class_binary_connection.html#a6741e631509e52efb764672125f61152">BinaryConnection::mRequest</a></div><div class="ttdeci">ByteBuffer mRequest</div><div class="ttdoc">Only used when partial request are received, saves previous content. </div><div class="ttdef"><b>Definition:</b> <a href="oz_connection_8h_source.html#l00093">ozConnection.h:93</a></div></div>
 <div class="ttc" id="class_controller_html_a8023c903e8826ff80a1815a4ed2fcadb"><div class="ttname"><a href="class_controller.html#a8023c903e8826ff80a1815a4ed2fcadb">Controller::verifyStreamName</a></div><div class="ttdeci">bool verifyStreamName(const std::string &amp;streamName)</div><div class="ttdef"><b>Definition:</b> <a href="oz_controller_8cpp_source.html#l00060">ozController.cpp:60</a></div></div>
 <div class="ttc" id="class_h264_relay_html"><div class="ttname"><a href="class_h264_relay.html">H264Relay</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_h264_relay_8h_source.html#l00019">ozH264Relay.h:19</a></div></div>
 <div class="ttc" id="class_encoder_html_a35555a54f3ebe399afd0a8e21580b4a6"><div class="ttname"><a href="class_encoder.html#a35555a54f3ebe399afd0a8e21580b4a6">Encoder::sdpString</a></div><div class="ttdeci">virtual const std::string &amp; sdpString(int trackId) const </div><div class="ttdoc">< Virtual as some encoders may need to generate it first </div><div class="ttdef"><b>Definition:</b> <a href="oz_encoder_8h_source.html#l00051">ozEncoder.h:51</a></div></div>
 <div class="ttc" id="class_controller_html_a05fce63816dc0d68201e530ad3101816"><div class="ttname"><a href="class_controller.html#a05fce63816dc0d68201e530ad3101816">Controller::findStream</a></div><div class="ttdeci">FeedProvider * findStream(const std::string &amp;streamName, const std::string &amp;streamSource)</div><div class="ttdef"><b>Definition:</b> <a href="oz_controller_8cpp_source.html#l00077">ozController.cpp:77</a></div></div>
 <div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
-<div class="ttc" id="class_tcp_inet_socket_html"><div class="ttname"><a href="class_tcp_inet_socket.html">TcpInetSocket</a></div><div class="ttdoc">Class representing a TCP internet socket. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_comms_8h_source.html#l00861">libgenComms.h:861</a></div></div>
+<div class="ttc" id="class_tcp_inet_socket_html"><div class="ttname"><a href="class_tcp_inet_socket.html">TcpInetSocket</a></div><div class="ttdoc">Class representing a TCP internet socket. </div><div class="ttdef"><b>Definition:</b> <a href="libgen_comms_8h_source.html#l00862">libgenComms.h:862</a></div></div>
 <div class="ttc" id="class_mpeg_encoder_html"><div class="ttname"><a href="class_mpeg_encoder.html">MpegEncoder</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_mpeg_encoder_8h_source.html#l00020">ozMpegEncoder.h:20</a></div></div>
 <div class="ttc" id="class_feed_base_html_aada1551e2fc238c1435be539ae27588a"><div class="ttname"><a href="class_feed_base.html#aada1551e2fc238c1435be539ae27588a">FeedBase::identity</a></div><div class="ttdeci">const std::string &amp; identity() const </div><div class="ttdoc">Return the identity string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00079">ozFeedBase.h:79</a></div></div>
 <div class="ttc" id="class_h264_encoder_html_aba7652f830d3d3aeddbdb4765d2340c9"><div class="ttname"><a href="class_h264_encoder.html#aba7652f830d3d3aeddbdb4765d2340c9">H264Encoder::getPoolKey</a></div><div class="ttdeci">static std::string getPoolKey(const std::string &amp;name, uint16_t width, uint16_t height, FrameRate frameRate, uint32_t bitRate, uint8_t quality)</div><div class="ttdef"><b>Definition:</b> <a href="oz_h264_encoder_8cpp_source.html#l00021">ozH264Encoder.cpp:21</a></div></div>
 <div class="ttc" id="class_feed_base_html_aa59409b5f2ed4f9e5357590c101d860d"><div class="ttname"><a href="class_feed_base.html#aa59409b5f2ed4f9e5357590c101d860d">FeedBase::cl4ss</a></div><div class="ttdeci">const std::string &amp; cl4ss() const </div><div class="ttdoc">Return the class string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00075">ozFeedBase.h:75</a></div></div>
 <div class="ttc" id="class_connection_html_a5185934b0343ff8039ce3f8a7c3a8930"><div class="ttname"><a href="class_connection.html#a5185934b0343ff8039ce3f8a7c3a8930">Connection::mSocket</a></div><div class="ttdeci">TcpInetSocket * mSocket</div><div class="ttdoc">Pointer to the socket used for this connection. </div><div class="ttdef"><b>Definition:</b> <a href="oz_connection_8h_source.html#l00025">ozConnection.h:25</a></div></div>
-<div class="ttc" id="class_rtsp_connection_html_a875a0d2807a5b53c3931e1a3420e4360"><div class="ttname"><a href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">RtspConnection::sendInterleavedPacket</a></div><div class="ttdeci">bool sendInterleavedPacket(uint8_t channel, const ByteBuffer &amp;packet)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00433">ozRtspConnection.cpp:433</a></div></div>
+<div class="ttc" id="class_rtsp_connection_html_a875a0d2807a5b53c3931e1a3420e4360"><div class="ttname"><a href="class_rtsp_connection.html#a875a0d2807a5b53c3931e1a3420e4360">RtspConnection::sendInterleavedPacket</a></div><div class="ttdeci">bool sendInterleavedPacket(uint8_t channel, const ByteBuffer &amp;packet)</div><div class="ttdef"><b>Definition:</b> <a href="oz_rtsp_connection_8cpp_source.html#l00437">ozRtspConnection.cpp:437</a></div></div>
 <div class="ttc" id="class_binary_connection_html"><div class="ttname"><a href="class_binary_connection.html">BinaryConnection</a></div><div class="ttdoc">Class representing binary protocol, e.g. RTMP. </div><div class="ttdef"><b>Definition:</b> <a href="oz_connection_8h_source.html#l00090">ozConnection.h:90</a></div></div>
 <div class="ttc" id="class_video_provider_html"><div class="ttname"><a href="class_video_provider.html">VideoProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00154">ozFeedProvider.h:154</a></div></div>
 <div class="ttc" id="class_feed_provider_html"><div class="ttname"><a href="class_feed_provider.html">FeedProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8h_source.html#l00021">ozFeedProvider.h:21</a></div></div>
@@ -552,7 +556,7 @@ $(document).ready(function(){initNavTree('oz_rtsp_connection_8cpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_79690749eba542503bb1a9a3dbb495e1.html">protocols</a></li><li class="navelem"><b>ozRtspConnection.cpp</b></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:56 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:31 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
