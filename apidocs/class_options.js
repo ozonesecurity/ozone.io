@@ -8,15 +8,22 @@ var class_options =
     [ "add", "class_options.html#ac6811077f9b36a08645cd5ec42b950d1", null ],
     [ "clear", "class_options.html#a2317d8a401de43037d49498b1f676e64", null ],
     [ "dump", "class_options.html#ad96cd822ed7934d75e9c05cdc7630b32", null ],
+    [ "exists", "class_options.html#a3518c616f714768e43d09ca1dab43927", null ],
     [ "extract", "class_options.html#af885b2b72b35a2f81acef47cbfb2b19a", null ],
     [ "extract", "class_options.html#acfbe5808defe1d118dcb78ad88ac500f", null ],
     [ "get", "class_options.html#af5a1671f5eb23d2c020607022c8f7f40", null ],
     [ "get", "class_options.html#a83c0252a1bae13604c7ec8e89d8c8f61", null ],
     [ "get", "class_options.html#a8def74e0500acd9f536dbe4974543b69", null ],
+    [ "jsonDump", "class_options.html#a27ac941f2506cf839de028a484559345", null ],
+    [ "jsonLoad", "class_options.html#a06f980a8b31ee2a9c7833a86bcb4bb9f", null ],
     [ "load", "class_options.html#aa40ef6ce8c58da5d71aed93ba1e291d8", null ],
+    [ "readFile", "class_options.html#a83aa2d35456768037b61d2007f05f81a", null ],
     [ "remove", "class_options.html#a60129f0806c084eeb76c8e46a4f531f9", null ],
     [ "set", "class_options.html#a8c053909deba1a91eabc838ddd63c11a", null ],
     [ "set", "class_options.html#aeec375263c08d234d46fecb5ee43f01a", null ],
     [ "set", "class_options.html#a1cbffacb8eb180cfb9e175c90ed5b8bc", null ],
-    [ "operator<<", "class_options.html#acc7e205320508bbd843d9bcdea6d546a", null ]
+    [ "writeFile", "class_options.html#a7c73fdf6b4a7b65563e00666c8b39ab1", null ],
+    [ "from_json", "class_options.html#ae2be1e2c7af4c9595f81a6c58ca0e3ee", null ],
+    [ "operator<<", "class_options.html#acc7e205320508bbd843d9bcdea6d546a", null ],
+    [ "to_json", "class_options.html#a1e59b34a8b49dc4f7fa816e6083444fd", null ]
 ];

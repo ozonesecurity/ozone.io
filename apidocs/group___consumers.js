@@ -44,7 +44,7 @@ var group___consumers =
       ] ],
       [ "EventRecorder", "class_event_recorder.html#af8cb64074d1534b6ba6ec63d947c718c", null ],
       [ "~EventRecorder", "class_event_recorder.html#a54c194d6913c8d12ba30c76dd4d9d369", null ],
-      [ "processFrame", "class_event_recorder.html#a84a608c8ab801d830856408647e1785e", null ],
+      [ "processFrame", "class_event_recorder.html#a8cd5453589f6e2f31677a18a0790f033", null ],
       [ "run", "class_event_recorder.html#a84137d6f676655852a6c306f9931ae5f", null ],
       [ "mAlarmTime", "class_event_recorder.html#a72baac56d18c13582976ca44397e650c", null ],
       [ "mEventCount", "class_event_recorder.html#a8764536d25ade8dc7a088b5a8b7c27f2", null ],
@@ -71,14 +71,14 @@ var group___consumers =
       [ "MemoryOutput", "class_memory_output.html#ab30a2b2d0527b7aa609ef6118fcd05b3", null ],
       [ "~MemoryOutput", "class_memory_output.html#a4ebdf16997992030ad7934b90277562c", null ],
       [ "run", "class_memory_output.html#ad78a4a552afecace71b15cb3c248d206", null ],
-      [ "storeFrame", "class_memory_output.html#aa2a0a962daba743c700cf2553e8400eb", null ],
+      [ "storeFrame", "class_memory_output.html#a3ffcd1cf8f55eddec1c4fb93fc949cde", null ],
       [ "mImageCount", "class_memory_output.html#a6674314235db9581518cb1fd4ff8a295", null ]
     ] ],
     [ "MemoryOutputV1", "class_memory_output_v1.html", [
       [ "MemoryOutputV1", "class_memory_output_v1.html#aac2f052066c0efc1c28fa061bfd627cb", null ],
       [ "~MemoryOutputV1", "class_memory_output_v1.html#a364cfc5c861412b63b8596843182d504", null ],
       [ "run", "class_memory_output_v1.html#a67b923ac652eebc3eb3ca7a92af4bf71", null ],
-      [ "storeFrame", "class_memory_output_v1.html#a9f3dbf9b280eb09a63cccff2b29f9709", null ],
+      [ "storeFrame", "class_memory_output_v1.html#a2c441b725042ccb0ba93f38ff54ca4c4", null ],
       [ "mImageCount", "class_memory_output_v1.html#ac99ef5ed59c15f41516dad57eaeb8b30", null ]
     ] ],
     [ "MemoryTriggerV1", "class_memory_trigger_v1.html", [
@@ -90,7 +90,7 @@ var group___consumers =
       ] ],
       [ "MemoryTriggerV1", "class_memory_trigger_v1.html#a524503a240349a167fa21356b1f1e54d", null ],
       [ "~MemoryTriggerV1", "class_memory_trigger_v1.html#a123865831072941f46eab54f412e82a1", null ],
-      [ "processFrame", "class_memory_trigger_v1.html#accd332ba1679d2e79c0fbe78caf8c8dd", null ],
+      [ "processFrame", "class_memory_trigger_v1.html#a23351eb4f270548a9cc15108c3c7377e", null ],
       [ "run", "class_memory_trigger_v1.html#a4e8fbae2959719ad520f569948100343", null ],
       [ "mAlarmTime", "class_memory_trigger_v1.html#a31c57dcc8673eb04310a1ca82f4aa5f7", null ],
       [ "mEventCount", "class_memory_trigger_v1.html#a9802908e2d0b2b74af2fd84ae9312d97", null ],
@@ -136,7 +136,7 @@ var group___consumers =
       [ "encodeFrame", "class_video_recorder.html#a0598376bb71a5fa161f9f3180b12060f", null ],
       [ "initEncoder", "class_video_recorder.html#a6897e743ca998f4dbdc031fe4fb6f1a2", null ],
       [ "openVideoFile", "class_video_recorder.html#adb548b0adda15e43c90aa3b86339994b", null ],
-      [ "processFrame", "class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba", null ],
+      [ "processFrame", "class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35", null ],
       [ "run", "class_video_recorder.html#a88391f0c4a0a061551999ae72ed52be9", null ],
       [ "mAlarmTime", "class_video_recorder.html#aec6e97c5db3d074b067af7aadb326819", null ],
       [ "mAudioBuffer", "class_video_recorder.html#a3692cc9f88154bf40b934327661ef615", null ],

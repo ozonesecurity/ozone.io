@@ -12,7 +12,7 @@ var class_feed_consumer =
     [ "hasProvider", "class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5", null ],
     [ "hasProvider", "class_feed_consumer.html#a2ac1d96d15bdc8fb64ad115dbcc15a3f", null ],
     [ "provider", "class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25", null ],
-    [ "queueFrame", "class_feed_consumer.html#a34c94d306a178ab2049498a02ced5fe4", null ],
+    [ "queueFrame", "class_feed_consumer.html#aa2f86bda25f48b6b645f6655d1dde3e6", null ],
     [ "registerProvider", "class_feed_consumer.html#a5eac06a868f4dc353d34589207ab99f6", null ],
     [ "waitForProviders", "class_feed_consumer.html#aed564300bea459da045829eecce52b5c", null ],
     [ "mFrameQueue", "class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a", null ],

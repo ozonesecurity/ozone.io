@@ -1,5 +1,5 @@
 <map id="Image::Image" name="Image::Image">
-<area shape="rect" id="node2" href="$class_image.html#a56104949202cb8c0a404e0abc4892ad6" title="Image::calcBufferSize" alt="" coords="168,5,319,32"/>
+<area shape="rect" id="node2" href="$class_image.html#aab629dc6fb861a90f4108172c344aadb" title="Image::calcBufferSize" alt="" coords="168,5,319,32"/>
 <area shape="rect" id="node3" href="$class_image.html#aa3c908f15e0376b5b1119ce4d9528db4" title="Image::copyYUVP2YUVP" alt="" coords="156,56,331,83"/>
 <area shape="rect" id="node6" href="$class_image.html#a1b6d8500f5720584e9ea67969ad7a557" title="Image::copyYUYV2YUVP" alt="" coords="156,107,331,133"/>
 <area shape="rect" id="node7" href="$class_image.html#aa00ef418b82e560e82560be03b73bb71" title="Image::copyUYVY2RGB" alt="" coords="160,157,327,184"/>

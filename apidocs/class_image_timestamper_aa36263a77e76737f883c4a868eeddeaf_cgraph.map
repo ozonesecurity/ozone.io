@@ -10,7 +10,7 @@
 <area shape="rect" id="node11" href="$class_feed_frame.html#a410433cd0f566b87251790f099d1f984" title="Return the provider of the originating frame. " alt="" coords="243,442,393,469"/>
 <area shape="rect" id="node12" href="$class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a" title="How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. " alt="" coords="259,493,377,519"/>
 <area shape="rect" id="node13" href="$class_image_timestamper.html#a87b0016cf59e9370f3fed0da2207e73e" title="ImageTimestamper::timestamp\lImage" alt="" coords="217,325,419,367"/>
-<area shape="rect" id="node15" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="238,5,398,47"/>
+<area shape="rect" id="node15" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="238,5,398,47"/>
 <area shape="rect" id="node20" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="213,543,423,570"/>
 <area shape="rect" id="node22" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="242,695,394,722"/>
 <area shape="rect" id="node25" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="236,746,400,773"/>

@@ -30,15 +30,15 @@ var group___utilities =
         [ "CRITICAL", "group___utilities.html#gga9707d1c54820c7461bcafa37fcf41995a83b6985e269a17814f8fbf855276239f", null ]
       ] ],
       [ "NotifyFrame", "class_notify_frame.html#ad095a3eb49123ac22e26778602575be5", null ],
-      [ "NotifyFrame", "class_notify_frame.html#a816ebd14aec1ee5cf31c093cee0481d8", null ],
-      [ "NotifyFrame", "class_notify_frame.html#af1e4b8721b54f804b3d0bc9903bb11b0", null ],
+      [ "NotifyFrame", "class_notify_frame.html#a5ec2a2b9c3bde55bdd7dd07544f20e10", null ],
+      [ "NotifyFrame", "class_notify_frame.html#a2259646f6be2ed326738cf698f752536", null ],
       [ "urgency", "class_notify_frame.html#a86b39f87c5c9130c063a508c98f02536", null ],
       [ "mUrgency", "class_notify_frame.html#a33828eae9e9ce3eb3c9d789485243c07", null ]
     ] ],
     [ "DiskIONotification", "class_disk_i_o_notification.html", [
       [ "DiskIONotification", "class_disk_i_o_notification.html#a6a15e6cfbaad88925448c5a111c62745", null ],
-      [ "DiskIONotification", "class_disk_i_o_notification.html#a6ad4d40a231d75e03cce064cefb23d01", null ],
-      [ "DiskIONotification", "class_disk_i_o_notification.html#a3bf615a589accb9d27843150d3b98e36", null ],
+      [ "DiskIONotification", "class_disk_i_o_notification.html#af6c13c9f6d2a2fdaa92e5cd45309acf1", null ],
+      [ "DiskIONotification", "class_disk_i_o_notification.html#a5e5e3f3f3fb634ea3bafc2343e5399c3", null ],
       [ "DiskIONotification", "class_disk_i_o_notification.html#a802d98ee7b5f41d9539aeaccfbd62bde", null ],
       [ "DiskIONotification", "class_disk_i_o_notification.html#af39234167a303107d45e280b6ecd9361", null ],
       [ "detail", "class_disk_i_o_notification.html#a3502f54077d409084f670cfd60d49f20", null ],
@@ -79,8 +79,8 @@ var group___utilities =
     ] ],
     [ "EventNotification", "class_event_notification.html", [
       [ "EventNotification", "class_event_notification.html#acccea36cc6c52480b278c8adc469b286", null ],
-      [ "EventNotification", "class_event_notification.html#a189ea4b5a622a7062713ff9127589b4a", null ],
-      [ "EventNotification", "class_event_notification.html#ab84cd7e7ed40017321c4331f911c0c2b", null ],
+      [ "EventNotification", "class_event_notification.html#ab6ab138ccf3d4e51a6f53337b4537600", null ],
+      [ "EventNotification", "class_event_notification.html#a6477ae0dcce68085c6b5739a22da6ed9", null ],
       [ "EventNotification", "class_event_notification.html#a19a8b5db3efc8b38e76574348acb5159", null ],
       [ "detail", "class_event_notification.html#a041391c13d8258d1dcb51fee53de6ca2", null ],
       [ "mDetail", "class_event_notification.html#ad03024c5f8698c9db748f940d9e62609", null ]

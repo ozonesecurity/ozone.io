@@ -215,7 +215,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">//Info( &quot;%d x %d = %d&quot;, num_rows(img), num_columns(img), 3*num_rows(img)*num_columns(img) );</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        dlib::save_png( img, <span class="stringliteral">&quot;/transfer/image.png&quot;</span> );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//dlib::save_png( img, &quot;/transfer/image.png&quot; );</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// Don&#39;t really need to do this if nothing detected as will be the same as input buffer</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> ( dets.size() &gt; 0 )</div>
@@ -235,7 +235,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    memcpy( image_data( img ), inputBuffer.data(), inputBuffer.size() );</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//while(img.size() &lt; 1800*1800)</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="comment">//  dlib::pyramid_up(img);</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">//dlib::pyramid_up(img);</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">auto</span> dets = mDetector(img);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//std::vector&lt;dlib::rectangle&gt; dets = mDetector(img);</span></div>
@@ -253,8 +253,8 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                draw_rectangle( img, dets[i], dlib::rgb_pixel( 255, 0, 0 ), 1 );</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">//dlib::save_png( img, &quot;/transfer/image.png&quot; );</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//Info( &quot;%d x %d = %d&quot;, num_rows(img), num_columns(img), 3*num_rows(img)*num_columns(img) );</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">//Info( &quot;%d x %d = %d&quot;, num_rows(img), num_columns(img), 3*num_rows(img)*num_columns(img) );</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//dlib::save_png( img, &quot;/transfer/image.png&quot; );</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// Don&#39;t really need to do this if nothing detected as will be the same as input buffer</span></div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> ( dets.size() &gt; 0 )</div>
@@ -335,31 +335,30 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                        <span class="keywordflow">if</span> ( detected )</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                            alarmFrame = <span class="keyword">new</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( <span class="keyword">this</span>, *iter, frame-&gt;id(), frame-&gt;timestamp(), detectBuffer, detected );</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                          <span class="comment">//  alarmFrame = new AlarmFrame( this, *iter, detected );</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                alarmFrame = <span class="keyword">new</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( <span class="keyword">this</span>, *iter, frame-&gt;id(), frame-&gt;timestamp(), convImage.buffer(), detected );</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        <a class="code" href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( alarmFrame ) );</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.clear();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">mQueueMutex</a>.unlock();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <a class="code" href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">checkProviders</a>();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="comment">// Quite short so we can always keep up with the required packet rate for 25/30 fps</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a>();</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a>();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                            alarmFrame = <span class="keyword">new</span> <a class="code" href="class_alarm_frame.html">AlarmFrame</a>( <span class="keyword">this</span>, *iter, frame-&gt;id(), frame-&gt;timestamp(), convImage.buffer(), detected );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        <a class="code" href="class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb">distributeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a>( alarmFrame ) );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        <a class="code" href="class_feed_provider.html#a113a8127bb5d18b0317e70b850bf2c89">mFrameCount</a>++;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <a class="code" href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">mFrameQueue</a>.clear();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <a class="code" href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">mQueueMutex</a>.unlock();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">checkProviders</a>();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="comment">// Quite short so we can always keep up with the required packet rate for 25/30 fps</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            usleep( <a class="code" href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">INTERFRAME_TIMEOUT</a> );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27">FeedProvider::cleanup</a>();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a">FeedConsumer::cleanup</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span>( !ended() );</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
 <div class="ttc" id="class_feed_consumer_html_adc13326763ab579da3c33c6cc6c04604"><div class="ttname"><a href="class_feed_consumer.html#adc13326763ab579da3c33c6cc6c04604">FeedConsumer::mQueueMutex</a></div><div class="ttdeci">Mutex mQueueMutex</div><div class="ttdoc">Protects the frame queue. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00028">ozFeedConsumer.h:28</a></div></div>
 <div class="ttc" id="class_video_provider_html_a025b965717f76ea6abc267626238d493"><div class="ttname"><a href="class_video_provider.html#a025b965717f76ea6abc267626238d493">VideoProvider::width</a></div><div class="ttdeci">virtual uint16_t width() const =0</div><div class="ttdoc">Return the width (in pixels) of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_video_provider_html_a4594d6b84217ad16434bb3ff382a6022"><div class="ttname"><a href="class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022">VideoProvider::height</a></div><div class="ttdeci">virtual uint16_t height() const =0</div><div class="ttdoc">Return the height (in pixels) of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_video_provider_html_ac11321473510fcbb4d4a4933722a67d0"><div class="ttname"><a href="class_video_provider.html#ac11321473510fcbb4d4a4933722a67d0">VideoProvider::pixelFormat</a></div><div class="ttdeci">virtual AVPixelFormat pixelFormat() const =0</div><div class="ttdoc">Return the image format of video frames supplied by this provider. </div></div>
 <div class="ttc" id="class_feed_consumer_html_a691943c77143c693193555f8dc21c0c9"><div class="ttname"><a href="class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9">FeedConsumer::checkProviders</a></div><div class="ttdeci">bool checkProviders()</div><div class="ttdoc">Verify that providers exist and are in good condition. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00171">ozFeedConsumer.cpp:171</a></div></div>
 <div class="ttc" id="class_alarm_frame_html"><div class="ttname"><a href="class_alarm_frame.html">AlarmFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_alarm_frame_8h_source.html#l00009">ozAlarmFrame.h:9</a></div></div>
-<div class="ttc" id="class_options_html"><div class="ttname"><a href="class_options.html">Options</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_options_8h_source.html#l00062">ozOptions.h:62</a></div></div>
+<div class="ttc" id="class_options_html"><div class="ttname"><a href="class_options.html">Options</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_options_8h_source.html#l00080">ozOptions.h:80</a></div></div>
 <div class="ttc" id="classlinked__ptr_html"><div class="ttname"><a href="classlinked__ptr.html">linked_ptr&lt; const FeedFrame &gt;</a></div></div>
 <div class="ttc" id="class_face_detector_html_aaf02e5d98f47d20aac62e14df3b21c10"><div class="ttname"><a href="class_face_detector.html#aaf02e5d98f47d20aac62e14df3b21c10">FaceDetector::height</a></div><div class="ttdeci">uint16_t height() const </div><div class="ttdoc">Return the height (in pixels) of video frames supplied by this provider. </div><div class="ttdef"><b>Definition:</b> <a href="oz_face_detector_8h_source.html#l00090">ozFaceDetector.h:90</a></div></div>
 <div class="ttc" id="class_image_html"><div class="ttname"><a href="class_image.html">Image</a></div><div class="ttdef"><b>Definition:</b> <a href="libimg_image_8h_source.html#l00168">libimgImage.h:168</a></div></div>
@@ -377,8 +376,8 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div class="ttc" id="class_video_consumer_html"><div class="ttname"><a href="class_video_consumer.html">VideoConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00118">ozFeedConsumer.h:118</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_a7e7b12b6dbd3995eeb956e00063a781a"><div class="ttname"><a href="class_feed_consumer.html#a7e7b12b6dbd3995eeb956e00063a781a">FeedConsumer::mFrameQueue</a></div><div class="ttdeci">FrameQueue mFrameQueue</div><div class="ttdoc">Queue of frames from providers that are ready to be handled. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00029">ozFeedConsumer.h:29</a></div></div>
 <div class="ttc" id="class_face_detector_html"><div class="ttname"><a href="class_face_detector.html">FaceDetector</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_face_detector_8h_source.html#l00029">ozFaceDetector.h:29</a></div></div>
-<div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer</a></div><div class="ttdef"><b>Definition:</b> <a href="libgen_buffer_8h_source.html#l00012">libgenBuffer.h:12</a></div></div>
-<div class="ttc" id="class_feed_provider_html_a99d747e444a2efd7bdcbc533d9124072"><div class="ttname"><a href="class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(FramePtr frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00212">ozFeedProvider.cpp:212</a></div></div>
+<div class="ttc" id="class_buffer_html"><div class="ttname"><a href="class_buffer.html">Buffer&lt; uint8_t &gt;</a></div></div>
+<div class="ttc" id="class_feed_provider_html_aea6410342e879bcc9d80e7d130be90eb"><div class="ttname"><a href="class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb">FeedProvider::distributeFrame</a></div><div class="ttdeci">virtual void distributeFrame(const FramePtr &amp;frame)</div><div class="ttdoc">Pass a frame on to all registered consumers. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_provider_8cpp_source.html#l00212">ozFeedProvider.cpp:212</a></div></div>
 <div class="ttc" id="class_face_detector_html_aa705cc4f53e8409bf18f1460d6dd8146"><div class="ttname"><a href="class_face_detector.html#aa705cc4f53e8409bf18f1460d6dd8146">FaceDetector::FaceDetector</a></div><div class="ttdeci">FaceDetector(const std::string &amp;name, const Options &amp;options=gNullOptions)</div><div class="ttdef"><b>Definition:</b> <a href="oz_face_detector_8cpp_source.html#l00173">ozFaceDetector.cpp:173</a></div></div>
 <div class="ttc" id="class_feed_base_html_a782956651d65d7a04ae759e9d0129961"><div class="ttname"><a href="class_feed_base.html#a782956651d65d7a04ae759e9d0129961">FeedBase::INTERFRAME_TIMEOUT</a></div><div class="ttdeci">static const int INTERFRAME_TIMEOUT</div><div class="ttdoc">Needs to be short enough to cope with all possible frame rates.This allows for 100fps. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00040">ozFeedBase.h:40</a></div></div>
 <div class="ttc" id="class_feed_consumer_html_aed564300bea459da045829eecce52b5c"><div class="ttname"><a href="class_feed_consumer.html#aed564300bea459da045829eecce52b5c">FeedConsumer::waitForProviders</a></div><div class="ttdeci">bool waitForProviders(unsigned int=0)</div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8cpp_source.html#l00107">ozFeedConsumer.cpp:107</a></div></div>
@@ -389,7 +388,7 @@ $(document).ready(function(){initNavTree('oz_face_detector_8cpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><b>ozFaceDetector.cpp</b></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:56 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:31 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -8,7 +8,7 @@ var class_memory_trigger_v1 =
     ] ],
     [ "MemoryTriggerV1", "class_memory_trigger_v1.html#a524503a240349a167fa21356b1f1e54d", null ],
     [ "~MemoryTriggerV1", "class_memory_trigger_v1.html#a123865831072941f46eab54f412e82a1", null ],
-    [ "processFrame", "class_memory_trigger_v1.html#accd332ba1679d2e79c0fbe78caf8c8dd", null ],
+    [ "processFrame", "class_memory_trigger_v1.html#a23351eb4f270548a9cc15108c3c7377e", null ],
     [ "run", "class_memory_trigger_v1.html#a4e8fbae2959719ad520f569948100343", null ],
     [ "mAlarmTime", "class_memory_trigger_v1.html#a31c57dcc8673eb04310a1ca82f4aa5f7", null ],
     [ "mEventCount", "class_memory_trigger_v1.html#a9802908e2d0b2b74af2fd84ae9312d97", null ],

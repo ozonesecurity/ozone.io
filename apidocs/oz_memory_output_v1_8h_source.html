@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('oz_memory_output_v1_8h_source.html',''
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_memory_output_v1.html#a67b923ac652eebc3eb3ca7a92af4bf71">run</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_memory_output_v1.html#a9f3dbf9b280eb09a63cccff2b29f9709">storeFrame</a>( <a class="code" href="classlinked__ptr.html">FramePtr</a> frame );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_memory_output_v1.html#a2c441b725042ccb0ba93f38ff54ca4c4">storeFrame</a>( <span class="keyword">const</span> <a class="code" href="classlinked__ptr.html">FramePtr</a> &amp;frame );</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_memory_output_v1.html#aac2f052066c0efc1c28fa061bfd627cb">MemoryOutputV1</a>( <span class="keyword">const</span> std::string &amp;<a class="code" href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">name</a>, <span class="keyword">const</span> std::string &amp;location, <span class="keywordtype">int</span> memoryKey );</div>
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('oz_memory_output_v1_8h_source.html',''
 <div class="ttc" id="class_memory_output_v1_html_a67b923ac652eebc3eb3ca7a92af4bf71"><div class="ttname"><a href="class_memory_output_v1.html#a67b923ac652eebc3eb3ca7a92af4bf71">MemoryOutputV1::run</a></div><div class="ttdeci">int run()</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_output_v1_8cpp_source.html#l00048">ozMemoryOutputV1.cpp:48</a></div></div>
 <div class="ttc" id="class_video_consumer_html"><div class="ttname"><a href="class_video_consumer.html">VideoConsumer</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_consumer_8h_source.html#l00118">ozFeedConsumer.h:118</a></div></div>
 <div class="ttc" id="class_feed_base_html_a22f313327e4e4effc09beed76b12fa55"><div class="ttname"><a href="class_feed_base.html#a22f313327e4e4effc09beed76b12fa55">FeedBase::name</a></div><div class="ttdeci">const std::string &amp; name() const </div><div class="ttdoc">Return the name string. </div><div class="ttdef"><b>Definition:</b> <a href="oz_feed_base_8h_source.html#l00077">ozFeedBase.h:77</a></div></div>
-<div class="ttc" id="class_memory_output_v1_html_a9f3dbf9b280eb09a63cccff2b29f9709"><div class="ttname"><a href="class_memory_output_v1.html#a9f3dbf9b280eb09a63cccff2b29f9709">MemoryOutputV1::storeFrame</a></div><div class="ttdeci">bool storeFrame(FramePtr frame)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_output_v1_8cpp_source.html#l00085">ozMemoryOutputV1.cpp:85</a></div></div>
+<div class="ttc" id="class_memory_output_v1_html_a2c441b725042ccb0ba93f38ff54ca4c4"><div class="ttname"><a href="class_memory_output_v1.html#a2c441b725042ccb0ba93f38ff54ca4c4">MemoryOutputV1::storeFrame</a></div><div class="ttdeci">bool storeFrame(const FramePtr &amp;frame)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_output_v1_8cpp_source.html#l00085">ozMemoryOutputV1.cpp:85</a></div></div>
 <div class="ttc" id="class_memory_output_v1_html_aac2f052066c0efc1c28fa061bfd627cb"><div class="ttname"><a href="class_memory_output_v1.html#aac2f052066c0efc1c28fa061bfd627cb">MemoryOutputV1::MemoryOutputV1</a></div><div class="ttdeci">MemoryOutputV1(const std::string &amp;name, const std::string &amp;location, int memoryKey)</div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_output_v1_8cpp_source.html#l00028">ozMemoryOutputV1.cpp:28</a></div></div>
 <div class="ttc" id="class_memory_i_o_v1_html"><div class="ttname"><a href="class_memory_i_o_v1.html">MemoryIOV1</a></div><div class="ttdef"><b>Definition:</b> <a href="oz_memory_i_o_v1_8h_source.html#l00008">ozMemoryIOV1.h:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('oz_memory_output_v1_8h_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d36de6d9921a6ab7cb445011e2e89e9.html">consumers</a></li><li class="navelem"><b>ozMemoryOutputV1.h</b></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:56 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:30 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

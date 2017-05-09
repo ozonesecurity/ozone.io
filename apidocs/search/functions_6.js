@@ -8,7 +8,6 @@ var searchData=
   ['getblendtable',['getBlendTable',['../class_image.html#aa98357fab6e86d5e42ff1b7538919955',1,'Image']]],
   ['getblocking',['getBlocking',['../class_socket.html#a0c16f0adfc29bb978e65ceea566909b3',1,'Socket']]],
   ['getffpixformat',['getFfPixFormat',['../class_image.html#acf081289e3dde561d654bcbfc194658a',1,'Image']]],
-  ['getformatfrompalette',['getFormatFromPalette',['../class_image.html#aeff0343d821b11e84d8002c8d4a78bfb',1,'Image']]],
   ['getformatfrompixelformat',['getFormatFromPixelFormat',['../class_image.html#a98fc31eeca29e3b09629f3b682d7e53b',1,'Image']]],
   ['getnodelay',['getNoDelay',['../class_socket.html#ad40ad906bb4384677be28aeeae8a7170',1,'Socket']]],
   ['getpooledencoder',['getPooledEncoder',['../class_encoder.html#aaf8c767c8d75c360c985a1468b603ddb',1,'Encoder']]],

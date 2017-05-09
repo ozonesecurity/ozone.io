@@ -140,6 +140,15 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (con
 <tr class="memitem:ad96cd822ed7934d75e9c05cdc7630b32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad96cd822ed7934d75e9c05cdc7630b32"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (unsigned int depth=0) const </td></tr>
 <tr class="separator:ad96cd822ed7934d75e9c05cdc7630b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83aa2d35456768037b61d2007f05f81a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83aa2d35456768037b61d2007f05f81a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>readFile</b> (const std::string &amp;filename)</td></tr>
+<tr class="separator:a83aa2d35456768037b61d2007f05f81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c73fdf6b4a7b65563e00666c8b39ab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c73fdf6b4a7b65563e00666c8b39ab1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeFile</b> (const std::string &amp;filename, bool pretty=false)</td></tr>
+<tr class="separator:a7c73fdf6b4a7b65563e00666c8b39ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3518c616f714768e43d09ca1dab43927"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3518c616f714768e43d09ca1dab43927"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a3518c616f714768e43d09ca1dab43927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a7f8dd621627933dcf19a11a225a99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58a7f8dd621627933dcf19a11a225a99"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const std::string &amp;name, const char *value)</td></tr>
 <tr class="separator:a58a7f8dd621627933dcf19a11a225a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +196,12 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ex
 template&lt;typename t &gt; </td></tr>
 <tr class="memitem:acfbe5808defe1d118dcb78ad88ac500f"><td class="memTemplItemLeft" align="right" valign="top">const t &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract</b> (const std::string &amp;name, const t &amp;notFoundValue)</td></tr>
 <tr class="separator:acfbe5808defe1d118dcb78ad88ac500f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ac941f2506cf839de028a484559345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27ac941f2506cf839de028a484559345"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>jsonDump</b> (json &amp;j) const </td></tr>
+<tr class="separator:a27ac941f2506cf839de028a484559345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f980a8b31ee2a9c7833a86bcb4bb9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06f980a8b31ee2a9c7833a86bcb4bb9f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>jsonLoad</b> (const json &amp;j)</td></tr>
+<tr class="separator:a06f980a8b31ee2a9c7833a86bcb4bb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class___option"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class___option')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class___option.html">_Option</a></td></tr>
 <tr class="memitem:a0206590b70e38b5325c8f856074b2a58 inherit pub_methods_class___option"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0206590b70e38b5325c8f856074b2a58"></a>
 virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> () const </td></tr>
@@ -194,16 +209,25 @@ virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="memitem:aa53bcc38bd841c50035f8306aa68fcce inherit pub_methods_class___option"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa53bcc38bd841c50035f8306aa68fcce"></a>
 virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>valueString</b> () const </td></tr>
 <tr class="separator:aa53bcc38bd841c50035f8306aa68fcce inherit pub_methods_class___option"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fba61f0a8b56cdf2c6aef340ff74f9 inherit pub_methods_class___option"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1fba61f0a8b56cdf2c6aef340ff74f9"></a>
+virtual const void&#160;</td><td class="memItemRight" valign="bottom"><b>jsonDump</b> (json &amp;j, const std::string &amp;name) const </td></tr>
+<tr class="separator:aa1fba61f0a8b56cdf2c6aef340ff74f9 inherit pub_methods_class___option"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:acc7e205320508bbd843d9bcdea6d546a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc7e205320508bbd843d9bcdea6d546a"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;stream, const <a class="el" href="class_options.html">Options</a> &amp;options)</td></tr>
 <tr class="separator:acc7e205320508bbd843d9bcdea6d546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e59b34a8b49dc4f7fa816e6083444fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e59b34a8b49dc4f7fa816e6083444fd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>to_json</b> (json &amp;j, const <a class="el" href="class_options.html">Options</a> &amp;o)</td></tr>
+<tr class="separator:a1e59b34a8b49dc4f7fa816e6083444fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2be1e2c7af4c9595f81a6c58ca0e3ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2be1e2c7af4c9595f81a6c58ca0e3ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>from_json</b> (const json &amp;j, <a class="el" href="class_options.html">Options</a> &amp;o)</td></tr>
+<tr class="separator:ae2be1e2c7af4c9595f81a6c58ca0e3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="oz_options_8h_source.html#l00062">62</a> of file <a class="el" href="oz_options_8h_source.html">ozOptions.h</a>.</p>
+<p>Definition at line <a class="el" href="oz_options_8h_source.html#l00080">80</a> of file <a class="el" href="oz_options_8h_source.html">ozOptions.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/base/<a class="el" href="oz_options_8h_source.html">ozOptions.h</a></li>
 <li>src/base/<a class="el" href="oz_options_8cpp_source.html">ozOptions.cpp</a></li>
@@ -214,7 +238,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_options.html">Options</a></li>
-    <li class="footer">Generated on Tue Jan 24 2017 07:10:58 for oZone Server Framework by
+    <li class="footer">Generated on Fri May 5 2017 16:42:32 for oZone Server Framework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

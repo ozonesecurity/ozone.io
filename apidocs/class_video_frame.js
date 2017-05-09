@@ -2,9 +2,9 @@ var class_video_frame =
 [
     [ "VideoFrame", "class_video_frame.html#a8a19e1ea5b69b4ac64b4c9aa3ec38b02", null ],
     [ "VideoFrame", "class_video_frame.html#af450655fca27614ed8a5323e46861d8f", null ],
-    [ "VideoFrame", "class_video_frame.html#aa7a1362e3e934055c55220cf64e71b11", null ],
-    [ "VideoFrame", "class_video_frame.html#ad2f6c861894e7ab1c3d69a964576cf7b", null ],
-    [ "VideoFrame", "class_video_frame.html#acdedbbb901c296e191efbe169fb430e6", null ],
+    [ "VideoFrame", "class_video_frame.html#a0f65dc9f0c5954ebb531fc8754476967", null ],
+    [ "VideoFrame", "class_video_frame.html#a7ca1b09a912dd694e039a406c8418504", null ],
+    [ "VideoFrame", "class_video_frame.html#a3b77c40630bded815d360bae80eff345", null ],
     [ "height", "class_video_frame.html#a740fd41be7e4b08583ffb368f7255ae3", null ],
     [ "pixelFormat", "class_video_frame.html#abc51f64f28cf590ef6d69d6db2f9a4d0", null ],
     [ "videoProvider", "class_video_frame.html#a087e5ddcc039adb2c32b5a66efb58460", null ],

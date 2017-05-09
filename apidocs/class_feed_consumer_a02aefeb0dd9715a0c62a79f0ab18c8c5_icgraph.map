@@ -11,15 +11,15 @@
 <area shape="rect" id="node8" href="$class_rtsp_connection.html#a8864466b9ec035a67c9973fa4d0aa126" title="RtspConnection::handleRequest" alt="" coords="775,239,985,265"/>
 <area shape="rect" id="node9" href="$class_rtsp_stream.html#a32b2907b4bac8d99070c12f639a640b2" title="RtspStream::RtspStream" alt="" coords="795,289,965,316"/>
 <area shape="rect" id="node13" href="$class_feed_consumer.html#ab88de12bdfc4be4476fd138e59a8cda1" title="FeedConsumer::deregister\lProvider" alt="" coords="525,697,701,738"/>
-<area shape="rect" id="node16" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="533,1058,693,1099"/>
+<area shape="rect" id="node16" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="533,1058,693,1099"/>
 <area shape="rect" id="node49" href="$class_h264_encoder.html#a6f5f6fc05bc1a12d4124277161971a8d" title="H264Encoder::deregisterConsumer" alt="" coords="500,1124,727,1151"/>
 <area shape="rect" id="node50" href="$class_h264_relay.html#a88a15610c98409aa9f59e03c072762ed" title="H264Relay::deregisterConsumer" alt="" coords="507,1175,719,1201"/>
 <area shape="rect" id="node14" href="$class_input_fallback.html#a6559477834bfcf7cfff248b93a1e9a6e" title="InputFallback::deregister\lProvider" alt="" coords="797,341,963,382"/>
 <area shape="rect" id="node15" href="$class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b" title="MatrixVideo::deregisterProvider" alt="" coords="778,407,982,433"/>
-<area shape="rect" id="node17" href="$class_encoder.html#acc731ccbc4c05090a66c8dc61d254940" title="Pass a frame on to all registered consumers. " alt="" coords="796,457,964,484"/>
-<area shape="rect" id="node22" href="$class_event_recorder.html#a84a608c8ab801d830856408647e1785e" title="EventRecorder::processFrame" alt="" coords="780,508,980,535"/>
+<area shape="rect" id="node17" href="$class_encoder.html#aa34206bfb35743d261321dfdd4d7b30f" title="Pass a frame on to all registered consumers. " alt="" coords="796,457,964,484"/>
+<area shape="rect" id="node22" href="$class_event_recorder.html#a8cd5453589f6e2f31677a18a0790f033" title="EventRecorder::processFrame" alt="" coords="780,508,980,535"/>
 <area shape="rect" id="node23" href="$class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8" title="MovieFileOutput::run" alt="" coords="809,559,951,585"/>
-<area shape="rect" id="node24" href="$class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba" title="VideoRecorder::processFrame" alt="" coords="781,609,979,636"/>
+<area shape="rect" id="node24" href="$class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35" title="VideoRecorder::processFrame" alt="" coords="781,609,979,636"/>
 <area shape="rect" id="node25" href="$class_video_filter.html#a04324dbaf442e6c8b1d5109eeecd400c" title="VideoFilter::run" alt="" coords="825,660,935,687"/>
 <area shape="rect" id="node26" href="$class_delay_buffer_filter.html#ae11002a478c6a99daaa687116c4eb0be" title="DelayBufferFilter::run" alt="" coords="807,711,953,737"/>
 <area shape="rect" id="node27" href="$class_face_detector.html#a7778cbc2fbf8c61eceee8b33a8e781f8" title="FaceDetector::run" alt="" coords="817,761,943,788"/>
@@ -33,7 +33,7 @@
 <area shape="rect" id="node35" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="823,1167,937,1193"/>
 <area shape="rect" id="node36" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="813,1217,947,1244"/>
 <area shape="rect" id="node37" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="813,1268,947,1295"/>
-<area shape="rect" id="node38" href="$class_direct_video_filter.html#a90099ea58458f513477c14de85c8a8f7" title="DirectVideoFilter::\lqueueFrame" alt="" coords="817,1319,943,1361"/>
+<area shape="rect" id="node38" href="$class_direct_video_filter.html#a0a01ca6879ff389e0c9cb0f89c110858" title="DirectVideoFilter::\lqueueFrame" alt="" coords="817,1319,943,1361"/>
 <area shape="rect" id="node39" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="803,1385,957,1412"/>
 <area shape="rect" id="node40" href="$class_dummy_input.html#a27e2393485b32ce9654b9bf6e4cfb6d1" title="DummyInput::run" alt="" coords="819,1436,941,1463"/>
 <area shape="rect" id="node41" href="$class_local_file_input.html#a7fed56a720b51c3b9c88b90d8d4b3904" title="LocalFileInput::run" alt="" coords="815,1487,945,1513"/>

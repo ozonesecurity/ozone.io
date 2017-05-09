@@ -13,7 +13,7 @@
 <area shape="rect" id="node19" href="$class_image.html#a5af802879f05abe0ad9b5988e21a5b97" title="Image::writeJpeg" alt="" coords="723,789,845,816"/>
 <area shape="rect" id="node21" href="$class_image.html#aa67c19ac9c6c4f7e9ba143fca64bbdf4" title="Image::assign" alt="" coords="1153,461,1257,488"/>
 <area shape="rect" id="node22" href="$class_motion_detector.html#ab3c14562972b1881b184b2f3814123a6" title="MotionDetector::analyse" alt="" coords="213,588,377,615"/>
-<area shape="rect" id="node25" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="915,817,1075,858"/>
+<area shape="rect" id="node25" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="915,817,1075,858"/>
 <area shape="rect" id="node44" href="$class_image.html#af83a2eace8c751bdb46d302f9a9be60a" title="Image::blend" alt="" coords="247,1381,344,1408"/>
 <area shape="rect" id="node45" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="191,309,400,336"/>
 <area shape="rect" id="node47" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="219,183,371,209"/>

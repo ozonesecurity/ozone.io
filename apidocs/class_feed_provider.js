@@ -14,7 +14,7 @@ var class_feed_provider =
     [ "canPoll", "class_feed_provider.html#a3089a6e0dc76ba03e3d03174d36da29b", null ],
     [ "cleanup", "class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27", null ],
     [ "deregisterConsumer", "class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1", null ],
-    [ "distributeFrame", "class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072", null ],
+    [ "distributeFrame", "class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb", null ],
     [ "ended", "class_feed_provider.html#a642b57b47a2c7a1dcaea8654e5a465f0", null ],
     [ "error", "class_feed_provider.html#a3cce08a8d34d664de2976d050884f86a", null ],
     [ "frameCount", "class_feed_provider.html#a15c749a9a99dfbe0bd38795d0b8a0b10", null ],

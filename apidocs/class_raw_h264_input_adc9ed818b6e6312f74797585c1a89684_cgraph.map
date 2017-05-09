@@ -1,6 +1,6 @@
 <map id="RawH264Input::run" name="RawH264Input::run">
 <area shape="rect" id="node2" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="910,33,1049,60"/>
-<area shape="rect" id="node3" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="188,76,348,118"/>
+<area shape="rect" id="node3" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="188,76,348,118"/>
 <area shape="rect" id="node8" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="192,142,344,169"/>
 <area shape="rect" id="node4" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="417,76,581,118"/>
 <area shape="rect" id="node5" href="$class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="649,54,837,81"/>

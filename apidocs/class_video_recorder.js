@@ -14,7 +14,7 @@ var class_video_recorder =
     [ "encodeFrame", "class_video_recorder.html#a0598376bb71a5fa161f9f3180b12060f", null ],
     [ "initEncoder", "class_video_recorder.html#a6897e743ca998f4dbdc031fe4fb6f1a2", null ],
     [ "openVideoFile", "class_video_recorder.html#adb548b0adda15e43c90aa3b86339994b", null ],
-    [ "processFrame", "class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba", null ],
+    [ "processFrame", "class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35", null ],
     [ "run", "class_video_recorder.html#a88391f0c4a0a061551999ae72ed52be9", null ],
     [ "mAlarmTime", "class_video_recorder.html#aec6e97c5db3d074b067af7aadb326819", null ],
     [ "mAudioBuffer", "class_video_recorder.html#a3692cc9f88154bf40b934327661ef615", null ],

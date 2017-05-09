@@ -14,13 +14,13 @@
 <area shape="rect" id="node13" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="523,955,687,997"/>
 <area shape="rect" id="node49" href="$class_input_fallback.html#a6559477834bfcf7cfff248b93a1e9a6e" title="InputFallback::deregister\lProvider" alt="" coords="523,1021,688,1062"/>
 <area shape="rect" id="node50" href="$class_matrix_video.html#a1ee0e39a3097d719f3fcc72c9e32bb5b" title="MatrixVideo::deregisterProvider" alt="" coords="503,1087,707,1113"/>
-<area shape="rect" id="node14" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="792,783,952,825"/>
+<area shape="rect" id="node14" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="792,783,952,825"/>
 <area shape="rect" id="node47" href="$class_h264_encoder.html#a6f5f6fc05bc1a12d4124277161971a8d" title="H264Encoder::deregisterConsumer" alt="" coords="759,937,985,964"/>
 <area shape="rect" id="node48" href="$class_h264_relay.html#a88a15610c98409aa9f59e03c072762ed" title="H264Relay::deregisterConsumer" alt="" coords="766,988,978,1015"/>
-<area shape="rect" id="node15" href="$class_encoder.html#acc731ccbc4c05090a66c8dc61d254940" title="Pass a frame on to all registered consumers. " alt="" coords="1049,81,1217,108"/>
-<area shape="rect" id="node20" href="$class_event_recorder.html#a84a608c8ab801d830856408647e1785e" title="EventRecorder::processFrame" alt="" coords="1033,132,1233,159"/>
+<area shape="rect" id="node15" href="$class_encoder.html#aa34206bfb35743d261321dfdd4d7b30f" title="Pass a frame on to all registered consumers. " alt="" coords="1049,81,1217,108"/>
+<area shape="rect" id="node20" href="$class_event_recorder.html#a8cd5453589f6e2f31677a18a0790f033" title="EventRecorder::processFrame" alt="" coords="1033,132,1233,159"/>
 <area shape="rect" id="node21" href="$class_movie_file_output.html#aadab693b67ea6cf88fff6c5e4ab1b4a8" title="MovieFileOutput::run" alt="" coords="1062,183,1205,209"/>
-<area shape="rect" id="node22" href="$class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba" title="VideoRecorder::processFrame" alt="" coords="1034,233,1233,260"/>
+<area shape="rect" id="node22" href="$class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35" title="VideoRecorder::processFrame" alt="" coords="1034,233,1233,260"/>
 <area shape="rect" id="node23" href="$class_video_filter.html#a04324dbaf442e6c8b1d5109eeecd400c" title="VideoFilter::run" alt="" coords="1078,284,1189,311"/>
 <area shape="rect" id="node24" href="$class_delay_buffer_filter.html#ae11002a478c6a99daaa687116c4eb0be" title="DelayBufferFilter::run" alt="" coords="1060,335,1207,361"/>
 <area shape="rect" id="node25" href="$class_face_detector.html#a7778cbc2fbf8c61eceee8b33a8e781f8" title="FaceDetector::run" alt="" coords="1070,385,1197,412"/>
@@ -33,7 +33,7 @@
 <area shape="rect" id="node33" href="$class_rate_limiter.html#a89b9a7cc39202bf79c975a90e15aec33" title="RateLimiter::run" alt="" coords="1076,740,1191,767"/>
 <area shape="rect" id="node34" href="$class_shape_detector.html#a1256795caf38492987aae4045a7dc2cf" title="ShapeDetector::run" alt="" coords="1066,791,1201,817"/>
 <area shape="rect" id="node35" href="$class_signal_checker.html#a0d7e5f8cd72dc90cbc3c37444962bf57" title="SignalChecker::run" alt="" coords="1067,841,1200,868"/>
-<area shape="rect" id="node36" href="$class_direct_video_filter.html#a90099ea58458f513477c14de85c8a8f7" title="DirectVideoFilter::\lqueueFrame" alt="" coords="1070,893,1197,934"/>
+<area shape="rect" id="node36" href="$class_direct_video_filter.html#a0a01ca6879ff389e0c9cb0f89c110858" title="DirectVideoFilter::\lqueueFrame" alt="" coords="1070,893,1197,934"/>
 <area shape="rect" id="node37" href="$class_queued_video_filter.html#ac2b2270ec298f5b243bf893048a99f16" title="QueuedVideoFilter::run" alt="" coords="1056,959,1211,985"/>
 <area shape="rect" id="node38" href="$class_dummy_input.html#a27e2393485b32ce9654b9bf6e4cfb6d1" title="DummyInput::run" alt="" coords="1072,1009,1195,1036"/>
 <area shape="rect" id="node39" href="$class_local_file_input.html#a7fed56a720b51c3b9c88b90d8d4b3904" title="LocalFileInput::run" alt="" coords="1069,1060,1198,1087"/>

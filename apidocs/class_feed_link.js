@@ -6,7 +6,7 @@ var class_feed_link =
     [ "clearPolled", "class_feed_link.html#a182c96d26b6e0bb5f6ed34a117517ae6", null ],
     [ "clearQueued", "class_feed_link.html#ad0402f04195583524a1dc79ade79f113", null ],
     [ "comparators", "class_feed_link.html#a1dfc40b6fa26ad881078b496459a2fbd", null ],
-    [ "compare", "class_feed_link.html#a1cdf37d857004fe8cdb7f67add4b2fde", null ],
+    [ "compare", "class_feed_link.html#a0a5d85321e2d01374ceee218794ecacb", null ],
     [ "hasComparators", "class_feed_link.html#ac8bc1924943dc0dd2f8af0f2852ab225", null ],
     [ "isPolled", "class_feed_link.html#aecab94d2b7f61f794e4d615ad80ec628", null ],
     [ "isQueued", "class_feed_link.html#a53179730399939d036d9efdba5792535", null ],

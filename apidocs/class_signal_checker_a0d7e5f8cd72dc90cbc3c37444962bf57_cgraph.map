@@ -5,7 +5,7 @@
 <area shape="rect" id="node7" href="$class_video_provider.html#a025b965717f76ea6abc267626238d493" title="Return the width (in pixels) of video frames supplied by this provider. " alt="" coords="220,602,363,629"/>
 <area shape="rect" id="node8" href="$class_video_provider.html#a4594d6b84217ad16434bb3ff382a6022" title="Return the height (in pixels) of video frames supplied by this provider. " alt="" coords="218,653,365,679"/>
 <area shape="rect" id="node9" href="$class_signal_checker.html#a2ed64e4c3df3495b4c3278a28927b123" title="SignalChecker::checkSignal" alt="" coords="198,450,385,477"/>
-<area shape="rect" id="node15" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="211,68,371,109"/>
+<area shape="rect" id="node15" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="211,68,371,109"/>
 <area shape="rect" id="node20" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="187,223,396,250"/>
 <area shape="rect" id="node22" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="215,159,367,186"/>
 <area shape="rect" id="node24" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="209,703,373,730"/>

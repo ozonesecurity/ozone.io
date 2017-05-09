@@ -2,13 +2,13 @@
 <area shape="rect" id="node2" href="$class_feed_consumer.html#aed564300bea459da045829eecce52b5c" title="FeedConsumer::waitForProviders" alt="" coords="699,12,916,39"/>
 <area shape="rect" id="node4" href="$class_video_consumer.html#a843010ada945a86ff979dae0d667435c" title="Return the first provider cast appropriately, shortcut for when providers == 1. " alt="" coords="191,252,394,279"/>
 <area shape="rect" id="node6" href="$class_video_provider.html#a5b5ad2235e3bb94f6f21bf82ea0fd9ec" title="Return the frame rate at this this provider supplies frames. May not be available or accurate..." alt="" coords="207,303,379,329"/>
-<area shape="rect" id="node7" href="$class_video_recorder.html#a7d83328d1828367cfc6886881201d6ba" title="VideoRecorder::processFrame" alt="" coords="193,201,392,228"/>
+<area shape="rect" id="node7" href="$class_video_recorder.html#a7b89780eee2035d649b76e31c80fdb35" title="VideoRecorder::processFrame" alt="" coords="193,201,392,228"/>
 <area shape="rect" id="node14" href="$class_feed_consumer.html#a691943c77143c693193555f8dc21c0c9" title="Verify that providers exist and are in good condition. " alt="" coords="188,100,397,127"/>
 <area shape="rect" id="node16" href="$class_feed_provider.html#a9e6dfca4261b1f3e67fca4543dc24f27" title="Tidy up relations before destruction. " alt="" coords="217,151,369,177"/>
 <area shape="rect" id="node19" href="$class_feed_consumer.html#a5d1815f55c448c80392e2f28a36cde3a" title="Tidy up relationships with providers etc before destruction. " alt="" coords="211,353,375,380"/>
 <area shape="rect" id="node3" href="$class_feed_base.html#a21fb04c56b16da04d346748ca0c5b2d4" title="Return the identity string as a c&#45;style string. " alt="" coords="1225,201,1363,228"/>
 <area shape="rect" id="node5" href="$class_feed_consumer.html#a2478ab8f8b5b3a41e16ba451c68d5f25" title="Return the first provider, shortcut for when providers == 1. " alt="" coords="465,319,631,345"/>
-<area shape="rect" id="node8" href="$class_feed_provider.html#a99d747e444a2efd7bdcbc533d9124072" title="Pass a frame on to all registered consumers. " alt="" coords="468,253,628,294"/>
+<area shape="rect" id="node8" href="$class_feed_provider.html#aea6410342e879bcc9d80e7d130be90eb" title="Pass a frame on to all registered consumers. " alt="" coords="468,253,628,294"/>
 <area shape="rect" id="node13" href="$class_feed_frame.html#ab7b2319f304dbc261142dd53c5ca010a" title="How old this frame is (in seconds) relative to &#39;now&#39; or the supplied timestamp. " alt="" coords="489,201,607,228"/>
 <area shape="rect" id="node9" href="$class_feed_provider.html#a351ebd59ac16f8f7522aad379e5f3cf1" title="FeedProvider::deregister\lConsumer" alt="" coords="725,295,889,337"/>
 <area shape="rect" id="node10" href="$class_feed_consumer.html#a02aefeb0dd9715a0c62a79f0ab18c8c5" title="FeedConsumer::hasProvider" alt="" coords="964,303,1152,329"/>
